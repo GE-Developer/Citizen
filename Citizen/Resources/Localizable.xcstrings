@@ -1,0 +1,288 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "%@ - %lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ - %2$lld"
+          }
+        }
+      }
+    },
+    "Question.1.v1" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "მე ცუდად ვსაუბრობ ქართული"
+          }
+        }
+      }
+    },
+    "Question.1.v2" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "მე ცუდად ვსაუბრობ ქართულით"
+          }
+        }
+      }
+    },
+    "Question.1.v3" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "მე ცუდად ვსაუბრობ ქართულად"
+          }
+        }
+      }
+    },
+    "Question.1.v4" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "მე ცუდად ვსაუბრობ ქართულმა"
+          }
+        }
+      }
+    },
+    "Question.2.v1" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "მე ვხატავ სურათს"
+          }
+        }
+      }
+    },
+    "Question.2.v2" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "მე ვხატავ სურათმ"
+          }
+        }
+      }
+    },
+    "Question.2.v3" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "მე ვხატავ სურათი"
+          }
+        }
+      }
+    },
+    "Question.2.v4" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "მე ვხატავ სურათის"
+          }
+        }
+      }
+    },
+    "Question.3.v1" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "მე დამიძახა ამხანაგს"
+          }
+        }
+      }
+    },
+    "Question.3.v2" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "მე დამიძახა ამხანაგმა"
+          }
+        }
+      }
+    },
+    "Question.3.v3" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "მე დამიძახა ამხანაგით"
+          }
+        }
+      }
+    },
+    "Question.3.v4" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "მე დამიძახა ამხანაგის"
+          }
+        }
+      }
+    },
+    "Question.4.v1" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "შენ ხარ ექიმმა"
+          }
+        }
+      }
+    },
+    "Question.4.v2" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "შენ ხარ ექიმით"
+          }
+        }
+      }
+    },
+    "Question.4.v3" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "შენ ხარ ექიმი"
+          }
+        }
+      }
+    },
+    "Question.4.v4" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "შენ ხარ ექიმად"
+          }
+        }
+      }
+    },
+    "Question.100.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "რას ნიშნავს უდანაშაულობის პრეზუმფცია?"
+          }
+        }
+      }
+    },
+    "Question.100.v1" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ადამიანი უდანაშაულოდ ითვლება, ვიდრე სასამართლო გადაწყვეტილება არ გამოცხადდება"
+          }
+        }
+      }
+    },
+    "Question.100.v2" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ადამიანი უდანაშაულოდ ითვლება, ვიდრე მისი დამნაშავეობა არ დამტკიცდება მედიაში გავრცელებული ინფორმაციით"
+          }
+        }
+      }
+    },
+    "Question.100.v3" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ადამიანი უდანაშაულოდ ითვლება, ვიდრე მისი დამნაშავეობა არ დამტკიცდება კანონით დადგენილი წესით, კანონიერ ძალაში შესული სასამართლოს გამამტყუნებელი განაჩენით"
+          }
+        }
+      }
+    },
+    "Question.100.v4" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ადამიანი უდანაშაულოდ ითვლება, ვიდრე გამოძიება დაიწყება ადამიანი უდანაშაულოდ ითვლება, ვიდრე გამოძიება დაიწყება  ადამიანი უდანაშაულოდ ითვლება, ვიდრე გამოძიება დაიწყება  ადამიანი უდანაშაულოდ ითვლება, ვიდრე გამოძიება დაიწყება ადამიანი უდანაშაულოდ ითვლება, ვიდრე გამოძიება დაიწყება "
+          }
+        }
+      }
+    },
+    "Settings.General.Language.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Language"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Язык"
+          }
+        }
+      }
+    },
+    "Выйти" : {
+
+    },
+    "Категория вопросов:" : {
+
+    },
+    "Количество вопросов:" : {
+
+    },
+    "Начать сначала" : {
+
+    },
+    "Обнулить" : {
+
+    },
+    "Прогресс будет сброшен" : {
+
+    },
+    "Продолжить" : {
+
+    },
+    "Тема:" : {
+
+    }
+  },
+  "version" : "1.0"
+}
