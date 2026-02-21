@@ -17,6 +17,7 @@ struct CircularProgressView: View {
         self.progresss = progresss
         self.percentProgress = "\(Int(progresss * 100))%"
     }
+    
 
     var body: some View {
         ZStack {
