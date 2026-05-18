@@ -12,6 +12,21 @@ struct CustomTabBar: View {
     
     private let haptics = HapticsManager.shared
     
+    private static let hideSystemTabBar: Void = {
+        let appearance = UITabBarAppearance()
+        appearance.configureWithTransparentBackground()
+        appearance.backgroundColor = .clear
+        appearance.shadowColor = .clear
+        appearance.shadowImage = UIImage()
+        appearance.backgroundImage = UIImage()
+        UITabBar.appearance().standardAppearance = appearance
+        UITabBar.appearance().scrollEdgeAppearance = appearance
+    }()
+    
+    init() {
+        _ = Self.hideSystemTabBar
+    }
+    
     var body: some View {
         customTabBar
     }
@@ -71,12 +86,8 @@ extension CustomTabBar {
     private func icon(for tab: TabBarState.RootTab) -> some View {
         Group {
             switch tab {
-            case .alphabet:
-                Image.system.chevron
-            case .test:
-                Image.system.chevron
-            case .exam:
-                Image.system.chevron
+            case .home:
+                Image(systemName: "books.vertical.fill")
             case .settings:
                 Image.system.gear
                     .rotationEffect(.degrees(tab == tabBarState.selectedTab ? 120 : 0))

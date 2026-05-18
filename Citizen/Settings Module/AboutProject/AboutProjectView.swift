@@ -18,10 +18,9 @@ struct AboutProjectView: View {
 // MARK: - Builder
 extension AboutProjectView {
     private var aboutProjectView: some View {
-        CustomScrollView {
-            CustomNavigationTitle(title: vm.title, isLargeNavBar: $0)
-            Spacer()
-        } scrollView: { _ in
+        CustomScrollView(title: vm.title) {
+            EmptyView()
+        } content: { _ in
             VStack(spacing: 25) {
                 aboutProjectForm
                 developerMichaelForm

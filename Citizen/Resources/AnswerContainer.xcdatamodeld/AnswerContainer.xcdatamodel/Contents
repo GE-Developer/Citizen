@@ -4,4 +4,7 @@
         <attribute name="id" optional="YES" attributeType="String"/>
         <attribute name="isCorrect" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
     </entity>
+    <entity name="GlobalMistakeEntity" representedClassName="GlobalMistakeEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="questionID" optional="YES" attributeType="String"/>
+    </entity>
 </model>

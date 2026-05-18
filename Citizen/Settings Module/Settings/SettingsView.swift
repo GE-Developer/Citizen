@@ -38,10 +38,9 @@ struct SettingsView: View {
 // MARK: - Builder
 extension SettingsView {
     private var settingsView: some View {
-        CustomScrollView(withBackButton: false, tabBarIsVisible: true) {
-            CustomNavigationTitle(title: vm.title, isLargeNavBar: $0)
-            Spacer()
-        } scrollView: { _ in
+        CustomScrollView(title: vm.title, withBackButton: false, tabBarIsVisible: true) {
+            EmptyView()
+        } content: { _ in
             VStack(spacing: 25) {
                 CustomForm(headerText: vm.generalSettingsTitle) {
                     themeToggle
@@ -68,11 +67,9 @@ extension SettingsView {
                     Divider().padding(.leading, 50)
                     projectButton
                 }
-                
-//                AppVersion()
             }
-            .padding(.bottom, tabBarState.height)
         }
+
     }
     
     private var themeToggle: some View {

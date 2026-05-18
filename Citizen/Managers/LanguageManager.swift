@@ -13,6 +13,7 @@ final class LanguageManager {
         didSet {
             defaults.set([currentLanguageID], forKey: key)
             defaults.synchronize()
+            QuizRepository.shared.reload()
         }
     }
     

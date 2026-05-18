@@ -22,6 +22,7 @@ struct SystemImage {
     let timer = Image(systemName: "timer")
     let send = Image(systemName: "arrow.up")
     let xmark = Image(systemName: "xmark")
+    let checkmark = Image(systemName: "checkmark")
     let cryptoSettings = Image(systemName: "slider.horizontal.3")
     let number = Image(systemName: "number")
     let info = Image(systemName: "info.circle")
@@ -42,6 +43,8 @@ struct SystemImage {
     let gear = Image(systemName: "gear")
     let code = Image(systemName: "chevron.left.slash.chevron.right")
     let warning = Image(systemName: "exclamationmark.triangle")
+    let repeatArrow = Image(systemName: "checkmark.arrow.trianglehead.counterclockwise")
+    let bookmark = Image(systemName: "bookmark.fill")
     
     func key(_ isFilled: Bool = false) -> Image {
         isFilled ? Image(systemName: "key.fill") : Image(systemName: "key")

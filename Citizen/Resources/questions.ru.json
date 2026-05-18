@@ -1,0 +1,5081 @@
+{
+  "categories": [
+    {
+      "id": "georgian",
+      "index": 1,
+      "name": "Грузинский язык",
+      "topics": [
+        {
+          "id": "grammar-noun",
+          "index": 1,
+          "name": "Изменение имен",
+          "questions": [
+            {
+              "id": "geo-grammar-noun-I.1.1",
+              "number": "I.1.1",
+              "index": 1,
+              "question": "Какое слово пропущено в предложении?",
+              "additionalText": "Георгий окончил университет в этом году. ---------- Он уже начал работать в банке.",
+              "answers": [
+                {
+                  "text": "он",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Он",
+                  "isCorrect": true
+                },
+                {
+                  "text": "ему",
+                  "isCorrect": false
+                },
+                {
+                  "text": "РС",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-noun-I.1.2",
+              "number": "I.1.2",
+              "index": 2,
+              "question": "Какое слово пропущено в предложении?",
+              "additionalText": "Нотариус оставил мое заявление. ---------- Все документы подготовил за две недели.",
+              "answers": [
+                {
+                  "text": "он",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Он",
+                  "isCorrect": true
+                },
+                {
+                  "text": "ему",
+                  "isCorrect": false
+                },
+                {
+                  "text": "РС",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-noun-I.1.3",
+              "number": "I.1.3",
+              "index": 3,
+              "question": "Какое слово пропущено в предложении?",
+              "additionalText": "Мой брат вернулся из путешествия. ---------- Он давно рассказал нам свои впечатления.",
+              "answers": [
+                {
+                  "text": "он",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Он",
+                  "isCorrect": false
+                },
+                {
+                  "text": "ему",
+                  "isCorrect": false
+                },
+                {
+                  "text": "РС",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-noun-I.1.4",
+              "number": "I.1.4",
+              "index": 4,
+              "question": "Какое слово пропущено в предложении?",
+              "additionalText": "Сегодня вас встретит адвокат. ---------- Он ответит на все ваши вопросы.",
+              "answers": [
+                {
+                  "text": "он",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Он",
+                  "isCorrect": false
+                },
+                {
+                  "text": "ему",
+                  "isCorrect": false
+                },
+                {
+                  "text": "РС",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-noun-I.1.5",
+              "number": "I.1.5",
+              "index": 5,
+              "question": "Какое слово пропущено в предложении?",
+              "additionalText": "Завтра мы поведем нашего иностранного гостя на прогулку по городу. ---------- Сначала мы посетим старый Тбилиси.",
+              "answers": [
+                {
+                  "text": "он",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Он",
+                  "isCorrect": false
+                },
+                {
+                  "text": "ему",
+                  "isCorrect": true
+                },
+                {
+                  "text": "РС",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-noun-I.1.6",
+              "number": "I.1.6",
+              "index": 6,
+              "question": "Каким словом вы замените подчеркнутое слово?",
+              "additionalText": "Им нужно еще два дня, чтобы завершить работу.",
+              "answers": [
+                {
+                  "text": "мастера",
+                  "isCorrect": false
+                },
+                {
+                  "text": "мастера",
+                  "isCorrect": false
+                },
+                {
+                  "text": "мастера",
+                  "isCorrect": false
+                },
+                {
+                  "text": "мастера",
+                  "isCorrect": true
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-noun-I.1.7",
+              "number": "I.1.7",
+              "index": 7,
+              "question": "Каким словом вы замените подчеркнутое слово?",
+              "additionalText": "Они приняли участие в программе обмена.",
+              "answers": [
+                {
+                  "text": "Студенты",
+                  "isCorrect": false
+                },
+                {
+                  "text": "студентов",
+                  "isCorrect": false
+                },
+                {
+                  "text": "студенты",
+                  "isCorrect": true
+                },
+                {
+                  "text": "студенты",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-noun-I.1.8",
+              "number": "I.1.8",
+              "index": 8,
+              "question": "Каким словом вы замените подчеркнутое слово?",
+              "additionalText": "Они любят проводить свободное время вместе.",
+              "answers": [
+                {
+                  "text": "друзья",
+                  "isCorrect": false
+                },
+                {
+                  "text": "друзей",
+                  "isCorrect": false
+                },
+                {
+                  "text": "друзья",
+                  "isCorrect": false
+                },
+                {
+                  "text": "друзьям",
+                  "isCorrect": true
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-noun-I.1.9",
+              "number": "I.1.9",
+              "index": 9,
+              "question": "Каким словом вы замените подчеркнутое слово?",
+              "additionalText": "Тренер поздравил их с победой.",
+              "answers": [
+                {
+                  "text": "спортсмены",
+                  "isCorrect": false
+                },
+                {
+                  "text": "спортсмены",
+                  "isCorrect": false
+                },
+                {
+                  "text": "спортсмены",
+                  "isCorrect": false
+                },
+                {
+                  "text": "спортсмены",
+                  "isCorrect": true
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-noun-I.1.10",
+              "number": "I.1.10",
+              "index": 10,
+              "question": "Каким словом вы замените подчеркнутое слово?",
+              "additionalText": "Оператор попросил у него удостоверение личности.",
+              "answers": [
+                {
+                  "text": "гражданин",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Гражданин",
+                  "isCorrect": false
+                },
+                {
+                  "text": "гражданин",
+                  "isCorrect": true
+                },
+                {
+                  "text": "гражданин",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-noun-I.1.11",
+              "number": "I.1.11",
+              "index": 11,
+              "question": "Каким словом вы замените подчеркнутое слово?",
+              "additionalText": "Я впервые представил ему свою инициативу.",
+              "answers": [
+                {
+                  "text": "сотрудник",
+                  "isCorrect": false
+                },
+                {
+                  "text": "сотрудник",
+                  "isCorrect": false
+                },
+                {
+                  "text": "сотрудник",
+                  "isCorrect": true
+                },
+                {
+                  "text": "сотрудник",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-noun-I.1.12",
+              "number": "I.1.12",
+              "index": 12,
+              "question": "Какое слово пропущено в предложении?",
+              "additionalText": "Встретила на улице старого знакомого, ---------- он был очень рад меня видеть.",
+              "answers": [
+                {
+                  "text": "который",
+                  "isCorrect": false
+                },
+                {
+                  "text": "ВОЗ",
+                  "isCorrect": false
+                },
+                {
+                  "text": "к которому",
+                  "isCorrect": true
+                },
+                {
+                  "text": "с которым",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-noun-I.1.13",
+              "number": "I.1.13",
+              "index": 13,
+              "question": "Какое слово пропущено в предложении?",
+              "additionalText": "Завтра у меня день рождения, ---------- Мне надо праздновать в Мцхете.",
+              "answers": [
+                {
+                  "text": "который",
+                  "isCorrect": true
+                },
+                {
+                  "text": "ВОЗ",
+                  "isCorrect": false
+                },
+                {
+                  "text": "к которому",
+                  "isCorrect": false
+                },
+                {
+                  "text": "с которым",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-noun-I.1.14",
+              "number": "I.1.14",
+              "index": 14,
+              "question": "Какое слово пропущено в предложении?",
+              "additionalText": "Вчера позвонил другу, ---------- Попросил помощи.",
+              "answers": [
+                {
+                  "text": "который",
+                  "isCorrect": false
+                },
+                {
+                  "text": "ВОЗ",
+                  "isCorrect": false
+                },
+                {
+                  "text": "к которому",
+                  "isCorrect": true
+                },
+                {
+                  "text": "с которым",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-noun-I.1.15",
+              "number": "I.1.15",
+              "index": 15,
+              "question": "Какое слово пропущено в предложении?",
+              "additionalText": "Сотрудник банка прислал мне сообщение, ---------- моя заявка рассмотрена.",
+              "answers": [
+                {
+                  "text": "который",
+                  "isCorrect": false
+                },
+                {
+                  "text": "ВОЗ",
+                  "isCorrect": true
+                },
+                {
+                  "text": "к которому",
+                  "isCorrect": false
+                },
+                {
+                  "text": "с которым",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-noun-I.1.16",
+              "number": "I.1.16",
+              "index": 16,
+              "question": "Какое слово пропущено в предложении?",
+              "additionalText": "Сегодня вечером мы встречаемся с американским послом, ---------- хочет с нами познакомиться.",
+              "answers": [
+                {
+                  "text": "который",
+                  "isCorrect": false
+                },
+                {
+                  "text": "ВОЗ",
+                  "isCorrect": false
+                },
+                {
+                  "text": "к которому",
+                  "isCorrect": true
+                },
+                {
+                  "text": "с которым",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-noun-I.1.17",
+              "number": "I.1.17",
+              "index": 17,
+              "question": "Какое слово пропущено в предложении?",
+              "additionalText": "В ресторане турист заказал грузинское блюдо, ---------- оно ему раньше очень нравилось.",
+              "answers": [
+                {
+                  "text": "который",
+                  "isCorrect": true
+                },
+                {
+                  "text": "ВОЗ",
+                  "isCorrect": false
+                },
+                {
+                  "text": "к которому",
+                  "isCorrect": false
+                },
+                {
+                  "text": "с которым",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-noun-I.1.18",
+              "number": "I.1.18",
+              "index": 18,
+              "question": "Какое слово пропущено в предложении?",
+              "additionalText": "Юбиляру подарили картину, ---------- повешенную на стену в гостиной.",
+              "answers": [
+                {
+                  "text": "который",
+                  "isCorrect": true
+                },
+                {
+                  "text": "ВОЗ",
+                  "isCorrect": false
+                },
+                {
+                  "text": "к которому",
+                  "isCorrect": false
+                },
+                {
+                  "text": "с которым",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-noun-I.1.19",
+              "number": "I.1.19",
+              "index": 19,
+              "question": "Какое слово пропущено в предложении?",
+              "additionalText": "О своем докладе обязательно сообщу, ---------- Скоро зачитаю на конференции.",
+              "answers": [
+                {
+                  "text": "который",
+                  "isCorrect": false
+                },
+                {
+                  "text": "ВОЗ",
+                  "isCorrect": false
+                },
+                {
+                  "text": "к которому",
+                  "isCorrect": true
+                },
+                {
+                  "text": "с которым",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-noun-I.1.20",
+              "number": "I.1.20",
+              "index": 20,
+              "question": "Какое слово пропущено в предложении?",
+              "additionalText": "Выбирайте пальто такого цвета, который ---------- Вам больше идёт.",
+              "answers": [
+                {
+                  "text": "который",
+                  "isCorrect": true
+                },
+                {
+                  "text": "ВОЗ",
+                  "isCorrect": false
+                },
+                {
+                  "text": "к которому",
+                  "isCorrect": false
+                },
+                {
+                  "text": "с которым",
+                  "isCorrect": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "grammar-verb",
+          "index": 2,
+          "name": "время глагола",
+          "questions": [
+            {
+              "id": "geo-grammar-verb-I.2.1",
+              "number": "I.2.1",
+              "index": 1,
+              "question": "закончите предложение:",
+              "additionalText": "Новый бизнес-центр в центральном районе города Гайса ----------.",
+              "answers": [
+                {
+                  "text": "откроется",
+                  "isCorrect": true
+                },
+                {
+                  "text": "быть открытым",
+                  "isCorrect": false
+                },
+                {
+                  "text": "открыт",
+                  "isCorrect": false
+                },
+                {
+                  "text": "быть открытым",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-verb-I.2.2",
+              "number": "I.2.2",
+              "index": 2,
+              "question": "закончите предложение:",
+              "additionalText": "В ближайшее время Международный экономический форум в Кутаиси ----------.",
+              "answers": [
+                {
+                  "text": "было проведено",
+                  "isCorrect": false
+                },
+                {
+                  "text": "будет проводиться",
+                  "isCorrect": true
+                },
+                {
+                  "text": "проведенный",
+                  "isCorrect": false
+                },
+                {
+                  "text": "было проведено",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-verb-I.2.3",
+              "number": "I.2.3",
+              "index": 3,
+              "question": "закончите предложение:",
+              "additionalText": "Международный день музеев в прошлом году стал самым масштабным ----------.",
+              "answers": [
+                {
+                  "text": "было отмечено",
+                  "isCorrect": true
+                },
+                {
+                  "text": "отмечено",
+                  "isCorrect": false
+                },
+                {
+                  "text": "быть отмеченным",
+                  "isCorrect": false
+                },
+                {
+                  "text": "отметить",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-verb-I.2.4",
+              "number": "I.2.4",
+              "index": 4,
+              "question": "закончите предложение:",
+              "additionalText": "Только я ---------- завтра к группе туристов в аэропорту.",
+              "answers": [
+                {
+                  "text": "я встречу тебя",
+                  "isCorrect": true
+                },
+                {
+                  "text": "встретиться",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Я встретил",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Я встретил",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-verb-I.2.5",
+              "number": "I.2.5",
+              "index": 5,
+              "question": "закончите предложение:",
+              "additionalText": "Первый номер грузиноязычной газеты за рубежом в прошлом году ----------.",
+              "answers": [
+                {
+                  "text": "был напечатан",
+                  "isCorrect": true
+                },
+                {
+                  "text": "будет напечатано",
+                  "isCorrect": false
+                },
+                {
+                  "text": "печатается",
+                  "isCorrect": false
+                },
+                {
+                  "text": "быть напечатанным",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-verb-I.2.6",
+              "number": "I.2.6",
+              "index": 6,
+              "question": "закончите предложение:",
+              "additionalText": "Вчера с утра до вечера без съемок ----------.",
+              "answers": [
+                {
+                  "text": "шел снег",
+                  "isCorrect": true
+                },
+                {
+                  "text": "пусть идет снег",
+                  "isCorrect": false
+                },
+                {
+                  "text": "идти снег",
+                  "isCorrect": false
+                },
+                {
+                  "text": "идет снег",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-verb-I.2.7",
+              "number": "I.2.7",
+              "index": 7,
+              "question": "закончите предложение:",
+              "additionalText": "Вакансия на должность консультанта появилась на прошлой неделе ----------.",
+              "answers": [
+                {
+                  "text": "было объявлено",
+                  "isCorrect": true
+                },
+                {
+                  "text": "будет объявлено",
+                  "isCorrect": false
+                },
+                {
+                  "text": "становится ясным",
+                  "isCorrect": false
+                },
+                {
+                  "text": "чтобы быть ясным",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-verb-I.2.8",
+              "number": "I.2.8",
+              "index": 8,
+              "question": "закончите предложение:",
+              "additionalText": "Новые здания в этом районе в следующем году ----------.",
+              "answers": [
+                {
+                  "text": "был построен",
+                  "isCorrect": false
+                },
+                {
+                  "text": "будет построен",
+                  "isCorrect": true
+                },
+                {
+                  "text": "строился",
+                  "isCorrect": false
+                },
+                {
+                  "text": "быть построенным",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-verb-I.2.9",
+              "number": "I.2.9",
+              "index": 9,
+              "question": "закончите предложение:",
+              "additionalText": "В прошлом году мой кактус был именно в это время ----------.",
+              "answers": [
+                {
+                  "text": "процветал",
+                  "isCorrect": true
+                },
+                {
+                  "text": "будет процветать",
+                  "isCorrect": false
+                },
+                {
+                  "text": "процветает",
+                  "isCorrect": false
+                },
+                {
+                  "text": "процветать",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-verb-I.2.10",
+              "number": "I.2.10",
+              "index": 10,
+              "question": "закончите предложение:",
+              "additionalText": "Для этого экзамена с сентября следующего года ----------.",
+              "answers": [
+                {
+                  "text": "я приготовился",
+                  "isCorrect": false
+                },
+                {
+                  "text": "я буду готов",
+                  "isCorrect": true
+                },
+                {
+                  "text": "чтобы подготовиться",
+                  "isCorrect": false
+                },
+                {
+                  "text": "я готов",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-verb-I.2.11",
+              "number": "I.2.11",
+              "index": 11,
+              "question": "Какое слово пропущено в предложении?",
+              "additionalText": "---------- Я пришёл с работы относительно рано.",
+              "answers": [
+                {
+                  "text": "вчера",
+                  "isCorrect": true
+                },
+                {
+                  "text": "на следующий день",
+                  "isCorrect": false
+                },
+                {
+                  "text": "затем",
+                  "isCorrect": false
+                },
+                {
+                  "text": "завтра",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-verb-I.2.12",
+              "number": "I.2.12",
+              "index": 12,
+              "question": "Какое слово пропущено в предложении?",
+              "additionalText": "Члены нашей организации собрались в офисе ----------.",
+              "answers": [
+                {
+                  "text": "Недавно",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Гайсад",
+                  "isCorrect": false
+                },
+                {
+                  "text": "затем",
+                  "isCorrect": false
+                },
+                {
+                  "text": "завтра",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-verb-I.2.13",
+              "number": "I.2.13",
+              "index": 13,
+              "question": "Какое слово пропущено в предложении?",
+              "additionalText": "Встреча с членами делегации состоится ----------.",
+              "answers": [
+                {
+                  "text": "вчера",
+                  "isCorrect": false
+                },
+                {
+                  "text": "позавчера",
+                  "isCorrect": false
+                },
+                {
+                  "text": "сегодня",
+                  "isCorrect": true
+                },
+                {
+                  "text": "в прошлом году",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-verb-I.2.14",
+              "number": "I.2.14",
+              "index": 14,
+              "question": "Какое слово пропущено в предложении?",
+              "additionalText": "Новости о медицинском страховании ---------- Будем знать.",
+              "answers": [
+                {
+                  "text": "вчера",
+                  "isCorrect": false
+                },
+                {
+                  "text": "в прошлом году",
+                  "isCorrect": false
+                },
+                {
+                  "text": "до прошлого года",
+                  "isCorrect": false
+                },
+                {
+                  "text": "завтра",
+                  "isCorrect": true
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-verb-I.2.15",
+              "number": "I.2.15",
+              "index": 15,
+              "question": "Какое слово пропущено в предложении?",
+              "additionalText": "Я еще знал начальника нашего отдела ----------.",
+              "answers": [
+                {
+                  "text": "Гайсад",
+                  "isCorrect": false
+                },
+                {
+                  "text": "на следующий день",
+                  "isCorrect": false
+                },
+                {
+                  "text": "в прошлом году",
+                  "isCorrect": true
+                },
+                {
+                  "text": "завтра",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-verb-I.2.16",
+              "number": "I.2.16",
+              "index": 16,
+              "question": "Какое слово пропущено в предложении?",
+              "additionalText": "---------- Погода внезапно изменилась.",
+              "answers": [
+                {
+                  "text": "утром",
+                  "isCorrect": true
+                },
+                {
+                  "text": "на следующий день",
+                  "isCorrect": false
+                },
+                {
+                  "text": "затем",
+                  "isCorrect": false
+                },
+                {
+                  "text": "завтра",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-verb-I.2.17",
+              "number": "I.2.17",
+              "index": 17,
+              "question": "Какое слово пропущено в предложении?",
+              "additionalText": "---------- Мы находимся в аэропорту и ждем начала регистрации.",
+              "answers": [
+                {
+                  "text": "Сейчас",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Гайсад",
+                  "isCorrect": false
+                },
+                {
+                  "text": "вчера",
+                  "isCorrect": false
+                },
+                {
+                  "text": "в будущем",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-verb-I.2.18",
+              "number": "I.2.18",
+              "index": 18,
+              "question": "Какие слова пропущены в предложении?",
+              "additionalText": "---------- Наша делегация находилась с визитом в Брюсселе.",
+              "answers": [
+                {
+                  "text": "в прошлом году",
+                  "isCorrect": true
+                },
+                {
+                  "text": "в следующем месяце",
+                  "isCorrect": false
+                },
+                {
+                  "text": "на следующей неделе",
+                  "isCorrect": false
+                },
+                {
+                  "text": "завтра утром",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-verb-I.2.19",
+              "number": "I.2.19",
+              "index": 19,
+              "question": "Какое слово пропущено в предложении?",
+              "additionalText": "---------- Ночью вода замерзла.",
+              "answers": [
+                {
+                  "text": "Гайсад",
+                  "isCorrect": false
+                },
+                {
+                  "text": "вчера",
+                  "isCorrect": true
+                },
+                {
+                  "text": "в будущем",
+                  "isCorrect": false
+                },
+                {
+                  "text": "завтра",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-verb-I.2.20",
+              "number": "I.2.20",
+              "index": 20,
+              "question": "Какое слово пропущено в предложении?",
+              "additionalText": "---------- Наша давняя мечта сбылась.",
+              "answers": [
+                {
+                  "text": "Гайсад",
+                  "isCorrect": false
+                },
+                {
+                  "text": "затем",
+                  "isCorrect": false
+                },
+                {
+                  "text": "в будущем",
+                  "isCorrect": false
+                },
+                {
+                  "text": "в этом году",
+                  "isCorrect": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "grammar-question",
+          "index": 3,
+          "name": "вопросительные слова",
+          "questions": [
+            {
+              "id": "geo-grammar-question-I.3.1",
+              "number": "I.3.1",
+              "index": 1,
+              "question": "Какое слово пропущено в диалоге?",
+              "additionalText": "- Вы бывали в ---------- уголках Грузии?\n- Я был почти на каждом углу.",
+              "answers": [
+                {
+                  "text": "какой",
+                  "isCorrect": false
+                },
+                {
+                  "text": "когда",
+                  "isCorrect": false
+                },
+                {
+                  "text": "который из",
+                  "isCorrect": true
+                },
+                {
+                  "text": "седло",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-question-I.3.2",
+              "number": "I.3.2",
+              "index": 2,
+              "question": "Какое слово пропущено в диалоге?",
+              "additionalText": "- Вы приехали в Грузию в этом году в ---------- день?\n- У меня много дел, и я думаю, что останусь здесь минимум на десять дней.",
+              "answers": [
+                {
+                  "text": "что",
+                  "isCorrect": false
+                },
+                {
+                  "text": "сколько?",
+                  "isCorrect": true
+                },
+                {
+                  "text": "когда",
+                  "isCorrect": false
+                },
+                {
+                  "text": "откуда",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-question-I.3.3",
+              "number": "I.3.3",
+              "index": 3,
+              "question": "Какое слово пропущено в диалоге?",
+              "additionalText": "- ---------- Вы так хорошо выучили грузинский язык?\n- Когда я был студентом, у меня был друг-грузин, он меня учил.",
+              "answers": [
+                {
+                  "text": "сколько?",
+                  "isCorrect": false
+                },
+                {
+                  "text": "сколько раз",
+                  "isCorrect": false
+                },
+                {
+                  "text": "который из",
+                  "isCorrect": false
+                },
+                {
+                  "text": "когда",
+                  "isCorrect": true
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-question-I.3.4",
+              "number": "I.3.4",
+              "index": 4,
+              "question": "Какое слово пропущено в диалоге?",
+              "additionalText": "- Знаешь, завтра ---------- погода будет в Тбилиси?\n- Говорят, завтра будет пасмурно.",
+              "answers": [
+                {
+                  "text": "какой",
+                  "isCorrect": true
+                },
+                {
+                  "text": "когда",
+                  "isCorrect": false
+                },
+                {
+                  "text": "который из",
+                  "isCorrect": false
+                },
+                {
+                  "text": "седло",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-question-I.3.5",
+              "number": "I.3.5",
+              "index": 5,
+              "question": "Какое слово пропущено в диалоге?",
+              "additionalText": "- ---------- Вы начали работать?\n- В супермаркете на должности менеджера по продажам. Надеюсь, я смогу это осуществить.",
+              "answers": [
+                {
+                  "text": "почему",
+                  "isCorrect": false
+                },
+                {
+                  "text": "как",
+                  "isCorrect": false
+                },
+                {
+                  "text": "когда",
+                  "isCorrect": false
+                },
+                {
+                  "text": "где",
+                  "isCorrect": true
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-question-I.3.6",
+              "number": "I.3.6",
+              "index": 6,
+              "question": "Какое слово пропущено в диалоге?",
+              "additionalText": "- Майя, ты еще стоишь в очереди? ---------- ты?\n- Я двадцатый. Наверное, мне придется долго стоять.",
+              "answers": [
+                {
+                  "text": "Мерадан",
+                  "isCorrect": true
+                },
+                {
+                  "text": "что",
+                  "isCorrect": false
+                },
+                {
+                  "text": "какой",
+                  "isCorrect": false
+                },
+                {
+                  "text": "когда",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-question-I.3.7",
+              "number": "I.3.7",
+              "index": 7,
+              "question": "Какое слово пропущено в диалоге?",
+              "additionalText": "- Можете ли вы сказать нам, ---------- сможем ли мы сегодня приехать в гости?\n- Мы думаем посетить старые районы Тбилиси и парк Мтацминда.",
+              "answers": [
+                {
+                  "text": "Мерадан",
+                  "isCorrect": false
+                },
+                {
+                  "text": "что",
+                  "isCorrect": true
+                },
+                {
+                  "text": "за что",
+                  "isCorrect": false
+                },
+                {
+                  "text": "где",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-question-I.3.8",
+              "number": "I.3.8",
+              "index": 8,
+              "question": "Какое слово пропущено в диалоге?",
+              "additionalText": "– ---------- Будет ли в марте персональная выставка?\n- грузинский художник-самоучка Нико Фиросмани.",
+              "answers": [
+                {
+                  "text": "ВОЗ",
+                  "isCorrect": false
+                },
+                {
+                  "text": "чей",
+                  "isCorrect": true
+                },
+                {
+                  "text": "какой",
+                  "isCorrect": false
+                },
+                {
+                  "text": "когда",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-question-I.3.9",
+              "number": "I.3.9",
+              "index": 9,
+              "question": "Какое слово пропущено в диалоге?",
+              "additionalText": "– ------------ Это хлеб с печеньем?\n- Это было вчера, мы еще не получили новый.",
+              "answers": [
+                {
+                  "text": "чей",
+                  "isCorrect": false
+                },
+                {
+                  "text": "с каких это пор",
+                  "isCorrect": true
+                },
+                {
+                  "text": "который",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Садаурия",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-question-I.3.10",
+              "number": "I.3.10",
+              "index": 10,
+              "question": "Какое слово пропущено в диалоге?",
+              "additionalText": "- ---------- Хотите попробовать блюда?\n- Традиционные грузинские блюда, мои друзья их очень хвалят.",
+              "answers": [
+                {
+                  "text": "сколько?",
+                  "isCorrect": false
+                },
+                {
+                  "text": "почему",
+                  "isCorrect": false
+                },
+                {
+                  "text": "который из",
+                  "isCorrect": true
+                },
+                {
+                  "text": "когда",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-question-I.3.11",
+              "number": "I.3.11",
+              "index": 11,
+              "question": "Какое слово пропущено в диалоге?",
+              "additionalText": "– ---------- Готовишься к своему первому концерту?\n- С большой ответственностью. Все ждут нашего выступления.",
+              "answers": [
+                {
+                  "text": "почему",
+                  "isCorrect": false
+                },
+                {
+                  "text": "как",
+                  "isCorrect": true
+                },
+                {
+                  "text": "когда",
+                  "isCorrect": false
+                },
+                {
+                  "text": "который из",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-question-I.3.12",
+              "number": "I.3.12",
+              "index": 12,
+              "question": "Какое слово пропущено в диалоге?",
+              "additionalText": "---------- Он так рано позвонил?\n- Он был моим сотрудником, он меня о чем-то просил.",
+              "answers": [
+                {
+                  "text": "ВОЗ",
+                  "isCorrect": true
+                },
+                {
+                  "text": "что",
+                  "isCorrect": false
+                },
+                {
+                  "text": "когда",
+                  "isCorrect": false
+                },
+                {
+                  "text": "где",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-question-I.3.13",
+              "number": "I.3.13",
+              "index": 13,
+              "question": "Какое слово пропущено в диалоге?",
+              "additionalText": "- Ты навестишь меня снова? Я буду очень скучать по тебе.\n- Я постараюсь встретиться с тобой на следующей неделе и съездить куда-нибудь вместе.",
+              "answers": [
+                {
+                  "text": "почему",
+                  "isCorrect": false
+                },
+                {
+                  "text": "как",
+                  "isCorrect": false
+                },
+                {
+                  "text": "когда",
+                  "isCorrect": true
+                },
+                {
+                  "text": "где",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-question-I.3.14",
+              "number": "I.3.14",
+              "index": 14,
+              "question": "Какое слово пропущено в диалоге?",
+              "additionalText": "– ---------- Это красивый молодой человек?\n- Он мой старший сын. В этом году он заканчивает школу.",
+              "answers": [
+                {
+                  "text": "ВОЗ",
+                  "isCorrect": true
+                },
+                {
+                  "text": "за что",
+                  "isCorrect": false
+                },
+                {
+                  "text": "какой",
+                  "isCorrect": false
+                },
+                {
+                  "text": "где",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-question-I.3.15",
+              "number": "I.3.15",
+              "index": 15,
+              "question": "Какое слово пропущено в диалоге?",
+              "additionalText": "– ---------- Хочешь книгу? Я могу помочь вам найти его.\n- В этом году вышла «История Тбилиси».",
+              "answers": [
+                {
+                  "text": "сколько?",
+                  "isCorrect": false
+                },
+                {
+                  "text": "который из",
+                  "isCorrect": true
+                },
+                {
+                  "text": "когда",
+                  "isCorrect": false
+                },
+                {
+                  "text": "седло",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-question-I.3.16",
+              "number": "I.3.16",
+              "index": 16,
+              "question": "Какое слово пропущено в диалоге?",
+              "additionalText": "---------- Ты опоздал? Поезд уже ушел со станции.\n- Я неправильно прочитал время, указанное в билете, как я ошибся.",
+              "answers": [
+                {
+                  "text": "что",
+                  "isCorrect": false
+                },
+                {
+                  "text": "почему",
+                  "isCorrect": true
+                },
+                {
+                  "text": "когда",
+                  "isCorrect": false
+                },
+                {
+                  "text": "который из",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-question-I.3.17",
+              "number": "I.3.17",
+              "index": 17,
+              "question": "Какое слово пропущено в диалоге?",
+              "additionalText": "– ---------- Твои родители приходили?\n- Они сегодня утром приехали из Кобулети, там отдыхали.",
+              "answers": [
+                {
+                  "text": "от кого",
+                  "isCorrect": false
+                },
+                {
+                  "text": "от чего",
+                  "isCorrect": false
+                },
+                {
+                  "text": "с каких это пор",
+                  "isCorrect": false
+                },
+                {
+                  "text": "откуда",
+                  "isCorrect": true
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-question-I.3.18",
+              "number": "I.3.18",
+              "index": 18,
+              "question": "Какое слово пропущено в диалоге?",
+              "additionalText": "– ---------- Тебе нужен номер телефона моего брата?\n- У меня дела, я вас на минутку побеспокою, хочу кое-что спросить.",
+              "answers": [
+                {
+                  "text": "за что",
+                  "isCorrect": true
+                },
+                {
+                  "text": "как",
+                  "isCorrect": false
+                },
+                {
+                  "text": "когда",
+                  "isCorrect": false
+                },
+                {
+                  "text": "где",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-question-I.3.19",
+              "number": "I.3.19",
+              "index": 19,
+              "question": "Какое слово пропущено в диалоге?",
+              "additionalText": "- Так много ---------- Вам нравится этот фильм? Вы смотрите его второй раз.\n- Это историческая драма, и это мой любимый жанр.",
+              "answers": [
+                {
+                  "text": "почему",
+                  "isCorrect": true
+                },
+                {
+                  "text": "до тех пор, пока",
+                  "isCorrect": false
+                },
+                {
+                  "text": "когда",
+                  "isCorrect": false
+                },
+                {
+                  "text": "откуда",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-question-I.3.20",
+              "number": "I.3.20",
+              "index": 20,
+              "question": "Какое слово пропущено в диалоге?",
+              "additionalText": "---------- Нам обязательно быть в Доме юстиции к часу? мы опоздаем\n- Не нервничай. Собеседование начнется в час, мы не опоздаем.",
+              "answers": [
+                {
+                  "text": "почему",
+                  "isCorrect": false
+                },
+                {
+                  "text": "как",
+                  "isCorrect": false
+                },
+                {
+                  "text": "когда",
+                  "isCorrect": false
+                },
+                {
+                  "text": "который из",
+                  "isCorrect": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "grammar-conjunction",
+          "index": 4,
+          "name": "Соединения",
+          "questions": [
+            {
+              "id": "geo-grammar-conjunction-I.4.1",
+              "number": "I.4.1",
+              "index": 1,
+              "question": "Какое слово пропущено в предложении?",
+              "additionalText": "Если мы смешаем красный и синий цвета, то получим фиолетовый.",
+              "answers": [
+                {
+                  "text": "или",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Если",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Но",
+                  "isCorrect": false
+                },
+                {
+                  "text": "что",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-conjunction-I.4.2",
+              "number": "I.4.2",
+              "index": 2,
+              "question": "Какое слово пропущено в предложении?",
+              "additionalText": "Рыба – очень полезный продукт, ---------- она ​​богата витаминами.",
+              "answers": [
+                {
+                  "text": "Но",
+                  "isCorrect": false
+                },
+                {
+                  "text": "потому что",
+                  "isCorrect": true
+                },
+                {
+                  "text": "для того, чтобы",
+                  "isCorrect": false
+                },
+                {
+                  "text": "что",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-conjunction-I.4.3",
+              "number": "I.4.3",
+              "index": 3,
+              "question": "Какое слово пропущено в предложении?",
+              "additionalText": "Чтобы добиться успеха ----------, надо правильно оценить свои способности.",
+              "answers": [
+                {
+                  "text": "Если",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Но",
+                  "isCorrect": false
+                },
+                {
+                  "text": "когда",
+                  "isCorrect": false
+                },
+                {
+                  "text": "что",
+                  "isCorrect": true
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-conjunction-I.4.4",
+              "number": "I.4.4",
+              "index": 4,
+              "question": "Какое слово пропущено в предложении?",
+              "additionalText": "Погода с утра была солнечная, ---------- Вечером пошел сильный дождь.",
+              "answers": [
+                {
+                  "text": "Если",
+                  "isCorrect": false
+                },
+                {
+                  "text": "однако",
+                  "isCorrect": true
+                },
+                {
+                  "text": "потому что",
+                  "isCorrect": false
+                },
+                {
+                  "text": "что",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-conjunction-I.4.5",
+              "number": "I.4.5",
+              "index": 5,
+              "question": "Какое слово пропущено в предложении?",
+              "additionalText": "Пассажиры были расстроены, ---------- рейс самолета был задержан.",
+              "answers": [
+                {
+                  "text": "Если",
+                  "isCorrect": false
+                },
+                {
+                  "text": "однако",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Но",
+                  "isCorrect": false
+                },
+                {
+                  "text": "потому что",
+                  "isCorrect": true
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-conjunction-I.4.6",
+              "number": "I.4.6",
+              "index": 6,
+              "question": "Какое слово пропущено в предложении?",
+              "additionalText": "Выходите из дома вовремя, ---------- опоздаете на встречу.",
+              "answers": [
+                {
+                  "text": "в противном случае",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Если",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Но",
+                  "isCorrect": false
+                },
+                {
+                  "text": "что",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-conjunction-I.4.7",
+              "number": "I.4.7",
+              "index": 7,
+              "question": "Какое слово пропущено в предложении?",
+              "additionalText": "Они выполнили все условия, ---------- желаемого результата они еще не получили.",
+              "answers": [
+                {
+                  "text": "в противном случае",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Если",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Но",
+                  "isCorrect": true
+                },
+                {
+                  "text": "что",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-conjunction-I.4.8",
+              "number": "I.4.8",
+              "index": 8,
+              "question": "Какое слово пропущено в предложении?",
+              "additionalText": "Познакомьтесь с гидом заранее, ---------- лучше спланируйте экскурсию.",
+              "answers": [
+                {
+                  "text": "в противном случае",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Если",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Но",
+                  "isCorrect": false
+                },
+                {
+                  "text": "что",
+                  "isCorrect": true
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-conjunction-I.4.9",
+              "number": "I.4.9",
+              "index": 9,
+              "question": "Какое слово пропущено в предложении?",
+              "additionalText": "Давай договоримся, я принесу продукты, ты --------- приготовь ужин.",
+              "answers": [
+                {
+                  "text": "в противном случае",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Да",
+                  "isCorrect": true
+                },
+                {
+                  "text": "что",
+                  "isCorrect": false
+                },
+                {
+                  "text": "когда",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-conjunction-I.4.10",
+              "number": "I.4.10",
+              "index": 10,
+              "question": "Какое слово пропущено в предложении?",
+              "additionalText": "Если у вас высокая температура, позвоните своему врачу.",
+              "answers": [
+                {
+                  "text": "в противном случае",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Если",
+                  "isCorrect": true
+                },
+                {
+                  "text": "однако",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Но",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-conjunction-I.4.11",
+              "number": "I.4.11",
+              "index": 11,
+              "question": "Какие слова пропущены в предложении?",
+              "additionalText": "---------- Разделите свое время, ---------- У вас остался один час на отдых.",
+              "answers": [
+                {
+                  "text": "так/как",
+                  "isCorrect": false
+                },
+                {
+                  "text": "так что",
+                  "isCorrect": true
+                },
+                {
+                  "text": "там/где",
+                  "isCorrect": false
+                },
+                {
+                  "text": "тогда/когда",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-conjunction-I.4.12",
+              "number": "I.4.12",
+              "index": 12,
+              "question": "Какие слова пропущены в предложении?",
+              "additionalText": "Я согласен с мнением, что человек должен получить ----------, ---------- есть.",
+              "answers": [
+                {
+                  "text": "потому что / что",
+                  "isCorrect": false
+                },
+                {
+                  "text": "для того, чтобы",
+                  "isCorrect": false
+                },
+                {
+                  "text": "он/кто",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Такой как",
+                  "isCorrect": true
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-conjunction-I.4.13",
+              "number": "I.4.13",
+              "index": 13,
+              "question": "Какие слова пропущены в предложении?",
+              "additionalText": "---------- Вы сможете правильно заполнить анкету, ---------- внимательно читайте вопросы.",
+              "answers": [
+                {
+                  "text": "для того, чтобы",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Такой как",
+                  "isCorrect": false
+                },
+                {
+                  "text": "это / это",
+                  "isCorrect": false
+                },
+                {
+                  "text": "тогда / если",
+                  "isCorrect": true
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-conjunction-I.4.14",
+              "number": "I.4.14",
+              "index": 14,
+              "question": "Какие слова пропущены в предложении?",
+              "additionalText": "Возьмите ---------- рисунок, ---------- который вам больше всего нравится.",
+              "answers": [
+                {
+                  "text": "Если/то",
+                  "isCorrect": false
+                },
+                {
+                  "text": "так/как",
+                  "isCorrect": false
+                },
+                {
+                  "text": "то / которое",
+                  "isCorrect": true
+                },
+                {
+                  "text": "там/где",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-conjunction-I.4.15",
+              "number": "I.4.15",
+              "index": 15,
+              "question": "Какие слова пропущены в предложении?",
+              "additionalText": "---------- Будет дождь, ---------- поехали обратно.",
+              "answers": [
+                {
+                  "text": "Если/то",
+                  "isCorrect": true
+                },
+                {
+                  "text": "так/как",
+                  "isCorrect": false
+                },
+                {
+                  "text": "тогда/когда",
+                  "isCorrect": false
+                },
+                {
+                  "text": "это / это",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-conjunction-I.4.16",
+              "number": "I.4.16",
+              "index": 16,
+              "question": "Какие слова пропущены в предложении?",
+              "additionalText": "Куплю машину ----------, получу водительские права ----------.",
+              "answers": [
+                {
+                  "text": "так/как",
+                  "isCorrect": false
+                },
+                {
+                  "text": "так что",
+                  "isCorrect": false
+                },
+                {
+                  "text": "это / это",
+                  "isCorrect": false
+                },
+                {
+                  "text": "тогда/когда",
+                  "isCorrect": true
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-conjunction-I.4.17",
+              "number": "I.4.17",
+              "index": 17,
+              "question": "Какие слова пропущены в предложении?",
+              "additionalText": "Если хочешь, ---------- я тебя отвезу ---------- Я купила эти сувениры.",
+              "answers": [
+                {
+                  "text": "так/как",
+                  "isCorrect": false
+                },
+                {
+                  "text": "так что",
+                  "isCorrect": false
+                },
+                {
+                  "text": "там/где",
+                  "isCorrect": true
+                },
+                {
+                  "text": "тогда/когда",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-conjunction-I.4.18",
+              "number": "I.4.18",
+              "index": 18,
+              "question": "Какие слова пропущены в предложении?",
+              "additionalText": "Этот знак ---------- вывешен, ---------- на всеобщее обозрение.",
+              "answers": [
+                {
+                  "text": "потому что / что",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Такой как",
+                  "isCorrect": false
+                },
+                {
+                  "text": "там/где",
+                  "isCorrect": false
+                },
+                {
+                  "text": "тогда/когда",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-conjunction-I.4.19",
+              "number": "I.4.19",
+              "index": 19,
+              "question": "Какие слова пропущены в предложении?",
+              "additionalText": "Не забывайте ---------- вести себя, ---------- Я вам советовал.",
+              "answers": [
+                {
+                  "text": "так/как",
+                  "isCorrect": true
+                },
+                {
+                  "text": "так что",
+                  "isCorrect": false
+                },
+                {
+                  "text": "там/где",
+                  "isCorrect": false
+                },
+                {
+                  "text": "тогда/когда",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-grammar-conjunction-I.4.20",
+              "number": "I.4.20",
+              "index": 20,
+              "question": "Какие слова пропущены в предложении?",
+              "additionalText": "Я ---------- продолжу тренировки, ---------- Я не достигну цели.",
+              "answers": [
+                {
+                  "text": "столько же / столько, сколько",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Такой как",
+                  "isCorrect": false
+                },
+                {
+                  "text": "то / которое",
+                  "isCorrect": false
+                },
+                {
+                  "text": "до/пока",
+                  "isCorrect": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "lex-relations",
+          "index": 5,
+          "name": "Словесные отношения",
+          "questions": [
+            {
+              "id": "geo-lex-relations-II.1.1",
+              "number": "II.1.1",
+              "index": 1,
+              "question": "Какое соотношение неверно?",
+              "additionalText": "",
+              "answers": [
+                {
+                  "text": "Время дня – после полудня",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Зимний месяц – январь",
+                  "isCorrect": false
+                },
+                {
+                  "text": "День недели – среда",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Время года – май.",
+                  "isCorrect": true
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-relations-II.1.2",
+              "number": "II.1.2",
+              "index": 2,
+              "question": "Какое соотношение неверно?",
+              "additionalText": "",
+              "answers": [
+                {
+                  "text": "Внешний вид - красивый",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Национальность – Германия",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Профессия - юрист",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Страна – Польша",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-relations-II.1.3",
+              "number": "II.1.3",
+              "index": 3,
+              "question": "Какое соотношение неверно?",
+              "additionalText": "",
+              "answers": [
+                {
+                  "text": "Продукт – сахар",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Регион – Имеретия",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Цвет - синий",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Страна – итальянский",
+                  "isCorrect": true
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-relations-II.1.4",
+              "number": "II.1.4",
+              "index": 4,
+              "question": "Какое соотношение неверно?",
+              "additionalText": "",
+              "answers": [
+                {
+                  "text": "Образование - среднее",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Национальность – испанец",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Деятельность - профессиональная",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Пол - женский",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-relations-II.1.5",
+              "number": "II.1.5",
+              "index": 5,
+              "question": "Какое соотношение неверно?",
+              "additionalText": "",
+              "answers": [
+                {
+                  "text": "Погода - дождливая",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Национальность - из Тбилиси.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Сторона - Восток",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Деятельность - студент",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-relations-II.1.6",
+              "number": "II.1.6",
+              "index": 6,
+              "question": "Какое соотношение неверно?",
+              "additionalText": "",
+              "answers": [
+                {
+                  "text": "Праздник - концерт",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Часть дня – вечер",
+                  "isCorrect": false
+                },
+                {
+                  "text": "День недели – пятница",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Часть горы - вершина",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-relations-II.1.7",
+              "number": "II.1.7",
+              "index": 7,
+              "question": "Какое соотношение неверно?",
+              "additionalText": "",
+              "answers": [
+                {
+                  "text": "Национальность - грузин",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Профессия - студент",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Документ - паспорт",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Искусство - живопись",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-relations-II.1.8",
+              "number": "II.1.8",
+              "index": 8,
+              "question": "Какое соотношение неверно?",
+              "additionalText": "",
+              "answers": [
+                {
+                  "text": "Мебель - диван",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Продукт - сливочное масло",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Регион – Кахетия",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Спортсмен - борьба",
+                  "isCorrect": true
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-relations-II.1.9",
+              "number": "II.1.9",
+              "index": 9,
+              "question": "Какое соотношение неверно?",
+              "additionalText": "",
+              "answers": [
+                {
+                  "text": "Внешний вид – жирный",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Национальность – украинец",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Характеристика – вид",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Родственник – двоюродный брат",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-relations-II.1.10",
+              "number": "II.1.10",
+              "index": 10,
+              "question": "Какое соотношение неверно?",
+              "additionalText": "",
+              "answers": [
+                {
+                  "text": "Погода пасмурная",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Размер - тяжелый",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Сторона - юг",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Деятельность - студент",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-relations-II.1.11",
+              "number": "II.1.11",
+              "index": 11,
+              "question": "Какое соотношение неверно?",
+              "additionalText": "",
+              "answers": [
+                {
+                  "text": "Часть реки – исток",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Молочные продукты - сыр",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Форма объекта легкая.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Строительный материал - кирпич.",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-relations-II.1.12",
+              "number": "II.1.12",
+              "index": 12,
+              "question": "Какое соотношение неверно?",
+              "additionalText": "",
+              "answers": [
+                {
+                  "text": "Документ - рекламное заявление",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Спектакль - театральная труппа",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Мероприятие представляет собой благотворительный концерт.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Мастер-портной одежды",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-relations-II.1.13",
+              "number": "II.1.13",
+              "index": 13,
+              "question": "Какое соотношение неверно?",
+              "additionalText": "",
+              "answers": [
+                {
+                  "text": "Возраст - старый",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Вкус - влажный",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Продукт - масло",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Цвет - желтый",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-relations-II.1.14",
+              "number": "II.1.14",
+              "index": 14,
+              "question": "Какое соотношение неверно?",
+              "additionalText": "",
+              "answers": [
+                {
+                  "text": "Образование - талантливый",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Внешность - светловолосая.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Спортсмен - футболист",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Хобби – музыка",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-relations-II.1.15",
+              "number": "II.1.15",
+              "index": 15,
+              "question": "Какое соотношение неверно?",
+              "additionalText": "",
+              "answers": [
+                {
+                  "text": "Период времени – секунда",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Время суток - утро",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Зимний месяц – март.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "День недели – понедельник",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-relations-II.1.16",
+              "number": "II.1.16",
+              "index": 16,
+              "question": "Какое соотношение неверно?",
+              "additionalText": "",
+              "answers": [
+                {
+                  "text": "Родитель - мать",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Документ - реклама",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Пол – мужской",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Блюдо - стекло",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-relations-II.1.17",
+              "number": "II.1.17",
+              "index": 17,
+              "question": "Какое соотношение неверно?",
+              "additionalText": "",
+              "answers": [
+                {
+                  "text": "Член семьи – знакомый",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Рабочее оружие – молоток.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Бытовая техника - холодильник",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Часть улицы – тротуар",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-relations-II.1.18",
+              "number": "II.1.18",
+              "index": 18,
+              "question": "Какое соотношение неверно?",
+              "additionalText": "",
+              "answers": [
+                {
+                  "text": "Средство связи - самолет",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Железнодорожный транспорт - поезд",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Периферия города - пригород",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Часть здания - крыша",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-relations-II.1.19",
+              "number": "II.1.19",
+              "index": 19,
+              "question": "Какое соотношение неверно?",
+              "additionalText": "",
+              "answers": [
+                {
+                  "text": "Форма предмета круглая.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Вес объекта большой",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Социальная сеть - Facebook",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Часть здания - двор.",
+                  "isCorrect": true
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-relations-II.1.20",
+              "number": "II.1.20",
+              "index": 20,
+              "question": "Какое соотношение неверно?",
+              "additionalText": "",
+              "answers": [
+                {
+                  "text": "Место отдыха - парк",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Часть реки - ширина",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Вид спорта - верховая езда",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Часть тела – голова.",
+                  "isCorrect": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "lex-phrases",
+          "index": 6,
+          "name": "Фразы",
+          "questions": [
+            {
+              "id": "geo-lex-phrases-II.2.1",
+              "number": "II.2.1",
+              "index": 1,
+              "question": "Что мы говорим при встрече со знакомым?",
+              "additionalText": "",
+              "answers": [
+                {
+                  "text": "Привет",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Спасибо",
+                  "isCorrect": false
+                },
+                {
+                  "text": "до свидания",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Мне жаль",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-phrases-II.2.2",
+              "number": "II.2.2",
+              "index": 2,
+              "question": "Что мы говорим, выражая радость?",
+              "additionalText": "",
+              "answers": [
+                {
+                  "text": "Будь здоров",
+                  "isCorrect": false
+                },
+                {
+                  "text": "какое счастье",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Конечно",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Другого пути нет",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-phrases-II.2.3",
+              "number": "II.2.3",
+              "index": 3,
+              "question": "Что мы говорим, приветствуя человека?",
+              "additionalText": "",
+              "answers": [
+                {
+                  "text": "Желаю хорошей поездки",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Как вы",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Вы можете помочь мне",
+                  "isCorrect": false
+                },
+                {
+                  "text": "сон будет",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-phrases-II.2.4",
+              "number": "II.2.4",
+              "index": 4,
+              "question": "Что мы говорим, когда получаем разрешение?",
+              "additionalText": "",
+              "answers": [
+                {
+                  "text": "Большое спасибо",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Мне жаль",
+                  "isCorrect": false
+                },
+                {
+                  "text": "если возможно",
+                  "isCorrect": true
+                },
+                {
+                  "text": "до свидания",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-phrases-II.2.5",
+              "number": "II.2.5",
+              "index": 5,
+              "question": "Что мы говорим, когда сомневаемся?",
+              "additionalText": "",
+              "answers": [
+                {
+                  "text": "Это невероятно",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Простите меня",
+                  "isCorrect": false
+                },
+                {
+                  "text": "К сожалению",
+                  "isCorrect": false
+                },
+                {
+                  "text": "перед встречей",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-phrases-II.2.6",
+              "number": "II.2.6",
+              "index": 6,
+              "question": "Что мы говорим, когда соглашаемся с кем-то?",
+              "additionalText": "",
+              "answers": [
+                {
+                  "text": "Мне жаль",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Ты прав",
+                  "isCorrect": true
+                },
+                {
+                  "text": "как удивительно",
+                  "isCorrect": false
+                },
+                {
+                  "text": "желаю тебе удачи",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-phrases-II.2.7",
+              "number": "II.2.7",
+              "index": 7,
+              "question": "Что мы говорим, когда хотим кого-то похвалить?",
+              "additionalText": "",
+              "answers": [
+                {
+                  "text": "извини",
+                  "isCorrect": false
+                },
+                {
+                  "text": "будь осторожен",
+                  "isCorrect": false
+                },
+                {
+                  "text": "осторожно",
+                  "isCorrect": false
+                },
+                {
+                  "text": "каждый раз",
+                  "isCorrect": true
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-phrases-II.2.8",
+              "number": "II.2.8",
+              "index": 8,
+              "question": "Какое слово пропущено?",
+              "additionalText": "- Мадам, не могли бы вы сказать мне, где здесь остановка?\n- ----------, ничем не могу помочь, я здесь первый раз.",
+              "answers": [
+                {
+                  "text": "Спасибо",
+                  "isCorrect": false
+                },
+                {
+                  "text": "К сожалению",
+                  "isCorrect": true
+                },
+                {
+                  "text": "с удовольствием",
+                  "isCorrect": false
+                },
+                {
+                  "text": "будь осторожен",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-phrases-II.2.9",
+              "number": "II.2.9",
+              "index": 9,
+              "question": "Какая фраза пропущена?",
+              "additionalText": "- Я уеду через неделю, но у меня истек срок действия паспорта.\n----------, в Доме Юстиции тебе через три дня дадут новый паспорт.",
+              "answers": [
+                {
+                  "text": "Все нормально",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Мне очень жаль",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Я благодарен",
+                  "isCorrect": false
+                },
+                {
+                  "text": "какое удовольствие",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-phrases-II.2.10",
+              "number": "II.2.10",
+              "index": 10,
+              "question": "Какая фраза пропущена?",
+              "additionalText": "- Здесь запрещено фотографировать.\n- ----------, с удовольствием сфотографирую, там потрясающие экспонаты.",
+              "answers": [
+                {
+                  "text": "я не знал",
+                  "isCorrect": true
+                },
+                {
+                  "text": "разрешите",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Как дела?",
+                  "isCorrect": false
+                },
+                {
+                  "text": "очень хороший",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-phrases-II.2.11",
+              "number": "II.2.11",
+              "index": 11,
+              "question": "Какое слово пропущено?",
+              "additionalText": "- Если можно, взвесьте мне два килограмма огурцов.\n- ----------, оплатите сумму в кассе.",
+              "answers": [
+                {
+                  "text": "извини",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Спасибо",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Отпусти ситуацию",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Мне жаль",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-phrases-II.2.12",
+              "number": "II.2.12",
+              "index": 12,
+              "question": "Какая фраза пропущена?",
+              "additionalText": "- Вам следует дать «Скиннера с тигров» с иллюстрациями Русудана Фетвиашвили.\n----------, это очень ценный подарок.",
+              "answers": [
+                {
+                  "text": "Большое спасибо",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Конечно",
+                  "isCorrect": false
+                },
+                {
+                  "text": "как нет",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Это вполне возможно",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-phrases-II.2.13",
+              "number": "II.2.13",
+              "index": 13,
+              "question": "Какая фраза пропущена?",
+              "additionalText": "- Пойдем, если хочешь, поужинаем в ресторане.\n- ----------, я ничего не ел с утра.",
+              "answers": [
+                {
+                  "text": "Наверное невозможно",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Наслаждайся этим",
+                  "isCorrect": false
+                },
+                {
+                  "text": "с большим удовольствием",
+                  "isCorrect": true
+                },
+                {
+                  "text": "у меня есть работа",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-phrases-II.2.14",
+              "number": "II.2.14",
+              "index": 14,
+              "question": "В каком предложении содержится совет?",
+              "additionalText": "",
+              "answers": [
+                {
+                  "text": "Ничего, мы поможем вам найти другой отель",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Я сомневаюсь, что ты сможешь сделать это самостоятельно",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Было бы хорошо, если бы вы держались подальше от пляжа во время шторма.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Конечно, здесь никто не упустит ваше внимание.",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-phrases-II.2.15",
+              "number": "II.2.15",
+              "index": 15,
+              "question": "Какую фразу мы используем при свидании?",
+              "additionalText": "",
+              "answers": [
+                {
+                  "text": "Доброе утро, какая сегодня прекрасная погода",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Хорошо, что вы вовремя обратились ко мне",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Подожди меня немного, я сам ему позвоню.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Очень приятно, я много о тебе слышала",
+                  "isCorrect": true
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-phrases-II.2.16",
+              "number": "II.2.16",
+              "index": 16,
+              "question": "Какую фразу мы используем, прощаясь?",
+              "additionalText": "",
+              "answers": [
+                {
+                  "text": "Извините, если сможете, дайте мне знать!",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Пожалуйста, дайте мне ваш сертификат!",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Спасибо большое, вы меня очень порадовали!",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Будьте здоровы до следующей встречи!",
+                  "isCorrect": true
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-phrases-II.2.17",
+              "number": "II.2.17",
+              "index": 17,
+              "question": "Какую фразу мы используем, когда хотим извиниться?",
+              "additionalText": "",
+              "answers": [
+                {
+                  "text": "Пожалуйста, помогите мне поднять сумку",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Спасибо, что вы с нами",
+                  "isCorrect": false
+                },
+                {
+                  "text": "извини, я сегодня так поздно",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Если ты не против, дай мне лекарство.",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-phrases-II.2.18",
+              "number": "II.2.18",
+              "index": 18,
+              "question": "Какую фразу мы используем, обращаясь с просьбой?",
+              "additionalText": "",
+              "answers": [
+                {
+                  "text": "Обратите внимание, что место необходимо бронировать заранее.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Если возможно, пожалуйста, просмотрите мои документы сейчас.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Я так рада, что ты будешь с нами на Новый год",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Мне очень жаль, что ваша виза была задержана.",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-phrases-II.2.19",
+              "number": "II.2.19",
+              "index": 19,
+              "question": "Какую фразу мы используем, когда хотим кого-то успокоить?",
+              "additionalText": "",
+              "answers": [
+                {
+                  "text": "Извините, что заставил вас ждать так долго",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Решать вам, я бы порекомендовал его купить.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Не волнуйтесь, эта проблема скоро будет решена",
+                  "isCorrect": true
+                },
+                {
+                  "text": "К сожалению, встреча сегодня не состоится.",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-phrases-II.2.20",
+              "number": "II.2.20",
+              "index": 20,
+              "question": "Какую фразу мы используем, когда нам что-то нравится?",
+              "additionalText": "",
+              "answers": [
+                {
+                  "text": "Конечно, мы обязательно к вам приедем",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Как жаль, что время прошло так быстро",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Извините, если можно, возьмите номер строки",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Отлично, я очень доволен вашим результатом",
+                  "isCorrect": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "lex-collocation",
+          "index": 7,
+          "name": "Совместимость слов",
+          "questions": [
+            {
+              "id": "geo-lex-collocation-II.3.1",
+              "number": "II.3.1",
+              "index": 1,
+              "question": "Закончите предложение.",
+              "additionalText": "Я вами доволен, хороший выбор ----------.",
+              "answers": [
+                {
+                  "text": "ты сделал",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Вы хорошо провели время",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Тебе решать",
+                  "isCorrect": false
+                },
+                {
+                  "text": "понял тебя",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-collocation-II.3.2",
+              "number": "II.3.2",
+              "index": 2,
+              "question": "Закончите предложение.",
+              "additionalText": "Они перекрыли ту часть улицы, где произошла эта история ----------.",
+              "answers": [
+                {
+                  "text": "оказалось",
+                  "isCorrect": false
+                },
+                {
+                  "text": "встал",
+                  "isCorrect": false
+                },
+                {
+                  "text": "случилось",
+                  "isCorrect": true
+                },
+                {
+                  "text": "был создан",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-collocation-II.3.3",
+              "number": "II.3.3",
+              "index": 3,
+              "question": "Закончите предложение.",
+              "additionalText": "Мнение иностранного гостя о грузинской кухне ----------.",
+              "answers": [
+                {
+                  "text": "решенный",
+                  "isCorrect": false
+                },
+                {
+                  "text": "выразил",
+                  "isCorrect": true
+                },
+                {
+                  "text": "запланировано",
+                  "isCorrect": false
+                },
+                {
+                  "text": "готовый",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-collocation-II.3.4",
+              "number": "II.3.4",
+              "index": 4,
+              "question": "Закончите предложение.",
+              "additionalText": "Сумма, необходимая из бюджета на строительство Ратушного моста ----------.",
+              "answers": [
+                {
+                  "text": "делал",
+                  "isCorrect": false
+                },
+                {
+                  "text": "отложить",
+                  "isCorrect": true
+                },
+                {
+                  "text": "создавать",
+                  "isCorrect": false
+                },
+                {
+                  "text": "сформированный",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-collocation-II.3.5",
+              "number": "II.3.5",
+              "index": 5,
+              "question": "Закончите предложение.",
+              "additionalText": "Офисный работник хорошо справился со своими обязанностями ----------.",
+              "answers": [
+                {
+                  "text": "делал",
+                  "isCorrect": false
+                },
+                {
+                  "text": "готовый",
+                  "isCorrect": false
+                },
+                {
+                  "text": "получил",
+                  "isCorrect": false
+                },
+                {
+                  "text": "выполнено",
+                  "isCorrect": true
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-collocation-II.3.6",
+              "number": "II.3.6",
+              "index": 6,
+              "question": "Закончите предложение.",
+              "additionalText": "Молодой человек обратил внимание на пассажира ----------.",
+              "answers": [
+                {
+                  "text": "вспомнил",
+                  "isCorrect": false
+                },
+                {
+                  "text": "показал",
+                  "isCorrect": true
+                },
+                {
+                  "text": "готовый",
+                  "isCorrect": false
+                },
+                {
+                  "text": "он думал",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-collocation-II.3.7",
+              "number": "II.3.7",
+              "index": 7,
+              "question": "Закончите предложение.",
+              "additionalText": "Дежурный врач вовремя оказал помощь пациенту ----------.",
+              "answers": [
+                {
+                  "text": "узнал",
+                  "isCorrect": true
+                },
+                {
+                  "text": "показал",
+                  "isCorrect": false
+                },
+                {
+                  "text": "делал",
+                  "isCorrect": false
+                },
+                {
+                  "text": "взял его",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-collocation-II.3.8",
+              "number": "II.3.8",
+              "index": 8,
+              "question": "Закончите предложение.",
+              "additionalText": "После лекции студент задал вопрос ----------.",
+              "answers": [
+                {
+                  "text": "выразил",
+                  "isCorrect": false
+                },
+                {
+                  "text": "положить",
+                  "isCorrect": true
+                },
+                {
+                  "text": "сказал",
+                  "isCorrect": false
+                },
+                {
+                  "text": "решил это",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-collocation-II.3.9",
+              "number": "II.3.9",
+              "index": 9,
+              "question": "Закончите предложение.",
+              "additionalText": "Члены семьи принимают важное решение вместе ----------.",
+              "answers": [
+                {
+                  "text": "они сделали",
+                  "isCorrect": false
+                },
+                {
+                  "text": "держал",
+                  "isCorrect": false
+                },
+                {
+                  "text": "полученный",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Они решили это",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-collocation-II.3.10",
+              "number": "II.3.10",
+              "index": 10,
+              "question": "Какое слово пропущено в предложении?",
+              "additionalText": "В завершение дня участники конференции обсудили ----------.",
+              "answers": [
+                {
+                  "text": "Они решили это",
+                  "isCorrect": false
+                },
+                {
+                  "text": "держал",
+                  "isCorrect": true
+                },
+                {
+                  "text": "были созданы",
+                  "isCorrect": false
+                },
+                {
+                  "text": "созданный",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-collocation-II.3.11",
+              "number": "II.3.11",
+              "index": 11,
+              "question": "Закончите предложение.",
+              "additionalText": "Только после встречи сотрудники смогли сделать вывод ----------.",
+              "answers": [
+                {
+                  "text": "решение",
+                  "isCorrect": false
+                },
+                {
+                  "text": "выиграть",
+                  "isCorrect": true
+                },
+                {
+                  "text": "решать",
+                  "isCorrect": false
+                },
+                {
+                  "text": "находить",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-collocation-II.3.12",
+              "number": "II.3.12",
+              "index": 12,
+              "question": "Закончите предложение.",
+              "additionalText": "В Грузии каждый может получить хорошее образование ----------.",
+              "answers": [
+                {
+                  "text": "делиться",
+                  "isCorrect": false
+                },
+                {
+                  "text": "чтобы получить",
+                  "isCorrect": false
+                },
+                {
+                  "text": "прием",
+                  "isCorrect": true
+                },
+                {
+                  "text": "достижение",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-collocation-II.3.13",
+              "number": "II.3.13",
+              "index": 13,
+              "question": "Закончите предложение.",
+              "additionalText": "Рад, что наши советы полностью ----------.",
+              "answers": [
+                {
+                  "text": "признай это",
+                  "isCorrect": false
+                },
+                {
+                  "text": "принять во внимание",
+                  "isCorrect": true
+                },
+                {
+                  "text": "указать",
+                  "isCorrect": false
+                },
+                {
+                  "text": "решить это",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-collocation-II.3.14",
+              "number": "II.3.14",
+              "index": 14,
+              "question": "Закончите предложение.",
+              "additionalText": "Нелегко доверять ребенку в переходном возрасте ----------.",
+              "answers": [
+                {
+                  "text": "понимание",
+                  "isCorrect": false
+                },
+                {
+                  "text": "рендеринг",
+                  "isCorrect": false
+                },
+                {
+                  "text": "прием",
+                  "isCorrect": false
+                },
+                {
+                  "text": "чтобы получить",
+                  "isCorrect": true
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-collocation-II.3.15",
+              "number": "II.3.15",
+              "index": 15,
+              "question": "Закончите предложение.",
+              "additionalText": "Я собираюсь ----------- решить эту проблему в кратчайшие сроки.",
+              "answers": [
+                {
+                  "text": "планирование",
+                  "isCorrect": false
+                },
+                {
+                  "text": "решать",
+                  "isCorrect": true
+                },
+                {
+                  "text": "прекращение",
+                  "isCorrect": false
+                },
+                {
+                  "text": "нарушить",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-collocation-II.3.16",
+              "number": "II.3.16",
+              "index": 16,
+              "question": "Закончите предложение.",
+              "additionalText": "Все наши запросы вовремя ----------.",
+              "answers": [
+                {
+                  "text": "удовлетворен",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Они закончили",
+                  "isCorrect": false
+                },
+                {
+                  "text": "им удалось",
+                  "isCorrect": false
+                },
+                {
+                  "text": "проведенный",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-collocation-II.3.17",
+              "number": "II.3.17",
+              "index": 17,
+              "question": "Закончите предложение.",
+              "additionalText": "Если надо, действительно могу дать дельный совет ----------.",
+              "answers": [
+                {
+                  "text": "выражение",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Подтверждение",
+                  "isCorrect": false
+                },
+                {
+                  "text": "предоставление",
+                  "isCorrect": true
+                },
+                {
+                  "text": "решать",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-collocation-II.3.18",
+              "number": "II.3.18",
+              "index": 18,
+              "question": "Закончите предложение.",
+              "additionalText": "Лучше подумать над решением вместе ----------.",
+              "answers": [
+                {
+                  "text": "вот-вот произойдет",
+                  "isCorrect": false
+                },
+                {
+                  "text": "найти",
+                  "isCorrect": true
+                },
+                {
+                  "text": "при покупке",
+                  "isCorrect": false
+                },
+                {
+                  "text": "по формированию",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-collocation-II.3.19",
+              "number": "II.3.19",
+              "index": 19,
+              "question": "Закончите предложение.",
+              "additionalText": "Молодые люди любят проводить свободное время вместе ----------.",
+              "answers": [
+                {
+                  "text": "продолжать",
+                  "isCorrect": false
+                },
+                {
+                  "text": "тратить",
+                  "isCorrect": true
+                },
+                {
+                  "text": "решать",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Подготовка",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-lex-collocation-II.3.20",
+              "number": "II.3.20",
+              "index": 20,
+              "question": "Закончите предложение.",
+              "additionalText": "Все люди должны иметь возможность поблагодарить ----------.",
+              "answers": [
+                {
+                  "text": "открытие",
+                  "isCorrect": false
+                },
+                {
+                  "text": "выражение",
+                  "isCorrect": true
+                },
+                {
+                  "text": "дать",
+                  "isCorrect": false
+                },
+                {
+                  "text": "решать",
+                  "isCorrect": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "reading-announcement",
+          "index": 8,
+          "name": "заявление",
+          "questions": [
+            {
+              "id": "geo-reading-announcement-III.1.1",
+              "number": "III.1.1",
+              "index": 1,
+              "question": "Что означает это заявление?",
+              "additionalText": "Срок годности продукта - 3 года.",
+              "answers": [
+                {
+                  "text": "Продукт необходимо использовать через 3 года.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Срок годности продукта 3 года.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Продукт можно использовать в течение 3 лет.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Продукт можно использовать даже через 3 года.",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-announcement-III.1.2",
+              "number": "III.1.2",
+              "index": 2,
+              "question": "Что означает это заявление?",
+              "additionalText": "Прежде чем принимать лекарство, прочтите инструкцию!",
+              "answers": [
+                {
+                  "text": "Желательно знать правильную инструкцию по приему лекарства.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Все лекарства имеют особые инструкции по их приему.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "При необходимости прочтите инструкцию по приему лекарства.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Принимать лекарство необходимо согласно инструкции.",
+                  "isCorrect": true
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-announcement-III.1.3",
+              "number": "III.1.3",
+              "index": 3,
+              "question": "Что означает это заявление?",
+              "additionalText": "Пересчитайте деньги в кассе!",
+              "answers": [
+                {
+                  "text": "Вносите деньги вовремя в кассу",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Проверьте сумму на кассе",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Забирайте деньги из кассы вовремя",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Перевести деньги в кассу",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-announcement-III.1.4",
+              "number": "III.1.4",
+              "index": 4,
+              "question": "Что означает это заявление?",
+              "additionalText": "Добро пожаловать!",
+              "answers": [
+                {
+                  "text": "Мы рады общению с вами",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Мы рады быть с вами",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Мы ценим вашу доброту",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Мы рады вашему визиту",
+                  "isCorrect": true
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-announcement-III.1.5",
+              "number": "III.1.5",
+              "index": 5,
+              "question": "Что означает это заявление?",
+              "additionalText": "Дорога к миру!",
+              "answers": [
+                {
+                  "text": "Проезжайте их все, пока едете по дороге",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Вы должны обгонять других на дороге",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Я рекомендую быстро ходить во время путешествий",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Желаю всем счастливого пути",
+                  "isCorrect": true
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-announcement-III.1.6",
+              "number": "III.1.6",
+              "index": 6,
+              "question": "Что означает это заявление?",
+              "additionalText": "Публикация объявления в газете – 50 лари.",
+              "answers": [
+                {
+                  "text": "Газета увеличивает стоимость рекламы на 50 лари",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Цель газеты – разместить рекламу стоимостью 50 лари.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Стоимость печати объявления в газете 50 лари.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Стоимость рекламной газеты 50 лари.",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-announcement-III.1.7",
+              "number": "III.1.7",
+              "index": 7,
+              "question": "Что означает это заявление?",
+              "additionalText": "Иностранцам вход в здание воспрещен!",
+              "answers": [
+                {
+                  "text": "В конце дня любой желающий может войти в здание.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Сотрудникам также запрещен вход в здание.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "В здание могут войти только сотрудники",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Никому не разрешено входить в здание",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-announcement-III.1.8",
+              "number": "III.1.8",
+              "index": 8,
+              "question": "Что означает это заявление?",
+              "additionalText": "При покупке билетов предъявите удостоверение личности.",
+              "answers": [
+                {
+                  "text": "Билеты и удостоверение личности выдаются вместе.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Не оставляйте удостоверение личности после покупки билетов.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "ID-карта будет выдана при покупке билетов",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Билеты не будут продаваться без удостоверения личности.",
+                  "isCorrect": true
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-announcement-III.1.9",
+              "number": "III.1.9",
+              "index": 9,
+              "question": "Что означает это заявление?",
+              "additionalText": "В музее запрещено фотографировать!",
+              "answers": [
+                {
+                  "text": "Вход посетителей в музей ограничен.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "В музей разрешен вход с фотоаппаратом.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "В музее разрешено фотографировать.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "В музее запрещено фотографировать",
+                  "isCorrect": true
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-announcement-III.1.10",
+              "number": "III.1.10",
+              "index": 10,
+              "question": "Что означает это заявление?",
+              "additionalText": "Проданное лекарство обратно не принимается!",
+              "answers": [
+                {
+                  "text": "Вы можете обменять проданное лекарство",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Возврат проданного лекарства не допускается.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Некоторые лекарства продаются с гарантией возврата денег.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Любое лекарство продается с гарантией возврата.",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-announcement-III.1.11",
+              "number": "III.1.11",
+              "index": 11,
+              "question": "Что означает это заявление?",
+              "additionalText": "Курение в здании запрещено!",
+              "answers": [
+                {
+                  "text": "Запрещен вход в здание с сигаретами.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Курение в здании запрещено",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Курение разрешено в здании",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Сигареты можно приобрести в здании.",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-announcement-III.1.12",
+              "number": "III.1.12",
+              "index": 12,
+              "question": "Что означает это заявление?",
+              "additionalText": "Внимание, идут ремонтные работы!",
+              "answers": [
+                {
+                  "text": "В зоне ремонтных работ необходимо соблюдать осторожность.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Ремонтные работы следует выполнять аккуратно",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Ремонтные работы следует выполнять аккуратно",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Ремонтные работы следует начинать осторожно",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-announcement-III.1.13",
+              "number": "III.1.13",
+              "index": 13,
+              "question": "Что означает это заявление?",
+              "additionalText": "Экономьте электроэнергию!",
+              "answers": [
+                {
+                  "text": "Экономно используйте электричество",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Используйте неограниченное электричество",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Избегайте использования электричества",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Получите разрешение на использование электричества",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-announcement-III.1.14",
+              "number": "III.1.14",
+              "index": 14,
+              "question": "Что означает это заявление?",
+              "additionalText": "В аптеке лекарства без рецепта не отдают!",
+              "answers": [
+                {
+                  "text": "Лекарства можно купить в аптеке без рецепта",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Рецепт на препарат выдается во всех аптеках.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Рецепт можно получить в аптеке",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Для приобретения препарата необходим рецепт",
+                  "isCorrect": true
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-announcement-III.1.15",
+              "number": "III.1.15",
+              "index": 15,
+              "question": "Что означает это заявление?",
+              "additionalText": "Перерыв с 14:00 до 15:00.",
+              "answers": [
+                {
+                  "text": "В заведении им предоставляется один час отдыха в неделю.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Перерыв в заведении начинается в три часа.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Работают без перерывов в заведении",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Днем они отдыхают один час",
+                  "isCorrect": true
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-announcement-III.1.16",
+              "number": "III.1.16",
+              "index": 16,
+              "question": "Что означает это заявление?",
+              "additionalText": "Не трогайте экспонаты!",
+              "answers": [
+                {
+                  "text": "Не допускается рукопожатие с экспонатами.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Временно запрещено трогать экспонаты",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Просмотр экспонатов разрешен.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Экспонаты изготовлены вручную.",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-announcement-III.1.17",
+              "number": "III.1.17",
+              "index": 17,
+              "question": "Что означает это заявление?",
+              "additionalText": "Услуги читателей в библиотеке бесплатны.",
+              "answers": [
+                {
+                  "text": "Не платят за услуги, полученные в библиотеке.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Регистрация читателей в библиотеке платная.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Оплата абонентской платы за пользование библиотекой обязательна.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Сотрудники библиотеки работают бесплатно",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-announcement-III.1.18",
+              "number": "III.1.18",
+              "index": 18,
+              "question": "Что означает это заявление?",
+              "additionalText": "Пожалуйста, выключите свои мобильные телефоны перед выступлением!",
+              "answers": [
+                {
+                  "text": "Зрители не будут допущены на спектакль без выключенных мобильных телефонов.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Зрители должны прийти на спектакль с выключенными мобильными телефонами.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Спектакль не начнется, пока у зрителей не отключат мобильные телефоны",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Зрители должны выключать свои мобильные телефоны во время представления.",
+                  "isCorrect": true
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-announcement-III.1.19",
+              "number": "III.1.19",
+              "index": 19,
+              "question": "Что означает это заявление?",
+              "additionalText": "Прежде чем войти в зал, положите пальто в гардероб!",
+              "answers": [
+                {
+                  "text": "Зрители могут войти в зал в пальто.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Зрители в пальто не допускаются в зал.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Зрители должны войти в зал со стороны гардероба.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Гардероб обслуживает зрителей до конца спектакля.",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-announcement-III.1.20",
+              "number": "III.1.20",
+              "index": 20,
+              "question": "Что означает это заявление?",
+              "additionalText": "Размещение объявлений бесплатно только на указанном сайте!",
+              "answers": [
+                {
+                  "text": "Рекламу можно размещать только на указанном сайте.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Объявления можно бесплатно разместить на любом сайте.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Некоторые сайты предназначены только для размещения рекламы.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Публикация объявлений на указанном сайте возможна бесплатно.",
+                  "isCorrect": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "reading-dialogue",
+          "index": 9,
+          "name": "диалог",
+          "questions": [
+            {
+              "id": "geo-reading-dialogue-III.2.1",
+              "number": "III.2.1",
+              "index": 1,
+              "question": "Где происходит разговор?",
+              "additionalText": "- Посмотрите, сколько людей стоит у кассы. Продукты купим позже.\n- А если бы людей было больше?!\n- Ну, заходим! Ты стоишь в очереди на кассу, я возьму продукты из холодильника и приду.\n- Это хорошая идея. Мы обязательно выиграем время.\n- Надеюсь на это, а то я так устала, что не смогу долго стоять в очереди.",
+              "answers": [
+                {
+                  "text": "у входа в магазин",
+                  "isCorrect": true
+                },
+                {
+                  "text": "у холодильника",
+                  "isCorrect": false
+                },
+                {
+                  "text": "в кассе",
+                  "isCorrect": false
+                },
+                {
+                  "text": "в кассе",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-dialogue-III.2.2",
+              "number": "III.2.2",
+              "index": 2,
+              "question": "Где происходит разговор?",
+              "additionalText": "- Кто последний?\n- Да, но кассир сказала, что на 5-часовой сеанс осталось мало билетов.\n- Все в порядке, я подожду.\n- Сколько билетов вы хотите?\n- Только двое.\n- Я хочу пять билетов. Если их не так много, мы предоставим вам очередь. Итак, у вас есть два билета.\n- Большое спасибо.",
+              "answers": [
+                {
+                  "text": "в кассе аэропорта",
+                  "isCorrect": false
+                },
+                {
+                  "text": "в кассе автовокзала",
+                  "isCorrect": false
+                },
+                {
+                  "text": "в кассе кинотеатра",
+                  "isCorrect": true
+                },
+                {
+                  "text": "в кассе рынка",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-dialogue-III.2.3",
+              "number": "III.2.3",
+              "index": 3,
+              "question": "Где происходит разговор?",
+              "additionalText": "- Извините, это место мое.\n- Я думаю, тебе весело. Вот билет.\n- Смотри, твое место в 12-м ряду.\n- Ну, а это какой ряд? я облажался?\n- Да! Здесь написано – 10 ряд.\n- Простите меня. Я сейчас пойду, спектакль скоро начнется.\n- Все нормально.",
+              "answers": [
+                {
+                  "text": "В гардеробе театра",
+                  "isCorrect": false
+                },
+                {
+                  "text": "в театральном зале",
+                  "isCorrect": true
+                },
+                {
+                  "text": "в вестибюле театра",
+                  "isCorrect": false
+                },
+                {
+                  "text": "у входа в театр",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-dialogue-III.2.4",
+              "number": "III.2.4",
+              "index": 4,
+              "question": "С кем ты разговариваешь?",
+              "additionalText": "- Привет. Вы администратор?\n- Да, я тебя слышу.\n- У вас есть двузначный номер?\n- У нас есть Сколько дней вы планируете остаться у нас?\n- На пять дней. Где я могу припарковать машину?\n- У отеля имеется хорошо охраняемая парковка.\n- Это хорошо. Оставьте наши паспорта.\n- Обратите внимание, что в стоимость проживания включен только завтрак. Вопрос ужина согласовывается с менеджером. Вы можете прийти в номер, там вас встретит технический персонал.\n- Большое спасибо.",
+              "answers": [
+                {
+                  "text": "с охраной парковки",
+                  "isCorrect": false
+                },
+                {
+                  "text": "с администратором отеля",
+                  "isCorrect": true
+                },
+                {
+                  "text": "с менеджером отеля",
+                  "isCorrect": false
+                },
+                {
+                  "text": "с техническим персоналом",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-dialogue-III.2.5",
+              "number": "III.2.5",
+              "index": 5,
+              "question": "Где происходит разговор?",
+              "additionalText": "- Привет.\n- Я слышу тебя. как я могу тебе помочь\n- Мы ищем отель. В метро нам сказали, что оно находится на этой улице.\n- Разве ты не знаешь название отеля?\n- К сожалению, мы не помним.\n- Рядом есть одна гостиница. Вам придется пройти двести метров.\n- Пойдем прямо?\n- Да, вы увидите подземный переход, гостиница тоже там.\n- Большое спасибо, до свидания.",
+              "answers": [
+                {
+                  "text": "в метро",
+                  "isCorrect": false
+                },
+                {
+                  "text": "в подземном переходе",
+                  "isCorrect": false
+                },
+                {
+                  "text": "у входа в отель",
+                  "isCorrect": false
+                },
+                {
+                  "text": "на улице",
+                  "isCorrect": true
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-dialogue-III.2.6",
+              "number": "III.2.6",
+              "index": 6,
+              "question": "Где происходит разговор?",
+              "additionalText": "- Здравствуйте, я хочу выбрать подарок иностранному гостю.\n- Здесь много сувениров. Многие из них сделаны вручную. Еще у нас есть керамическая посуда, посмотрите.\n- Понимаю, но мне очень сложно принять решение.\n- Ты выбираешь женщину или мужчину?\n- для дамы средних лет.\n- Могу порекомендовать копии украшений, найденные археологами. Например, это. Посмотрите, это тоже красиво.\n- Оба мне очень нравятся, я их возьму. Большое спасибо за совет. Цена также приемлемая.\n- Оставь это, до свидания.",
+              "answers": [
+                {
+                  "text": "В Музее археологии",
+                  "isCorrect": false
+                },
+                {
+                  "text": "в керамической мастерской",
+                  "isCorrect": false
+                },
+                {
+                  "text": "в ювелирной промышленности",
+                  "isCorrect": false
+                },
+                {
+                  "text": "В сувенирном магазине",
+                  "isCorrect": true
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-dialogue-III.2.7",
+              "number": "III.2.7",
+              "index": 7,
+              "question": "Где происходит разговор?",
+              "additionalText": "- Здравствуйте, у вас есть словари?\n- У нас много словарей. Какой из них вы хотите?\n- Орфографический словарь грузинского языка.\n- Да, оно у нас есть, это новое издание. Вот пара на этой полке.\n- Очень хорошо, я больше нигде этого не видел. Еще я возьму словарь и этот иллюстрированный сборник грузинских народных сказок. Я хочу это для своего трехлетнего внука.\n- Это хороший подарок. Смело оплачивайте сумму в кассе.",
+              "answers": [
+                {
+                  "text": "в библиотеке",
+                  "isCorrect": false
+                },
+                {
+                  "text": "в издательстве",
+                  "isCorrect": false
+                },
+                {
+                  "text": "В сувенирном магазине",
+                  "isCorrect": false
+                },
+                {
+                  "text": "в книжном магазине",
+                  "isCorrect": true
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-dialogue-III.2.8",
+              "number": "III.2.8",
+              "index": 8,
+              "question": "Где происходит разговор?",
+              "additionalText": "- Майя, давай прочитаем, какие спектакли мы можем посмотреть в эти дни.\n- Вот завтрашние выступления. Мы видим «джинсовое поколение». Начало в восемь часов вечера.\n- Я видел эту пьесу. Мне это очень понравилось. ты\n- Нет, я давно не был в театре.\n- Тогда не будем медлить, пойдем сейчас в кассу и купим билеты. Я хотел бы увидеть это снова.\n- Ну, возьмем. Знай, что я приглашаю тебя.\n- Спасибо большое, пусть в этот раз будет так. Я приглашу тебя следующим.",
+              "answers": [
+                {
+                  "text": "на афише театра",
+                  "isCorrect": true
+                },
+                {
+                  "text": "возле театрального зала",
+                  "isCorrect": false
+                },
+                {
+                  "text": "в театре партер",
+                  "isCorrect": false
+                },
+                {
+                  "text": "в кассе театра",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-dialogue-III.2.9",
+              "number": "III.2.9",
+              "index": 9,
+              "question": "Где происходит разговор?",
+              "additionalText": "- Привет. Какой у вас сегодня выбор молочных продуктов и мяса!\n- Да, сегодня утром компания привезла нам новинки.\n- Если да, то взвесьте мне два килограмма говядины и одну курицу. Еще я хочу сыр, одну головку.\n- Вчера на нашем рынке открылось кафе. Вы можете наслаждаться, у них вкусный кофе.\n- Спасибо за информацию, я узнаю.\n- Оставьте свои продукты. Оплатите сумму в кассе.\n- Спасибо, до свидания.",
+              "answers": [
+                {
+                  "text": "в кафе",
+                  "isCorrect": false
+                },
+                {
+                  "text": "на рынке",
+                  "isCorrect": true
+                },
+                {
+                  "text": "в ресторане",
+                  "isCorrect": false
+                },
+                {
+                  "text": "в фирме",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-dialogue-III.2.10",
+              "number": "III.2.10",
+              "index": 10,
+              "question": "Где происходит разговор?",
+              "additionalText": "- У вас есть свободный столик на четверых?\n- Да. Вы будете сидеть в зале или на балконе?\n- на балконе. Оттуда открывается потрясающий вид.\n- Приходить. Вот меню, посмотрите.\n- Если я закажу хинкали, через сколько будет готово?\n- У нас любой заказ готов за 10-15 минут.\n- Очень хороший. Тогда запишите это.\n- Прямо сейчас. Я слышу тебя...",
+              "answers": [
+                {
+                  "text": "на балконе",
+                  "isCorrect": false
+                },
+                {
+                  "text": "в семье",
+                  "isCorrect": false
+                },
+                {
+                  "text": "на пикнике",
+                  "isCorrect": false
+                },
+                {
+                  "text": "в ресторане",
+                  "isCorrect": true
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-dialogue-III.2.11",
+              "number": "III.2.11",
+              "index": 11,
+              "question": "Где происходит разговор?",
+              "additionalText": "- Мариам, лучше воспользоваться подземным переходом, он рядом с метро.\n— Здесь есть «зебра» — пешеходный переход и светофор. Чего мы хотим от метро?\n- Ого, я даже не заметил светофор, его только что установили. Это хорошо, а то некоторые водители не обращали внимания на «Зебру» и аварии здесь случались не раз.\n- Да, я помню несколько случаев.\n- Вот, горит зеленый свет, поехали.\n- Пойдем. Это более короткий путь домой.",
+              "answers": [
+                {
+                  "text": "на остановке",
+                  "isCorrect": false
+                },
+                {
+                  "text": "в метро",
+                  "isCorrect": false
+                },
+                {
+                  "text": "в подземном переходе",
+                  "isCorrect": false
+                },
+                {
+                  "text": "на пешеходном переходе",
+                  "isCorrect": true
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-dialogue-III.2.12",
+              "number": "III.2.12",
+              "index": 12,
+              "question": "Где происходит разговор?",
+              "additionalText": "- Простите, а не подскажете, далеко ли стадион от этой станции метро?\n- Не совсем, это на параллельной улице.\n- Если вы не против, скажите мне, как туда добраться.\n- Езжайте прямо. На светофоре вы пойдете на противоположную сторону. В углу есть аптека. Пройдите по улице, и справа вы увидите стадион.\n- Большое спасибо.\n- Ничего.",
+              "answers": [
+                {
+                  "text": "в аптеке",
+                  "isCorrect": false
+                },
+                {
+                  "text": "возле метро",
+                  "isCorrect": true
+                },
+                {
+                  "text": "возле стадиона",
+                  "isCorrect": false
+                },
+                {
+                  "text": "на светофоре",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-dialogue-III.2.13",
+              "number": "III.2.13",
+              "index": 13,
+              "question": "С кем ты разговариваешь?",
+              "additionalText": "- Здравствуйте, я хочу обратиться к семейному врачу.\n- Вы зарегистрированы?\n- Да, вчера я позвонил в загс и зарегистрировался.\n- Дайте мне свое удостоверение личности, я проверю информацию.\n- Мне назначено на 12 часов, но сначала мне нужно получить заключение рентгенолога и результаты анализов.\n- Вас ждет врач, входите в кабинет. Медсестра возьмет все ответы и передаст их вам.\n- Спасибо.",
+              "answers": [
+                {
+                  "text": "с медсестрой",
+                  "isCorrect": false
+                },
+                {
+                  "text": "к врачу",
+                  "isCorrect": false
+                },
+                {
+                  "text": "с регистратором",
+                  "isCorrect": true
+                },
+                {
+                  "text": "с радиологом",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-dialogue-III.2.14",
+              "number": "III.2.14",
+              "index": 14,
+              "question": "Где происходит разговор?",
+              "additionalText": "- Вы впервые посещаете нашу библиотеку?\n- Нет, меня зачислили в прошлом году. К сожалению, я потерял свою карту.\n- Назови мне свою фамилию. Я хочу найти ваши данные в журнале регистрации.\n- Георгий Мумладзе.\n- Я видел, что срок действия вашей карты истек. Вам придется зарегистрироваться заново.\n- Вот мое удостоверение личности.\n- Оставь карту. На этом стенде представлены новые книги, также имеется каталог книг. Вы можете воспользоваться залом или взять книгу домой.\n- Я найду нужную книгу в каталоге. Я буду работать в зале.",
+              "answers": [
+                {
+                  "text": "в зале библиотеки",
+                  "isCorrect": false
+                },
+                {
+                  "text": "в реестре библиотеки",
+                  "isCorrect": true
+                },
+                {
+                  "text": "на книжной ярмарке",
+                  "isCorrect": false
+                },
+                {
+                  "text": "в книжном магазине",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-dialogue-III.2.15",
+              "number": "III.2.15",
+              "index": 15,
+              "question": "С кем ты разговариваешь?",
+              "additionalText": "- Ну давай же. что тебя беспокоит\n- Он сильно кашляет уже четвертый день.\n- Скажите, какие симптомы были у вас вначале?\n- В первый день у меня была очень высокая температура, я чувствовала слабость. Членов семьи не оказалось дома, и сосед вызвал скорую помощь.\n- Какую цель они вам дали?\n- Мне укололи иглу, температуры больше нет, но я сильно кашляю. Мне посоветовали обратиться в поликлинику.\n- Хорошо, медсестра направит вас к рентгенологу.\n- Спасибо.",
+              "answers": [
+                {
+                  "text": "с медсестрой амбулаторного отделения",
+                  "isCorrect": false
+                },
+                {
+                  "text": "с амбулаторным врачом",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Доктор радиолог",
+                  "isCorrect": false
+                },
+                {
+                  "text": "к врачу скорой помощи",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-dialogue-III.2.16",
+              "number": "III.2.16",
+              "index": 16,
+              "question": "С кем ты разговариваешь?",
+              "additionalText": "- Нино, моя любимая, с днем ​​рождения!\n- Какой красивый букет, спасибо большое. Вы мой первый гость сегодня, заходите.\n- Твои друзья еще не пришли?\n- Они скоро придут, часов в шесть.\n- Где мама и папа?\n- Отец на работе. Сосед испек мне шоколадный торт, и мама пошла его вынести. Вот звонок. Тётя, если вы не возражаете, откройте дверь.\n- Они, наверное, твои друзья.",
+              "answers": [
+                {
+                  "text": "с матерью",
+                  "isCorrect": false
+                },
+                {
+                  "text": "с моей тетей",
+                  "isCorrect": true
+                },
+                {
+                  "text": "с друзьями",
+                  "isCorrect": false
+                },
+                {
+                  "text": "с соседом",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-dialogue-III.2.17",
+              "number": "III.2.17",
+              "index": 17,
+              "question": "Когда состоится разговор?",
+              "additionalText": "- Надеюсь, это будет хороший концерт. Я еле взял билет.\n- Вот программа, в первом отделении выступают в основном грузинские эстрадные певцы.\n- Насколько я знаю, участвуют и зарубежные певцы.\n- Да, после перерыва, во втором отделении концерта.\n- Я давно не был на таком концерте, сходил с удовольствием.\n- Проходим в зал, занимаем свои места.\n- Не забудь выключить телефон.\n- Хорошо, что ты мне напомнил. Пойдем ко мне после концерта.\n- Не сегодня, будет поздно.",
+              "answers": [
+                {
+                  "text": "когда берешь билет",
+                  "isCorrect": false
+                },
+                {
+                  "text": "перед концертом",
+                  "isCorrect": true
+                },
+                {
+                  "text": "во время концерта",
+                  "isCorrect": false
+                },
+                {
+                  "text": "во время перерыва",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-dialogue-III.2.18",
+              "number": "III.2.18",
+              "index": 18,
+              "question": "Где происходит разговор?",
+              "additionalText": "- Здравствуйте, ваше туристическое бюро посоветовало мне спланировать интересные туры.\n- Я вас слышу, куда вы собираетесь поехать и на какой срок?\n- Я хочу полететь в Грецию на две недели. У меня должно быть время отдохнуть и посетить исторические места.\n- Я обязательно тебе помогу. Мы подберем такой тур, вы останетесь довольны.\n- Оставь мой паспорт.\n- Я подпишу документы на билет на самолет и другие услуги и назову вам ориентировочную сумму.\n- Входит ли в услугу номер в отеле?\n- Конечно, я тебе все сейчас расскажу.\n- Спасибо.",
+              "answers": [
+                {
+                  "text": "в регистратуре аэропорта",
+                  "isCorrect": false
+                },
+                {
+                  "text": "в билетной кассе",
+                  "isCorrect": false
+                },
+                {
+                  "text": "в паспортном отделе",
+                  "isCorrect": false
+                },
+                {
+                  "text": "в туристическом офисе",
+                  "isCorrect": true
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-dialogue-III.2.19",
+              "number": "III.2.19",
+              "index": 19,
+              "question": "С кем ты разговариваешь?",
+              "additionalText": "- Здравствуйте, канцелярия здесь? ты старше?\n- Да, приходи. чего ты хочешь\n- У вас объявлена вакансия и я собираюсь участвовать в конкурсе. Я хочу подать документы.\n- В коридоре вывешен список документов, проверьте его.\n- Да, я уже проверил. Могу ли я оставить эти документы у вас?\n- Положите это в папку и передайте секретарю. В течение недели комиссия рассмотрит и сообщит вам ответ.\n- Спасибо. до свидания",
+              "answers": [
+                {
+                  "text": "секретарю канцелярии",
+                  "isCorrect": false
+                },
+                {
+                  "text": "с главой канцелярии",
+                  "isCorrect": true
+                },
+                {
+                  "text": "с членом комиссии",
+                  "isCorrect": false
+                },
+                {
+                  "text": "с организатором конкурса",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-dialogue-III.2.20",
+              "number": "III.2.20",
+              "index": 20,
+              "question": "Где происходит разговор?",
+              "additionalText": "- Здравствуйте, вы выдаете лекарства без рецепта?\n- Какое лекарство ты хочешь? что тебя беспокоит\n- Я кашляю и у меня болит горло.\n- У нас есть несколько лекарств, но лучше, если вы обратитесь к врачу в поликлинике и купите лекарство по его рецепту.\n- Хорошо, я пойду. Тогда просто дай мне лекарство от боли в горле.\n- Вот, отпусти. Принимать три раза в день. Оплатите сумму в кассе.\n- Спасибо, до свидания.",
+              "answers": [
+                {
+                  "text": "в аптеке",
+                  "isCorrect": true
+                },
+                {
+                  "text": "в кабинете врача",
+                  "isCorrect": false
+                },
+                {
+                  "text": "в регистратуре клиники",
+                  "isCorrect": false
+                },
+                {
+                  "text": "в кассе",
+                  "isCorrect": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "reading-text",
+          "index": 10,
+          "name": "информативный текст",
+          "questions": [
+            {
+              "id": "geo-reading-text-III.3.1",
+              "number": "III.3.1",
+              "index": 1,
+              "question": "Какое предложение соответствует содержанию текста?",
+              "additionalText": "Нарикала является важным культурно-историческим памятником. Эта древняя крепость возвышается над рекой Мтквари. По легенде, строительство замка связано с именем царя Вахтанга Горгасли. В исторических источниках он упоминается как замок Сюри, а во времена монгольского правления он назывался Нарикала. Слово «Нарикала» означает небольшую крепость. Это труднодоступное оборонительное сооружение было значительно расширено во времена правления Давида Агмашенебели. Он был укреплен мощными стенами, башнями и бастионами. Остатки ранней постройки до сих пор сохранились в стенах одной из башен замка.",
+              "answers": [
+                {
+                  "text": "Информация о старом имени Нарикали неизвестна.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Нарикала представляла собой укрепленное оборонительное сооружение.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Стены Нарикали были разрушены во времена правления монголов.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Крепость получила название «Нарикала» от царя Давида Агмашенебели.",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-text-III.3.2",
+              "number": "III.3.2",
+              "index": 2,
+              "question": "Какое предложение соответствует содержанию текста?",
+              "additionalText": "Тбилисский аэропорт начал свою работу в 1923 году. Сегодня это главный торговый и стратегический центр Кавказского региона. Сюда приходит и уходит много международных грузов. По маршруту Тбилиси-Аэропорт-Тбилиси обслуживается автобус, остановка которого находится у выхода из зала вылета. До центра города ехать 20-30 минут. Рядом с терминалом имеется парковка, рассчитанная на 370 автомобилей. Пользование парковкой платное. В 2015 году аэропорту было присвоено имя Шота Руставели.",
+              "answers": [
+                {
+                  "text": "Парковка аэропорта может вместить любое количество автомобилей.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Аэропорт Тбилиси – стратегический центр Кавказа",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Пользование парковкой аэропорта Тбилиси бесплатное.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Имя Шота Руставели аэропорту было присвоено сразу после его постройки.",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-text-III.3.3",
+              "number": "III.3.3",
+              "index": 3,
+              "question": "Какое предложение соответствует содержанию текста?",
+              "additionalText": "Тбилисский метрополитен был открыт в 1966 году. В настоящее время в тбилисском метрополитене действуют 23 станции, 16 из которых расположены на линии Глдани-Варкетили, а 7 - на линии Сабуртало. Большинство станций находятся очень глубоко под землей. Вагоны обслуживаются двумя депо: «Надзаладеви» и «Глдани». Ежегодно метрополитеном перевозится в среднем 105,6 миллиона человек. В эксплуатации 186 вагонов. Стоимость проезда — 1 лари, для студентов — 20 тетри, для школьников — бесплатно. Метро работает с 6 утра до 12 ночи. Поезд отправляется каждые 4 минуты, а в часы пик – каждые 2,5 минуты.",
+              "answers": [
+                {
+                  "text": "Стоимость проезда на метро для студентов относительно низкая.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "23 станции метро расположены на одной линии.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Лишь небольшая часть станций метро находится под землей.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Поезда метро ходят с 4-минутными интервалами в часы пик.",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-text-III.3.4",
+              "number": "III.3.4",
+              "index": 4,
+              "question": "Какое предложение соответствует содержанию текста?",
+              "additionalText": "«Боржоми» — минеральная вода вулканического происхождения, пользующаяся большой популярностью во всем мире. На поверхность земли она поднимается с глубины 10 км в теплом виде, поскольку, в отличие от многих других минеральных вод, не может остывать в грунте. Обнаруженные археологами каменные ванны и глиняные трубы доказывают, что в древности «Боржоми» использовали не только для питья, но и для купания. Геологи и химики постоянно тестируют минеральную воду. Из этих исследований видно, что его температура, химические свойства и состав не изменяются. Сегодня вода на разливочные заводы подается из 9 скважин по 25-километровому трубопроводу.",
+              "answers": [
+                {
+                  "text": "Химические свойства и состав «Боржоми» постоянно меняются.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "«Боржоми» ничем не отличается от других минеральных вод.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "По мнению ученых, в древности «Боржоми» употребляли только как напиток.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Химики и геологи систематически изучают «Боржоми».",
+                  "isCorrect": true
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-text-III.3.5",
+              "number": "III.3.5",
+              "index": 5,
+              "question": "Какое предложение соответствует содержанию текста?",
+              "additionalText": "Мтквари – главная река Грузии, берущая начало в Турции. Помимо Грузии, он пересекает три страны и, наконец, впадает в Каспийское море на территории Азербайджана. Питание Мтквари осуществляется за счет снега, дождей и грунтовых вод. Весной характеризуется обилием воды, летом и зимой – маловодием. Мтквари богата рыбой. Это особенно важный энергетический ресурс для нашей страны. На нем построено несколько ГЭС. Воды Куры и ее притоков орошают территорию в 315 тысяч гектаров на территории Грузии. Вода Куры используется в технических целях в Тбилиси.",
+              "answers": [
+                {
+                  "text": "Мтквари берет свое начало на территории Грузии.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Мтквари снабжает Тбилиси технической водой",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Мтквари питается в основном за счет своих притоков.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Пресной воды много в любое время года.",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-text-III.3.6",
+              "number": "III.3.6",
+              "index": 6,
+              "question": "Какое предложение соответствует содержанию текста?",
+              "additionalText": "История Батумского ботанического сада начинается в 1912 году, когда возглавил закладку сада профессор Андрия Краснов. Особый вклад в эту работу внес агроном-декоратор Джейсон Гордезян. В ботаническом саду произрастает более двух тысяч видов растений. Среди них 104 – кавказского происхождения, остальные завезены из разных уголков мира. В Батумском ботаническом саду реализуется ряд международных программ в направлении декоративного садоводства, защиты растений, экообразования и туризма. В 2012 году столетие сада было отмечено рядом мероприятий, в том числе международной научной конференцией.",
+              "answers": [
+                {
+                  "text": "В Батумском ботаническом саду реализуется множество международных программ.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Ясон Гордезян был руководителем Батумского ботанического сада.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Большинство растений Батумского ботанического сада имеют кавказское происхождение.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Основная функция Батумского ботанического сада – популяризация туризма.",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-text-III.3.7",
+              "number": "III.3.7",
+              "index": 7,
+              "question": "Какое предложение соответствует содержанию текста?",
+              "additionalText": "Тбилиси, столица Грузии, является важным промышленным и культурным центром Кавказского региона. Он расположен на историческом Шелковом пути и, как и прежде, по-прежнему выполняет важную транзитную функцию. Население города с незапамятных времен было многонациональным. Наряду с грузинами здесь жили курды, армяне, азербайджанцы, русские, греки. Грузинские цари лояльной политикой способствовали сосуществованию представителей разных народов и религий. Доказательством тому является тот факт, что в одном из старых районов Тбилиси рядом стоят мечеть, синагога, григорианская и православная церкви.",
+              "answers": [
+                {
+                  "text": "Тбилиси с недавних пор выполняет важную транзитную функцию.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Тбилиси с незапамятных времен отличался особой многонациональностью.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Тбилиси отличается от других городов по численности населения",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Все храмы в Тбилиси были построены по инициативе грузинских царей.",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-text-III.3.8",
+              "number": "III.3.8",
+              "index": 8,
+              "question": "Какое предложение соответствует содержанию текста?",
+              "additionalText": "Черное море принадлежит бассейну Атлантического океана. Его площадь составляет 422 000 км². Граничит с Грузией на западе. На его берегах построен ряд городов и курортов. Флора и фауна Черного моря разнообразна. В нем распространено 350 видов водорослей и 2500 видов фауны. В море обитает уникальное разнообразие рыб: лосось, кефаль и др. В Черном море нет больших и малых течений. Его важная особенность – ровный уровень воды. Поверхность воды здесь преимущественно спокойная. Из-за влияния моря на большей части Западной Грузии зима теплая, а лето прохладное. Столь своеобразный климат благоприятствует выращиванию субтропических растений в этом регионе.",
+              "answers": [
+                {
+                  "text": "Западная Грузия имеет своеобразный климат из-за влияния Черного моря.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Особенностью Черного моря являются малые и большие циркуляции.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Из-за климата Черного моря сложно выращивать субтропические растения.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "На побережье Черного моря зимой значительно холодно, а летом жарко.",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-text-III.3.9",
+              "number": "III.3.9",
+              "index": 9,
+              "question": "Какое предложение соответствует содержанию текста?",
+              "additionalText": "Кувшин – это большой глиняный сосуд, закопанный в землю для приготовления и хранения вина. Изготовление – сложный и долгий процесс. Глина, из которой изготовлен кувшин, содержит известняк и небольшое количество драгоценных металлов. Это укрепляет стенки кувшина и предотвращает рост бактерий. Делать вино начали в Квеври в Грузии 8 тысяч лет назад. Грузины сохраняют эту древнюю традицию и по сей день. В 2013 году ЮНЕСКО признала уникальный метод изготовления вина в Квеври старейшим и присвоила ему статус памятника всемирного культурного наследия, что еще больше способствовало популяризации грузинского вина.",
+              "answers": [
+                {
+                  "text": "До сих пор неизвестно, когда в Грузии начали производить вино Квевари.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Способ изготовления вина в Квеври до сих пор миру неизвестен.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Сделать кувшин очень просто и не требует много времени.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Глина для изготовления кувшина содержит известняк и драгоценные металлы.",
+                  "isCorrect": true
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-text-III.3.10",
+              "number": "III.3.10",
+              "index": 10,
+              "question": "Какое предложение соответствует содержанию текста?",
+              "additionalText": "Разные уголки Грузии отличаются разным образом жизни и кухней. Например, в Восточной Грузии любят мясо и жирную пищу. В Западной Грузии популярна растительная пища, смешанная с грецкими орехами и перцем – пхалеули и блюда из молочных продуктов. На родине вина виноградные лозы цветут практически повсюду, особенно в Кахетии. Здесь традиционные блюда: шашлык, хашлама, чакафули. Аджарскую кухню отличают блюда из молочных продуктов, так как ее население в основном занимается скотоводством.",
+              "answers": [
+                {
+                  "text": "Традиционные блюда местного населения Аджарии – хашлама и чакафули.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "В кахской кухне преобладают блюда из молочных продуктов.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "В каждом уголке Грузии готовят разные блюда.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Грузинскую кухню отличают преимущественно овощные блюда.",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-text-III.3.11",
+              "number": "III.3.11",
+              "index": 11,
+              "question": "Какое предложение соответствует содержанию текста?",
+              "additionalText": "Дманис – старейший город Квемо Картли. Археологические раскопки здесь ведутся с 1936 года. Первоначально были обнаружены руины средневековой крепости, остатки построек, кости животных, каменные орудия, а позже возле Дманиси были найдены черепа древних людей. Был определен их возраст – 1,8 миллиона лет. Уникальное открытие изменило ранее существовавшее мнение о том, что древние люди пришли в Евразию из Африки. Сегодня уже признано, что Дманис – родина первых европейцев. На основе двух черепов, найденных в Дманисе, были реконструированы лица этих людей. Они также выбрали имена: одного звали Мзия, другого – Зезва.",
+              "answers": [
+                {
+                  "text": "Под Дманиси найдены останки древних людей",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Возраст человеческих останков, найденных в Дманисе, неизвестен.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "По сей день первыми европейцами считаются мигрировавшие из Африки в Евразию.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Археологические работы в городе Дманис начались несколько столетий назад.",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-text-III.3.12",
+              "number": "III.3.12",
+              "index": 12,
+              "question": "Какое предложение соответствует содержанию текста?",
+              "additionalText": "Дендрологический парк – это место, где выращивают растения по географическим, декоративным и другим признакам. В мире восемь таких выдающихся парков, один из них находится в Гурии, на курорте Котупили. Он особенный своими масштабами и уникальной коллекцией растений. Дендрологический парк Копетили был открыт 15 июля 2020 года. 18 гектаров парка засажены деревьями эндемичных видов, встречающихся в уголках Грузии. Коллекция состоит из более чем 200 гигантских экземпляров 29 уникальных видов. На остальных 42 гектарах представлены тысячелетние экзотические растения, привезенные со всех пяти континентов мира.",
+              "answers": [
+                {
+                  "text": "На курорте Копетли впервые построен дендрологический парк",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Дендрологический парк занимает 42 га площади заказанного участка.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Тысячелетние деревья парка нашли только в Грузии",
+                  "isCorrect": false
+                },
+                {
+                  "text": "В парке Котупили представлена ​​уникальная коллекция гигантских растений.",
+                  "isCorrect": true
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-text-III.3.13",
+              "number": "III.3.13",
+              "index": 13,
+              "question": "Какое предложение соответствует содержанию текста?",
+              "additionalText": "Сигнаги – один из популярных туристических городов Грузии. Это было вызвано его особой архитектурой и природным расположением. Красивый город Кахети построен на высоком холмистом месте, откуда открывается вид как на Алазнинскую долину, так и на Кавказские горы. Сигнахи был основан как город во времена правления царя Ираклия II. Он сохранился почти в том же виде, что и 200 лет назад. Он окружен стеной с 28 башнями. Сегодня Сигнаги называют городом-музеем. В ходе реставрационных работ, проведенных в 2007 году, здесь был открыт национальный музей, в котором выставлено множество важных экспонатов, в том числе работы Фиросмана.",
+              "answers": [
+                {
+                  "text": "В настоящее время сохранилась лишь небольшая часть стены Сигнахи.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Сегодня Сигнахи потерял свой прежний облик",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Сигнахи отличается своей уникальной архитектурой.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Город назывался Сигнахи во времена правления царя Ираклия II.",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-text-III.3.14",
+              "number": "III.3.14",
+              "index": 14,
+              "question": "Какое предложение соответствует содержанию текста?",
+              "additionalText": "Проспект Руставели – любимое место тбилисцев. Имя Руставели ему было присвоено в 1918 году – после провозглашения независимости Грузии – а до этого он назывался проспектом Головини. Начинается от площади Свободы и соединяется с улицей Костава со станцией метро «Руставели». Благодаря обилию расположенных здесь государственных, культурных и общественных учреждений это место считается центром города. Его интенсивное развитие началось в 1860 году. Постепенно к проспекту пристроился ряд зданий, некоторые из которых украшают город и по сей день. Это: Дворец студентов и молодежи, Театр Руставели, Художественная галерея, Отель «Тбилиси Марриотт» и др.",
+              "answers": [
+                {
+                  "text": "Проспекту было присвоено имя Руставели после провозглашения независимости.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "На проспекте Руставели расположены только учреждения культуры.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Все важные здания на проспекте Руставели построены в 1860-х годах.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Первая интенсивная застройка проспекта Руставели началась в 1918 году.",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-text-III.3.15",
+              "number": "III.3.15",
+              "index": 15,
+              "question": "Какое предложение соответствует содержанию данного текста?",
+              "additionalText": "Главная площадь Тбилиси (Площадь Свободы) имеет историю около двухсот лет. Еще в конце XVIII века он был пригородом города и назывался окраиной. По плану, составленному Вахушти Батонишвили, на этом месте были разбиты сады и сохранилось единственное здание. Интенсивная застройка окраин началась в первой четверти XIX века. Одним из зданий этого периода является художественный музей. В 1847-1851 годах по проекту архитектора Джованни Скудьери были построены монументальные здания театра и караван-сарая, которые сгорели в 1874 году из-за пожара. В 30-е годы 20 века многие старые здания были снесены в связи с реконструкцией площади.",
+              "answers": [
+                {
+                  "text": "Развитие сегодняшней площади Свободы началось в 19 веке.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Скадье — архитектор большинства сохранившихся зданий на площади Свободы.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Площадь Свободы в основном украшена зданиями, построенными в 19 веке.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "План застройки площади Свободы был составлен в 30-х годах 20 века.",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-text-III.3.16",
+              "number": "III.3.16",
+              "index": 16,
+              "question": "Какое предложение соответствует содержанию данного текста?",
+              "additionalText": "Согласно историческим документам, первое поселение в Тбилиси появилось возле серных горячих источников. Именно отсюда началось экономическое процветание города: формировался архитектурный облик зданий, строились бани, развивалось ремесло... Известно, что еще в XIII веке в Тбилиси было 65 серных бань, большая часть которых сохранилась до наших дней. Серные воды привлекли внимание ученых в 60-х годах 19 века. Первый химический анализ связан с именем Фердинанда Оттена. Дальнейшие исследования установили уникальные целебные свойства воды. Это еще больше увеличило его популярность.",
+              "answers": [
+                {
+                  "text": "Ученые начали исследовать серные воды в 19 веке.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Целебные свойства серных вод до сих пор неизвестны.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Исторических сведений о серных водах сохранилось мало.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Старые ванны с сернистыми водами почти разрушены",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-text-III.3.17",
+              "number": "III.3.17",
+              "index": 17,
+              "question": "Какое предложение соответствует содержанию данного текста?",
+              "additionalText": "Первый телефон был создан Александром Беллом в 1876 году в Америке. Вскоре оно распространилось по всему миру. Телефон был введен в эксплуатацию в Тбилиси в 1882 году. Была установлена ​​первая связь между редакцией «Кавкази» и типографией, а князь Джорджадзе был первым предпринимателем, проложившим телефонную линию от своего кабинета до винного склада. В 1893 году телефонной сетью пользовались многие жители Тбилиси. Как писала пресса, Тбилиси находился на пятом месте в Российской империи по количеству подписчиков. В 1935 году была введена в эксплуатацию автоматическая станция, установленная фирмой «Эриксон». С годами телефонная связь постепенно улучшалась.",
+              "answers": [
+                {
+                  "text": "Тбилиси был на первом месте в Российской империи по количеству подписчиков.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "«Эрикссон» установил АТС в Тбилиси",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Джорджадзе сам запустил АТС",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Вся Грузия пользовалась телефонной связью со дня ее создания.",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-text-III.3.18",
+              "number": "III.3.18",
+              "index": 18,
+              "question": "Какое предложение соответствует содержанию данного текста?",
+              "additionalText": "Необходимость создания быстрых транспортных средств для перевозки пассажиров была вызвана ростом населения городов мира. В Грузии также работали над этим вопросом. Первый железнодорожный транспорт на улицах Тбилиси – конка, эл. год «Конка» — появился в 80-х годах XIX века. Открытая со всех четырех сторон повозка имела крышу, опиравшуюся на железные столбы. Внутри стоял ряд стульев. На «Конку» напали 20 человек. Продавец билетов регулировал остановку трамвая. Новый транспорт стал источником прибыли для иностранных предпринимателей. В 1904 году «Конку» заменил электронный трамвай. Позже в городе появились и другие виды транспортных средств.",
+              "answers": [
+                {
+                  "text": "По улицам Тбилиси «Конка» двигалась вместе с другими видами транспорта.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "«Конка» стала источником прибыли для грузинских предпринимателей",
+                  "isCorrect": false
+                },
+                {
+                  "text": "После «Конки» на улицах Тбилиси появился электронный трамвай",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Остановка «Конки» на улице зависела от желания пассажиров",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-text-III.3.19",
+              "number": "III.3.19",
+              "index": 19,
+              "question": "Какое предложение соответствует содержанию текста?",
+              "additionalText": "17 декабря 1903 года в небе появился первый моторизованный летательный аппарат, построенный американскими братьями Орвиллом и Уилбуром Райт. Он пробыл в воздухе 12 секунд и мирно приземлился на землю. О рождении настоящего самолета братья сообщили отцу телеграммой. С этого дня началась история авиации. В Грузии Шалва Эристав построил аналогичный летательный аппарат в 1835 году, но он не смог летать. В 1911 году в «Сахалхо Газети» был опубликован отчет Антона Клдиашвили о создании модели летательного аппарата. Он побуждал читателей объединить усилия для создания самолета, хотя широкая общественность в то время мало интересовалась полетами.",
+              "answers": [
+                {
+                  "text": "Первый моторизованный самолет построили и испытали братья Райт.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Антон Клидиашвили построил летательный аппарат с помощью общественности",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Шалва Эристави впервые прилетел в Грузию на собственной машине",
+                  "isCorrect": false
+                },
+                {
+                  "text": "«Народная газета» часто публиковала сведения об истории авиации",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": "geo-reading-text-III.3.20",
+              "number": "III.3.20",
+              "index": 20,
+              "question": "Какое предложение соответствует содержанию текста?",
+              "additionalText": "В 1865 году в Тбилиси был открыт первый сквер имени Александра. Его спроектировал немецкий архитектор Отто Симонсон, долгое время живший и работавший в Тбилиси. С его именем связан ряд зданий, которые до сих пор украшают нашу столицу. Один из них – Национальный дворец студентов и молодежи. Выставочные павильоны, ресторан, фонтаны были специально спроектированы Симонсоном. Они придали особый колорит саду в европейском стиле, не похожему на существовавшие ранее места для собраний. Сегодня садовая территория отремонтирована и благоустроена.",
+              "answers": [
+                {
+                  "text": "Александровский сад был похож на другие места встреч в Тбилиси.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Александровский сад отличался от других садов своим европейским стилем.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Немецкий архитектор Отто Симонсон редко приезжал в Тбилиси",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Это единственное здание в Тбилиси, построенное по проекту Отто Симонсона.",
+                  "isCorrect": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
