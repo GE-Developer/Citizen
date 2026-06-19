@@ -12,6 +12,7 @@ Icon
 xcuserdata/
 *.xcuserstate
 *.xcuserdatad
+*.pbxproj.bak
 
 ## Build generated
 build/

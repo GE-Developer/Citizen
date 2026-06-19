@@ -10,6 +10,10 @@ enum Language: String, CaseIterable, Identifiable {
     case georgian = "ka"
     case russian = "ru"
     
+    static var rtlLanguages: Set<String> {
+        ["ar", "he", "fa", "ur"]
+    }
+    
     var id: String { rawValue }
     
     var localizedName: String {
