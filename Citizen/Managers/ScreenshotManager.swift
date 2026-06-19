@@ -1,6 +1,6 @@
 //
 //  ScreenshotManager.swift
-//  VOID
+//  Citizen
 //
 //  Created by GE-Developer
 //
