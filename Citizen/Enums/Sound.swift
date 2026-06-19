@@ -6,11 +6,13 @@
 //
 
 enum Sound {
-    case someSound
+    case devMode
+    case errorAlert
     
     var name: String {
         switch self {
-        case .someSound: return "some sound"
+        case .devMode: return "Dev_Mode"
+        case .errorAlert: return "Error_Alert"
         }
     }
 }

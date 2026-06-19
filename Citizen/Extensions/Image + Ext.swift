@@ -18,16 +18,11 @@ struct SystemImage {
     let back = Image(systemName: "chevron.left")
     let chevron = Image(systemName: "chevron.right")
     let lock = Image(systemName: "lock.fill")
-    let openLock = Image(systemName: "lock.open.fill")
     let timer = Image(systemName: "timer")
     let send = Image(systemName: "arrow.up")
     let xmark = Image(systemName: "xmark")
-    let checkmark = Image(systemName: "checkmark")
-    let cryptoSettings = Image(systemName: "slider.horizontal.3")
     let number = Image(systemName: "number")
-    let info = Image(systemName: "info.circle")
     let magnifyingglass = Image(systemName: "magnifyingglass")
-    
     let darkMode = Image(systemName: "moon.fill")
     let language = Image(systemName: "globe")
     let vibration = Image(systemName: "iphone.radiowaves.left.and.right")
@@ -36,46 +31,44 @@ struct SystemImage {
     let star = Image(systemName: "star.fill")
     let restorePurchases = Image(systemName: "arrow.clockwise")
     let reviewLike = Image(systemName: "hand.thumbsup.fill")
-    let rectangle = Image(systemName: "app.fill")
     let termsOfUse = Image(systemName: "doc.plaintext")
     let privacyPolicy = Image(systemName: "lock.doc.fill")
     let developerTool = Image(systemName: "hammer.fill")
     let gear = Image(systemName: "gear")
-    let code = Image(systemName: "chevron.left.slash.chevron.right")
     let warning = Image(systemName: "exclamationmark.triangle")
     let repeatArrow = Image(systemName: "checkmark.arrow.trianglehead.counterclockwise")
     let bookmark = Image(systemName: "bookmark.fill")
+    let hint = Image(systemName: "lightbulb")
+    let books = Image(systemName: "books.vertical.fill")
+    let plus = Image(systemName: "plus")
+    let paintpalette = Image(systemName: "paintpalette.fill")
+    let code = Image(systemName: "chevron.left.slash.chevron.right")
     
     func key(_ isFilled: Bool = false) -> Image {
-        isFilled ? Image(systemName: "key.fill") : Image(systemName: "key")
+        Image(systemName: isFilled ? "key.fill" : "key")
     }
     
     func lock(_ isOpen: Bool) -> Image {
-        isOpen ? openLock : lock
+        isOpen ? Image(systemName: "lock.open.fill") : lock
     }
     
     func checkmarkInCircle(_ isFilled: Bool = true) -> Image {
-        isFilled ? Image(systemName: "checkmark.circle.fill") : Image(systemName: "circle")
+        Image(systemName: isFilled ? "checkmark.circle.fill" : "circle")
     }
     
     func checkmarkAndXmark(_ isCorrect: Bool) -> Image {
-        Image(systemName: isCorrect ? "checkmark" : "xmark")
+        isCorrect ? Image(systemName: "checkmark") : xmark
     }
 }
 
 struct BackgroundImage {
-    let aes256Argon2idVOID = Image("AES256+Argon2id+VOID")
-    let emojiBackground = Image("EmojiBackground")
 }
 
 struct ContentImage {
-    let voidAES256Argon2id = Image("VOID+AES256+Argon2id")
-    let emoji = Image("Emoji")
 }
 
 struct OtherImage {
     let iosDeveloperMichael = Image("iOS Developer")
-    let gitHub = Image("GitHub")
     
     let svgLogo = Image("SVG Logo")
 }

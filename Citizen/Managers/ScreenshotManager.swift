@@ -1,0 +1,28 @@
+//
+//  ScreenshotManager.swift
+//  VOID
+//
+//  Created by GE-Developer
+//
+
+import Foundation
+
+@Observable
+final class ScreenshotManager {
+    var isScreenshotProtectionOn: Bool {
+        didSet { defaults.set(isScreenshotProtectionOn, forKey: key) }
+    }
+    
+    static let shared = ScreenshotManager()
+    
+    private let defaults = UserDefaults.standard
+    private let key = AppStorageKey.screenshotProtection.key
+    
+    private init() {
+        isScreenshotProtectionOn = defaults.object(forKey: key) as? Bool ?? false
+    }
+    
+    func reset() {
+        isScreenshotProtectionOn = false
+    }
+}

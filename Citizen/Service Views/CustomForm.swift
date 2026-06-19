@@ -1,6 +1,6 @@
 //
 //  CustomForm.swift
-//  Citizen
+//  VOID
 //
 //  Created by GE-Developer
 //
@@ -33,7 +33,7 @@ extension CustomForm {
         VStack(alignment: .leading, spacing: 12) {
             if let headerText {
                 HStack(spacing: 0) {
-                    header(headerText)
+                    FormHeaderView(headerText)
                     Spacer()
                     headerContent
                 }
@@ -44,17 +44,5 @@ extension CustomForm {
             .background(Color(.secondarySystemGroupedBackground))
             .clipShape(RoundedRectangle(cornerRadius: 12))
         }
-    }
-    
-    private func header(_ text: String) -> some View {
-        Text(text)
-            .foregroundStyle(Color.citizen.mainText)
-            .font(.caption)
-            .fontDesign(.rounded)
-            .textCase(.uppercase)
-            .lineLimit(2)
-            .minimumScaleFactor(0.5)
-            .multilineTextAlignment(.leading)
-            .padding(.horizontal, 6)
     }
 }

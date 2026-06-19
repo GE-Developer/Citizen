@@ -1,6 +1,6 @@
 //
 //  ExplosiveStarView.swift
-//  Citizen
+//  VOID
 //
 //  Created by GE-Developer
 //
@@ -17,9 +17,8 @@ struct ExplosiveStarView: View {
     private let image: Image = .system.star
     private let imageFill: Image = .system.star
     
-    private let normalColor: Color = .citizen.background
-    private let selectColor: Color = .citizen.payWallAccentDark
-    private let effectColor: Color = .citizen.payWallAccentLight
+    private let normalColor: Color = .void.background
+    private let effectColor: Color = .void.accent
     
     var body: some View {
         GeometryReader{ proxy in
@@ -43,7 +42,7 @@ struct ExplosiveStarView: View {
                     .font(.system(size: minSize))
                     .opacity(isSelected ? 1 : 0)
                     .scaleEffect(isSelected ? 1 : 0.0001)
-                    .foregroundStyle(Gradient.payWallAccent)
+                    .foregroundStyle(Gradient.accent)
                     .opacity(isSelected ? 1 : 0)
                     .animation(
                         isSelected
@@ -53,7 +52,7 @@ struct ExplosiveStarView: View {
                 
                 Circle()
                     .stroke(lineWidth: isSelected ? 0 : minSize / 2)
-                    .foregroundColor(isSelected ? selectColor : normalColor)
+                    .foregroundColor(isSelected ? effectColor : normalColor)
                     .scaleEffect(scaleCircle)
                     .opacity(isSelected ? 1 : 0)
                     .animation(

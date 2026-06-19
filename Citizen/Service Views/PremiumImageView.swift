@@ -1,6 +1,6 @@
 //
 //  PremiumImageView.swift
-//  Citizen
+//  VOID
 //
 //  Created by GE-Developer
 //
@@ -18,14 +18,14 @@ struct PremiumView: View {
     
     private let demonstration: Demonstration
     
-    init(_ demonstration: Demonstration) {
-        self.demonstration = demonstration
-    }
-
     enum Demonstration {
         case star
         case textAndStar
         case status
+    }
+    
+    init(_ demonstration: Demonstration) {
+        self.demonstration = demonstration
     }
     
     var body: some View {

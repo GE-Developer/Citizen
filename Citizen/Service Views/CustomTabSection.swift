@@ -1,6 +1,6 @@
 //
 //  CustomTabSection.swift
-//  Citizen
+//  VOID
 //
 //  Created by GE-Developer
 //
@@ -56,7 +56,7 @@ extension CustomTabSection {
                 .overlay(blick(shineOpacity, shineOffset))
                 .clipShape(RoundedRectangle(cornerRadius: 12))
                 .overlay(stroke)
-                .shadow(color: Color.citizen.viewShadow, radius: 2)
+                .shadow(color: .viewShadow, radius: 2)
                 .scaleEffect(CGFloat(scale))
                 .rotation3DEffect(
                     angle,

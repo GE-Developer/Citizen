@@ -12,13 +12,16 @@ extension Color {
 }
 
 struct CitizenColor {
+    var accent: Color {
+        AccentColorManager.shared.currentColor.color
+    }
+    
     let background = Color("Background")
     let blackAndWhite = Color("Black And White")
     let whiteAndBlack = Color("White And Black")
+    let white = Color.white
     let groupBackground = Color("Group Background")
     let secondaryText = Color("Secondary Text")
-    let accentDark = Color("Accent Dark")
-    let accentLight = Color("Accent Georgian")
     let goldLight = Color("Gold Light")
     let goldDark = Color("Gold Dark")
     let grayLight = Color("Gray Light")
@@ -33,8 +36,6 @@ struct CitizenColor {
     let yellowDark = Color("Yellow Dark")
     let redLight = Color("Red Light")
     let redDark = Color("Red Dark")
-    let payWallAccentDark = Color("PayWallAccentDark")
-    let payWallAccentLight = Color("PayWallAccentLight")
     
     func progress(_ progress: Double) -> Color {
         if progress == 1    { return greenLight }
@@ -42,7 +43,7 @@ struct CitizenColor {
         if progress > 0     { return redLight }
         return secondaryText
     }
-
+    
     func phase(_ phase: TopicPhase) -> Color {
         switch phase {
         case .completed:         greenLight
