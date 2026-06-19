@@ -8,8 +8,8 @@
 import UIKit
 
 final class HapticsManager {
-    var isHapticsOff: Bool {
-        didSet { defaults.set(isHapticsOff, forKey: key) }
+    var isHapticsOn: Bool {
+        didSet { defaults.set(isHapticsOn, forKey: key) }
     }
     
     static let shared = HapticsManager()
@@ -18,11 +18,15 @@ final class HapticsManager {
     private let key = AppStorageKey.haptics.key
     
     private init() {
-        isHapticsOff = defaults.bool(forKey: key)
+        isHapticsOn = defaults.object(forKey: key) as? Bool ?? true
+    }
+    
+    func reset() {
+        isHapticsOn = true
     }
     
     func impact(style: UIImpactFeedbackGenerator.FeedbackStyle = .medium, vol: CGFloat = 1, delay: Double = 0) {
-        guard !isHapticsOff else { return }
+        guard isHapticsOn else { return }
         
         let impactGenerator = UIImpactFeedbackGenerator(style: style)
         impactGenerator.prepare()
@@ -33,7 +37,7 @@ final class HapticsManager {
     }
     
     func notification(type: UINotificationFeedbackGenerator.FeedbackType, delay: Double = 0) {
-        guard !isHapticsOff else { return }
+        guard isHapticsOn else { return }
         
         let notificationGenerator = UINotificationFeedbackGenerator()
         notificationGenerator.prepare()
@@ -44,7 +48,7 @@ final class HapticsManager {
     }
     
     func selectionChanged(delay: Double = 0) {
-        guard !isHapticsOff else { return }
+        guard isHapticsOn else { return }
         
         let selectionGenerator = UISelectionFeedbackGenerator()
         selectionGenerator.prepare()

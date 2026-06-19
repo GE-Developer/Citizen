@@ -13,19 +13,14 @@ final class LanguageManager {
         didSet {
             defaults.set([currentLanguageID], forKey: key)
             defaults.synchronize()
-            QuizRepository.shared.reload()
         }
-    }
-    
-    var bundleGE: Bundle? {
-        guard let path = Bundle.main.path(forResource: Language.georgian.id, ofType: "lproj") else {
-            return .main
-        }
-        return Bundle(path: path)
     }
     
     var bundle: Bundle? {
-        guard let path = Bundle.main.path(forResource: currentLanguageID, ofType: "lproj") else {
+        guard let path = Bundle.main.path(
+            forResource: currentLanguageID,
+            ofType: "lproj"
+        ) else {
             return .main
         }
         return Bundle(path: path)
@@ -37,6 +32,13 @@ final class LanguageManager {
     private let key = AppStorageKey.language.key
     
     private init() {
+        let baseAppLanguage = Bundle.main.developmentLocalization ?? Language.english.id
+        let baseUserLanguage = Bundle.main.preferredLocalizations.first
+        
+        currentLanguageID = baseUserLanguage ?? baseAppLanguage
+    }
+    
+    func reset() {
         let baseAppLanguage = Bundle.main.developmentLocalization ?? Language.english.id
         let baseUserLanguage = Bundle.main.preferredLocalizations.first
         

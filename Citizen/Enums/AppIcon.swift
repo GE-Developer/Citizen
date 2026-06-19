@@ -6,7 +6,7 @@
 //
 
 enum AppIcon: CaseIterable, Identifiable {
-    case blackVoid
+    case blackCitizen
     case ghostWhite
     case cyberGold
     case titanium
@@ -15,7 +15,7 @@ enum AppIcon: CaseIterable, Identifiable {
     
     var id: String {
         switch self {
-        case .blackVoid:
+        case .blackCitizen:
             return "BlackVoid"
         case .ghostWhite:
             return "GhostWhite"
@@ -32,7 +32,7 @@ enum AppIcon: CaseIterable, Identifiable {
     
     var appIconid: String? {
         switch self {
-        case .blackVoid:
+        case .blackCitizen:
             return nil
         case .ghostWhite:
             return "GhostWhite"
@@ -49,7 +49,7 @@ enum AppIcon: CaseIterable, Identifiable {
     
     var title: String {
         switch self {
-        case .blackVoid:
+        case .blackCitizen:
             return "Black VOID"
         case .ghostWhite:
             return "Ghost White"
@@ -65,6 +65,6 @@ enum AppIcon: CaseIterable, Identifiable {
     }
     
     static var premiumIcons: [AppIcon] {
-        allCases.filter { $0 != .blackVoid }
+        allCases.filter { $0 != .blackCitizen }
     }
 }

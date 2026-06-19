@@ -8,8 +8,8 @@
 import AVFoundation
 
 final class SoundManager {
-    var isSoundOff: Bool {
-        didSet { defaults.set(isSoundOff, forKey: key) }
+    var isSoundOn: Bool {
+        didSet { defaults.set(isSoundOn, forKey: key) }
     }
     
     static let shared = SoundManager()
@@ -19,12 +19,16 @@ final class SoundManager {
     private var player: AVAudioPlayer?
     
     private init() {
-        isSoundOff = defaults.bool(forKey: key)
+        isSoundOn = defaults.object(forKey: key) as? Bool ?? true
         configureAudioSession()
     }
     
+    func reset() {
+        isSoundOn = true
+    }
+    
     func playSound(_ soundName: Sound) {
-        guard !isSoundOff else { return }
+        guard isSoundOn else { return }
         
         let url = Bundle.main.url(forResource: soundName.name, withExtension: "mp3")
         guard let url else { return }

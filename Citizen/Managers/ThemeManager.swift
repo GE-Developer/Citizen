@@ -5,16 +5,16 @@
 //  Created by GE-Developer
 //
 
-import SwiftUICore
+import SwiftUI
 
 @Observable
 final class ThemeManager {
-    var isThemeLight: Bool {
-        didSet { defaults.set(isThemeLight, forKey: key) }
+    var isDarkMode: Bool {
+        didSet { defaults.set(isDarkMode, forKey: key) }
     }
     
     var theme: ColorScheme {
-        isThemeLight ? .light : .dark
+        isDarkMode ? .dark : .light
     }
     
     static let shared = ThemeManager()
@@ -23,6 +23,10 @@ final class ThemeManager {
     private let key = AppStorageKey.theme.key
     
     private init() {
-        isThemeLight = defaults.bool(forKey: key)
+        isDarkMode = defaults.object(forKey: key) as? Bool ?? true
+    }
+    
+    func reset() {
+        isDarkMode = true
     }
 }

@@ -19,8 +19,8 @@ final class StoreManager: ObservableObject {
     
     init() {
         devTest = UserDefaults.standard.bool(forKey: AppStorageKey.devTest.key)
-//        updates = newTransactionListenerTask()
-//        Task { await updatePurchasedProducts() }
+        updates = newTransactionListenerTask()
+        Task { await updatePurchasedProducts() }
     }
     
     deinit {
