@@ -1,6 +1,6 @@
 //
 //  PremiumImageView.swift
-//  VOID
+//  Citizen
 //
 //  Created by GE-Developer
 //
@@ -10,7 +10,7 @@ import SwiftUI
 struct PremiumView: View {
     @EnvironmentObject private var store: StoreManager
     
-    @State private var isAnimating = false
+    @State private var rotation: Double = 0
     
     private let forPremiumText = "For Premium"
     private let premiumText = "Premium"
@@ -53,20 +53,12 @@ extension PremiumView {
                 .fontWeight(.bold)
                 .foregroundStyle(Gradient.gold)
                 .rotation3DEffect(
-                    .degrees(isAnimating ? 360 : 0),
+                    .degrees(rotation),
                     axis: (x: 0, y: 1, z: 0)
                 )
                 .font(.callout)
                 .fontDesign(.rounded)
-                .animation(
-                    .easeInOut(duration: 0.6)
-                    .delay(1.5)
-                    .repeatForever(autoreverses: true),
-                    value: isAnimating
-                )
-                .onAppear {
-                    isAnimating = true
-                }
+                .onAppear { startRotation() }
         }
     }
     
@@ -80,22 +72,14 @@ extension PremiumView {
                     .fontWeight(.bold)
                     .foregroundStyle(Gradient.gold)
                     .rotation3DEffect(
-                        .degrees(isAnimating ? 360 : 0),
+                        .degrees(rotation),
                         axis: (x: 0, y: 1, z: 0)
                     )
                     .offset(y: -3)
             }
             .font(.callout)
             .fontDesign(.rounded)
-            .animation(
-                .easeInOut(duration: 0.6)
-                .delay(1.5)
-                .repeatForever(autoreverses: true),
-                value: isAnimating
-            )
-            .onAppear {
-                isAnimating = true
-            }
+            .onAppear { startRotation() }
         }
     }
     
@@ -127,6 +111,20 @@ extension PremiumView {
                     RoundedRectangle(cornerRadius: 5)
                         .stroke(Color(.secondarySystemGroupedBackground), lineWidth: 2)
                 )
+        }
+    }
+}
+
+// MARK: - Logic
+extension PremiumView {
+    private func startRotation() {
+        guard rotation == 0 else { return }
+        withAnimation(
+            .easeInOut(duration: 0.6)
+            .delay(1.5)
+            .repeatForever(autoreverses: true)
+        ) {
+            rotation = 360
         }
     }
 }

@@ -1,6 +1,6 @@
 //
 //  TopViewHeaderText.swift
-//  VOID
+//  Citizen
 //
 //  Created by GE-Developer
 //
@@ -27,7 +27,7 @@ extension TopViewHeaderText {
                 .font(.subheadline)
                 .fontWeight(.thin)
                 .fontDesign(.rounded)
-                .foregroundStyle(Color.void.secondaryText)
+                .foregroundStyle(Color.citizen.secondaryText)
                 .minimumScaleFactor(0.5)
                 .multilineTextAlignment(.leading)
             Spacer()

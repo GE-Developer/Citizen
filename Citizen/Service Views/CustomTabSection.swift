@@ -1,6 +1,6 @@
 //
 //  CustomTabSection.swift
-//  VOID
+//  Citizen
 //
 //  Created by GE-Developer
 //
@@ -8,6 +8,15 @@
 import SwiftUI
 
 struct CustomTabSection: View {
+    private var activeScreenWidth: CGFloat {
+        let scenes = UIApplication.shared.connectedScenes
+        let scene = scenes
+            .compactMap { $0 as? UIWindowScene }
+            .first { $0.activationState == .foregroundActive }
+        ?? scenes.compactMap { $0 as? UIWindowScene }.first
+        return scene?.screen.bounds.width ?? 0
+    }
+    
     private let image: Image
     private let text: String?
     private let subtext: String?
@@ -34,13 +43,16 @@ struct CustomTabSection: View {
 extension CustomTabSection {
     private var customTabSection: some View {
         GeometryReader {
-            let screenWidth = UIScreen.main.bounds.width
+            let screenWidth = max(activeScreenWidth, 1)
             let minX = $0.frame(in: .global).minX
-            let distance = min(1.0, max(0.0, Double(abs(minX) / screenWidth)))
-            let direction: Double = minX >= 0 ? 1.0 : -1.0
+            let safeMinX = minX.isFinite ? minX : 0
+            let distance = min(1.0, max(0.0, Double(abs(safeMinX) / screenWidth)))
+            let direction: Double = safeMinX >= 0 ? 1.0 : -1.0
             let angle = Angle(degrees: -direction * distance * 25.0)
             let scale = 1.0 - distance * 0.08
-            let slideRaw = ($0.frame(in: .global).midX - screenWidth / 2) / screenWidth
+            let midX = $0.frame(in: .global).midX
+            let safeMidX = midX.isFinite ? midX : 0
+            let slideRaw = (safeMidX - screenWidth / 2) / screenWidth
             let slide = max(-1.0, min(1.0, Double(slideRaw)))
             let shineOffset = CGFloat(slide) * 240.0
             let shineOpacity = 0.18 + 0.22 * abs(slide)

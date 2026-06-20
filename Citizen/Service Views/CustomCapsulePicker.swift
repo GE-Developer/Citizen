@@ -1,6 +1,6 @@
 //
 //  CustomCapsulePicker.swift
-//  VOID
+//  Citizen
 //
 //  Created by GE-Developer
 //
@@ -76,7 +76,7 @@ extension CustomCapsulePicker {
                 .fontDesign(.rounded)
                 .padding(.horizontal, 14)
                 .padding(.vertical, 8)
-                .foregroundStyle(isDisabled ? Color.void.mainText.opacity(0.3) : Color.void.mainText)
+                .foregroundStyle(isDisabled ? Color.citizen.mainText.opacity(0.3) : Color.citizen.mainText)
                 .background(isSelected ? AnyShapeStyle(Gradient.accent) : AnyShapeStyle(Color(.secondarySystemGroupedBackground)))
                 .clipShape(Capsule())
         }

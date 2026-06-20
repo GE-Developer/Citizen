@@ -1,6 +1,6 @@
 //
 //  CustomButtonRow.swift
-//  VOID
+//  Citizen
 //
 //  Created by GE-Developer
 //
@@ -83,9 +83,9 @@ extension CustomButtonRow {
                     .clipShape(Circle())
                     .overlay(
                         Circle()
-                            .stroke(Color.void.background, lineWidth: 1)
+                            .stroke(Color.citizen.background, lineWidth: 1)
                     )
-                    .shadow(color: Color.void.viewShadow, radius: 1)
+                    .shadow(color: Color.citizen.viewShadow, radius: 1)
                     .padding(.horizontal, 6)
                     .padding(6)
             } else {
@@ -97,14 +97,14 @@ extension CustomButtonRow {
     private var titlePlace: some View {
         VStack(alignment: .leading, spacing: 3) {
             Text(title)
-                .foregroundStyle(Color.void.mainText)
+                .foregroundStyle(Color.citizen.mainText)
                 .font(.headline)
                 .fontWeight(isCritical ? .semibold : .regular)
                 .lineLimit(2)
                 .minimumScaleFactor(0.5)
             if let subtitle {
                 Text(subtitle)
-                    .foregroundStyle(Color.void.secondaryText)
+                    .foregroundStyle(Color.citizen.secondaryText)
                     .font(.caption)
                     .fontWeight(.light)
             }
@@ -119,7 +119,7 @@ extension CustomButtonRow {
         Group {
             if let additionalTitle {
                 Text(additionalTitle)
-                    .foregroundStyle(Color.void.mainText)
+                    .foregroundStyle(Color.citizen.mainText)
                     .font(.headline)
                     .lineLimit(1)
                     .minimumScaleFactor(0.5)
@@ -134,7 +134,7 @@ extension CustomButtonRow {
         Group {
             if isLink {
                 Image.system.chevron
-                    .foregroundStyle(Color.void.blackAndWhite)
+                    .foregroundStyle(Color.citizen.blackAndWhite)
                     .font(.footnote)
                     .padding(.trailing)
             }
@@ -144,7 +144,7 @@ extension CustomButtonRow {
     private var checkmarkPlace: some View {
         Group {
             if withCheckmark {
-                Image.system.checkmark()
+                Image.system.checkmarkInCircle()
                     .foregroundStyle(Gradient.accent)
                     .font(.footnote)
                     .fontWeight(.heavy)

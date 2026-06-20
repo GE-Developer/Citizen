@@ -1,6 +1,6 @@
 //
 //  FormHeaderView.swift
-//  VOID
+//  Citizen
 //
 //  Created by GE-Developer
 //
@@ -23,7 +23,7 @@ struct FormHeaderView: View {
 extension FormHeaderView {
     private var header: some View {
         Text(text)
-            .foregroundStyle(Color.void.mainText)
+            .foregroundStyle(Color.citizen.mainText)
             .font(.caption)
             .fontDesign(.rounded)
             .textCase(.uppercase)

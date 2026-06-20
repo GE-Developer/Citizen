@@ -9,9 +9,10 @@ import SwiftUI
 
 struct CustomScrollView<Content: View, NavBarItems: View>: View {
     @Environment(\.dismiss) private var dismiss
-    @EnvironmentObject private var tabBarState: TabBarState
+    @Environment(\.parentTab) private var parentTab
+    @Environment(TabBarState.self) private var tabBarState
     @State private var navState = NavBarState()
-
+    
     private let title: String
     private let subTitle: String?
     private let alignment: HorizontalAlignment
@@ -19,10 +20,10 @@ struct CustomScrollView<Content: View, NavBarItems: View>: View {
     private let tabBarIsVisible: Bool
     private let showNavBar: Bool
     private let backgroundImage: Image?
-
+    
     @ViewBuilder private let navBarItems: () -> NavBarItems
     @ViewBuilder private let content: (ScrollViewProxy) -> Content
-
+    
     init(
         title: String,
         subTitle: String? = nil,
@@ -43,7 +44,7 @@ struct CustomScrollView<Content: View, NavBarItems: View>: View {
         self.navBarItems = navBarItems
         self.content = content
     }
-
+    
     var body: some View {
         ZStack(alignment: .top) {
             background.zIndex(0)
@@ -63,8 +64,15 @@ struct CustomScrollView<Content: View, NavBarItems: View>: View {
         }
         .toolbar(.hidden, for: .navigationBar)
         .onAppear {
-            tabBarState.isVisible = tabBarIsVisible
+            if !tabBarIsVisible {
+                tabBarState.enterStack(for: parentTab)
+            }
             closeKeyboard()
+        }
+        .onDisappear {
+            if !tabBarIsVisible {
+                tabBarState.exitStack(for: parentTab)
+            }
         }
     }
 }

@@ -1,6 +1,6 @@
 //
 //  CustomTextRow.swift
-//  VOID
+//  Citizen
 //
 //  Created by GE-Developer
 //
@@ -17,7 +17,7 @@ struct CustomTextRow: View {
     var body: some View {
         HStack(spacing: 0) {
             Text(text.asMarkdown)
-                .foregroundStyle(Color.void.secondaryText)
+                .foregroundStyle(Color.citizen.secondaryText)
                 .font(.subheadline)
                 .fontWeight(.light)
                 .fontDesign(.rounded)

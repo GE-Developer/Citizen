@@ -135,16 +135,16 @@ fileprivate struct MaskView: View {
     @State private var maskHeight: CGFloat
     @State private var duration: Double
     @State private var delay: Double
-
+    
     private let width: CGFloat
     private let height: CGFloat
-
+    
     private let gradientMask = LinearGradient(
         colors: [.clear, .black.opacity(0.5), .black.opacity(0.9), .black],
         startPoint: .top,
         endPoint: .bottom
     )
-
+    
     init(width: CGFloat, height: CGFloat, speedRange: ClosedRange<Double>) {
         self.width = width
         self.height = height
@@ -152,10 +152,10 @@ fileprivate struct MaskView: View {
         _duration = State(initialValue: .random(in: speedRange))
         _delay = State(initialValue: .random(in: 0...4))
     }
-
+    
     var body: some View {
         let yOffset = shouldAnimate ? height : -maskHeight
-
+        
         VStack(spacing: 0) {
             Rectangle()
                 .fill(gradientMask)
@@ -166,7 +166,7 @@ fileprivate struct MaskView: View {
         .offset(y: yOffset)
         .onAppear { startAnimation() }
     }
-
+    
     // MARK: - MaskView (Logic)
     private func startAnimation() {
         withAnimation(.linear(duration: duration)

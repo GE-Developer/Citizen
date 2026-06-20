@@ -9,12 +9,13 @@ import SwiftUI
 
 struct CustomPage<Title: View, Content: View>: View {
     @Environment(\.dismiss) private var dismiss
-    
-    @EnvironmentObject private var tabBarState: TabBarState
-    
+    @Environment(\.parentTab) private var parentTab
+
+    @Environment(TabBarState.self) private var tabBarState
+
     @ViewBuilder private let titleHStackView: () -> Title
     @ViewBuilder private let content: () -> Content
-    
+
     init(
         @ViewBuilder titleHStackView: @escaping () -> Title,
         @ViewBuilder content: @escaping () -> Content
@@ -22,13 +23,15 @@ struct CustomPage<Title: View, Content: View>: View {
         self.titleHStackView = titleHStackView
         self.content = content
     }
-    
+
     var body: some View {
         customPage
-            .onAppear { tabBarState.isVisible = false }
+            .onAppear { tabBarState.enterStack(for: parentTab) }
+            .onDisappear { tabBarState.exitStack(for: parentTab) }
     }
 }
 
+// MARK: - Builder
 extension CustomPage {
     private var customPage: some View {
         ZStack(alignment: .top) {

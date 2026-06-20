@@ -1,6 +1,6 @@
 //
 //  CustomSecureField.swift
-//  VOID
+//  Citizen
 //
 //  Created by GE-Developer
 //
@@ -61,7 +61,7 @@ extension CustomSecureField {
             .textContentType(.password)
             .keyboardType(.asciiCapable)
             .padding(.horizontal, 8)
-            .foregroundStyle(Color.void.mainText)
+            .foregroundStyle(Color.citizen.mainText)
             .submitLabel(.done)
             .onSubmit { focus = false }
             .fontDesign(.rounded)
@@ -73,7 +73,7 @@ extension CustomSecureField {
             Image.system.xmark
                 .font(.title3)
                 .fontWeight(.ultraLight)
-                .foregroundStyle(Color.void.secondaryText)
+                .foregroundStyle(Color.citizen.secondaryText)
                 .padding(.trailing, 10)
         }
         .opacity(password.isEmpty ? 0 : 1)
@@ -82,8 +82,8 @@ extension CustomSecureField {
     
     private var background: some View {
         RoundedRectangle(cornerRadius: height / 2)
-            .fill(Color.void.textFieldBackground)
-            .shadow(color: Color.void.viewShadow, radius: 2)
+            .fill(Color.citizen.textFieldBackground)
+            .shadow(color: Color.citizen.viewShadow, radius: 2)
     }
 }
 

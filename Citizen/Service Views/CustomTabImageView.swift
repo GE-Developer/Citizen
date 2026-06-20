@@ -1,6 +1,6 @@
 //
 //  CustomTabImageView.swift
-//  VOID
+//  Citizen
 //
 //  Created by GE-Developer
 //
@@ -64,7 +64,7 @@ extension CustomTabImageView {
             
             Text(title)
                 .font(.headline)
-                .foregroundStyle(Color.void.mainText)
+                .foregroundStyle(Color.citizen.mainText)
                 .fontDesign(.rounded)
                 .lineLimit(2)
                 .minimumScaleFactor(0.7)

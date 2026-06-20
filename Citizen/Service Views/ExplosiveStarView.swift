@@ -1,6 +1,6 @@
 //
 //  ExplosiveStarView.swift
-//  VOID
+//  Citizen
 //
 //  Created by GE-Developer
 //
@@ -17,8 +17,8 @@ struct ExplosiveStarView: View {
     private let image: Image = .system.star
     private let imageFill: Image = .system.star
     
-    private let normalColor: Color = .void.background
-    private let effectColor: Color = .void.accent
+    private let normalColor: Color = .citizen.background
+    private let effectColor: Color = .citizen.accent
     
     var body: some View {
         GeometryReader{ proxy in

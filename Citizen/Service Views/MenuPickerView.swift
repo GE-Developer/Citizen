@@ -1,6 +1,6 @@
 //
 //  MenuPickerView.swift
-//  VOID
+//  Citizen
 //
 //  Created by GE-Developer
 //
@@ -11,6 +11,7 @@ struct MenuPickerView: View {
     @Binding private var selection: String
     
     private let options: [String]
+    private let emptyString = ""
     
     init(selection: Binding<String>, options: [String]) {
         self._selection = selection
@@ -25,7 +26,7 @@ struct MenuPickerView: View {
 // MARK: - Builder
 extension MenuPickerView {
     private var menuPickerView: some View {
-        Picker("", selection: $selection) {
+        Picker(emptyString, selection: $selection) {
             ForEach(options, id: \.self) { option in
                 Text(option)
                     .fontWeight(.bold)
@@ -34,7 +35,7 @@ extension MenuPickerView {
             }
         }
         .pickerStyle(.menu)
-        .tint(Color.void.accent)
+        .tint(Color.citizen.accent)
         .frame(height: 40)
         .background(background)
     }
@@ -42,6 +43,6 @@ extension MenuPickerView {
     private var background: some View {
         RoundedRectangle(cornerRadius: 20)
             .fill(Color(.secondarySystemGroupedBackground))
-            .shadow(color: Color.void.viewShadow, radius: 4)
+            .shadow(color: Color.citizen.viewShadow, radius: 4)
     }
 }
