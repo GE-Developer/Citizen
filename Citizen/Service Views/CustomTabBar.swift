@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CustomTabBar: View {
-    @EnvironmentObject private var tabBarState: TabBarState
+    @Environment(TabBarState.self) private var tabBarState
     
     private let haptics = HapticsManager.shared
     
@@ -40,7 +40,7 @@ extension CustomTabBar {
             
             ForEach(tabs) { tab in
                 icon(for: tab)
-//                divider(after: tab, in: tabs)
+                divider(after: tab, in: tabs)
             }
         }
         .padding(.horizontal, 15)
@@ -87,7 +87,7 @@ extension CustomTabBar {
         Group {
             switch tab {
             case .home:
-                Image(systemName: "books.vertical.fill")
+                Image.system.books
             case .settings:
                 Image.system.gear
                     .rotationEffect(.degrees(tab == tabBarState.selectedTab ? 120 : 0))
@@ -97,7 +97,7 @@ extension CustomTabBar {
         .font(.title2)
         .foregroundStyle(
             tabBarState.selectedTab == tab
-            ? Color.citizen.accentDark
+            ? Color.citizen.accent
             : Color.citizen.grayDark
         )
         .frame(maxWidth: .infinity, maxHeight: .infinity)

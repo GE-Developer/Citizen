@@ -12,9 +12,11 @@ struct ProgressRing: View {
     private let subtitle: String?
     private let withPercent: Bool
     private let lineWidth: CGFloat
-
+    
     private var progressColor: Color { .citizen.progress(progress) }
-
+    private var progressGradient: LinearGradient { Gradient.progress(progress) }
+    private var percentText: String { "\(Int(progress * 100))%" }
+    
     init(
         progress: Double,
         subtitle: String? = nil,
@@ -26,7 +28,7 @@ struct ProgressRing: View {
         self.withPercent = withPercent
         self.lineWidth = lineWidth
     }
-
+    
     var body: some View {
         progressRing
     }
@@ -47,22 +49,22 @@ extension ProgressRing {
             .stroke(lineWidth: lineWidth)
             .fill(Color.citizen.groupBackground)
     }
-
+    
     private var fillLine: some View {
         Circle()
             .trim(from: 0, to: progress)
             .stroke(style: .init(lineWidth: lineWidth, lineCap: .round))
-            .fill(progressColor)
+            .fill(progressGradient)
             .rotationEffect(.degrees(-90))
     }
-
+    
     private var percentLabel: some View {
         VStack {
             if withPercent {
-                Text("\(Int(progress * 100))%")
+                Text(percentText)
                     .font(.largeTitle)
                     .fontWeight(.bold)
-                    .foregroundStyle(subtitle == nil ? progressColor : .citizen.mainText)
+                    .foregroundStyle(subtitle == nil ? AnyShapeStyle(progressGradient) : AnyShapeStyle(Color.citizen.mainText))
             }
             if let subtitle {
                 Text(subtitle)
