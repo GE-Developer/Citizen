@@ -8,6 +8,7 @@
         <attribute name="isCorrect" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
     </entity>
     <entity name="SavedWordEntity" representedClassName="SavedWordEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="word" optional="YES" attributeType="String"/>
     </entity>
     <entity name="TopicStatsEntity" representedClassName="TopicStatsEntity" syncable="YES" codeGenerationType="class">

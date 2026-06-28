@@ -1,7 +1,46 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "· %@" : {
+
+    },
     "[%@]" : {
+
+    },
+    "Alphabet.Letters.header" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "All Letters"
+          }
+        }
+      }
+    },
+    "Alphabet.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alphabet"
+          }
+        }
+      }
+    },
+    "Alphabet.Transcription.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transcription"
+          }
+        }
+      }
+    },
+    "Couldn't load data" : {
 
     },
     "Error.title" : {

@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "tsigni.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
