@@ -23,15 +23,15 @@ final class AlphabetViewModel {
     
     private var playbackTask: Task<Void, Never>?
     
-    private let voiceActingManager = VoiceActingManager.shared
-    private let hapticManager = HapticsManager.shared
-    
     let showPlayButton: Bool
     
     let title = L10n("Alphabet.title")
     let allLettersTitle = L10n("Alphabet.Letters.header")
     let transcriptionToggleTitle = L10n("Alphabet.Transcription.title")
     let letters: [AlphabetLetter]
+    
+    private let voiceActingManager = VoiceActingManager.shared
+    private let hapticManager = HapticsManager.shared
     
     init() {
         letters = AlphabetCatalog.shared.letters
