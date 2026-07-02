@@ -26,6 +26,7 @@ extension FormHeaderView {
             .foregroundStyle(Color.citizen.mainText)
             .font(.caption)
             .fontDesign(.rounded)
+            .tracking(1)
             .textCase(.uppercase)
             .lineLimit(2)
             .minimumScaleFactor(0.5)

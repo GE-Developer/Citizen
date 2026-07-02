@@ -7,6 +7,7 @@
 
 import Foundation
 
-public func L10n(_ key: String) -> String {
-    String(localized: .init(key), bundle: LanguageManager.shared.bundle)
+@MainActor
+public func L10n(_ key: String.LocalizationValue) -> String {
+    String(localized: key, bundle: LanguageManager.shared.bundle)
 }

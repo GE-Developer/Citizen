@@ -22,6 +22,7 @@ enum StoreError: Error {
     case loadingError
     case syncError
     
+    @MainActor
     var description: String {
         switch self {
         case .revokedCertificate:

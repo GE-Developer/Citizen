@@ -7,11 +7,10 @@
 
 import SwiftUI
 
-struct CustomCapsulePicker<Item: CaseIterable & Hashable>: View
-where Item.AllCases: RandomAccessCollection
-{
+struct CustomCapsulePicker<Item: Hashable>: View {
     @Binding private var selection: Item
     
+    private let items: [Item]
     private let disabledItems: Set<Item>
     private let title: String?
     private let capsuleName: (Item) -> String
@@ -20,11 +19,13 @@ where Item.AllCases: RandomAccessCollection
     
     init(
         selection: Binding<Item>,
+        items: [Item],
         disabledItems: Set<Item> = [],
         title: String? = nil,
         capsuleName: @escaping (Item) -> String
     ) {
         self._selection = selection
+        self.items = items
         self.disabledItems = disabledItems
         self.title = title
         self.capsuleName = capsuleName
@@ -32,6 +33,23 @@ where Item.AllCases: RandomAccessCollection
     
     var body: some View {
         capsulePicker
+    }
+}
+
+extension CustomCapsulePicker where Item: CaseIterable, Item.AllCases: RandomAccessCollection {
+    init(
+        selection: Binding<Item>,
+        disabledItems: Set<Item> = [],
+        title: String? = nil,
+        capsuleName: @escaping (Item) -> String
+    ) {
+        self.init(
+            selection: selection,
+            items: Array(Item.allCases),
+            disabledItems: disabledItems,
+            title: title,
+            capsuleName: capsuleName
+        )
     }
 }
 
@@ -45,7 +63,7 @@ extension CustomCapsulePicker {
             ScrollViewReader { proxy in
                 ScrollView(.horizontal, showsIndicators: false) {
                     LazyHStack(spacing: 8) {
-                        ForEach(Item.allCases, id: \.self) { item in
+                        ForEach(items, id: \.self) { item in
                             capsuleButton(item)
                                 .id(item)
                         }
@@ -76,7 +94,11 @@ extension CustomCapsulePicker {
                 .fontDesign(.rounded)
                 .padding(.horizontal, 14)
                 .padding(.vertical, 8)
-                .foregroundStyle(isDisabled ? Color.citizen.mainText.opacity(0.3) : Color.citizen.mainText)
+                .foregroundStyle(
+                    isSelected ? Color.citizen.white
+                    : isDisabled ? Color.citizen.mainText.opacity(0.3)
+                    : Color.citizen.mainText
+                )
                 .background(isSelected ? AnyShapeStyle(Gradient.accent) : AnyShapeStyle(Color(.secondarySystemGroupedBackground)))
                 .clipShape(Capsule())
         }

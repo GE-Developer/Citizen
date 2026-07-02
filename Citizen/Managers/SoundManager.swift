@@ -7,6 +7,7 @@
 
 import AVFoundation
 
+@MainActor
 final class SoundManager {
     var isSoundOn: Bool {
         didSet { defaults.set(isSoundOn, forKey: key) }

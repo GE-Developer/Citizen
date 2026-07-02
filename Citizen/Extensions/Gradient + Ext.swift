@@ -8,6 +8,7 @@
 import SwiftUI
 
 extension Gradient {
+    @MainActor
     static var accent: LinearGradient {
         AccentColorManager.shared.currentColor.gradient
     }
@@ -55,12 +56,5 @@ extension Gradient {
         case .workingOnMistakes: Gradient.red
         case .inProgress:        Gradient.yellow
         }
-    }
-    
-    static func progress(_ progress: Double) -> LinearGradient {
-        if progress == 1   { return Gradient.green }
-        if progress > 0.3  { return Gradient.yellow }
-        if progress > 0    { return Gradient.red }
-        return Gradient.gray
     }
 }

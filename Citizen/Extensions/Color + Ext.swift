@@ -12,6 +12,7 @@ extension Color {
 }
 
 struct CitizenColor {
+    @MainActor
     var accent: Color {
         AccentColorManager.shared.currentColor.color
     }
@@ -36,13 +37,6 @@ struct CitizenColor {
     let yellowDark = Color("Yellow Dark")
     let redLight = Color("Red Light")
     let redDark = Color("Red Dark")
-    
-    func progress(_ progress: Double) -> Color {
-        if progress == 1    { return greenLight }
-        if progress > 0.3   { return yellowLight }
-        if progress > 0     { return redLight }
-        return secondaryText
-    }
     
     func phase(_ phase: TopicPhase) -> Color {
         switch phase {

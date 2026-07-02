@@ -10,7 +10,6 @@ import SwiftUI
 extension Image {
     static let system = SystemImage()
     static let background = BackgroundImage()
-    static let content = ContentImage()
     static let other = OtherImage()
 }
 
@@ -21,12 +20,16 @@ struct SystemImage {
     let timer = Image(systemName: "timer")
     let send = Image(systemName: "arrow.up")
     let xmark = Image(systemName: "xmark")
+    let checkmark = Image(systemName: "checkmark")
     let number = Image(systemName: "number")
     let magnifyingglass = Image(systemName: "magnifyingglass")
     let darkMode = Image(systemName: "moon.fill")
     let language = Image(systemName: "globe")
     let vibration = Image(systemName: "iphone.radiowaves.left.and.right")
     let sound = Image(systemName: "speaker.wave.2.fill")
+    let voiceActing = Image(systemName: "waveform")
+    let play = Image(systemName: "play.fill")
+    let transcription = Image(systemName: "textformat")
     let subscription = Image(systemName: "star")
     let star = Image(systemName: "star.fill")
     let restorePurchases = Image(systemName: "arrow.clockwise")
@@ -38,8 +41,12 @@ struct SystemImage {
     let warning = Image(systemName: "exclamationmark.triangle")
     let repeatArrow = Image(systemName: "checkmark.arrow.trianglehead.counterclockwise")
     let bookmark = Image(systemName: "bookmark.fill")
+    let bookmarkOutline = Image(systemName: "bookmark")
     let hint = Image(systemName: "lightbulb")
     let books = Image(systemName: "books.vertical.fill")
+    let dictionary = Image(systemName: "character.book.closed.fill")
+    let dictionaryOutline = Image(systemName: "character.book.closed")
+    let leaderboard = Image(systemName: "chart.bar.fill")
     let plus = Image(systemName: "plus")
     let paintpalette = Image(systemName: "paintpalette.fill")
     let code = Image(systemName: "chevron.left.slash.chevron.right")
@@ -62,9 +69,6 @@ struct SystemImage {
 }
 
 struct BackgroundImage {
-}
-
-struct ContentImage {
 }
 
 struct OtherImage {

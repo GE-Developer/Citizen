@@ -46,7 +46,7 @@ extension AlphabetView {
     
     private func featuredCard(_ letter: AlphabetLetter) -> some View {
         HStack(spacing: 14) {
-            Image.content.alphabetExample(letter.exampleImage)
+            Image(letter.exampleImage)
                 .resizable()
                 .scaledToFill()
                 .frame(maxHeight: .infinity)

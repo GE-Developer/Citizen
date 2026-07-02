@@ -69,13 +69,9 @@ extension CustomTabBar {
     }
     
     private var background: some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: 12)
-                .foregroundStyle(Color(.secondarySystemGroupedBackground).opacity(0.3))
-            RoundedRectangle(cornerRadius: 12)
-                .foregroundStyle(.ultraThinMaterial)
-        }
-        .shadow(color: Color.citizen.navBarShadow, radius: 2)
+        RoundedRectangle(cornerRadius: 12)
+            .foregroundStyle(Color.citizen.groupBackground)
+            .shadow(color: Color.citizen.navBarShadow, radius: 2)
     }
     
     private var overlayStroke: some View {
@@ -86,6 +82,8 @@ extension CustomTabBar {
     private func icon(for tab: TabBarState.RootTab) -> some View {
         Group {
             switch tab {
+            case .dictionary:
+                Image.system.dictionary
             case .home:
                 Image.system.books
             case .settings:

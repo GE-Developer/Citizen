@@ -7,12 +7,12 @@
 
 import Foundation
 
+@MainActor
 @Observable
 final class LanguageManager {
     var currentLanguageID: String {
         didSet {
             defaults.set([currentLanguageID], forKey: key)
-            defaults.synchronize()
         }
     }
     

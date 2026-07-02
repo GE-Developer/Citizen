@@ -11,7 +11,7 @@ import SwiftUI
 struct CitizenApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            RootView()
         }
     }
 }

@@ -107,7 +107,7 @@ extension CustomNavigationTextField {
     
     private var background: some View {
         RoundedRectangle(cornerRadius: 15)
-            .fill(Color.citizen.textFieldBackground)
+            .fill(Color.citizen.groupBackground)
             .shadow(color: Color.citizen.viewShadow, radius: 2)
             .frame(height: 40)
     }

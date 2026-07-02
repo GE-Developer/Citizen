@@ -41,7 +41,7 @@ extension CustomForm {
             VStack(spacing: 0) {
                 content
             }
-            .background(Color(.secondarySystemGroupedBackground))
+            .background(Color.citizen.groupBackground)
             .clipShape(RoundedRectangle(cornerRadius: 12))
         }
     }

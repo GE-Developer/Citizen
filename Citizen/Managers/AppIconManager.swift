@@ -7,6 +7,7 @@
 
 import UIKit
 
+@MainActor
 final class AppIconManager {
     static private var supportsAlternateIcons: Bool {
         UIApplication.shared.supportsAlternateIcons

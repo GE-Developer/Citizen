@@ -202,12 +202,13 @@ private struct NavigationBarView<NavBarItems: View>: View {
     
     var body: some View {
         ZStack {
-            UnevenRoundedRectangle(
-                bottomLeadingRadius: 10,
-                bottomTrailingRadius: 10
-            )
+            ZStack {
+                UnevenRoundedRectangle(bottomLeadingRadius: 10, bottomTrailingRadius: 10)
+                    .foregroundStyle(.ultraThinMaterial)
+                UnevenRoundedRectangle(bottomLeadingRadius: 10, bottomTrailingRadius: 10)
+                    .foregroundStyle(Color.citizen.groupBackground.opacity(0.5))
+            }
             .ignoresSafeArea()
-            .foregroundStyle(.ultraThinMaterial)
             .opacity(navState.isLarge ? 0 : 1)
             .shadow(color: Color.citizen.navBarShadow, radius: navState.isLarge ? 0 : 5)
             .compositingGroup()
@@ -232,7 +233,10 @@ private struct NavigationBarView<NavBarItems: View>: View {
                     .fontWeight(.light)
                     .foregroundStyle(Color.citizen.blackAndWhite)
                     .padding(.leading, 8)
-                    .frame(width: 50, height: navState.isLarge ? largeNavBarHeight : smallNavBarHeight)
+                    .frame(
+                        width: 50,
+                        height: navState.isLarge ? largeNavBarHeight : smallNavBarHeight
+                    )
             }
         }
     }
