@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+@MainActor
 struct AboutProjectViewModel {
     let title = L10n("Project.title")
     

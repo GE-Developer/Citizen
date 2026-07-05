@@ -1,5 +1,5 @@
 //
-//  DictionarySortOrder.swift
+//  SortOrder.swift
 //  Citizen
 //
 //  Created by GE-Developer
