@@ -1,0 +1,948 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "[%@]" : {
+
+    },
+    "%lld Dictionary.Alphabet.lettersCount" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld letter"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld letters"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld Dictionary.wordsCountSuffix" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%#@count@"
+          },
+          "substitutions" : {
+            "count" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "Word saved"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "Words saved"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld WordOccurrences.subtitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "in %lld question"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "in %lld questions"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Alphabet.Letters.header" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "All Letters"
+          }
+        }
+      }
+    },
+    "Alphabet.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alphabet"
+          }
+        }
+      }
+    },
+    "Alphabet.Transcription.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transcription"
+          }
+        }
+      }
+    },
+    "Couldn't load data" : {
+
+    },
+    "Dictionary.emptyMessage" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap any word on the Hint screen to add it here with its translation and grammar."
+          }
+        }
+      }
+    },
+    "Dictionary.emptyTitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No saved words yet"
+          }
+        }
+      }
+    },
+    "Dictionary.noResultsText" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nothing found"
+          }
+        }
+      }
+    },
+    "Dictionary.removeActionTitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Remove from dictionary"
+          }
+        }
+      }
+    },
+    "Dictionary.savedAsLabel" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saved as"
+          }
+        }
+      }
+    },
+    "Dictionary.searchPlaceholder" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search words"
+          }
+        }
+      }
+    },
+    "Dictionary.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dictionary"
+          }
+        }
+      }
+    },
+    "DictionaryFilter.All.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "All"
+          }
+        }
+      }
+    },
+    "DictionarySortOrder.Alphabetical.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A-Z"
+          }
+        }
+      }
+    },
+    "DictionarySortOrder.Recent.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recent"
+          }
+        }
+      }
+    },
+    "Error.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error"
+          }
+        }
+      }
+    },
+    "PayWall.Annual.subtitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Every year"
+          }
+        }
+      }
+    },
+    "PayWall.Annual.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Annual"
+          }
+        }
+      }
+    },
+    "PayWall.annualSaving" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SAVE"
+          }
+        }
+      }
+    },
+    "PayWall.Button.manage" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Manage"
+          }
+        }
+      }
+    },
+    "PayWall.Button.owned" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Owned"
+          }
+        }
+      }
+    },
+    "PayWall.Button.purchase" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Purchase"
+          }
+        }
+      }
+    },
+    "PayWall.Button.subscribe" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Subscribe"
+          }
+        }
+      }
+    },
+    "PayWall.Button.upgrade" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Upgrade"
+          }
+        }
+      }
+    },
+    "PayWall.familyPlan" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Family Plan"
+          }
+        }
+      }
+    },
+    "PayWall.Lifetime.subtitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "One-time purchase"
+          }
+        }
+      }
+    },
+    "PayWall.Lifetime.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lifetime"
+          }
+        }
+      }
+    },
+    "PayWall.Monthly.subtitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Every month"
+          }
+        }
+      }
+    },
+    "PayWall.Monthly.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Monthly"
+          }
+        }
+      }
+    },
+    "PayWall.Status.notAvailable" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not available"
+          }
+        }
+      }
+    },
+    "PayWall.Status.popular" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Popular"
+          }
+        }
+      }
+    },
+    "PayWall.Status.purchased" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Purchased"
+          }
+        }
+      }
+    },
+    "PayWall.Subtitle.annual" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your annual plan is active"
+          }
+        }
+      }
+    },
+    "PayWall.Subtitle.default" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose your plan and explore Citizen"
+          }
+        }
+      }
+    },
+    "PayWall.Subtitle.lifetime" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You own lifetime access"
+          }
+        }
+      }
+    },
+    "PayWall.Subtitle.monthly" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Monthly access enabled"
+          }
+        }
+      }
+    },
+    "PayWall.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Premium Features"
+          }
+        }
+      }
+    },
+    "PayWall.trialPeriod %lld" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld Day Free"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld Days Free"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "PayWall.warningToCancelSubscriptions" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Don’t forget to cancel your subscription!"
+          }
+        }
+      }
+    },
+    "Project.AboutProject.description" : {
+      "extractionState" : "manual"
+    },
+    "Project.AboutProject.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "About Citizen Project"
+          }
+        }
+      }
+    },
+    "Project.Developers.MichaelButton.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iOS Developer"
+          }
+        }
+      }
+    },
+    "Project.Developers.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Developers"
+          }
+        }
+      }
+    },
+    "Project.other" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "If you have any suggestions, ideas, or corrections, please contact us in any way convenient for you."
+          }
+        }
+      }
+    },
+    "Project.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Project"
+          }
+        }
+      }
+    },
+    "SearchField.cancel" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancel"
+          }
+        }
+      }
+    },
+    "Settings.AboutApp.PrivacyPolicy.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Privacy Policy"
+          }
+        }
+      }
+    },
+    "Settings.AboutApp.Project.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "About the Project"
+          }
+        }
+      }
+    },
+    "Settings.AboutApp.TermsOfUse.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terms of Use"
+          }
+        }
+      }
+    },
+    "Settings.AboutApp.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "About the App"
+          }
+        }
+      }
+    },
+    "Settings.Access.RestorePurchases.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restore Purchases"
+          }
+        }
+      }
+    },
+    "Settings.Access.Review.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Leave a Review on the App Store"
+          }
+        }
+      }
+    },
+    "Settings.Access.Subscription.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Subscription"
+          }
+        }
+      }
+    },
+    "Settings.Access.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Access"
+          }
+        }
+      }
+    },
+    "Settings.AppVersion.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App Version"
+          }
+        }
+      }
+    },
+    "Settings.Customization.Style.headerTitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pick an accent color that matches your style. Premium colors unlock with a subscription."
+          }
+        }
+      }
+    },
+    "Settings.Customization.Style.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Style"
+          }
+        }
+      }
+    },
+    "Settings.Customization.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Customization"
+          }
+        }
+      }
+    },
+    "Settings.General.DarkMode.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dark Mode"
+          }
+        }
+      }
+    },
+    "Settings.General.Haptics.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Haptics"
+          }
+        }
+      }
+    },
+    "Settings.General.Language.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Language"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Язык"
+          }
+        }
+      }
+    },
+    "Settings.General.Sound.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sounds"
+          }
+        }
+      }
+    },
+    "Settings.General.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "General"
+          }
+        }
+      }
+    },
+    "Settings.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings"
+          }
+        }
+      }
+    },
+    "StoreError.invalidCertificateChain" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Invalid certificate chain."
+          }
+        }
+      }
+    },
+    "StoreError.invalidDeviceVerification" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Device verification failed."
+          }
+        }
+      }
+    },
+    "StoreError.invalidEncoding" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Invalid data encoding."
+          }
+        }
+      }
+    },
+    "StoreError.invalidSignature" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Invalid transaction signature."
+          }
+        }
+      }
+    },
+    "StoreError.loadingError" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Failed to load products."
+          }
+        }
+      }
+    },
+    "StoreError.missingRequiredProperties" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Missing required transaction properties."
+          }
+        }
+      }
+    },
+    "StoreError.pending" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your purchase is pending approval."
+          }
+        }
+      }
+    },
+    "StoreError.productNotChosen" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No product selected."
+          }
+        }
+      }
+    },
+    "StoreError.revokedCertificate" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The certificate has been revoked."
+          }
+        }
+      }
+    },
+    "StoreError.syncError" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Purchases were not synced."
+          }
+        }
+      }
+    },
+    "StoreError.system" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "System error. Please try again later."
+          }
+        }
+      }
+    },
+    "StoreError.unknown" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unknown error occurred."
+          }
+        }
+      }
+    },
+    "StoreError.userCancelled" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Purchase was cancelled by user."
+          }
+        }
+      }
+    },
+    "WordOccurrences.emptyRows" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not found in any question"
+          }
+        }
+      }
+    },
+    "WordOccurrences.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Word"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

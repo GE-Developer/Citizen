@@ -511,6 +511,7 @@
 				1F73690E2EC60316002D12D1 /* Enums */,
 				1F7369142EC60316002D12D1 /* Extensions */,
 				1F7369172EC60316002D12D1 /* Helpers */,
+				AB06000300000001 /* Modifiers */,
 				1F73692C2EC60316002D12D1 /* Resources */,
 				1F7368C22EC5FFCD002D12D1 /* Preview Content */,
 			);
@@ -550,8 +551,10 @@
 				AABB000200010004 /* HomeActionCard.swift */,
 				AAFF000200010001 /* Badge.swift */,
 				1F0E934E2FBB89110016D5B4 /* MatrixAnimationView.swift */,
+				AB03000200000001 /* FlowLayout.swift */,
 				AACC000200010002 /* RichTextView.swift */,
 				AACC000200010003 /* QuestionProgressBar.swift */,
+				AB02000200000002 /* ScreenShotPreventerMask.swift */,
 			);
 			path = "Service Views";
 			sourceTree = "<group>";
@@ -576,6 +579,7 @@
 				AAEE000200020005 /* Filter.swift */,
 				1F36F5F92ED4AABC0035E21F /* TopicPhase.swift */,
 				AA00FEEDC0DE0002 /* FeedbackPhrase.swift */,
+				AB02000200000003 /* DeviceLayout.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -599,11 +603,6 @@
 			children = (
 				1F7369152EC60316002D12D1 /* L10n.swift */,
 				1F7369162EC60316002D12D1 /* Plist.swift */,
-				AB02000200000003 /* DeviceLayout.swift */,
-				AB02000200000001 /* PremiumLockModifier.swift */,
-				AB02000200000002 /* ScreenShotPreventerMask.swift */,
-				AABB000200010005 /* ShimmerModifier.swift */,
-				AB03000200000001 /* FlowLayout.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -641,8 +640,8 @@
 			isa = PBXGroup;
 			children = (
 				1FE85B832FFB13BF008C90D4 /* From Supabase in Future */,
-				1F7369242EC60316002D12D1 /* Assets.xcassets */,
 				1F36F5EC2ECF61F90035E21F /* Localizable.xcstrings */,
+				1F7369242EC60316002D12D1 /* Assets.xcassets */,
 				1F7369252EC60316002D12D1 /* Colors.xcassets */,
 				1F7369262EC60316002D12D1 /* Images.xcassets */,
 				1F7369272EC60316002D12D1 /* Info.plist */,
@@ -920,6 +919,15 @@
 				AAEE0002000100B2 /* AlphabetViewModel.swift */,
 			);
 			path = Alphabet;
+			sourceTree = "<group>";
+		};
+		AB06000300000001 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				AB02000200000001 /* PremiumLockModifier.swift */,
+				AABB000200010005 /* ShimmerModifier.swift */,
+			);
+			path = Modifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

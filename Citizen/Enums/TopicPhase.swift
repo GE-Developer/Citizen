@@ -5,40 +5,50 @@
 //  Created by GE-Developer
 //
 
-// Перечисление описывает все возможные состояния темы
 enum TopicPhase {
-    case notStarted        // тема ещё не открывалась
-    case inProgress        // часть вопросов отвечена, тема не завершена
-    case workingOnMistakes // все вопросы пройдены, но есть ошибки для разбора
-    case completed         // тема полностью пройдена без ошибок в пуле
-
-    // Заголовок для hero-секции превью-экрана; nil — превью не показывается
-    var previewTitle: String? {
+    case notStarted
+    case inProgress
+    case workingOnMistakes
+    case completed
+    
+    @MainActor
+    var statusLabel: String? {
         switch self {
-        case .notStarted:        nil
-        case .inProgress:        "Продолжаем!"
-        case .workingOnMistakes: "Работа над ошибками"
-        case .completed:         "Тема пройдена!"
+        case .notStarted:
+            nil
+        case .inProgress:
+            L10n("TopicPhase.Status.inProgress")
+        case .workingOnMistakes:
+            L10n("TopicPhase.Status.workingOnMistakes")
+        case .completed:
+            L10n("TopicPhase.Status.completed")
         }
     }
-
-    // Текст основной кнопки действия на превью-экране; nil — кнопка не показывается
-    var primaryActionTitle: String? {
+    
+    @MainActor
+    func primaryActionTitle(mistakesCount: Int) -> String? {
         switch self {
-        case .notStarted:        nil
-        case .inProgress:        "Продолжить"
-        case .workingOnMistakes: "Разобрать ошибки"
-        case .completed:         "Пройти заново"
+        case .notStarted:
+            nil
+        case .inProgress:
+            L10n("ContinueAction.title")
+        case .workingOnMistakes:
+            L10n("\(mistakesCount) TopicPhase.Action.workingOnMistakes")
+        case .completed:
+            L10n("TopicPhase.Action.completed")
         }
     }
-
-    // Текст плашки-статуса на карточке темы в списке топиков
-    var pillTitle: String {
+    
+    func pillText(answered: Int, total: Int, wrong: Int) -> String? {
         switch self {
-        case .notStarted:        "Начать"
-        case .inProgress:        "В процессе"
-        case .workingOnMistakes: "Ошибки"
-        case .completed:         "Выполнено"
+        case .notStarted:
+            nil
+        case .inProgress:
+            "\(answered)/\(total)"
+        case .workingOnMistakes:
+            "\(wrong)"
+        case .completed:
+            nil
         }
     }
 }
