@@ -1,20 +1,20 @@
 //
-//  DictionaryFilter.swift
+//  Filter.swift
 //  Citizen
 //
 //  Created by GE-Developer
 //
 
-enum DictionaryFilter: Hashable {
+enum Filter: Hashable {
     case all
-    case partOfSpeech(String)
+    case named(String)
     
     @MainActor
     var title: String {
         switch self {
         case .all:
             L10n("DictionaryFilter.All.title")
-        case .partOfSpeech(let name):
+        case .named(let name):
             name
         }
     }

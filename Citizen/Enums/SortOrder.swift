@@ -5,7 +5,7 @@
 //  Created by GE-Developer
 //
 
-enum DictionarySortOrder: CaseIterable, Identifiable {
+enum SortOrder: CaseIterable, Identifiable {
     case recent
     case alphabetical
     

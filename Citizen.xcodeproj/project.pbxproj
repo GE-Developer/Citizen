@@ -30,7 +30,7 @@
 		1F496C292FC1BE0700E0D7F5 /* ExplosiveStarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F496C172FC1BE0700E0D7F5 /* ExplosiveStarView.swift */; };
 		1F496C2A2FC1BE0700E0D7F5 /* CustomSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F496C102FC1BE0700E0D7F5 /* CustomSecureField.swift */; };
 		1F496C2B2FC1BE0700E0D7F5 /* FormHeaderContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F496C182FC1BE0700E0D7F5 /* FormHeaderContent.swift */; };
-		1F496C2C2FC1BE0700E0D7F5 /* PremiumImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F496C1C2FC1BE0700E0D7F5 /* PremiumImageView.swift */; };
+		1F496C2C2FC1BE0700E0D7F5 /* PremiumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F496C1C2FC1BE0700E0D7F5 /* PremiumView.swift */; };
 		1F496C2D2FC1BE0700E0D7F5 /* CustomTabSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F496C122FC1BE0700E0D7F5 /* CustomTabSection.swift */; };
 		1F496C2E2FC1BE0700E0D7F5 /* CustomCapsulePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F496C0D2FC1BE0700E0D7F5 /* CustomCapsulePicker.swift */; };
 		1F496C2F2FC1BE0700E0D7F5 /* CustomForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F496C0E2FC1BE0700E0D7F5 /* CustomForm.swift */; };
@@ -197,10 +197,11 @@
 		AAEE0001000100C1 /* AlphabetCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEE0002000100C1 /* AlphabetCatalog.swift */; };
 		AAEE0001000100D1 /* alphabet.json in Resources */ = {isa = PBXBuildFile; fileRef = AAEE0002000100D1 /* alphabet.json */; };
 		AAEE000100020001 /* AnswerRowState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEE000200020001 /* AnswerRowState.swift */; };
-		AAEE000100020002 /* DictionarySortOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEE000200020002 /* DictionarySortOrder.swift */; };
-		AAEE000100020005 /* DictionaryFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEE000200020005 /* DictionaryFilter.swift */; };
+		AAEE000100020002 /* SortOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEE000200020002 /* SortOrder.swift */; };
+		AAEE000100020005 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEE000200020005 /* Filter.swift */; };
 		AAEE00012EC60316002D12D1 /* VoiceActingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEE00022EC60316002D12D1 /* VoiceActingManager.swift */; };
 		AAFF000100010001 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFF000200010001 /* Badge.swift */; };
+		AB01000100000001 /* AnswerStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB01000200000001 /* AnswerStatus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -231,7 +232,7 @@
 		1F496C192FC1BE0700E0D7F5 /* FormHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormHeaderView.swift; sourceTree = "<group>"; };
 		1F496C1A2FC1BE0700E0D7F5 /* MenuPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPickerView.swift; sourceTree = "<group>"; };
 		1F496C1B2FC1BE0700E0D7F5 /* NavigationToolButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationToolButton.swift; sourceTree = "<group>"; };
-		1F496C1C2FC1BE0700E0D7F5 /* PremiumImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumImageView.swift; sourceTree = "<group>"; };
+		1F496C1C2FC1BE0700E0D7F5 /* PremiumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumView.swift; sourceTree = "<group>"; };
 		1F496C1D2FC1BE0700E0D7F5 /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
 		1F496C1E2FC1BE0700E0D7F5 /* TopViewHeaderText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewHeaderText.swift; sourceTree = "<group>"; };
 		1F496C342FC1C26C00E0D7F5 /* AccentColorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccentColorManager.swift; sourceTree = "<group>"; };
@@ -397,10 +398,11 @@
 		AAEE0002000100C1 /* AlphabetCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetCatalog.swift; sourceTree = "<group>"; };
 		AAEE0002000100D1 /* alphabet.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = alphabet.json; sourceTree = "<group>"; };
 		AAEE000200020001 /* AnswerRowState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerRowState.swift; sourceTree = "<group>"; };
-		AAEE000200020002 /* DictionarySortOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionarySortOrder.swift; sourceTree = "<group>"; };
-		AAEE000200020005 /* DictionaryFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryFilter.swift; sourceTree = "<group>"; };
+		AAEE000200020002 /* SortOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortOrder.swift; sourceTree = "<group>"; };
+		AAEE000200020005 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		AAEE00022EC60316002D12D1 /* VoiceActingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceActingManager.swift; sourceTree = "<group>"; };
 		AAFF000200010001 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
+		AB01000200000001 /* AnswerStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerStatus.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -518,7 +520,7 @@
 				1F496C192FC1BE0700E0D7F5 /* FormHeaderView.swift */,
 				1F496C1A2FC1BE0700E0D7F5 /* MenuPickerView.swift */,
 				1F496C1B2FC1BE0700E0D7F5 /* NavigationToolButton.swift */,
-				1F496C1C2FC1BE0700E0D7F5 /* PremiumImageView.swift */,
+				1F496C1C2FC1BE0700E0D7F5 /* PremiumView.swift */,
 				1F496C1D2FC1BE0700E0D7F5 /* ShareSheet.swift */,
 				1F496C1E2FC1BE0700E0D7F5 /* TopViewHeaderText.swift */,
 				1F36F5F02ED093A30035E21F /* CustomPage.swift */,
@@ -549,8 +551,9 @@
 				1F73690D2EC60316002D12D1 /* StoreError.swift */,
 				1F36F5F92ED4AABC0035E21F /* TopicPhase.swift */,
 				AAEE000200020001 /* AnswerRowState.swift */,
-				AAEE000200020002 /* DictionarySortOrder.swift */,
-				AAEE000200020005 /* DictionaryFilter.swift */,
+				AB01000200000001 /* AnswerStatus.swift */,
+				AAEE000200020002 /* SortOrder.swift */,
+				AAEE000200020005 /* Filter.swift */,
 				AA00FEEDC0DE0002 /* FeedbackPhrase.swift */,
 			);
 			path = Enums;
@@ -565,7 +568,6 @@
 				1F7369122EC60316002D12D1 /* String + Ext.swift */,
 				AADD000200010003 /* String + Dictionary.swift */,
 				1F7369132EC60316002D12D1 /* View + Ext.swift */,
-				AABB000200010005 /* ShimmerModifier.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -575,6 +577,7 @@
 			children = (
 				1F7369152EC60316002D12D1 /* L10n.swift */,
 				1F7369162EC60316002D12D1 /* Plist.swift */,
+				AABB000200010005 /* ShimmerModifier.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1040,7 +1043,7 @@
 				1F496C292FC1BE0700E0D7F5 /* ExplosiveStarView.swift in Sources */,
 				1F496C2A2FC1BE0700E0D7F5 /* CustomSecureField.swift in Sources */,
 				1F496C2B2FC1BE0700E0D7F5 /* FormHeaderContent.swift in Sources */,
-				1F496C2C2FC1BE0700E0D7F5 /* PremiumImageView.swift in Sources */,
+				1F496C2C2FC1BE0700E0D7F5 /* PremiumView.swift in Sources */,
 				1F496C2D2FC1BE0700E0D7F5 /* CustomTabSection.swift in Sources */,
 				1F496C2E2FC1BE0700E0D7F5 /* CustomCapsulePicker.swift in Sources */,
 				1F496C2F2FC1BE0700E0D7F5 /* CustomForm.swift in Sources */,
@@ -1058,8 +1061,9 @@
 				1F36F5F82ED4AABC0035E21F /* TopicPreviewView.swift in Sources */,
 				1F36F5FA2ED4AABC0035E21F /* TopicPhase.swift in Sources */,
 				AAEE000100020001 /* AnswerRowState.swift in Sources */,
-				AAEE000100020002 /* DictionarySortOrder.swift in Sources */,
-				AAEE000100020005 /* DictionaryFilter.swift in Sources */,
+				AB01000100000001 /* AnswerStatus.swift in Sources */,
+				AAEE000100020002 /* SortOrder.swift in Sources */,
+				AAEE000100020005 /* Filter.swift in Sources */,
 				AA00FEEDC0DE0001 /* FeedbackPhrase.swift in Sources */,
 				AABB000100010002 /* MainViewModel.swift in Sources */,
 				AABB000100010003 /* MainView.swift in Sources */,

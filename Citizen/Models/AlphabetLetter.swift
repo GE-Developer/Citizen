@@ -5,7 +5,7 @@
 //  Created by GE-Developer
 //
 
-struct AlphabetLetter: Codable, Identifiable, Hashable {
+struct AlphabetLetter: Decodable, Identifiable, Hashable {
     let id: Int
     let character: String
     let transliteration: String

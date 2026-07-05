@@ -4,20 +4,15 @@
 //
 //  Created by GE-Developer
 //
-//  Диагональный «блик» по placeholder-формам скелета: из левого-верхнего угла в
-//  правый-нижний, с отзеркаливанием (autoreverse) и бесконечным повтором. Блик
-//  маскируется контентом, поэтому светятся только сами формы, а не промежутки.
-//  Переиспользуемо: .shimmering() на любой скелет-вью.
-//
 
 import SwiftUI
 
 struct Shimmer: ViewModifier {
     @State private var animate = false
-
+    
     private let duration: Double = 1.1
     private let bandOpacity: Double = 0.55
-
+    
     func body(content: Content) -> some View {
         content
             .overlay {
@@ -31,7 +26,6 @@ struct Shimmer: ViewModifier {
                         startPoint: .topLeading,
                         endPoint: .bottomTrailing
                     )
-                    // Полоса шире контента, чтобы уходить за края по диагонали.
                     .frame(width: geo.size.width * 2, height: geo.size.height * 2)
                     .offset(
                         x: animate ? 0 : -geo.size.width,
@@ -46,11 +40,5 @@ struct Shimmer: ViewModifier {
                     animate = true
                 }
             }
-    }
-}
-
-extension View {
-    func shimmering() -> some View {
-        modifier(Shimmer())
     }
 }

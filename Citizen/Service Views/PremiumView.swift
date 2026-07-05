@@ -58,6 +58,7 @@ extension PremiumView {
                 )
                 .font(.callout)
                 .fontDesign(.rounded)
+                .animation(Self.rotationAnimation, value: rotation)
                 .onAppear { startRotation() }
         }
     }
@@ -75,6 +76,7 @@ extension PremiumView {
                         .degrees(rotation),
                         axis: (x: 0, y: 1, z: 0)
                     )
+                    .animation(Self.rotationAnimation, value: rotation)
                     .offset(y: -3)
             }
             .font(.callout)
@@ -117,14 +119,20 @@ extension PremiumView {
 
 // MARK: - Logic
 extension PremiumView {
+    // Кривая вращения звезды. Применяется через .animation(_, value:) — скоуп
+    // строго на rotation3DEffect самой звезды. Раньше запуск шёл через
+    // withAnimation, а это глобальная транзакция: repeatForever захватывал
+    // чужие layout-сдвиги, случившиеся в том же тике (вставка ячейки LazyVStack
+    // при скролле), и они начинали вечно осциллировать вместе со звездой —
+    // экран «ездил», нав-бар дёргался.
+    private static var rotationAnimation: Animation {
+        .easeInOut(duration: 0.6)
+        .delay(1.5)
+        .repeatForever(autoreverses: true)
+    }
+
     private func startRotation() {
         guard rotation == 0 else { return }
-        withAnimation(
-            .easeInOut(duration: 0.6)
-            .delay(1.5)
-            .repeatForever(autoreverses: true)
-        ) {
-            rotation = 360
-        }
+        rotation = 360
     }
 }
