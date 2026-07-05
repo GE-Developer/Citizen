@@ -10,14 +10,14 @@ import Foundation
 @MainActor
 @Observable
 final class DictionaryViewModel {
-    var selectedFilter: DictionaryFilter = .all
-    var selectedSort: DictionarySortOrder = .recent
+    var selectedFilter: Filter = .all
+    var selectedSort: SortOrder = .recent
     var searchText = ""
     var selectedOccurrenceWord: WordEntry?
     var showAlphabet = false
     
-    var availableFilters: [DictionaryFilter] {
-        [.all] + dictionary.partsOfSpeech.map(DictionaryFilter.named)
+    var availableFilters: [Filter] {
+        [.all] + dictionary.partsOfSpeech.map(Filter.named)
     }
     
     var displayedWords: [WordEntry] {
@@ -133,8 +133,6 @@ final class DictionaryViewModel {
         "[\(value)]"
     }
     
-    // Записи берутся из WordsDictionary по сохранённым ключам; всё на этом
-    // экране по определению в словарике, поэтому isSaved сразу true.
     private func fetchSavedWords() -> [WordEntry] {
         store.fetchAll().compactMap { key in
             guard var entry = dictionary.entry(for: key) else { return nil }

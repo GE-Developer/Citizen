@@ -11,7 +11,7 @@ import Foundation
 @Observable
 final class WordOccurrencesViewModel {
     var selectedQuestion: Question?
-    var selectedFilter: DictionaryFilter = .all
+    var selectedFilter: Filter = .all
     
     var visibleRows: [OccurrenceRow] {
         switch selectedFilter {
@@ -30,7 +30,7 @@ final class WordOccurrencesViewModel {
     let headerTransliteration: String
     let headerTranslation: String?
     let headerDescription: String?
-    let availableFilters: [DictionaryFilter]
+    let availableFilters: [Filter]
     let rows: [OccurrenceRow]
     
     private let hapticsManager = HapticsManager.shared
@@ -53,7 +53,7 @@ final class WordOccurrencesViewModel {
         selectedQuestion = row.question
     }
     
-    private static func filters(for rows: [OccurrenceRow]) -> [DictionaryFilter] {
+    private static func filters(for rows: [OccurrenceRow]) -> [Filter] {
         var seen = Set<String>()
         var categories: [String] = []
         
@@ -66,7 +66,7 @@ final class WordOccurrencesViewModel {
             categories.append(category)
         }
         
-        return [.all] + categories.map(DictionaryFilter.named)
+        return [.all] + categories.map(Filter.named)
     }
     
     private static func makeRow(for question: Question) -> OccurrenceRow {
@@ -74,10 +74,8 @@ final class WordOccurrencesViewModel {
         let sentence = question.additionalText ?? ""
         return OccurrenceRow(
             question: question,
-            number: question.number,
             categoryName: placement?.category.name ?? "",
             topicName: placement?.topic.name ?? "",
-            questionText: question.question,
             sentenceSegments: sentence.isEmpty ? [] : sentence.asRichSegments,
             isPremium: placement?.topic.isPremium ?? false
         )

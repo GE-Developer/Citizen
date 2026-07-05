@@ -9,13 +9,14 @@ import SwiftUI
 
 struct SettingsView: View {
     @EnvironmentObject private var store: StoreManager
-    @EnvironmentObject private var tabBarState: TabBarState
+    @Environment(TabBarState.self) private var tabBarState
     
     @StateObject private var vm = SettingsViewModel()
     
     @State private var languageViewPresented = false
     @State private var showPayWall = false
     @State private var projectViewPresented = false
+    @State private var showStyleView = false
     
     init() {
         UIScrollView.appearance().delaysContentTouches = false
@@ -29,9 +30,12 @@ struct SettingsView: View {
             .navigationDestination(isPresented: $projectViewPresented) {
                 NavigationLazyView(AboutProjectView())
             }
-//            .fullScreenCover(isPresented: $showPayWall) {
-//                NavigationLazyView(PayWallView(store))
-//            }
+            .navigationDestination(isPresented: $showStyleView) {
+                NavigationLazyView(StyleView())
+            }
+            .fullScreenCover(isPresented: $showPayWall) {
+                NavigationLazyView(PayWallView(store))
+            }
     }
 }
 
@@ -52,12 +56,20 @@ extension SettingsView {
                     soundToggle
                 }
                 
+                CustomForm(headerText: vm.voiceActingTitle) {
+                    voiceActingToggle
+                }
+                
                 CustomForm(headerText: vm.accessTitle) {
                     PremiumView(.status)
                 } content: {
                     subscriptionButton
                     Divider().padding(.leading, 50)
                     reviewButton
+                }
+                
+                CustomForm(headerText: vm.customizationTitle) {
+                    styleButton
                 }
                 
                 CustomForm(headerText: vm.aboutAppTitle) {
@@ -67,14 +79,16 @@ extension SettingsView {
                     Divider().padding(.leading, 50)
                     projectButton
                 }
+                
+                AppVersion()
             }
         }
-
+        
     }
     
     private var themeToggle: some View {
         CustomToggleRow(
-            isOff: $vm.isThemeLight,
+            isOn: $vm.isDarkMode,
             icon: .system.darkMode,
             title: vm.darkModeTitle
         )
@@ -105,7 +119,7 @@ extension SettingsView {
     
     private var vibrationToggle: some View {
         CustomToggleRow(
-            isOff: $vm.isHapticsOff,
+            isOn: $vm.isHapticsOn,
             icon: .system.vibration,
             title: vm.hapticsTitle
         )
@@ -113,9 +127,17 @@ extension SettingsView {
     
     private var soundToggle: some View {
         CustomToggleRow(
-            isOff: $vm.isSoundOff,
+            isOn: $vm.isSoundOn,
             icon: .system.sound,
             title: vm.soundTitle
+        )
+    }
+    
+    private var voiceActingToggle: some View {
+        CustomToggleRow(
+            isOn: $vm.isVoiceActingOn,
+            icon: .system.voiceActing,
+            title: vm.voiceActingToggleTitle
         )
     }
     
@@ -133,6 +155,15 @@ extension SettingsView {
             icon: .system.reviewLike,
             title: vm.reviewTitle,
             action: { vm.rateApp() }
+        )
+    }
+    
+    private var styleButton: some View {
+        CustomButtonRow(
+            icon: .system.paintpalette,
+            title: vm.styleTitle,
+            isLink: true,
+            action: { showStyleView.toggle() }
         )
     }
     

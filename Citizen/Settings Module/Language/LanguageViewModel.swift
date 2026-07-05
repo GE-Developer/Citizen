@@ -7,8 +7,10 @@
 
 import Foundation
 
-final class LanguageViewModel: ObservableObject {
-    @Published var chosenLanguage: Language?
+@MainActor
+@Observable
+final class LanguageViewModel {
+    var chosenLanguage: Language?
     
     var title: String {
         L10n("Settings.General.Language.title")
@@ -42,5 +44,7 @@ final class LanguageViewModel: ObservableObject {
     
     func setNewLanguage() {
         languageManager.currentLanguageID = chosenLanguage?.id ?? Language.english.id
+        
+        Task { await AppDataLoader.shared.reload() }
     }
 }

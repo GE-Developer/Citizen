@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LanguageView: View {
-    @StateObject private var vm = LanguageViewModel()
+    @State private var vm = LanguageViewModel()
     
     @State private var isShowingAlert = false
     
@@ -41,7 +41,7 @@ extension LanguageView {
                 }
             }
         }
-
+        
     }
     
     private func languageButtonTapped(_ index: Int, _ language: Language) -> some View {
