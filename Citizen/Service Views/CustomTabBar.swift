@@ -36,7 +36,7 @@ struct CustomTabBar: View {
 extension CustomTabBar {
     private var customTabBar: some View {
         HStack(spacing: 7) {
-            let tabs = TabBarState.RootTab.allCases
+            let tabs = RootTab.allCases
             
             ForEach(tabs) { tab in
                 icon(for: tab)
@@ -79,7 +79,7 @@ extension CustomTabBar {
             .stroke(Color.citizen.background.opacity(0.7), lineWidth: 0.1)
     }
     
-    private func icon(for tab: TabBarState.RootTab) -> some View {
+    private func icon(for tab: RootTab) -> some View {
         Group {
             switch tab {
             case .dictionary:
@@ -105,7 +105,7 @@ extension CustomTabBar {
     }
     
     @ViewBuilder
-    private func divider(after tab: TabBarState.RootTab, in tabs: [TabBarState.RootTab]) -> some View {
+    private func divider(after tab: RootTab, in tabs: [RootTab]) -> some View {
         if tab != tabs.last {
             Divider()
                 .padding(.vertical, 20)
@@ -116,7 +116,7 @@ extension CustomTabBar {
 
 // MARK: - Logic
 extension CustomTabBar {
-    private func tapGesture(on tab: TabBarState.RootTab) {
+    private func tapGesture(on tab: RootTab) {
         guard tabBarState.selectedTab != tab else { return }
         withAnimation(.easeIn.speed(4)) {
             tabBarState.selectedTab = tab

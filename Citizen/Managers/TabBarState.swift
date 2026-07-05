@@ -7,40 +7,28 @@
 
 import Foundation
 
+@MainActor
 @Observable
 final class TabBarState {
     var selectedTab: RootTab = .home
     
     var isVisible: Bool {
-        switch selectedTab {
-        case .home:     homeDepth == 0
-        case .settings: settingsDepth == 0
-        }
+        depth(for: selectedTab) == 0
     }
     
-    private(set) var homeDepth: Int = 0
-    private(set) var settingsDepth: Int = 0
+    private var depths: [RootTab: Int] = [:]
     
     let height: CGFloat = 65
     
     func enterStack(for tab: RootTab) {
-        switch tab {
-        case .home:     homeDepth += 1
-        case .settings: settingsDepth += 1
-        }
+        depths[tab, default: 0] += 1
     }
     
     func exitStack(for tab: RootTab) {
-        switch tab {
-        case .home:     homeDepth = max(0, homeDepth - 1)
-        case .settings: settingsDepth = max(0, settingsDepth - 1)
-        }
+        depths[tab] = max(0, depth(for: tab) - 1)
     }
     
-    enum RootTab: Int, CaseIterable, Identifiable {
-        case home
-        case settings
-        
-        var id: Int { rawValue }
+    private func depth(for tab: RootTab) -> Int {
+        depths[tab, default: 0]
     }
 }

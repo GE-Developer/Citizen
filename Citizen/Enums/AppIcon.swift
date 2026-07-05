@@ -14,23 +14,10 @@ enum AppIcon: CaseIterable, Identifiable {
     case desertForge
     
     var id: String {
-        switch self {
-        case .blackCitizen:
-            return "BlackVoid"
-        case .ghostWhite:
-            return "GhostWhite"
-        case .cyberGold:
-            return "CyberGold"
-        case .titanium:
-            return "Titanium"
-        case .neonPinky:
-            return "NeonPinky"
-        case .desertForge:
-            return "DesertForge"
-        }
+        appIconID ?? "BlackVoid"
     }
     
-    var appIconid: String? {
+    var appIconID: String? {
         switch self {
         case .blackCitizen:
             return nil

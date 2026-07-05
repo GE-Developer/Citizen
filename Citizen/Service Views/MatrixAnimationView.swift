@@ -30,7 +30,7 @@ struct MatrixAnimationView: View {
         updateDelay: UInt? = 15,
         speedRange: ClosedRange<Double> = 4...6
     ) {
-        self.letters = letters.get
+        self.letters = letters.characters
         self.color = color
         self.letterSize = letterSize
         self.columnSpacing = columnSpacing

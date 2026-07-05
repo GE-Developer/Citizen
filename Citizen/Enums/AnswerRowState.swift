@@ -5,7 +5,6 @@
 //  Created by GE-Developer
 //
 
-import Foundation
 
 enum AnswerRowState {
     case idle

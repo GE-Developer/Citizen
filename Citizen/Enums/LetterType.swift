@@ -8,7 +8,7 @@
 enum LetterType: CaseIterable {
     case georgian
     
-    var get: [Character] {
+    var characters: [Character] {
         switch self {
         case .georgian:
             return [

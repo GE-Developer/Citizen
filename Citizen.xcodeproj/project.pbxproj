@@ -174,12 +174,10 @@
 		AACC000100010003 /* QuestionProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACC000200010003 /* QuestionProgressBar.swift */; };
 		AADD000100010001 /* WordEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADD000200010001 /* WordEntry.swift */; };
 		AADD000100010002 /* WordsDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADD000200010002 /* WordsDictionary.swift */; };
-		AADD000100010003 /* String + Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADD000200010003 /* String + Dictionary.swift */; };
 		AADD000100010004 /* HintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADD000200010004 /* HintView.swift */; };
 		AADD000100010005 /* HintViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADD000200010005 /* HintViewModel.swift */; };
 		AADD000100010006 /* SavedWordsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADD000200010006 /* SavedWordsStore.swift */; };
 		AADD000100010007 /* WordDetailSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADD000200010007 /* WordDetailSheet.swift */; };
-		AADD000100010008 /* QuestionTranslations.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADD000200010008 /* QuestionTranslations.swift */; };
 		AADD0001000100AA /* WordOccurrenceIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADD0002000100AA /* WordOccurrenceIndex.swift */; };
 		AADD0001000100B1 /* ResourceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADD0002000100B1 /* ResourceProvider.swift */; };
 		AADD0001000100B2 /* ResourceDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADD0002000100B2 /* ResourceDownloader.swift */; };
@@ -202,6 +200,17 @@
 		AAEE00012EC60316002D12D1 /* VoiceActingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEE00022EC60316002D12D1 /* VoiceActingManager.swift */; };
 		AAFF000100010001 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFF000200010001 /* Badge.swift */; };
 		AB01000100000001 /* AnswerStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB01000200000001 /* AnswerStatus.swift */; };
+		AB02000100000001 /* PremiumLockModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB02000200000001 /* PremiumLockModifier.swift */; };
+		AB02000100000002 /* ScreenShotPreventerMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB02000200000002 /* ScreenShotPreventerMask.swift */; };
+		AB02000100000003 /* DeviceLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB02000200000003 /* DeviceLayout.swift */; };
+		AB02000100000004 /* EnvironmentValues + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB02000200000004 /* EnvironmentValues + Ext.swift */; };
+		AB03000100000001 /* FlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB03000200000001 /* FlowLayout.swift */; };
+		AB03000100000002 /* Array + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB03000200000002 /* Array + Ext.swift */; };
+		AB04000100000001 /* RootTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB04000200000001 /* RootTab.swift */; };
+		AB04000100000002 /* TopicStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB04000200000002 /* TopicStats.swift */; };
+		AB05000100000001 /* ResourceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB05000200000001 /* ResourceError.swift */; };
+		AB05000100000002 /* LoadPhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB05000200000002 /* LoadPhase.swift */; };
+		AB05000100000003 /* ResourceManifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB05000200000003 /* ResourceManifest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -375,12 +384,10 @@
 		AACC000200010003 /* QuestionProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionProgressBar.swift; sourceTree = "<group>"; };
 		AADD000200010001 /* WordEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordEntry.swift; sourceTree = "<group>"; };
 		AADD000200010002 /* WordsDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsDictionary.swift; sourceTree = "<group>"; };
-		AADD000200010003 /* String + Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Dictionary.swift"; sourceTree = "<group>"; };
 		AADD000200010004 /* HintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintView.swift; sourceTree = "<group>"; };
 		AADD000200010005 /* HintViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintViewModel.swift; sourceTree = "<group>"; };
 		AADD000200010006 /* SavedWordsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedWordsStore.swift; sourceTree = "<group>"; };
 		AADD000200010007 /* WordDetailSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDetailSheet.swift; sourceTree = "<group>"; };
-		AADD000200010008 /* QuestionTranslations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTranslations.swift; sourceTree = "<group>"; };
 		AADD0002000100AA /* WordOccurrenceIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordOccurrenceIndex.swift; sourceTree = "<group>"; };
 		AADD0002000100B1 /* ResourceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceProvider.swift; sourceTree = "<group>"; };
 		AADD0002000100B2 /* ResourceDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceDownloader.swift; sourceTree = "<group>"; };
@@ -403,6 +410,17 @@
 		AAEE00022EC60316002D12D1 /* VoiceActingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceActingManager.swift; sourceTree = "<group>"; };
 		AAFF000200010001 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 		AB01000200000001 /* AnswerStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerStatus.swift; sourceTree = "<group>"; };
+		AB02000200000001 /* PremiumLockModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumLockModifier.swift; sourceTree = "<group>"; };
+		AB02000200000002 /* ScreenShotPreventerMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenShotPreventerMask.swift; sourceTree = "<group>"; };
+		AB02000200000003 /* DeviceLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceLayout.swift; sourceTree = "<group>"; };
+		AB02000200000004 /* EnvironmentValues + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues + Ext.swift"; sourceTree = "<group>"; };
+		AB03000200000001 /* FlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowLayout.swift; sourceTree = "<group>"; };
+		AB03000200000002 /* Array + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array + Ext.swift"; sourceTree = "<group>"; };
+		AB04000200000001 /* RootTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTab.swift; sourceTree = "<group>"; };
+		AB04000200000002 /* TopicStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicStats.swift; sourceTree = "<group>"; };
+		AB05000200000001 /* ResourceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceError.swift; sourceTree = "<group>"; };
+		AB05000200000002 /* LoadPhase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadPhase.swift; sourceTree = "<group>"; };
+		AB05000200000003 /* ResourceManifest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceManifest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -552,9 +570,13 @@
 				1F36F5F92ED4AABC0035E21F /* TopicPhase.swift */,
 				AAEE000200020001 /* AnswerRowState.swift */,
 				AB01000200000001 /* AnswerStatus.swift */,
+				AB04000200000001 /* RootTab.swift */,
+				AB05000200000001 /* ResourceError.swift */,
+				AB05000200000002 /* LoadPhase.swift */,
 				AAEE000200020002 /* SortOrder.swift */,
 				AAEE000200020005 /* Filter.swift */,
 				AA00FEEDC0DE0002 /* FeedbackPhrase.swift */,
+				AB02000200000003 /* DeviceLayout.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -566,8 +588,9 @@
 				1F7369102EC60316002D12D1 /* Gradient + Ext.swift */,
 				1F7369112EC60316002D12D1 /* Image + Ext.swift */,
 				1F7369122EC60316002D12D1 /* String + Ext.swift */,
-				AADD000200010003 /* String + Dictionary.swift */,
 				1F7369132EC60316002D12D1 /* View + Ext.swift */,
+				AB02000200000004 /* EnvironmentValues + Ext.swift */,
+				AB03000200000002 /* Array + Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -577,7 +600,10 @@
 			children = (
 				1F7369152EC60316002D12D1 /* L10n.swift */,
 				1F7369162EC60316002D12D1 /* Plist.swift */,
+				AB02000200000001 /* PremiumLockModifier.swift */,
+				AB02000200000002 /* ScreenShotPreventerMask.swift */,
 				AABB000200010005 /* ShimmerModifier.swift */,
+				AB03000200000001 /* FlowLayout.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -602,10 +628,10 @@
 				AADD000200010002 /* WordsDictionary.swift */,
 				AAEE0002000100C1 /* AlphabetCatalog.swift */,
 				AADD000200010006 /* SavedWordsStore.swift */,
-				AADD000200010008 /* QuestionTranslations.swift */,
 				AADD0002000100AA /* WordOccurrenceIndex.swift */,
 				AADD0002000100B1 /* ResourceProvider.swift */,
 				AADD0002000100B2 /* ResourceDownloader.swift */,
+				AB05000200000003 /* ResourceManifest.swift */,
 				AADD0002000100B3 /* AppDataLoader.swift */,
 			);
 			path = Managers;
@@ -740,6 +766,7 @@
 				AADD000200010001 /* WordEntry.swift */,
 				AAEE0002000100B3 /* AlphabetLetter.swift */,
 				AAEE0002000100A3 /* OccurrenceRow.swift */,
+				AB04000200000002 /* TopicStats.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1077,6 +1104,8 @@
 				AABB000100010005 /* ShimmerModifier.swift in Sources */,
 				AACC000100010001 /* RichTextSegment.swift in Sources */,
 				AACC000100010002 /* RichTextView.swift in Sources */,
+				AB03000100000001 /* FlowLayout.swift in Sources */,
+				AB03000100000002 /* Array + Ext.swift in Sources */,
 				1F496C3C2FC1C36200E0D7F5 /* AppIcon.swift in Sources */,
 				1F496C3D2FC1C36200E0D7F5 /* AccentColor.swift in Sources */,
 				AACC000100010003 /* QuestionProgressBar.swift in Sources */,
@@ -1091,13 +1120,20 @@
 				AAEE0001000100A1 /* WordOccurrencesView.swift in Sources */,
 				AAEE0001000100A2 /* WordOccurrencesViewModel.swift in Sources */,
 				AAEE0001000100A3 /* OccurrenceRow.swift in Sources */,
-				AADD000100010003 /* String + Dictionary.swift in Sources */,
+				AB02000100000001 /* PremiumLockModifier.swift in Sources */,
+				AB02000100000002 /* ScreenShotPreventerMask.swift in Sources */,
+				AB02000100000003 /* DeviceLayout.swift in Sources */,
+				AB02000100000004 /* EnvironmentValues + Ext.swift in Sources */,
 				AAFF000100010001 /* Badge.swift in Sources */,
 				AADD000100010004 /* HintView.swift in Sources */,
 				AADD000100010005 /* HintViewModel.swift in Sources */,
 				AADD000100010006 /* SavedWordsStore.swift in Sources */,
 				AADD000100010007 /* WordDetailSheet.swift in Sources */,
-				AADD000100010008 /* QuestionTranslations.swift in Sources */,
+				AB04000100000001 /* RootTab.swift in Sources */,
+				AB05000100000001 /* ResourceError.swift in Sources */,
+				AB05000100000002 /* LoadPhase.swift in Sources */,
+				AB05000100000003 /* ResourceManifest.swift in Sources */,
+				AB04000100000002 /* TopicStats.swift in Sources */,
 				1F496C372FC1C26C00E0D7F5 /* AccentColorManager.swift in Sources */,
 				1F496C382FC1C26C00E0D7F5 /* AppIconManager.swift in Sources */,
 				1F496C392FC1C26C00E0D7F5 /* ScreenshotManager.swift in Sources */,

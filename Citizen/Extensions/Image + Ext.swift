@@ -9,7 +9,6 @@ import SwiftUI
 
 extension Image {
     static let system = SystemImage()
-    static let background = BackgroundImage()
     static let other = OtherImage()
 }
 
@@ -68,11 +67,7 @@ struct SystemImage {
     }
 }
 
-struct BackgroundImage {
-}
-
 struct OtherImage {
     let iosDeveloperMichael = Image("iOS Developer")
-    
     let svgLogo = Image("SVG Logo")
 }
