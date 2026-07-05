@@ -190,6 +190,7 @@
 		AAEE000100010004 /* DictionarySkeletonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEE000200010004 /* DictionarySkeletonView.swift */; };
 		AAEE0001000100A1 /* WordOccurrencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEE0002000100A1 /* WordOccurrencesView.swift */; };
 		AAEE0001000100A2 /* WordOccurrencesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEE0002000100A2 /* WordOccurrencesViewModel.swift */; };
+		AAEE0001000100A3 /* OccurrenceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEE0002000100A3 /* OccurrenceRow.swift */; };
 		AAEE0001000100B1 /* AlphabetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEE0002000100B1 /* AlphabetView.swift */; };
 		AAEE0001000100B2 /* AlphabetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEE0002000100B2 /* AlphabetViewModel.swift */; };
 		AAEE0001000100B3 /* AlphabetLetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEE0002000100B3 /* AlphabetLetter.swift */; };
@@ -197,8 +198,6 @@
 		AAEE0001000100D1 /* alphabet.json in Resources */ = {isa = PBXBuildFile; fileRef = AAEE0002000100D1 /* alphabet.json */; };
 		AAEE000100020001 /* AnswerRowState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEE000200020001 /* AnswerRowState.swift */; };
 		AAEE000100020002 /* DictionarySortOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEE000200020002 /* DictionarySortOrder.swift */; };
-		AAEE000100020003 /* SavedWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEE000200020003 /* SavedWord.swift */; };
-		AAEE000100020004 /* WordDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEE000200020004 /* WordDetail.swift */; };
 		AAEE000100020005 /* DictionaryFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEE000200020005 /* DictionaryFilter.swift */; };
 		AAEE00012EC60316002D12D1 /* VoiceActingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEE00022EC60316002D12D1 /* VoiceActingManager.swift */; };
 		AAFF000100010001 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFF000200010001 /* Badge.swift */; };
@@ -391,6 +390,7 @@
 		AAEE000200010004 /* DictionarySkeletonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionarySkeletonView.swift; sourceTree = "<group>"; };
 		AAEE0002000100A1 /* WordOccurrencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordOccurrencesView.swift; sourceTree = "<group>"; };
 		AAEE0002000100A2 /* WordOccurrencesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordOccurrencesViewModel.swift; sourceTree = "<group>"; };
+		AAEE0002000100A3 /* OccurrenceRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OccurrenceRow.swift; sourceTree = "<group>"; };
 		AAEE0002000100B1 /* AlphabetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetView.swift; sourceTree = "<group>"; };
 		AAEE0002000100B2 /* AlphabetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetViewModel.swift; sourceTree = "<group>"; };
 		AAEE0002000100B3 /* AlphabetLetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetLetter.swift; sourceTree = "<group>"; };
@@ -398,8 +398,6 @@
 		AAEE0002000100D1 /* alphabet.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = alphabet.json; sourceTree = "<group>"; };
 		AAEE000200020001 /* AnswerRowState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerRowState.swift; sourceTree = "<group>"; };
 		AAEE000200020002 /* DictionarySortOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionarySortOrder.swift; sourceTree = "<group>"; };
-		AAEE000200020003 /* SavedWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedWord.swift; sourceTree = "<group>"; };
-		AAEE000200020004 /* WordDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDetail.swift; sourceTree = "<group>"; };
 		AAEE000200020005 /* DictionaryFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryFilter.swift; sourceTree = "<group>"; };
 		AAEE00022EC60316002D12D1 /* VoiceActingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceActingManager.swift; sourceTree = "<group>"; };
 		AAFF000200010001 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
@@ -737,9 +735,8 @@
 				1FCAFE0000110000CAFE0011 /* QuestionCatalog.swift */,
 				AACC000200010001 /* RichTextSegment.swift */,
 				AADD000200010001 /* WordEntry.swift */,
-				AAEE000200020003 /* SavedWord.swift */,
-				AAEE000200020004 /* WordDetail.swift */,
 				AAEE0002000100B3 /* AlphabetLetter.swift */,
+				AAEE0002000100A3 /* OccurrenceRow.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1080,8 +1077,6 @@
 				1F496C3D2FC1C36200E0D7F5 /* AccentColor.swift in Sources */,
 				AACC000100010003 /* QuestionProgressBar.swift in Sources */,
 				AADD000100010001 /* WordEntry.swift in Sources */,
-				AAEE000100020003 /* SavedWord.swift in Sources */,
-				AAEE000100020004 /* WordDetail.swift in Sources */,
 				AADD000100010002 /* WordsDictionary.swift in Sources */,
 				AAEE0001000100C1 /* AlphabetCatalog.swift in Sources */,
 				AADD0001000100AA /* WordOccurrenceIndex.swift in Sources */,
@@ -1091,6 +1086,7 @@
 				AADD0001000100B4 /* RootView.swift in Sources */,
 				AAEE0001000100A1 /* WordOccurrencesView.swift in Sources */,
 				AAEE0001000100A2 /* WordOccurrencesViewModel.swift in Sources */,
+				AAEE0001000100A3 /* OccurrenceRow.swift in Sources */,
 				AADD000100010003 /* String + Dictionary.swift in Sources */,
 				AAFF000100010001 /* Badge.swift in Sources */,
 				AADD000100010004 /* HintView.swift in Sources */,

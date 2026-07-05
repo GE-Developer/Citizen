@@ -2502,7 +2502,7 @@
           "index": 4,
           "name": "Союзы",
           "description": null,
-          "isPremium": false,
+          "isPremium": true,
           "imageUrl": null,
           "questions": [
             {
@@ -3332,7 +3332,7 @@
           "index": 5,
           "name": "Смысловые соответствия слов",
           "description": null,
-          "isPremium": false,
+          "isPremium": true,
           "imageUrl": null,
           "questions": [
             {
@@ -8321,7 +8321,7 @@
           "index": 1,
           "name": "С древнейших времён до IV века",
           "description": null,
-          "isPremium": true,
+          "isPremium": false,
           "imageUrl": null,
           "questions": [
             {
@@ -9315,7 +9315,7 @@
           "index": 2,
           "name": "IV–X века",
           "description": null,
-          "isPremium": true,
+          "isPremium": false,
           "imageUrl": null,
           "questions": [
             {
@@ -10965,7 +10965,7 @@
           "index": 3,
           "name": "XI–XV века",
           "description": null,
-          "isPremium": true,
+          "isPremium": false,
           "imageUrl": null,
           "questions": [
             {
@@ -16600,7 +16600,7 @@
           "index": 1,
           "name": "Часть 1",
           "description": null,
-          "isPremium": true,
+          "isPremium": false,
           "imageUrl": null,
           "questions": [
             {
@@ -17430,7 +17430,7 @@
           "index": 2,
           "name": "Часть 2",
           "description": null,
-          "isPremium": true,
+          "isPremium": false,
           "imageUrl": null,
           "questions": [
             {
@@ -18260,7 +18260,7 @@
           "index": 3,
           "name": "Часть 3",
           "description": null,
-          "isPremium": true,
+          "isPremium": false,
           "imageUrl": null,
           "questions": [
             {

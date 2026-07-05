@@ -1,0 +1,85 @@
+//
+//  WordOccurrencesViewModel.swift
+//  Citizen
+//
+//  Created by GE-Developer
+//
+
+import Foundation
+
+@MainActor
+@Observable
+final class WordOccurrencesViewModel {
+    var selectedQuestion: Question?
+    var selectedFilter: DictionaryFilter = .all
+    
+    var visibleRows: [OccurrenceRow] {
+        switch selectedFilter {
+        case .all:
+            rows
+        case .named(let category):
+            rows.filter { $0.categoryName == category }
+        }
+    }
+    
+    let title = L10n("WordOccurrences.title")
+    let emptyText = L10n("WordOccurrences.emptyRows")
+    
+    let subtitle: String
+    let headerTitle: String
+    let headerTransliteration: String
+    let headerTranslation: String?
+    let headerDescription: String?
+    let availableFilters: [DictionaryFilter]
+    let rows: [OccurrenceRow]
+    
+    private let hapticsManager = HapticsManager.shared
+    
+    init(word: WordEntry) {
+        let questions = WordOccurrenceIndex.shared.questions(for: word.key)
+        let rows = questions.map { Self.makeRow(for: $0) }
+        
+        headerTitle = word.word
+        headerTransliteration = "[\(word.transliteration)]"
+        headerTranslation = word.translation
+        headerDescription = word.form?.formDescription
+        subtitle = L10n("\(questions.count) WordOccurrences.subtitle")
+        self.rows = rows
+        availableFilters = Self.filters(for: rows)
+    }
+    
+    func select(_ row: OccurrenceRow) {
+        hapticsManager.impact()
+        selectedQuestion = row.question
+    }
+    
+    private static func filters(for rows: [OccurrenceRow]) -> [DictionaryFilter] {
+        var seen = Set<String>()
+        var categories: [String] = []
+        
+        for row in rows {
+            let category = row.categoryName
+            
+            guard !category.isEmpty else { continue }
+            guard seen.insert(category).inserted else { continue }
+            
+            categories.append(category)
+        }
+        
+        return [.all] + categories.map(DictionaryFilter.named)
+    }
+    
+    private static func makeRow(for question: Question) -> OccurrenceRow {
+        let placement = QuizRepository.shared.placement(ofQuestionID: question.id)
+        let sentence = question.additionalText ?? ""
+        return OccurrenceRow(
+            question: question,
+            number: question.number,
+            categoryName: placement?.category.name ?? "",
+            topicName: placement?.topic.name ?? "",
+            questionText: question.question,
+            sentenceSegments: sentence.isEmpty ? [] : sentence.asRichSegments,
+            isPremium: placement?.topic.isPremium ?? false
+        )
+    }
+}

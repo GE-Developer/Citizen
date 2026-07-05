@@ -1,11 +1,87 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "· %@" : {
-
-    },
     "[%@]" : {
 
+    },
+    "%lld Dictionary.Alphabet.lettersCount" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld letter"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld letters"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld Dictionary.wordsCountSuffix" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%#@count@"
+          },
+          "substitutions" : {
+            "count" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "Word saved"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "Words saved"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld WordOccurrences.subtitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "in %lld question"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "in %lld questions"
+                }
+              }
+            }
+          }
+        }
+      }
     },
     "Alphabet.Letters.header" : {
       "extractionState" : "manual",
@@ -42,6 +118,116 @@
     },
     "Couldn't load data" : {
 
+    },
+    "Dictionary.emptyMessage" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap any word on the Hint screen to add it here with its translation and grammar."
+          }
+        }
+      }
+    },
+    "Dictionary.emptyTitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No saved words yet"
+          }
+        }
+      }
+    },
+    "Dictionary.noResultsText" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nothing found"
+          }
+        }
+      }
+    },
+    "Dictionary.removeActionTitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Remove from dictionary"
+          }
+        }
+      }
+    },
+    "Dictionary.savedAsLabel" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saved as"
+          }
+        }
+      }
+    },
+    "Dictionary.searchPlaceholder" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search words"
+          }
+        }
+      }
+    },
+    "Dictionary.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dictionary"
+          }
+        }
+      }
+    },
+    "DictionaryFilter.All.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "All"
+          }
+        }
+      }
+    },
+    "DictionarySortOrder.Alphabetical.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A-Z"
+          }
+        }
+      }
+    },
+    "DictionarySortOrder.Recent.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recent"
+          }
+        }
+      }
     },
     "Error.title" : {
       "extractionState" : "manual",
@@ -373,6 +559,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Project"
+          }
+        }
+      }
+    },
+    "SearchField.cancel" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancel"
           }
         }
       }
@@ -720,6 +917,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Purchase was cancelled by user."
+          }
+        }
+      }
+    },
+    "WordOccurrences.emptyRows" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not found in any question"
+          }
+        }
+      }
+    },
+    "WordOccurrences.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Word"
           }
         }
       }

@@ -13,21 +13,21 @@ final class DictionaryViewModel {
     var selectedFilter: DictionaryFilter = .all
     var selectedSort: DictionarySortOrder = .recent
     var searchText = ""
-    var selectedOccurrenceWord: SavedWord?
+    var selectedOccurrenceWord: WordEntry?
     var showAlphabet = false
     
     var availableFilters: [DictionaryFilter] {
-        [.all] + dictionary.partsOfSpeech.map(DictionaryFilter.partOfSpeech)
+        [.all] + dictionary.partsOfSpeech.map(DictionaryFilter.named)
     }
     
-    var displayedWords: [SavedWord] {
+    var displayedWords: [WordEntry] {
         let filtered = words.filter { matchesFilter($0) && matchesSearch($0) }
         switch selectedSort {
         case .recent:
             return filtered
         case .alphabetical:
             return filtered.sorted {
-                $0.lemmaWord.localizedStandardCompare($1.lemmaWord) == .orderedAscending
+                $0.lemma.word.localizedStandardCompare($1.lemma.word) == .orderedAscending
             }
         }
     }
@@ -86,7 +86,7 @@ final class DictionaryViewModel {
     
     private(set) var isLoading = true
     
-    private var words: [SavedWord] = []
+    private var words: [WordEntry] = []
     private var occurrenceCounts: [String: Int] = [:]
     
     let alphabetIconLetter = "ა"
@@ -105,7 +105,7 @@ final class DictionaryViewModel {
         isLoading = false
     }
     
-    func remove(_ word: SavedWord) {
+    func remove(_ word: WordEntry) {
         hapticsManager.impact(style: .rigid)
         store.remove(word.key)
         words.removeAll { $0.key == word.key }
@@ -116,7 +116,7 @@ final class DictionaryViewModel {
         showAlphabet = true
     }
     
-    func showOccurrences(_ word: SavedWord) {
+    func showOccurrences(_ word: WordEntry) {
         hapticsManager.impact()
         selectedOccurrenceWord = word
     }
@@ -125,7 +125,7 @@ final class DictionaryViewModel {
         searchText = ""
     }
     
-    func occurrenceCount(for word: SavedWord) -> Int {
+    func occurrenceCount(for word: WordEntry) -> Int {
         occurrenceCounts[word.key] ?? 0
     }
     
@@ -133,15 +133,17 @@ final class DictionaryViewModel {
         "[\(value)]"
     }
     
-    private func fetchSavedWords() -> [SavedWord] {
+    // Записи берутся из WordsDictionary по сохранённым ключам; всё на этом
+    // экране по определению в словарике, поэтому isSaved сразу true.
+    private func fetchSavedWords() -> [WordEntry] {
         store.fetchAll().compactMap { key in
-            dictionary
-                .entry(for: key)
-                .map { SavedWord(key: key, entry: $0) }
+            guard var entry = dictionary.entry(for: key) else { return nil }
+            entry.isSaved = true
+            return entry
         }
     }
     
-    private func countOccurrences(for words: [SavedWord]) -> [String: Int] {
+    private func countOccurrences(for words: [WordEntry]) -> [String: Int] {
         Dictionary(
             words.map { ($0.key, occurrences.count(for: $0.key)) },
             uniquingKeysWith: { first, _ in first }
@@ -154,14 +156,14 @@ final class DictionaryViewModel {
         }
     }
     
-    private func matchesFilter(_ word: SavedWord) -> Bool {
+    private func matchesFilter(_ word: WordEntry) -> Bool {
         switch selectedFilter {
-        case .all:                   return true
-        case .partOfSpeech(let pos): return word.partOfSpeech == pos
+        case .all:            return true
+        case .named(let pos): return word.partOfSpeech == pos
         }
     }
     
-    private func matchesSearch(_ word: SavedWord) -> Bool {
+    private func matchesSearch(_ word: WordEntry) -> Bool {
         let query = searchText.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !query.isEmpty else { return true }
         return word.searchableText.localizedCaseInsensitiveContains(query)
