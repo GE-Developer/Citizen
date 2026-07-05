@@ -154,6 +154,7 @@
 		1FD093542FEF427C009EADC5 /* khe.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1FD093212FEF427C009EADC5 /* khe.mp3 */; };
 		1FD093552FEF427C009EADC5 /* dzaghli.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1FD093192FEF427C009EADC5 /* dzaghli.mp3 */; };
 		1FD093582FEF4663009EADC5 /* jagrisi.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1FD093572FEF4663009EADC5 /* jagrisi.mp3 */; };
+		1FE85B812FFB1349008C90D4 /* Apphabet Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FE85B802FFB1349008C90D4 /* Apphabet Images.xcassets */; };
 		1FEF1BAE2ECBA3AC0085BA76 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEF1BAD2ECBA3AC0085BA76 /* HomeView.swift */; };
 		1FEF1BBD2ECBA40A0085BA76 /* LanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEF1BB22ECBA40A0085BA76 /* LanguageView.swift */; };
 		1FEF1BBE2ECBA40A0085BA76 /* AboutProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEF1BAF2ECBA40A0085BA76 /* AboutProjectView.swift */; };
@@ -364,6 +365,7 @@
 		1FD093332FEF427C009EADC5 /* zholo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = zholo.mp3; sourceTree = "<group>"; };
 		1FD093342FEF427C009EADC5 /* zvigeni.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = zvigeni.mp3; sourceTree = "<group>"; };
 		1FD093572FEF4663009EADC5 /* jagrisi.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = jagrisi.mp3; sourceTree = "<group>"; };
+		1FE85B802FFB1349008C90D4 /* Apphabet Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Apphabet Images.xcassets"; sourceTree = "<group>"; };
 		1FEF1BAD2ECBA3AC0085BA76 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		1FEF1BAF2ECBA40A0085BA76 /* AboutProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutProjectView.swift; sourceTree = "<group>"; };
 		1FEF1BB02ECBA40A0085BA76 /* AboutProjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutProjectViewModel.swift; sourceTree = "<group>"; };
@@ -468,8 +470,6 @@
 			children = (
 				1F496C472FC4B89600E0D7F5 /* Dev_Mode.mp3 */,
 				1F496C482FC4B89600E0D7F5 /* Error_Alert.mp3 */,
-				1FD093352FEF427C009EADC5 /* Alphabet example sound */,
-				1FD092EE2FEF3A1D009EADC5 /* Alphabet sound */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -567,7 +567,6 @@
 				1F73690B2EC60316002D12D1 /* LetterType.swift */,
 				1F73690C2EC60316002D12D1 /* Sound.swift */,
 				1F73690D2EC60316002D12D1 /* StoreError.swift */,
-				1F36F5F92ED4AABC0035E21F /* TopicPhase.swift */,
 				AAEE000200020001 /* AnswerRowState.swift */,
 				AB01000200000001 /* AnswerStatus.swift */,
 				AB04000200000001 /* RootTab.swift */,
@@ -575,8 +574,8 @@
 				AB05000200000002 /* LoadPhase.swift */,
 				AAEE000200020002 /* SortOrder.swift */,
 				AAEE000200020005 /* Filter.swift */,
+				1F36F5F92ED4AABC0035E21F /* TopicPhase.swift */,
 				AA00FEEDC0DE0002 /* FeedbackPhrase.swift */,
-				AB02000200000003 /* DeviceLayout.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -600,6 +599,7 @@
 			children = (
 				1F7369152EC60316002D12D1 /* L10n.swift */,
 				1F7369162EC60316002D12D1 /* Plist.swift */,
+				AB02000200000003 /* DeviceLayout.swift */,
 				AB02000200000001 /* PremiumLockModifier.swift */,
 				AB02000200000002 /* ScreenShotPreventerMask.swift */,
 				AABB000200010005 /* ShimmerModifier.swift */,
@@ -640,13 +640,7 @@
 		1F73692C2EC60316002D12D1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				1F0E93462FB6312B0016D5B4 /* questions.ka.json */,
-				1FA3EE602FE5FA3C0042AED5 /* questions.ru.json */,
-				1F7A35482FE55777005041DD /* questions.en.json */,
-				1F797C502FCB01AC00F33C97 /* words.en.json */,
-				1F54C2CA2FE9DF6D00D907D1 /* words.ka.json */,
-				1F54C2C82FE997D600D907D1 /* words.ru.json */,
-				AAEE0002000100D1 /* alphabet.json */,
+				1FE85B832FFB13BF008C90D4 /* From Supabase in Future */,
 				1F7369242EC60316002D12D1 /* Assets.xcassets */,
 				1F36F5EC2ECF61F90035E21F /* Localizable.xcstrings */,
 				1F7369252EC60316002D12D1 /* Colors.xcassets */,
@@ -756,6 +750,55 @@
 				1FD093342FEF427C009EADC5 /* zvigeni.mp3 */,
 			);
 			path = "Alphabet example sound";
+			sourceTree = "<group>";
+		};
+		1FE85B7D2FFB12FA008C90D4 /* Questions */ = {
+			isa = PBXGroup;
+			children = (
+				1F0E93462FB6312B0016D5B4 /* questions.ka.json */,
+				1FA3EE602FE5FA3C0042AED5 /* questions.ru.json */,
+				1F7A35482FE55777005041DD /* questions.en.json */,
+			);
+			path = Questions;
+			sourceTree = "<group>";
+		};
+		1FE85B7E2FFB1312008C90D4 /* Words */ = {
+			isa = PBXGroup;
+			children = (
+				1F797C502FCB01AC00F33C97 /* words.en.json */,
+				1F54C2CA2FE9DF6D00D907D1 /* words.ka.json */,
+				1F54C2C82FE997D600D907D1 /* words.ru.json */,
+			);
+			path = Words;
+			sourceTree = "<group>";
+		};
+		1FE85B7F2FFB1321008C90D4 /* Alphabet */ = {
+			isa = PBXGroup;
+			children = (
+				AAEE0002000100D1 /* alphabet.json */,
+			);
+			path = Alphabet;
+			sourceTree = "<group>";
+		};
+		1FE85B822FFB139D008C90D4 /* Alphabet Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				1FD093352FEF427C009EADC5 /* Alphabet example sound */,
+				1FD092EE2FEF3A1D009EADC5 /* Alphabet sound */,
+			);
+			path = "Alphabet Sounds";
+			sourceTree = "<group>";
+		};
+		1FE85B832FFB13BF008C90D4 /* From Supabase in Future */ = {
+			isa = PBXGroup;
+			children = (
+				1FE85B802FFB1349008C90D4 /* Apphabet Images.xcassets */,
+				1FE85B822FFB139D008C90D4 /* Alphabet Sounds */,
+				1FE85B7D2FFB12FA008C90D4 /* Questions */,
+				1FE85B7E2FFB1312008C90D4 /* Words */,
+				1FE85B7F2FFB1321008C90D4 /* Alphabet */,
+			);
+			path = "From Supabase in Future";
 			sourceTree = "<group>";
 		};
 		1FEF1BAC2ECA85600085BA76 /* Models */ = {
@@ -965,6 +1008,7 @@
 				1FD092F32FEF3A1D009EADC5 /* sh.mp3 in Resources */,
 				1FD092F42FEF3A1D009EADC5 /* dz.mp3 in Resources */,
 				1FD093132FEF3BD5009EADC5 /* d.mp3 in Resources */,
+				1FE85B812FFB1349008C90D4 /* Apphabet Images.xcassets in Resources */,
 				1FD092F62FEF3A1D009EADC5 /* g.mp3 in Resources */,
 				1FD092F72FEF3A1D009EADC5 /* p.mp3 in Resources */,
 				1FD092F82FEF3A1D009EADC5 /* i.mp3 in Resources */,

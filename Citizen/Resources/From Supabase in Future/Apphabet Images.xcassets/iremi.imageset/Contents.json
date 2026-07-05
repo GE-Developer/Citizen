@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "iremi.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

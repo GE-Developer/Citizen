@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "lomi.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
