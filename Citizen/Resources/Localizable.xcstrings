@@ -60,6 +60,29 @@
         }
       }
     },
+    "%lld TopicPhase.Action.workingOnMistakes" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Review %lld mistake"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Review %lld mistakes"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "%lld WordOccurrences.subtitle" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -112,6 +135,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Transcription"
+          }
+        }
+      }
+    },
+    "ContinueAction.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continue"
           }
         }
       }
@@ -236,6 +270,226 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Error"
+          }
+        }
+      }
+    },
+    "FeedbackPhrase.Correct.1" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nailed it!"
+          }
+        }
+      }
+    },
+    "FeedbackPhrase.Correct.2" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Crystal clear!"
+          }
+        }
+      }
+    },
+    "FeedbackPhrase.Correct.3" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "On the money!"
+          }
+        }
+      }
+    },
+    "FeedbackPhrase.Correct.4" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sharp thinking!"
+          }
+        }
+      }
+    },
+    "FeedbackPhrase.Correct.5" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Excellent work!"
+          }
+        }
+      }
+    },
+    "FeedbackPhrase.Correct.6" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Perfectly done!"
+          }
+        }
+      }
+    },
+    "FeedbackPhrase.Correct.7" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You've got it!"
+          }
+        }
+      }
+    },
+    "FeedbackPhrase.Correct.8" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Brilliant!"
+          }
+        }
+      }
+    },
+    "FeedbackPhrase.Correct.9" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spot on!"
+          }
+        }
+      }
+    },
+    "FeedbackPhrase.Correct.10" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keep crushing it!"
+          }
+        }
+      }
+    },
+    "FeedbackPhrase.Wrong.1" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not quite — try again next time."
+          }
+        }
+      }
+    },
+    "FeedbackPhrase.Wrong.2" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Close one, keep going."
+          }
+        }
+      }
+    },
+    "FeedbackPhrase.Wrong.3" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Almost there!"
+          }
+        }
+      }
+    },
+    "FeedbackPhrase.Wrong.4" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Don't worry, you'll get it."
+          }
+        }
+      }
+    },
+    "FeedbackPhrase.Wrong.5" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mistakes are how we learn."
+          }
+        }
+      }
+    },
+    "FeedbackPhrase.Wrong.6" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stay curious, keep pushing."
+          }
+        }
+      }
+    },
+    "FeedbackPhrase.Wrong.7" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tricky one, but you're learning."
+          }
+        }
+      }
+    },
+    "FeedbackPhrase.Wrong.8" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "One step at a time."
+          }
+        }
+      }
+    },
+    "FeedbackPhrase.Wrong.9" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No worries — onto the next."
+          }
+        }
+      }
+    },
+    "FeedbackPhrase.Wrong.10" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Progress, not perfection."
           }
         }
       }
@@ -767,6 +1021,28 @@
         }
       }
     },
+    "Settings.Tests.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tests"
+          }
+        }
+      }
+    },
+    "Settings.Tests.VoiceActing.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voice Acting"
+          }
+        }
+      }
+    },
     "Settings.title" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -917,6 +1193,50 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Purchase was cancelled by user."
+          }
+        }
+      }
+    },
+    "TopicPhase.Action.completed" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Exit"
+          }
+        }
+      }
+    },
+    "TopicPhase.Status.completed" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Topic Completed"
+          }
+        }
+      }
+    },
+    "TopicPhase.Status.inProgress" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In Progress"
+          }
+        }
+      }
+    },
+    "TopicPhase.Status.workingOnMistakes" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mistakes"
           }
         }
       }

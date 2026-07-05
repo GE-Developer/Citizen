@@ -77,6 +77,7 @@ extension RichTextView {
             .overlay {
                 Capsule()
                     .fill(Gradient.accent.opacity(0.18))
+                    .stroke(Gradient.accent, lineWidth: 1)
                     .padding(.vertical, 2)
             }
     }

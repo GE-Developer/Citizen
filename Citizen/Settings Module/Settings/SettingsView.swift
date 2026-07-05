@@ -56,7 +56,7 @@ extension SettingsView {
                     soundToggle
                 }
                 
-                CustomForm(headerText: vm.voiceActingTitle) {
+                CustomForm(headerText: vm.testsSettingsTitle) {
                     voiceActingToggle
                 }
                 

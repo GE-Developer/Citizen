@@ -7,17 +7,22 @@
 
 import SwiftUI
 
+@MainActor
 final class SettingsViewModel: ObservableObject {
-    @Published var isThemeLight: Bool {
-        didSet { themeManager.isThemeLight = isThemeLight }
+    @Published var isDarkMode: Bool {
+        didSet { themeManager.isDarkMode = isDarkMode }
     }
     
-    @Published var isHapticsOff: Bool {
-        didSet { hapticsManager.isHapticsOff = isHapticsOff }
+    @Published var isHapticsOn: Bool {
+        didSet { hapticsManager.isHapticsOn = isHapticsOn }
     }
     
-    @Published var isSoundOff: Bool {
-        didSet { soundManager.isSoundOff = isSoundOff }
+    @Published var isSoundOn: Bool {
+        didSet { soundManager.isSoundOn = isSoundOn }
+    }
+    
+    @Published var isVoiceActingOn: Bool {
+        didSet { voiceActingManager.isVoiceActingOn = isVoiceActingOn }
     }
     
     var title: String {
@@ -48,6 +53,14 @@ final class SettingsViewModel: ObservableObject {
         L10n("Settings.General.Sound.title")
     }
     
+    var testsSettingsTitle: String {
+        L10n("Settings.Tests.title")
+    }
+    
+    var voiceActingToggleTitle: String {
+        L10n("Settings.Tests.VoiceActing.title")
+    }
+    
     var accessTitle: String {
         L10n("Settings.Access.title")
     }
@@ -58,6 +71,14 @@ final class SettingsViewModel: ObservableObject {
     
     var reviewTitle: String {
         L10n("Settings.Access.Review.title")
+    }
+    
+    var customizationTitle: String {
+        L10n("Settings.Customization.title")
+    }
+    
+    var styleTitle: String {
+        L10n("Settings.Customization.Style.title")
     }
     
     var aboutAppTitle: String {
@@ -81,11 +102,13 @@ final class SettingsViewModel: ObservableObject {
     private let languageManager = LanguageManager.shared
     private let hapticsManager = HapticsManager.shared
     private let soundManager = SoundManager.shared
+    private let voiceActingManager = VoiceActingManager.shared
     
     init() {
-        isThemeLight = themeManager.isThemeLight
-        isHapticsOff = hapticsManager.isHapticsOff
-        isSoundOff = soundManager.isSoundOff
+        isDarkMode = themeManager.isDarkMode
+        isHapticsOn = hapticsManager.isHapticsOn
+        isSoundOn = soundManager.isSoundOn
+        isVoiceActingOn = voiceActingManager.isVoiceActingOn
     }
     
     func rateApp() {
