@@ -166,14 +166,14 @@
 		1FEF1BC42ECBA40A0085BA76 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEF1BB92ECBA40A0085BA76 /* SettingsView.swift */; };
 		1FEF1BC52ECBA40A0085BA76 /* PayWallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEF1BB52ECBA40A0085BA76 /* PayWallView.swift */; };
 		AA00FEEDC0DE0001 /* FeedbackPhrase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00FEEDC0DE0002 /* FeedbackPhrase.swift */; };
+		AA1100010001000A /* LinkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1100020001000A /* LinkButton.swift */; };
 		AABB000100010002 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABB000200010002 /* MainViewModel.swift */; };
 		AABB000100010003 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABB000200010003 /* MainView.swift */; };
 		AABB000100010004 /* HomeActionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABB000200010004 /* HomeActionCard.swift */; };
-		AA1100010001000A /* LinkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1100020001000A /* LinkButton.swift */; };
 		AABB000100010005 /* ShimmerModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABB000200010005 /* ShimmerModifier.swift */; };
 		AACC000100010001 /* RichTextSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACC000200010001 /* RichTextSegment.swift */; };
 		AACC000100010002 /* RichTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACC000200010002 /* RichTextView.swift */; };
-		AACC000100010003 /* QuestionProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACC000200010003 /* QuestionProgressBar.swift */; };
+		AACC000100010003 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACC000200010003 /* ProgressBar.swift */; };
 		AADD000100010001 /* WordEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADD000200010001 /* WordEntry.swift */; };
 		AADD000100010002 /* WordsDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADD000200010002 /* WordsDictionary.swift */; };
 		AADD000100010004 /* HintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADD000200010004 /* HintView.swift */; };
@@ -379,14 +379,14 @@
 		1FEF1BB92ECBA40A0085BA76 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		1FEF1BBA2ECBA40A0085BA76 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		AA00FEEDC0DE0002 /* FeedbackPhrase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackPhrase.swift; sourceTree = "<group>"; };
+		AA1100020001000A /* LinkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkButton.swift; sourceTree = "<group>"; };
 		AABB000200010002 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		AABB000200010003 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		AABB000200010004 /* HomeActionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeActionCard.swift; sourceTree = "<group>"; };
-		AA1100020001000A /* LinkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkButton.swift; sourceTree = "<group>"; };
 		AABB000200010005 /* ShimmerModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerModifier.swift; sourceTree = "<group>"; };
 		AACC000200010001 /* RichTextSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichTextSegment.swift; sourceTree = "<group>"; };
 		AACC000200010002 /* RichTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichTextView.swift; sourceTree = "<group>"; };
-		AACC000200010003 /* QuestionProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionProgressBar.swift; sourceTree = "<group>"; };
+		AACC000200010003 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		AADD000200010001 /* WordEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordEntry.swift; sourceTree = "<group>"; };
 		AADD000200010002 /* WordsDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsDictionary.swift; sourceTree = "<group>"; };
 		AADD000200010004 /* HintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintView.swift; sourceTree = "<group>"; };
@@ -558,7 +558,7 @@
 				1F0E934E2FBB89110016D5B4 /* MatrixAnimationView.swift */,
 				AB03000200000001 /* FlowLayout.swift */,
 				AACC000200010002 /* RichTextView.swift */,
-				AACC000200010003 /* QuestionProgressBar.swift */,
+				AACC000200010003 /* ProgressBar.swift */,
 				AB02000200000002 /* ScreenShotPreventerMask.swift */,
 			);
 			path = "Service Views";
@@ -669,8 +669,8 @@
 		1F797C4F2FC8703600F33C97 /* Questions */ = {
 			isa = PBXGroup;
 			children = (
-				1F7368C52EC5FFCD002D12D1 /* QuestionsView.swift */,
 				1F36F5F72ED4AABC0035E21F /* TopicPreviewView.swift */,
+				1F7368C52EC5FFCD002D12D1 /* QuestionsView.swift */,
 				1F36F5F52ED4AABC0035E21F /* QuestionsViewModel.swift */,
 			);
 			path = Questions;
@@ -1167,7 +1167,7 @@
 				AB03000100000002 /* Array + Ext.swift in Sources */,
 				1F496C3C2FC1C36200E0D7F5 /* AppIcon.swift in Sources */,
 				1F496C3D2FC1C36200E0D7F5 /* AccentColor.swift in Sources */,
-				AACC000100010003 /* QuestionProgressBar.swift in Sources */,
+				AACC000100010003 /* ProgressBar.swift in Sources */,
 				AADD000100010001 /* WordEntry.swift in Sources */,
 				AADD000100010002 /* WordsDictionary.swift in Sources */,
 				AAEE0001000100C1 /* AlphabetCatalog.swift in Sources */,
