@@ -7,18 +7,6 @@
 
 import Foundation
 
-// Строка варианта ответа на экране подсказки: грузинское слово + грамматическая
-// подсказка из словаря ("he / she — nominative") + признак правильного.
-struct HintAnswerRow: Identifiable, Hashable {
-    let label: String
-    let text: String
-    let segments: [RichTextSegment]
-    let translation: String?
-    let isCorrect: Bool
-
-    var id: String { label }
-}
-
 @MainActor
 @Observable
 final class HintViewModel {
@@ -28,7 +16,6 @@ final class HintViewModel {
 
     // MARK: - let
     let subTitle: String
-    let questionText: String
     let questionSegments: [RichTextSegment]
     let questionTranslation: String?
     let sentenceSegments: [RichTextSegment]
@@ -54,7 +41,6 @@ final class HintViewModel {
     // MARK: - init
     init(question: Question) {
         self.subTitle = question.number
-        self.questionText = question.question
         self.questionSegments = question.question.asRichSegments
 
         let additional = question.additionalText ?? ""
@@ -62,7 +48,7 @@ final class HintViewModel {
         self.sentenceSegments = additional.asRichSegments
 
         // Перевод вопроса/предложения/ответов на язык пользователя (nil для ka).
-        let translated = QuestionTranslations.shared.question(forID: question.id)
+        let translated = QuizRepository.shared.translation(forID: question.id)
         self.questionTranslation = translated?.question
         self.sentenceTranslationSegments = translated?.additionalText?.asRichSegments
         let answerTranslations = Dictionary(

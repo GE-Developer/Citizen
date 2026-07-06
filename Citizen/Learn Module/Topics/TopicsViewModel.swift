@@ -7,6 +7,7 @@
 
 import Foundation
 
+@MainActor
 final class TopicsViewModel: ObservableObject {
     @Published var chosenTopic: Topic?
     
@@ -18,15 +19,7 @@ final class TopicsViewModel: ObservableObject {
     var topics: [Topic] {
         category?.topics ?? []
     }
-    
-    var overviewCompleted: Int {
-        category?.completedTopics ?? 0
-    }
-    
-    var overviewProgress: Double {
-        category?.progress ?? 0
-    }
-    
+
     private var category: Category? {
         repository.catalog.categories.first { $0.id == categoryID }
     }
@@ -44,7 +37,7 @@ final class TopicsViewModel: ObservableObject {
         return String(format: "%02d", index + 1)
     }
     
-    func pillText(for topic: Topic) -> String {
+    func pillText(for topic: Topic) -> String? {
         topic.phase.pillText(
             answered: topic.answeredCount,
             total: topic.totalCount,

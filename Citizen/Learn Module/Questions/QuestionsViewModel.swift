@@ -7,14 +7,7 @@
 
 import Foundation
 
-enum AnswerRowState {
-    case idle
-    case selected
-    case correct
-    case wrong
-    case revealCorrect
-}
-
+@MainActor
 final class QuestionsViewModel: ObservableObject {
 
     // MARK: - @PropertyWrappers
@@ -58,7 +51,7 @@ final class QuestionsViewModel: ObservableObject {
     }
 
     var additionalTextSegments: [RichTextSegment] {
-        currentQuestion.additionalText.asRichSegments
+        (currentQuestion.additionalText ?? "").asRichSegments
     }
 
     var progressPercentText: String { "\(Int(progress * 100))" }
@@ -67,7 +60,7 @@ final class QuestionsViewModel: ObservableObject {
     var attemptsText: String { "\(attempts)" }
     var successfulCompletionsText: String { "\(successfulCompletions)" }
 
-    var headerSubtitle: String { phase.statusLabel }
+    var headerSubtitle: String? { phase.statusLabel }
     var ringCaption: String { "\(correctCount) ИЗ \(questionsCount) ПРАВИЛЬНО" }
     var wrongQuestions: [Question] {
         guard let topic = repository.topic(byID: topicID) else { return [] }
@@ -95,7 +88,6 @@ final class QuestionsViewModel: ObservableObject {
     let bestStreakLabel = "ЛУЧШАЯ СЕРИЯ"
     let successfulCompletionsLabel = "ПРОЙДЕНО"
     let attemptsLabel = "ПОПЫТКА"
-    let correctAnswerLabel = "Правильный ответ"
 
     // Тексты экрана вопроса (новый дизайн, английский — без L10n)
     let questionCounterFormat = "QUESTION %d OF %d"
@@ -226,15 +218,6 @@ final class QuestionsViewModel: ObservableObject {
 
         statsStorage.resetAttemptStats(topicID: topicID)
         statsStorage.setRoundProgress(topicID: topicID, roundSize: roundSize, visited: visitedInRound)
-    }
-
-    func correctAnswerText(for question: Question) -> String {
-        question.answers.first(where: { $0.isCorrect })?.text ?? ""
-    }
-
-    func questionLineText(for question: Question) -> String {
-        let raw = question.additionalText.isEmpty ? question.question : question.additionalText
-        return raw.strippedRichMarkup
     }
 
     func rowState(for answer: Answer) -> AnswerRowState {

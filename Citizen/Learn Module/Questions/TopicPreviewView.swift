@@ -46,13 +46,15 @@ extension TopicPreviewView {
 
     private var titleHeader: some View {
         VStack(spacing: 8) {
-            Text(vm.headerSubtitle)
-                .font(.caption)
-                .fontWeight(.semibold)
-                .fontDesign(.rounded)
-                .tracking(2)
-                .foregroundStyle(Color.citizen.secondaryText)
-                .multilineTextAlignment(.center)
+            if let subtitle = vm.headerSubtitle {
+                Text(subtitle)
+                    .font(.caption)
+                    .fontWeight(.semibold)
+                    .fontDesign(.rounded)
+                    .tracking(2)
+                    .foregroundStyle(Color.citizen.secondaryText)
+                    .multilineTextAlignment(.center)
+            }
 
             Text(vm.topicTitle)
                 .font(.system(size: 34, weight: .bold, design: .serif))
@@ -181,25 +183,11 @@ extension TopicPreviewView {
             }
             .frame(width: 28, height: 28)
 
-            VStack(alignment: .leading, spacing: 2) {
-                Text(vm.questionLineText(for: question))
-                    .font(.subheadline)
-                    .fontWeight(.medium)
-                    .fontDesign(.rounded)
-                    .foregroundStyle(Color.citizen.mainText)
-                    .lineLimit(1)
-
-                HStack(spacing: 4) {
-                    Text(vm.correctAnswerLabel)
-                        .foregroundStyle(Color.citizen.secondaryText)
-                    Text(vm.correctAnswerText(for: question))
-                        .fontWeight(.semibold)
-                        .foregroundStyle(Color.citizen.greenLight)
-                }
-                .font(.caption)
+            Text(question.number)
+                .font(.subheadline)
+                .fontWeight(.medium)
                 .fontDesign(.rounded)
-                .lineLimit(1)
-            }
+                .foregroundStyle(Color.citizen.mainText)
 
             Spacer()
         }
@@ -237,7 +225,7 @@ extension TopicPreviewView {
                 .font(.headline)
                 .fontWeight(.semibold)
                 .fontDesign(.rounded)
-                .foregroundStyle(.white)
+                .foregroundStyle(Color.citizen.white)
                 .frame(maxWidth: .infinity)
                 .frame(height: 56)
                 .background(Gradient.accent)

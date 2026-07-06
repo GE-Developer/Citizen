@@ -1,5 +1,5 @@
 //
-//  LearnView.swift
+//  MainView.swift
 //  Citizen
 //
 //  Created by GE-Developer
@@ -9,17 +9,11 @@ import SwiftUI
 
 struct MainView: View {
     @StateObject private var vm = MainViewModel()
-    
-    private var mistakeCountColor: Color {
-        vm.catalog.mistakePoolCount > 0
-        ? Color.citizen.redLight
-        : Color.citizen.greenLight
-    }
-    
+
     var body: some View {
         learnView
             .navigationDestination(item: $vm.chosenCategory) { category in
-                NavigationLazyView(QuestionTopicsView(category: category))
+                NavigationLazyView(TopicsView(category: category))
             }
     }
 }
@@ -31,6 +25,7 @@ extension MainView {
             LazyVStack(spacing: 25) {
                 header
                 statsRow
+                linkButtons
                 categoriesList
                 Divider()
                     .padding(.horizontal, 90)
@@ -60,7 +55,7 @@ extension MainView {
             statColumn(
                 top: vm.allMistakeScore,
                 bottom: vm.toReviewTitle.uppercased(),
-                topColor: mistakeCountColor
+                topColor: Color.citizen.accent
             )
         }
     }
@@ -89,6 +84,65 @@ extension MainView {
         .minimumScaleFactor(0.5)
     }
     
+    // Прямоугольные кнопки одинаковой ширины и высоты (пока без навигации).
+    // «Лидерборд» — акцентная (тон + обводка), как кнопка перехода на алфавит.
+    private var linkButtons: some View {
+        HStack(spacing: 12) {
+            linkButton(
+                icon: Image.system.magnifyingglass,
+                title: vm.searchTitle,
+                isAccent: false,
+                action: { vm.searchButtonPressed() }
+            )
+            linkButton(
+                icon: Image.system.leaderboard,
+                title: vm.leaderboardTitle,
+                isAccent: true,
+                action: { vm.leaderboardButtonPressed() }
+            )
+        }
+    }
+
+    private func linkButton(
+        icon: Image,
+        title: String,
+        isAccent: Bool,
+        action: @escaping () -> Void
+    ) -> some View {
+        Button(action: action) {
+            HStack(spacing: 10) {
+                icon
+                    .font(.headline)
+                    .foregroundStyle(
+                        isAccent
+                        ? AnyShapeStyle(Gradient.accent)
+                        : AnyShapeStyle(Color.citizen.secondaryText)
+                    )
+                Text(title)
+                    .font(.headline)
+                    .fontWeight(.semibold)
+                    .fontDesign(.rounded)
+                    .foregroundStyle(Color.citizen.mainText)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.5)
+            }
+            .frame(maxWidth: .infinity)
+            .frame(height: 56)
+            .background {
+                RoundedRectangle(cornerRadius: 15)
+                    .fill(Color.citizen.groupBackground)
+                    .overlay {
+                        RoundedRectangle(cornerRadius: 15)
+                            .fill(Gradient.accent.opacity(isAccent ? 0.12 : 0))
+                    }
+            }
+            .overlay {
+                RoundedRectangle(cornerRadius: 15)
+                    .strokeBorder(Gradient.accent.opacity(isAccent ? 0.45 : 0), lineWidth: 1)
+            }
+        }
+    }
+
     private var categoriesList: some View {
         VStack(spacing: 12) {
             ForEach(vm.catalog.categories) { category in
@@ -124,7 +178,7 @@ extension MainView {
                             .font(.title3)
                             .fontWeight(.bold)
                             .fontDesign(.rounded)
-                            .foregroundStyle(Color.citizen.progress(category.progress))
+                            .foregroundStyle(Color.citizen.accent)
 
                         Text(vm.topicScoreFor(category))
                             .font(.caption2)
@@ -146,7 +200,6 @@ extension MainView {
             .padding(16)
             .background(Color.citizen.groupBackground)
             .clipShape(RoundedRectangle(cornerRadius: 15))
-            .shadow(color: Color.citizen.viewShadow, radius: 2)
         }
     }
     
@@ -173,7 +226,7 @@ extension MainView {
             HStack(spacing: 12) {
                 HomeActionCard(
                     icon: Image.system.timer,
-                    сolor: Color.citizen.secondaryText,
+                    color: Color.citizen.secondaryText,
                     count: vm.examPreview,
                     title: vm.examTitle,
                     subtitle: vm.examSubtitle,
@@ -181,7 +234,7 @@ extension MainView {
                 
                 HomeActionCard(
                     icon: Image.system.repeatArrow,
-                    сolor: Color.citizen.greenLight,
+                    color: Color.citizen.greenLight,
                     count: vm.refreshPreview,
                     title: vm.refreshTitle,
                     subtitle: vm.refreshSubtitle,
@@ -191,7 +244,7 @@ extension MainView {
             HStack(spacing: 12) {
                 HomeActionCard(
                     icon: Image.system.warning,
-                    сolor: Color.citizen.redLight,
+                    color: Color.citizen.redLight,
                     count: vm.allMistakeScore,
                     title: vm.mistakesTitle,
                     subtitle: vm.mistakesSubtitle,
@@ -199,7 +252,7 @@ extension MainView {
                 
                 HomeActionCard(
                     icon: Image.system.bookmark,
-                    сolor: Color.citizen.yellowLight,
+                    color: Color.citizen.yellowLight,
                     count: vm.savedPreview,
                     title: vm.savedTitle,
                     subtitle: vm.savedSubtitle,

@@ -28,9 +28,7 @@ extension TopicsView {
         CustomScrollView(title: vm.title, subTitle: vm.subtitle) {
             EmptyView()
         } content: { _ in
-            LazyVStack(spacing: 16) {
-                topicsList
-            }
+            topicsList
         }
     }
     
@@ -75,28 +73,45 @@ extension TopicsView {
             .padding(16)
             .background(Color.citizen.groupBackground)
             .clipShape(RoundedRectangle(cornerRadius: 15))
-            .shadow(color: Color.citizen.viewShadow, radius: 2)
         }
     }
     
     @ViewBuilder
     private func pillBadge(_ topic: Topic) -> some View {
-        let gradient = Gradient.phase(topic.phase)
-        HStack(spacing: 6) {
-            Circle()
-                .fill(gradient)
-                .frame(width: 6, height: 6)
-            Text(vm.pillText(for: topic))
+        switch topic.phase {
+        case .notStarted:
+            Image.system.chevron
+                .font(.subheadline)
+                .fontWeight(.semibold)
+                .foregroundStyle(Color.citizen.secondaryText)
+
+        case .completed:
+            Image.system.checkmark
+                .font(.subheadline)
+                .fontWeight(.bold)
+                .foregroundStyle(Gradient.green)
+
+        case .inProgress:
+            textBadge(vm.pillText(for: topic), gradient: Gradient.yellow)
+
+        case .workingOnMistakes:
+            textBadge(vm.pillText(for: topic), gradient: Gradient.red)
+        }
+    }
+
+    @ViewBuilder
+    private func textBadge(_ text: String?, gradient: LinearGradient) -> some View {
+        if let text {
+            Text(text)
                 .font(.caption)
                 .fontWeight(.semibold)
                 .fontDesign(.rounded)
                 .foregroundStyle(gradient)
                 .lineLimit(1)
+                .padding(.horizontal, 8)
+                .padding(.vertical, 4)
+                .background(gradient.opacity(0.15))
+                .clipShape(Capsule())
         }
-        .padding(.horizontal, 8)
-        .padding(.vertical, 4)
-        .background(gradient.opacity(0.15))
-        .clipShape(Capsule())
     }
-    
 }

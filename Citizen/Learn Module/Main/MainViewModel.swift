@@ -1,5 +1,5 @@
 //
-//  LearnViewModel.swift
+//  MainViewModel.swift
 //  Citizen
 //
 //  Created by GE-Developer
@@ -7,6 +7,7 @@
 
 import Foundation
 
+@MainActor
 final class MainViewModel: ObservableObject {
     @Published var chosenCategory: Category?
     
@@ -21,14 +22,7 @@ final class MainViewModel: ObservableObject {
     var allMistakeScore: String {
         "\(catalog.mistakePoolCount)"
     }
-    
-    var allCorrectScore: String {
-        "\(catalog)"
-    }
-    
-    private let repository = QuizRepository.shared
-    private let haptics = HapticsManager.shared
-    
+
     let examReadinessTitle = "Exam Readiness"
     let topicsTitle = "Topics"
     let questionsTitle = "Questions"
@@ -48,6 +42,12 @@ final class MainViewModel: ObservableObject {
     let savedTitle = "Saved"
     let savedSubtitle = "Questions you bookmarked"
     let savedPreview = "15"
+
+    let searchTitle = "Search"
+    let leaderboardTitle = "Leaderboard"
+    
+    private let repository = QuizRepository.shared
+    private let haptics = HapticsManager.shared
     
     func choose(_ category: Category) {
         haptics.impact()
@@ -55,7 +55,7 @@ final class MainViewModel: ObservableObject {
     }
     
     func numberFor(_ category: Category) -> String {
-        "0\(category.index)"
+        String(format: "%02d", category.index)
     }
     
     func titleFor(_ category: Category) -> String {
@@ -83,6 +83,14 @@ final class MainViewModel: ObservableObject {
     }
     
     func savedButtonPressed() {
+        haptics.impact()
+    }
+
+    func searchButtonPressed() {
+        haptics.impact()
+    }
+
+    func leaderboardButtonPressed() {
         haptics.impact()
     }
 }

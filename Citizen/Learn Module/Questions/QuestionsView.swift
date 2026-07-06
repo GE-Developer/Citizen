@@ -11,6 +11,7 @@ struct QuestionsView: View {
     @Environment(\.dismiss) private var dismiss
 
     @StateObject private var vm: QuestionsViewModel
+    @State private var showHint = false
 
     init(topic: Topic) {
         _vm = StateObject(wrappedValue: QuestionsViewModel(topic: topic))
@@ -26,7 +27,7 @@ extension QuestionsView {
     private var questionsView: some View {
         CustomScrollView(title: vm.testTitle, subTitle: vm.currentQuestion.number) {
             NavigationToolButton(.system.bookmark, action: {})
-            NavigationToolButton(.system.hint, action: {})
+            NavigationToolButton(.system.hint, action: { showHint = true })
         } content: { _ in
             progressRow
             question
@@ -36,6 +37,9 @@ extension QuestionsView {
         .overlay { resultView }
         .safeAreaInset(edge: .bottom) { continueButton }
         .overlay { preview }
+        .navigationDestination(isPresented: $showHint) {
+            NavigationLazyView(HintView(question: vm.currentQuestion))
+        }
     }
 
     private var progressRow: some View {
@@ -109,7 +113,7 @@ extension QuestionsView {
 
     @ViewBuilder
     private var additionalText: some View {
-        if !vm.currentQuestion.additionalText.isEmpty {
+        if vm.currentQuestion.additionalText != nil {
             HStack(spacing: 10) {
                 Capsule()
                     .frame(width: 2)
@@ -126,7 +130,7 @@ extension QuestionsView {
 
     private var continueButton: some View {
         Button(action: vm.buttonPressed) {
-            Text(L10n(vm.ctaTitle))
+            Text(vm.ctaTitle)
                 .font(.title3)
                 .fontWeight(.medium)
                 .fontDesign(.rounded)
@@ -200,7 +204,14 @@ extension QuestionsView {
 
     private func answerRow(_ answer: Answer) -> some View {
         let state = vm.rowState(for: answer)
-        return HStack {
+        return HStack(alignment: .top, spacing: 12) {
+            Text(answer.label)
+                .font(.title3)
+                .fontWeight(.bold)
+                .fontDesign(.rounded)
+                .foregroundStyle(Gradient.accent)
+                .frame(width: 18, alignment: .leading)
+
             Text(answer.text)
                 .fontDesign(.rounded)
                 .font(.title3)
