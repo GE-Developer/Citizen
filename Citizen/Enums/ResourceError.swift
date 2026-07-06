@@ -8,4 +8,5 @@
 
 enum ResourceError: Error {
     case loadFailed(String)
+    case invalidData(String)
 }

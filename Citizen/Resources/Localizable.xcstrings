@@ -1,9 +1,6 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "[%@]" : {
-
-    },
     "%lld Dictionary.Alphabet.lettersCount" : {
       "extractionState" : "manual",
       "localizations" : {

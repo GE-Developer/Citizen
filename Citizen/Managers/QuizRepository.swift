@@ -29,9 +29,13 @@ final class QuizRepository {
             guard let base = Self.decode(langCode: "ka") else {
                 throw ResourceError.loadFailed("questions.ka")
             }
+            
+            try Self.validate(base)
+            
             guard langCode != "ka", let overlay = Self.decode(langCode: langCode) else {
                 return (base, nil)
             }
+            
             let translations = Dictionary(
                 overlay.categories.flatMap(\.topics).flatMap(\.questions).map { ($0.id, $0) },
                 uniquingKeysWith: { first, _ in first }
@@ -123,6 +127,32 @@ final class QuizRepository {
         }
         
         return QuestionCatalog(categories: merged)
+    }
+    
+    // Структурные инварианты, на которые опирается Learn Module:
+    // QuestionsViewModel берёт questions[0] у непустой темы, Answer.id == text,
+    // переводы ответов ключуются label'ом, ответы в CoreData — по question.id.
+    private nonisolated static func validate(_ catalog: QuestionCatalog) throws {
+        var questionIDs = Set<String>()
+        
+        for topic in catalog.categories.flatMap(\.topics) {
+            guard !topic.questions.isEmpty else {
+                throw ResourceError.invalidData("empty topic \(topic.id)")
+            }
+            
+            for question in topic.questions {
+                guard questionIDs.insert(question.id).inserted else {
+                    throw ResourceError.invalidData("duplicate question id \(question.id)")
+                }
+                guard question.answers.count(where: \.isCorrect) == 1 else {
+                    throw ResourceError.invalidData("question \(question.id) must have exactly one correct answer")
+                }
+                guard Set(question.answers.map(\.text)).count == question.answers.count,
+                      Set(question.answers.map(\.label)).count == question.answers.count else {
+                    throw ResourceError.invalidData("duplicate answer text/label in question \(question.id)")
+                }
+            }
+        }
     }
     
     private nonisolated static func decode(langCode: String) -> QuestionCatalog? {

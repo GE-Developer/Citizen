@@ -48,13 +48,4 @@ extension Gradient {
         startPoint: .leading,
         endPoint: .trailing
     )
-    
-    static func phase(_ phase: TopicPhase) -> LinearGradient {
-        switch phase {
-        case .completed:         Gradient.green
-        case .notStarted:        Gradient.gray
-        case .workingOnMistakes: Gradient.red
-        case .inProgress:        Gradient.yellow
-        }
-    }
 }

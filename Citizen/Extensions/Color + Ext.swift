@@ -39,17 +39,4 @@ struct CitizenColor {
     let yellowDark = Color("Yellow Dark")
     let redLight = Color("Red Light")
     let redDark = Color("Red Dark")
-    
-    func phase(_ phase: TopicPhase) -> Color {
-        switch phase {
-        case .completed:
-            greenLight
-        case .inProgress:
-            yellowLight
-        case .workingOnMistakes:
-            redLight
-        case .notStarted:
-            secondaryText
-        }
-    }
 }

@@ -169,6 +169,7 @@
 		AABB000100010002 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABB000200010002 /* MainViewModel.swift */; };
 		AABB000100010003 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABB000200010003 /* MainView.swift */; };
 		AABB000100010004 /* HomeActionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABB000200010004 /* HomeActionCard.swift */; };
+		AA1100010001000A /* LinkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1100020001000A /* LinkButton.swift */; };
 		AABB000100010005 /* ShimmerModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABB000200010005 /* ShimmerModifier.swift */; };
 		AACC000100010001 /* RichTextSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACC000200010001 /* RichTextSegment.swift */; };
 		AACC000100010002 /* RichTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACC000200010002 /* RichTextView.swift */; };
@@ -381,6 +382,7 @@
 		AABB000200010002 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		AABB000200010003 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		AABB000200010004 /* HomeActionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeActionCard.swift; sourceTree = "<group>"; };
+		AA1100020001000A /* LinkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkButton.swift; sourceTree = "<group>"; };
 		AABB000200010005 /* ShimmerModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerModifier.swift; sourceTree = "<group>"; };
 		AACC000200010001 /* RichTextSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichTextSegment.swift; sourceTree = "<group>"; };
 		AACC000200010002 /* RichTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichTextView.swift; sourceTree = "<group>"; };
@@ -551,6 +553,7 @@
 				1F7368E32EC6023F002D12D1 /* NavigationLazyView.swift */,
 				1F36F6002ED4AABC0035E21F /* ProgressRing.swift */,
 				AABB000200010004 /* HomeActionCard.swift */,
+				AA1100020001000A /* LinkButton.swift */,
 				AAFF000200010001 /* Badge.swift */,
 				1F0E934E2FBB89110016D5B4 /* MatrixAnimationView.swift */,
 				AB03000200000001 /* FlowLayout.swift */,
@@ -1156,6 +1159,7 @@
 				AAEE0001000100B2 /* AlphabetViewModel.swift in Sources */,
 				AAEE0001000100B3 /* AlphabetLetter.swift in Sources */,
 				AABB000100010004 /* HomeActionCard.swift in Sources */,
+				AA1100010001000A /* LinkButton.swift in Sources */,
 				AABB000100010005 /* ShimmerModifier.swift in Sources */,
 				AACC000100010001 /* RichTextSegment.swift in Sources */,
 				AACC000100010002 /* RichTextView.swift in Sources */,
