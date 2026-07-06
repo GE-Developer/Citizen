@@ -50,6 +50,7 @@ extension LinkButton {
                     .lineLimit(1)
                     .minimumScaleFactor(0.5)
             }
+            .padding(.horizontal, 5)
             .frame(maxWidth: .infinity)
             .frame(height: 56)
             .background { background }

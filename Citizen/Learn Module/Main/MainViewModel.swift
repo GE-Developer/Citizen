@@ -22,29 +22,74 @@ final class MainViewModel: ObservableObject {
     var allMistakeScore: String {
         "\(catalog.mistakePoolCount)"
     }
-
-    let examReadinessTitle = "Exam Readiness"
-    let topicsTitle = "Topics"
-    let questionsTitle = "Questions"
-    let toReviewTitle = "To Review"
     
-    let examTitle = "Exam"
-    let examSubtitle = "Simulate the real exam"
-    let examPreview = "20 min"
+    var examReadinessTitle: String {
+        L10n("Main.ExamReadiness.title")
+    }
     
-    let refreshTitle = "Refresh"
-    let refreshSubtitle = "Run through completed questions"
-    let refreshPreview = "52"
+    var topicsTitle: String {
+        L10n("Main.Topics.title")
+    }
     
-    let mistakesTitle = "Mistakes"
-    let mistakesSubtitle = "Redo questions you got wrong"
+    var questionsTitle: String {
+        L10n("Main.Questions.title")
+    }
     
-    let savedTitle = "Saved"
-    let savedSubtitle = "Questions you bookmarked"
-    let savedPreview = "15"
-
-    let searchTitle = "Search"
-    let leaderboardTitle = "Leaderboard"
+    var toReviewTitle: String {
+        L10n("Main.ToReview.title")
+    }
+    
+    var searchTitle: String {
+        L10n("Main.Search.title")
+    }
+    
+    var leaderboardTitle: String {
+        L10n("Main.Leaderboard.title")
+    }
+    
+    var examTitle: String {
+        L10n("Main.Exam.title")
+    }
+    
+    var examSubtitle: String {
+        L10n("Main.Exam.subtitle")
+    }
+    
+    var examPreview: String {
+        L10n("\(60) Main.Exam.preview")
+    }
+    
+    var refreshTitle: String {
+        L10n("Main.Refresh.title")
+    }
+    
+    var refreshSubtitle: String {
+        L10n("Main.Refresh.subtitle")
+    }
+    
+    var refreshPreview: String {
+        "\(0)"
+    }
+    
+    var mistakesTitle: String {
+        L10n("Main.Mistakes.title")
+    }
+    
+    var mistakesSubtitle: String {
+        L10n("Main.Mistakes.subtitle")
+    }
+    
+    var savedTitle: String {
+        L10n("Main.Saved.title")
+    }
+    
+    var savedSubtitle: String {
+        L10n("Main.Saved.subtitle")
+    }
+    
+    var savedPreview: String {
+        "\(0)"
+    }
     
     private let repository = QuizRepository.shared
     private let haptics = HapticsManager.shared
@@ -85,11 +130,11 @@ final class MainViewModel: ObservableObject {
     func savedButtonPressed() {
         haptics.impact()
     }
-
+    
     func searchButtonPressed() {
         haptics.impact()
     }
-
+    
     func leaderboardButtonPressed() {
         haptics.impact()
     }

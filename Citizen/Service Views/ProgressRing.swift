@@ -69,7 +69,7 @@ extension ProgressRing {
                     )
             }
             if let subtitle {
-                Text(subtitle)
+                Text(subtitle.uppercased())
                     .font(.caption2)
                     .fontWeight(.semibold)
                     .fontDesign(.rounded)

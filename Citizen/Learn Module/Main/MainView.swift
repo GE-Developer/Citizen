@@ -139,7 +139,7 @@ extension MainView {
                 .fontDesign(.rounded)
                 .foregroundStyle(topColor)
             
-            Text(bottom)
+            Text(bottom.uppercased())
                 .font(.caption2)
                 .fontWeight(.semibold)
                 .fontDesign(.rounded)

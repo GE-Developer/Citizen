@@ -10,6 +10,9 @@ import SwiftUI
 struct RootView: View {
     @State private var loader = AppDataLoader.shared
     
+    private let loadDataErrorTitle = "Couldn't load data"
+    private let retryTitle = "Retry"
+    
     var body: some View {
         content
             .dynamicTypeSize(.large)
@@ -41,11 +44,11 @@ extension RootView {
     
     private var failed: some View {
         VStack(spacing: 16) {
-            Text("Couldn't load data")
+            Text(loadDataErrorTitle)
                 .font(.headline)
                 .fontDesign(.rounded)
                 .foregroundStyle(Color.citizen.mainText)
-            Button("Retry") { retry() }
+            Button(retryTitle) { retry() }
                 .font(.body)
                 .fontWeight(.semibold)
                 .fontDesign(.rounded)
