@@ -99,7 +99,7 @@ extension CustomCapsulePicker {
                     : isDisabled ? Color.citizen.mainText.opacity(0.3)
                     : Color.citizen.mainText
                 )
-                .background(isSelected ? AnyShapeStyle(Gradient.accent) : AnyShapeStyle(Color(.secondarySystemGroupedBackground)))
+                .background(isSelected ? AnyShapeStyle(Gradient.accent) : AnyShapeStyle(Color.citizen.secondaryGroupBackground))
                 .clipShape(Capsule())
         }
         .disabled(isDisabled || isSelected)

@@ -42,7 +42,7 @@ extension MenuPickerView {
     
     private var background: some View {
         RoundedRectangle(cornerRadius: 20)
-            .fill(Color(.secondarySystemGroupedBackground))
+            .fill(Color.citizen.secondaryGroupBackground)
             .shadow(color: Color.citizen.viewShadow, radius: 4)
     }
 }

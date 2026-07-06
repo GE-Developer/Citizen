@@ -33,7 +33,7 @@ extension ExitButton {
     private var background: some View {
         Circle()
             .foregroundStyle(.ultraThinMaterial)
-            .shadow(color: .white.opacity(0.6), radius: 1)
+            .shadow(color: Color.citizen.white.opacity(0.6), radius: 1)
     }
 }
 

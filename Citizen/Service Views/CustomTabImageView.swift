@@ -46,7 +46,7 @@ extension CustomTabImageView {
             .overlay(gradientCurtains)
         }
         .padding(.bottom, 6)
-        .background(Color(.secondarySystemGroupedBackground))
+        .background(Color.citizen.secondaryGroupBackground)
         .clipShape(RoundedRectangle(cornerRadius: 12))
         .tabViewStyle(.page(indexDisplayMode: .always))
         .indexViewStyle(.page(backgroundDisplayMode: .always))
@@ -78,8 +78,8 @@ extension CustomTabImageView {
     private var gradientCurtains: some View {
         HStack(spacing: 0) {
             let colors = [
-                Color(.secondarySystemGroupedBackground),
-                Color(.secondarySystemGroupedBackground).opacity(0)
+                Color.citizen.secondaryGroupBackground,
+                Color.citizen.secondaryGroupBackground.opacity(0)
             ]
             
             LinearGradient(colors: colors, startPoint: .leading, endPoint: .trailing)

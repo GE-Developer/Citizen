@@ -10,14 +10,14 @@ import SwiftUI
 struct StyleView: View {
     @EnvironmentObject private var store: StoreManager
     @State private var showPayWall = false
-
+    
     private let vm = StyleViewModel()
-
+    
     private let columns = [
         GridItem(.flexible(), spacing: 12),
         GridItem(.flexible(), spacing: 12)
     ]
-
+    
     var body: some View {
         styleView
             .fullScreenCover(isPresented: $showPayWall) {
@@ -36,7 +36,7 @@ extension StyleView {
             accentGrid
         }
     }
-
+    
     private var accentGrid: some View {
         LazyVGrid(columns: columns, spacing: 12) {
             ForEach(vm.colorCases) { colorCase in
@@ -47,7 +47,7 @@ extension StyleView {
             }
         }
     }
-
+    
     private func accentButton(for colorCase: AccentColor) -> some View {
         Button(action: { vm.changeAccent(to: colorCase) }) {
             VStack(spacing: 12) {
@@ -85,7 +85,7 @@ extension StyleView {
             .padding()
             .background {
                 RoundedRectangle(cornerRadius: 15)
-                    .fill(Color(.secondarySystemGroupedBackground))
+                    .fill(Color.citizen.secondaryGroupBackground)
                     .shadow(color: .citizen.viewShadow, radius: 2)
             }
             .padding(2)
@@ -98,7 +98,7 @@ extension StyleView {
             }
         }
     }
-
+    
     @ViewBuilder
     private func premiumOverlay(_ colorCase: AccentColor) -> some View {
         if colorCase.requiresPremium {

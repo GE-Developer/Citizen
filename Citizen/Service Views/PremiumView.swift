@@ -41,14 +41,15 @@ struct PremiumView: View {
 
 // MARK: - Builder
 extension PremiumView {
+    @ViewBuilder
     private var premiumView: some View {
         switch demonstration {
         case .star:
-            AnyView(starView)
+            starView
         case .textAndStar:
-            AnyView(starAndTextView)
+            starAndTextView
         case .status:
-            AnyView(statusView)
+            statusView
         }
     }
     
@@ -95,11 +96,11 @@ extension PremiumView {
         HStack {
             if store.isPremium {
                 Image.system.star
-                    .foregroundStyle(Color(.secondarySystemGroupedBackground))
+                    .foregroundStyle(Color.citizen.secondaryGroupBackground)
             }
             
             Text(store.isPremium ? premiumText : basicText)
-                .foregroundStyle(Color(.secondarySystemGroupedBackground))
+                .foregroundStyle(Color.citizen.secondaryGroupBackground)
                 .fontDesign(.rounded)
                 .fontWeight(.semibold)
                 .textCase(.uppercase)
@@ -117,7 +118,7 @@ extension PremiumView {
                 )
                 .overlay(
                     RoundedRectangle(cornerRadius: 5)
-                        .stroke(Color(.secondarySystemGroupedBackground), lineWidth: 2)
+                        .stroke(Color.citizen.secondaryGroupBackground, lineWidth: 2)
                 )
         }
     }

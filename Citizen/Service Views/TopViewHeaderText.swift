@@ -38,6 +38,6 @@ extension TopViewHeaderText {
     
     private var background: some View {
         RoundedRectangle(cornerRadius: 12)
-            .foregroundStyle(Color(.secondarySystemGroupedBackground))
+            .foregroundStyle(Color.citizen.secondaryGroupBackground)
     }
 }
