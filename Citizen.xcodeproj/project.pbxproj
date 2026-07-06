@@ -582,6 +582,7 @@
 				1F36F5F92ED4AABC0035E21F /* TopicPhase.swift */,
 				AA00FEEDC0DE0002 /* FeedbackPhrase.swift */,
 				AB02000200000003 /* DeviceLayout.swift */,
+				AB05000200000003 /* ResourceManifest.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -632,7 +633,6 @@
 				AADD0002000100AA /* WordOccurrenceIndex.swift */,
 				AADD0002000100B1 /* ResourceProvider.swift */,
 				AADD0002000100B2 /* ResourceDownloader.swift */,
-				AB05000200000003 /* ResourceManifest.swift */,
 				AADD0002000100B3 /* AppDataLoader.swift */,
 			);
 			path = Managers;
