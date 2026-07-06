@@ -75,6 +75,10 @@ extension ProgressRing {
                     .fontDesign(.rounded)
                     .foregroundStyle(Color.citizen.secondaryText)
                     .tracking(1.5)
+                    .multilineTextAlignment(.center)
+                    .lineLimit(2)
+                    .minimumScaleFactor(0.5)
+                    .padding(.horizontal)
             }
         }
         .fontDesign(.rounded)
