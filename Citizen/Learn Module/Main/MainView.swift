@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MainView: View {
     @StateObject private var vm = MainViewModel()
-
+    
     var body: some View {
         learnView
             .navigationDestination(item: $vm.chosenCategory) { category in
@@ -26,6 +26,8 @@ extension MainView {
                 header
                 statsRow
                 linkButtons
+                Divider()
+                    .padding(.horizontal, 90)
                 categoriesList
                 Divider()
                     .padding(.horizontal, 90)
@@ -38,7 +40,7 @@ extension MainView {
     private var header: some View {
         ProgressRing(
             progress: vm.catalog.progress,
-            subtitle: vm.examReadinessTitle.uppercased(),
+            subtitle: vm.examReadinessTitle,
             lineWidth: 15
         )
         .padding(.horizontal, 70)
@@ -46,55 +48,29 @@ extension MainView {
     
     private var statsRow: some View {
         HStack {
-            statColumn(top: vm.allTopicScore, bottom: vm.topicsTitle.uppercased())
+            statColumn(top: vm.allTopicScore, bottom: vm.topicsTitle)
             Divider()
                 .frame(height: 30)
-            statColumn(top: vm.allQuestionScore, bottom: vm.questionsTitle.uppercased())
+            statColumn(top: vm.allQuestionScore, bottom: vm.questionsTitle)
             Divider()
                 .frame(height: 30)
             statColumn(
                 top: vm.allMistakeScore,
-                bottom: vm.toReviewTitle.uppercased(),
+                bottom: vm.toReviewTitle,
                 topColor: Color.citizen.accent
             )
         }
     }
     
-    private func statColumn(
-        top: String,
-        bottom: String,
-        topColor: Color = Color.citizen.mainText
-    ) -> some View {
-        VStack(spacing: 4) {
-            Text(top)
-                .font(.headline)
-                .fontWeight(.bold)
-                .fontDesign(.rounded)
-                .foregroundStyle(topColor)
-            
-            Text(bottom)
-                .font(.caption2)
-                .fontWeight(.semibold)
-                .fontDesign(.rounded)
-                .foregroundStyle(Color.citizen.secondaryText)
-                .tracking(1)
-        }
-        .frame(maxWidth: .infinity)
-        .lineLimit(1)
-        .minimumScaleFactor(0.5)
-    }
-    
-    // Прямоугольные кнопки одинаковой ширины и высоты (пока без навигации).
-    // «Лидерборд» — акцентная (тон + обводка), как кнопка перехода на алфавит.
     private var linkButtons: some View {
         HStack(spacing: 12) {
-            linkButton(
+            LinkButton(
                 icon: Image.system.magnifyingglass,
                 title: vm.searchTitle,
                 isAccent: false,
                 action: { vm.searchButtonPressed() }
             )
-            linkButton(
+            LinkButton(
                 icon: Image.system.leaderboard,
                 title: vm.leaderboardTitle,
                 isAccent: true,
@@ -102,122 +78,12 @@ extension MainView {
             )
         }
     }
-
-    private func linkButton(
-        icon: Image,
-        title: String,
-        isAccent: Bool,
-        action: @escaping () -> Void
-    ) -> some View {
-        Button(action: action) {
-            HStack(spacing: 10) {
-                icon
-                    .font(.headline)
-                    .foregroundStyle(
-                        isAccent
-                        ? AnyShapeStyle(Gradient.accent)
-                        : AnyShapeStyle(Color.citizen.secondaryText)
-                    )
-                Text(title)
-                    .font(.headline)
-                    .fontWeight(.semibold)
-                    .fontDesign(.rounded)
-                    .foregroundStyle(Color.citizen.mainText)
-                    .lineLimit(1)
-                    .minimumScaleFactor(0.5)
-            }
-            .frame(maxWidth: .infinity)
-            .frame(height: 56)
-            .background {
-                RoundedRectangle(cornerRadius: 15)
-                    .fill(Color.citizen.groupBackground)
-                    .overlay {
-                        RoundedRectangle(cornerRadius: 15)
-                            .fill(Gradient.accent.opacity(isAccent ? 0.12 : 0))
-                    }
-            }
-            .overlay {
-                RoundedRectangle(cornerRadius: 15)
-                    .strokeBorder(Gradient.accent.opacity(isAccent ? 0.45 : 0), lineWidth: 1)
-            }
-        }
-    }
-
+    
     private var categoriesList: some View {
         VStack(spacing: 12) {
             ForEach(vm.catalog.categories) { category in
                 categoryCard(category)
             }
-        }
-    }
-    
-    private func categoryCard(_ category: Category) -> some View {
-        Button(action: { vm.choose(category) }) {
-            VStack(alignment: .leading, spacing: 0) {
-                HStack {
-                    Text(vm.numberFor(category))
-                        .font(.title3)
-                        .fontWeight(.light)
-                        .fontDesign(.rounded)
-                        .foregroundStyle(Color.citizen.secondaryText)
-                        .lineLimit(1)
-
-                    Text(vm.titleFor(category))
-                        .font(.headline)
-                        .fontWeight(.bold)
-                        .fontDesign(.rounded)
-                        .foregroundStyle(Color.citizen.mainText)
-                        .lineLimit(2)
-                        .minimumScaleFactor(0.5)
-                        .multilineTextAlignment(.leading)
-
-                    Spacer()
-
-                    VStack(alignment: .trailing, spacing: 2) {
-                        Text(vm.percentProgressFor(category))
-                            .font(.title3)
-                            .fontWeight(.bold)
-                            .fontDesign(.rounded)
-                            .foregroundStyle(Color.citizen.accent)
-
-                        Text(vm.topicScoreFor(category))
-                            .font(.caption2)
-                            .fontWeight(.semibold)
-                            .fontDesign(.rounded)
-                            .foregroundStyle(Color.citizen.secondaryText)
-                            .tracking(0.5)
-                    }
-                    .lineLimit(1)
-                    .minimumScaleFactor(0.5)
-                }
-                .frame(maxHeight: .infinity)
-
-                Spacer()
-
-                topicDotsRow(topics: category.topics)
-            }
-            .frame(height: 70)
-            .padding(16)
-            .background(Color.citizen.groupBackground)
-            .clipShape(RoundedRectangle(cornerRadius: 15))
-        }
-    }
-    
-    private func topicDotsRow(topics: [Topic]) -> some View {
-        HStack(spacing: 4) {
-            ForEach(topics) { topic in
-                Capsule()
-                    .fill(topicCapsuleStyle(for: topic.phase))
-                    .frame(height: 8)
-            }
-        }
-    }
-
-    private func topicCapsuleStyle(for phase: TopicPhase) -> AnyShapeStyle {
-        switch phase {
-        case .completed:               return AnyShapeStyle(Gradient.green)
-        case .workingOnMistakes:       return AnyShapeStyle(Gradient.red)
-        case .notStarted, .inProgress: return AnyShapeStyle(Color.citizen.background)
         }
     }
     
@@ -258,6 +124,82 @@ extension MainView {
                     subtitle: vm.savedSubtitle,
                     action: { vm.savedButtonPressed() })
             }
+        }
+    }
+    
+    private func statColumn(
+        top: String,
+        bottom: String,
+        topColor: Color = Color.citizen.mainText
+    ) -> some View {
+        VStack(spacing: 4) {
+            Text(top)
+                .font(.headline)
+                .fontWeight(.bold)
+                .fontDesign(.rounded)
+                .foregroundStyle(topColor)
+            
+            Text(bottom)
+                .font(.caption2)
+                .fontWeight(.semibold)
+                .fontDesign(.rounded)
+                .foregroundStyle(Color.citizen.secondaryText)
+                .tracking(1)
+        }
+        .frame(maxWidth: .infinity)
+        .lineLimit(1)
+        .minimumScaleFactor(0.5)
+    }
+    
+    private func categoryCard(_ category: Category) -> some View {
+        Button(action: { vm.choose(category) }) {
+            VStack(alignment: .leading, spacing: 0) {
+                HStack {
+                    Text(vm.numberFor(category))
+                        .font(.title3)
+                        .fontWeight(.light)
+                        .fontDesign(.rounded)
+                        .foregroundStyle(Color.citizen.secondaryText)
+                        .lineLimit(1)
+                    
+                    Text(vm.titleFor(category))
+                        .font(.headline)
+                        .fontWeight(.bold)
+                        .fontDesign(.rounded)
+                        .foregroundStyle(Color.citizen.mainText)
+                        .lineLimit(2)
+                        .minimumScaleFactor(0.5)
+                        .multilineTextAlignment(.leading)
+                    
+                    Spacer()
+                    
+                    VStack(alignment: .trailing, spacing: 2) {
+                        Text(vm.percentProgressFor(category))
+                            .font(.title3)
+                            .fontWeight(.bold)
+                            .fontDesign(.rounded)
+                            .foregroundStyle(Color.citizen.accent)
+                        
+                        Text(vm.topicScoreFor(category))
+                            .font(.caption2)
+                            .fontWeight(.semibold)
+                            .fontDesign(.rounded)
+                            .foregroundStyle(Color.citizen.secondaryText)
+                            .tracking(0.5)
+                    }
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.5)
+                }
+                .frame(maxHeight: .infinity)
+                
+                Spacer()
+                
+                ProgressBar(topics: category.topics)
+            }
+            .frame(height: 70)
+            .padding(16)
+            .background(Color.citizen.groupBackground)
+            .clipShape(RoundedRectangle(cornerRadius: 15))
         }
     }
 }
