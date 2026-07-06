@@ -22,6 +22,9 @@ struct CustomToggleRow: View {
     
     var body: some View {
         customToggleRow
+            .onChange(of: isOn) {
+                haptics.selectionChanged()
+            }
     }
 }
 
@@ -67,15 +70,12 @@ extension CustomToggleRow {
                 .frame(width: 50, height: 30)
                 .overlay(
                     Circle()
-                        .fill(Color.white)
+                        .fill(Color.citizen.white)
                         .frame(width: 24, height: 24)
                         .offset(x: isOn ? 10 : -10)
                         .animation(.easeInOut(duration: 0.2), value: isOn)
                 )
         }
         .padding(.trailing)
-        .onChange(of: isOn) {
-            haptics.selectionChanged()
-        }
     }
 }

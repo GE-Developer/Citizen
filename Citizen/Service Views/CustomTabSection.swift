@@ -104,7 +104,7 @@ extension CustomTabSection {
                         }
                     }
                 }
-                .foregroundStyle(.white)
+                .foregroundStyle(Color.citizen.white)
                 .fontDesign(.rounded)
                 .padding(12)
                 Spacer()
@@ -131,9 +131,9 @@ extension CustomTabSection {
     private func blick(_ shineOpacity: Double, _ shineOffset: CGFloat) -> some View {
         LinearGradient(
             colors: [
-                Color.white.opacity(0.0),
-                Color.white.opacity(shineOpacity),
-                Color.white.opacity(0.0)
+                Color.citizen.white.opacity(0.0),
+                Color.citizen.white.opacity(shineOpacity),
+                Color.citizen.white.opacity(0.0)
             ],
             startPoint: .leading,
             endPoint: .trailing

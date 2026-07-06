@@ -23,7 +23,7 @@ struct LanguageView: View {
 
 // MARK: - Builder
 extension LanguageView {
-    private var languageView: some View {        
+    private var languageView: some View {
         CustomScrollView(title: vm.title) {
             EmptyView()
         } content: { _ in
@@ -32,16 +32,15 @@ extension LanguageView {
                 
                 ForEach(languages, id: \.element.id) {
                     languageButtonTapped($0, $1)
-                        .alert(
-                            Text(vm.alertTitle),
-                            isPresented: $isShowingAlert,
-                            actions: { languageAlertActions },
-                            message: { Text(vm.alertMessage) }
-                        )
                 }
             }
         }
-        
+        .alert(
+            Text(vm.alertTitle),
+            isPresented: $isShowingAlert,
+            actions: { languageAlertActions },
+            message: { Text(vm.alertMessage) }
+        )
     }
     
     private func languageButtonTapped(_ index: Int, _ language: Language) -> some View {

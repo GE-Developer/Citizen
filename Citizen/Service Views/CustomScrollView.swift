@@ -19,7 +19,6 @@ struct CustomScrollView<Content: View, NavBarItems: View>: View {
     private let withBackButton: Bool
     private let tabBarIsVisible: Bool
     private let showNavBar: Bool
-    private let backgroundImage: Image?
     
     @ViewBuilder private let navBarItems: () -> NavBarItems
     @ViewBuilder private let content: (ScrollViewProxy) -> Content
@@ -30,7 +29,6 @@ struct CustomScrollView<Content: View, NavBarItems: View>: View {
         alignment: HorizontalAlignment = .leading,
         withBackButton: Bool = true,
         tabBarIsVisible: Bool = false,
-        backgroundImage: Image? = nil,
         @ViewBuilder navBarItems: @escaping () -> NavBarItems,
         @ViewBuilder content: @escaping (ScrollViewProxy) -> Content
     ) {
@@ -40,7 +38,6 @@ struct CustomScrollView<Content: View, NavBarItems: View>: View {
         self.withBackButton = withBackButton
         self.tabBarIsVisible = tabBarIsVisible
         self.showNavBar = true
-        self.backgroundImage = backgroundImage
         self.navBarItems = navBarItems
         self.content = content
     }
@@ -80,7 +77,6 @@ struct CustomScrollView<Content: View, NavBarItems: View>: View {
 extension CustomScrollView where NavBarItems == EmptyView {
     init(
         tabBarIsVisible: Bool = false,
-        backgroundImage: Image? = nil,
         @ViewBuilder content: @escaping (ScrollViewProxy) -> Content
     ) {
         self.title = ""
@@ -89,7 +85,6 @@ extension CustomScrollView where NavBarItems == EmptyView {
         self.withBackButton = false
         self.tabBarIsVisible = tabBarIsVisible
         self.showNavBar = false
-        self.backgroundImage = backgroundImage
         self.navBarItems = { EmptyView() }
         self.content = content
     }
@@ -99,14 +94,6 @@ extension CustomScrollView where NavBarItems == EmptyView {
 extension CustomScrollView {
     private var background: some View {
         Color.citizen.background
-            .overlay {
-                if let backgroundImage {
-                    backgroundImage
-                        .resizable()
-                        .scaledToFill()
-                        .opacity(0.06)
-                }
-            }
             .ignoresSafeArea()
     }
     

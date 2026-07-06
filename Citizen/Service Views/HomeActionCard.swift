@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeActionCard: View {
     private let icon: Image
-    private let сolor: Color
+    private let color: Color
     private let count: String
     private let title: String
     private let subtitle: String
@@ -17,14 +17,14 @@ struct HomeActionCard: View {
     
     init(
         icon: Image,
-        сolor: Color,
+        color: Color,
         count: String,
         title: String,
         subtitle: String,
         action: @escaping () -> Void
     ) {
         self.icon = icon
-        self.сolor = сolor
+        self.color = color
         self.count = count
         self.title = title
         self.subtitle = subtitle
@@ -36,10 +36,10 @@ struct HomeActionCard: View {
             VStack(alignment: .leading) {
                 HStack(spacing: 5) {
                     icon
-                        .foregroundStyle(сolor)
+                        .foregroundStyle(color)
                         .frame(width: 20, height: 20)
                         .padding(10)
-                        .background(сolor.opacity(0.15))
+                        .background(color.opacity(0.15))
                         .clipShape(RoundedRectangle(cornerRadius: 10))
                     
                     Spacer()

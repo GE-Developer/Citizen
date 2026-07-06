@@ -6,7 +6,6 @@
 //
 
 import StoreKit
-//import Foundation
 import Combine
 
 @MainActor
@@ -107,10 +106,10 @@ final class PayWallViewModel: ObservableObject {
     let privacyPolicy = L10n("Settings.AboutApp.PrivacyPolicy.title")
     let restorePurchasesTitle = L10n("Settings.Access.RestorePurchases.title")
     let familyShareText = L10n("PayWall.familyPlan")
-
+    
     let featuresButtonTitle = L10n("PayWall.Features.buttonTitle")
     let featuresTitle = L10n("PayWall.Features.title")
-
+    
     let features: [String] = [
         L10n("PayWall.Features.1"),
         L10n("PayWall.Features.2"),
@@ -120,9 +119,9 @@ final class PayWallViewModel: ObservableObject {
         L10n("PayWall.Features.6"),
         L10n("PayWall.Features.7"),
     ]
-
+    
     let subscriptionDisclaimer = L10n("PayWall.subscriptionDisclaimer")
-
+    
     let errorTitle = L10n("Error.title")
     let errorOK = "OK"
     
@@ -204,7 +203,7 @@ final class PayWallViewModel: ObservableObject {
         chosenProduct = product
         haptic.selectionChanged()
     }
-
+    
     func toggleFeaturesSheet() {
         showFeatures.toggle()
         haptic.selectionChanged()
@@ -244,9 +243,6 @@ final class PayWallViewModel: ObservableObject {
     func lifetimeAnimationAppeared() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             self.showExploseIfLifetimePurchased = true
-        }
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             self.haptic.notification(type: .success)
             self.sound.playSound(.devMode)
         }
@@ -273,7 +269,7 @@ final class PayWallViewModel: ObservableObject {
         do {
             let fetchedSubscriptions = try await Product.products(for: subscriptionIDs)
             
-            guard !fetchedSubscriptions.isEmpty, !inAppPurchases.isEmpty else {
+            guard !fetchedSubscriptions.isEmpty else {
                 throw StoreError.loadingError
             }
             

@@ -192,7 +192,7 @@ extension PayWallView {
                 .frame(maxWidth: .infinity)
                 .frame(height: 60)
                 .background(Gradient.accent)
-                .foregroundStyle(Color.white)
+                .foregroundStyle(Color.citizen.white)
                 .clipShape(Capsule())
                 .shadow(color: Color.citizen.mainText, radius: 1)
         }
@@ -219,7 +219,7 @@ extension PayWallView {
     @ViewBuilder
     private var lifetimeButton: some View {
         if let inAppPurchase = vm.inAppPurchases.first {
-            ProductButton(inAppPurchase, .horisontal)
+            ProductButton(inAppPurchase, .horizontal)
         }
     }
     

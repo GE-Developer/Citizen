@@ -9,7 +9,6 @@ import SwiftUI
 
 struct SettingsView: View {
     @EnvironmentObject private var store: StoreManager
-    @Environment(TabBarState.self) private var tabBarState
     
     @StateObject private var vm = SettingsViewModel()
     
@@ -95,26 +94,14 @@ extension SettingsView {
     }
     
     private var languageButton: some View {
-        Group {
-            if vm.language == "English" {
-                CustomButtonRow(
-                    icon: .system.language,
-                    title: vm.languageTitle,
-                    additionalTitle: vm.language,
-                    isLink: true,
-                    action: { languageViewPresented.toggle() }
-                )
-            } else {
-                CustomButtonRow(
-                    icon: .system.language,
-                    title: vm.languageTitle,
-                    subtitle: vm.languageSubtitle,
-                    additionalTitle: vm.language,
-                    isLink: true,
-                    action: { languageViewPresented.toggle() }
-                )
-            }
-        }
+        CustomButtonRow(
+            icon: .system.language,
+            title: vm.languageTitle,
+            subtitle: vm.language == "English" ? nil : vm.languageSubtitle,
+            additionalTitle: vm.language,
+            isLink: true,
+            action: { languageViewPresented.toggle() }
+        )
     }
     
     private var vibrationToggle: some View {

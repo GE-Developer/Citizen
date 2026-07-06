@@ -212,6 +212,7 @@
 		AB05000100000001 /* ResourceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB05000200000001 /* ResourceError.swift */; };
 		AB05000100000002 /* LoadPhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB05000200000002 /* LoadPhase.swift */; };
 		AB05000100000003 /* ResourceManifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB05000200000003 /* ResourceManifest.swift */; };
+		AB07000100000001 /* HintAnswerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07000200000001 /* HintAnswerRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -423,6 +424,7 @@
 		AB05000200000001 /* ResourceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceError.swift; sourceTree = "<group>"; };
 		AB05000200000002 /* LoadPhase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadPhase.swift; sourceTree = "<group>"; };
 		AB05000200000003 /* ResourceManifest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceManifest.swift; sourceTree = "<group>"; };
+		AB07000200000001 /* HintAnswerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintAnswerRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -809,6 +811,7 @@
 				AAEE0002000100B3 /* AlphabetLetter.swift */,
 				AAEE0002000100A3 /* OccurrenceRow.swift */,
 				AB04000200000002 /* TopicStats.swift */,
+				AB07000200000001 /* HintAnswerRow.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1186,6 +1189,7 @@
 				AB05000100000002 /* LoadPhase.swift in Sources */,
 				AB05000100000003 /* ResourceManifest.swift in Sources */,
 				AB04000100000002 /* TopicStats.swift in Sources */,
+				AB07000100000001 /* HintAnswerRow.swift in Sources */,
 				1F496C372FC1C26C00E0D7F5 /* AccentColorManager.swift in Sources */,
 				1F496C382FC1C26C00E0D7F5 /* AppIconManager.swift in Sources */,
 				1F496C392FC1C26C00E0D7F5 /* ScreenshotManager.swift in Sources */,
@@ -1369,7 +1373,7 @@
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 6.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1405,7 +1409,7 @@
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 6.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

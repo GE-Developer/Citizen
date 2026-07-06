@@ -34,14 +34,14 @@ struct ProductButton: View {
     }
     
     enum ButtonType {
-        case horisontal
+        case horizontal
         case vertical
     }
     
     var body: some View {
         switch buttonType {
-        case .horisontal:
-            horisontalButton
+        case .horizontal:
+            horizontalButton
         case .vertical:
             verticalButton
         }
@@ -102,11 +102,9 @@ extension ProductButton {
         .opacity(isDisabled ? 0.5 : 1)
     }
     
-    private var horisontalButton: some View {
+    private var horizontalButton: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 15)
-                .fill(Color(.secondarySystemGroupedBackground))
-                .overlay(buttonStroke(for: product))
+            background
             HStack(spacing: 14) {
                 
                 CheckmarkView(vm.chosenProduct == product)
@@ -151,7 +149,7 @@ extension ProductButton {
     
     private var background: some View {
         RoundedRectangle(cornerRadius: 15)
-            .fill(Color(.secondarySystemGroupedBackground))
+            .fill(Color.citizen.secondaryGroupBackground)
             .overlay(buttonStroke(for: product))
     }
     
@@ -166,7 +164,7 @@ extension ProductButton {
                         .font(.caption)
                         .fontDesign(.rounded)
                         .fontWeight(.medium)
-                        .foregroundStyle(.white)
+                        .foregroundStyle(Color.citizen.white)
                         .lineLimit(1)
                         .minimumScaleFactor(0.5)
                         .padding(.horizontal, 6)
@@ -182,11 +180,10 @@ extension ProductButton {
         RoundedRectangle(cornerRadius: 15)
             .stroke(
                 vm.chosenProduct == product
-                ? Gradient.accent
-                : LinearGradient(colors: [.black], startPoint: .bottom, endPoint: .top),
+                ? AnyShapeStyle(Gradient.accent)
+                : AnyShapeStyle(Color.citizen.black),
                 lineWidth: vm.chosenProduct == product ? 2 : 0.5
             )
-        
     }
     
     private func accentSecondaryText(_ text: String) -> some View {

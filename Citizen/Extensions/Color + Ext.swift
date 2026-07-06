@@ -21,7 +21,9 @@ struct CitizenColor {
     let blackAndWhite = Color("Black And White")
     let whiteAndBlack = Color("White And Black")
     let white = Color.white
+    let black = Color.black
     let groupBackground = Color("Group Background")
+    let secondaryGroupBackground = Color(.secondarySystemGroupedBackground)
     let secondaryText = Color("Secondary Text")
     let goldLight = Color("Gold Light")
     let goldDark = Color("Gold Dark")
@@ -40,10 +42,14 @@ struct CitizenColor {
     
     func phase(_ phase: TopicPhase) -> Color {
         switch phase {
-        case .completed:         greenLight
-        case .inProgress:        yellowLight
-        case .workingOnMistakes: redLight
-        case .notStarted:        secondaryText
+        case .completed:
+            greenLight
+        case .inProgress:
+            yellowLight
+        case .workingOnMistakes:
+            redLight
+        case .notStarted:
+            secondaryText
         }
     }
 }
