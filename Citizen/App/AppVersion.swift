@@ -18,7 +18,7 @@ struct AppVersion: View {
     private let appVersion: String
     
     private var textColor: Color {
-        isGestureActivated ? Color.void.accent : Color.void.grayDark
+        isGestureActivated ? Color.citizen.accent : Color.citizen.grayDark
     }
     
     init() {
@@ -40,7 +40,7 @@ struct AppVersion: View {
     
     private var appVersionView: some View {
         ZStack {
-            Color.void.background
+            Color.citizen.background
             VStack {
                 Text(L10n("Settings.AppVersion.title"))
                 Text(appVersion)
@@ -156,8 +156,8 @@ struct DeveloperView: View {
                     .frame(width: 60)
                     .foregroundStyle(
                         devAccess
-                        ? Color.void.greenDark
-                        : Color.void.accent
+                        ? Color.citizen.greenDark
+                        : Color.citizen.accent
                     )
                     .background { background() }
             }
@@ -178,8 +178,8 @@ struct DeveloperView: View {
     
     private func background() -> some View {
         RoundedRectangle(cornerRadius: 15)
-            .fill(Color.void.textFieldBackground)
-            .shadow(color: Color.void.viewShadow, radius: 2)
+            .fill(Color.citizen.textFieldBackground)
+            .shadow(color: Color.citizen.viewShadow, radius: 2)
             .frame(height: 40)
     }
     
