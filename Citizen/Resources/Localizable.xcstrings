@@ -21,6 +21,54 @@
               }
             }
           }
+        },
+        "ka" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld ასო"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld ასო"
+                }
+              }
+            }
+          }
+        },
+        "ru" : {
+          "variations" : {
+            "plural" : {
+              "few" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld буквы"
+                }
+              },
+              "many" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld букв"
+                }
+              },
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld буква"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld буквы"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -54,6 +102,74 @@
               }
             }
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%#@count@"
+          },
+          "substitutions" : {
+            "count" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "შენახული სიტყვა"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "შენახული სიტყვა"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%#@count@"
+          },
+          "substitutions" : {
+            "count" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "few" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "Слова сохранены"
+                    }
+                  },
+                  "many" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "Слов сохранено"
+                    }
+                  },
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "Слово сохранено"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "Слова сохранено"
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -64,6 +180,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld min"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld წთ"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld мин"
           }
         }
       }
@@ -84,6 +212,54 @@
                 "stringUnit" : {
                   "state" : "translated",
                   "value" : "Review %lld mistakes"
+                }
+              }
+            }
+          }
+        },
+        "ka" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld შეცდომის გასწორება"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld შეცდომის გასწორება"
+                }
+              }
+            }
+          }
+        },
+        "ru" : {
+          "variations" : {
+            "plural" : {
+              "few" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Исправить %lld ошибки"
+                }
+              },
+              "many" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Исправить %lld ошибок"
+                }
+              },
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Исправить %lld ошибку"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Исправить %lld ошибки"
                 }
               }
             }
@@ -111,6 +287,54 @@
               }
             }
           }
+        },
+        "ka" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld კითხვაში"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld კითხვაში"
+                }
+              }
+            }
+          }
+        },
+        "ru" : {
+          "variations" : {
+            "plural" : {
+              "few" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "в %lld вопросах"
+                }
+              },
+              "many" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "в %lld вопросах"
+                }
+              },
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "в %lld вопросе"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "в %lld вопросах"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -121,6 +345,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "All Letters"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ყველა ასო"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Все буквы"
           }
         }
       }
@@ -133,6 +369,18 @@
             "state" : "translated",
             "value" : "Alphabet"
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ანბანი"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Алфавит"
+          }
         }
       }
     },
@@ -143,6 +391,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Transcription"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ტრანსკრიფცია"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Транскрипция"
           }
         }
       }
@@ -155,6 +415,18 @@
             "state" : "translated",
             "value" : "Continue"
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "გაგრძელება"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Продолжить"
+          }
         }
       }
     },
@@ -165,6 +437,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tap any word on the Hint screen to add it here with its translation and grammar."
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "შეეხეთ ნებისმიერ სიტყვას მინიშნების ეკრანზე და ის აქ დაემატება თარგმანითა და გრამატიკით."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нажмите на любое слово на экране подсказки, чтобы добавить его сюда с переводом и грамматикой."
           }
         }
       }
@@ -177,6 +461,18 @@
             "state" : "translated",
             "value" : "No saved words yet"
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "შენახული სიტყვები ჯერ არ არის"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пока нет сохранённых слов"
+          }
         }
       }
     },
@@ -187,6 +483,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nothing found"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ვერაფერი მოიძებნა"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ничего не найдено"
           }
         }
       }
@@ -199,6 +507,18 @@
             "state" : "translated",
             "value" : "Remove from dictionary"
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ლექსიკონიდან წაშლა"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Удалить из словаря"
+          }
         }
       }
     },
@@ -209,6 +529,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Saved as"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "შენახულია როგორც"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сохранено как"
           }
         }
       }
@@ -221,6 +553,18 @@
             "state" : "translated",
             "value" : "Search words"
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "სიტყვების ძიება"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поиск слов"
+          }
         }
       }
     },
@@ -231,6 +575,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dictionary"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ლექსიკონი"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Словарь"
           }
         }
       }
@@ -243,6 +599,18 @@
             "state" : "translated",
             "value" : "All"
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ყველა"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Все"
+          }
         }
       }
     },
@@ -253,6 +621,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "A-Z"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ა-ჰ"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "По алфавиту"
           }
         }
       }
@@ -265,6 +645,18 @@
             "state" : "translated",
             "value" : "Recent"
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "უახლესი"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Недавние"
+          }
         }
       }
     },
@@ -275,6 +667,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Error"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "შეცდომა"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ошибка"
           }
         }
       }
@@ -287,6 +691,18 @@
             "state" : "translated",
             "value" : "Nailed it!"
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "პირდაპირ ათიანში!"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "В яблочко!"
+          }
         }
       }
     },
@@ -297,6 +713,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Crystal clear!"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ყველაფერი ნათელია!"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Всё чётко!"
           }
         }
       }
@@ -309,6 +737,18 @@
             "state" : "translated",
             "value" : "On the money!"
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ზუსტად მიზანში!"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Точно в цель!"
+          }
         }
       }
     },
@@ -319,6 +759,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sharp thinking!"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "მახვილი გონება!"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отличная смекалка!"
           }
         }
       }
@@ -331,6 +783,18 @@
             "state" : "translated",
             "value" : "Excellent work!"
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "შესანიშნავია!"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отличная работа!"
+          }
         }
       }
     },
@@ -341,6 +805,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Perfectly done!"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "სრულყოფილია!"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Безупречно!"
           }
         }
       }
@@ -353,6 +829,18 @@
             "state" : "translated",
             "value" : "You've got it!"
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "გამოვიდა!"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Получилось!"
+          }
         }
       }
     },
@@ -363,6 +851,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Brilliant!"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ბრწყინვალეა!"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Блестяще!"
           }
         }
       }
@@ -375,6 +875,18 @@
             "state" : "translated",
             "value" : "Spot on!"
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ზუსტი პასუხი!"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Прямо в точку!"
+          }
         }
       }
     },
@@ -385,6 +897,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Keep crushing it!"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ასე განაგრძეთ!"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Так держать!"
           }
         }
       }
@@ -397,6 +921,18 @@
             "state" : "translated",
             "value" : "Not quite — try again next time."
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "მთლად ასე არა — შემდეგ ჯერზე გამოვა."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не совсем — в следующий раз получится."
+          }
         }
       }
     },
@@ -407,6 +943,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Close one, keep going."
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ძალიან ახლოს იყავით — განაგრძეთ."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Совсем близко — продолжайте."
           }
         }
       }
@@ -419,6 +967,18 @@
             "state" : "translated",
             "value" : "Almost there!"
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "თითქმის გამოვიდა!"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Почти получилось!"
+          }
         }
       }
     },
@@ -429,6 +989,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Don't worry, you'll get it."
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ნუ ღელავთ, აუცილებლად გამოვა."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не переживайте, всё получится."
           }
         }
       }
@@ -441,6 +1013,18 @@
             "state" : "translated",
             "value" : "Mistakes are how we learn."
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "შეცდომებზე ვსწავლობთ."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "На ошибках учатся."
+          }
         }
       }
     },
@@ -451,6 +1035,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Stay curious, keep pushing."
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "შეინარჩუნეთ ცნობისმოყვარეობა და განაგრძეთ წინსვლა."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сохраняйте любознательность и двигайтесь дальше."
           }
         }
       }
@@ -463,6 +1059,18 @@
             "state" : "translated",
             "value" : "Tricky one, but you're learning."
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ეშმაკური კითხვაა, მაგრამ სწავლობთ."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Каверзный вопрос, но вы учитесь."
+          }
         }
       }
     },
@@ -473,6 +1081,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "One step at a time."
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ნაბიჯ-ნაბიჯ."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Шаг за шагом."
           }
         }
       }
@@ -485,6 +1105,18 @@
             "state" : "translated",
             "value" : "No worries — onto the next."
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "არაუშავს — გადავიდეთ შემდეგზე."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ничего страшного — идём дальше."
+          }
         }
       }
     },
@@ -495,6 +1127,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Progress, not perfection."
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "მთავარია პროგრესი და არა სრულყოფილება."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Прогресс важнее совершенства."
           }
         }
       }
@@ -507,6 +1151,18 @@
             "state" : "translated",
             "value" : "Simulate the real exam"
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "რეალური გამოცდის სიმულაცია"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Симуляция реального экзамена"
+          }
         }
       }
     },
@@ -517,6 +1173,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Exam"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "გამოცდა"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Экзамен"
           }
         }
       }
@@ -529,6 +1197,18 @@
             "state" : "translated",
             "value" : "Exam Readiness"
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "გამოცდისთვის მზადყოფნა"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Готовность к экзамену"
+          }
         }
       }
     },
@@ -539,6 +1219,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Leaderboard"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "რეიტინგი"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Рейтинг"
           }
         }
       }
@@ -551,6 +1243,18 @@
             "state" : "translated",
             "value" : "Redo questions you got wrong"
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "თავიდან გაიარეთ კითხვები, სადაც შეცდით"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пройдите заново вопросы с ошибками"
+          }
         }
       }
     },
@@ -561,6 +1265,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mistakes"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "შეცდომები"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ошибки"
           }
         }
       }
@@ -573,6 +1289,18 @@
             "state" : "translated",
             "value" : "Questions"
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "კითხვები"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вопросы"
+          }
         }
       }
     },
@@ -583,6 +1311,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Run through completed questions"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "გაიმეორეთ გავლილი კითხვები"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Повторите пройденные вопросы"
           }
         }
       }
@@ -595,6 +1335,18 @@
             "state" : "translated",
             "value" : "Refresh"
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "გამეორება"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Повтор"
+          }
         }
       }
     },
@@ -605,6 +1357,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Questions you bookmarked"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "სანიშნეებში დამატებული კითხვები"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вопросы, добавленные в закладки"
           }
         }
       }
@@ -617,6 +1381,18 @@
             "state" : "translated",
             "value" : "Saved"
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "შენახული"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Избранное"
+          }
         }
       }
     },
@@ -627,6 +1403,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Search"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ძიება"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поиск"
           }
         }
       }
@@ -639,6 +1427,18 @@
             "state" : "translated",
             "value" : "Topics"
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "თემები"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Темы"
+          }
         }
       }
     },
@@ -649,6 +1449,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "To Review"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "შეცდომები"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ошибки"
           }
         }
       }
@@ -661,6 +1473,18 @@
             "state" : "translated",
             "value" : "Every year"
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ყოველ წელს"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Каждый год"
+          }
         }
       }
     },
@@ -671,6 +1495,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Annual"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "წლიური"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ежегодно"
           }
         }
       }
@@ -683,6 +1519,18 @@
             "state" : "translated",
             "value" : "SAVE"
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "შენახვა"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Экономия"
+          }
         }
       }
     },
@@ -693,6 +1541,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Manage"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "მართვა"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Управлять"
           }
         }
       }
@@ -705,6 +1565,18 @@
             "state" : "translated",
             "value" : "Owned"
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "შეძენილი"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Приобретено"
+          }
         }
       }
     },
@@ -715,6 +1587,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Purchase"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "შეძენა"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Купить"
           }
         }
       }
@@ -727,6 +1611,18 @@
             "state" : "translated",
             "value" : "Subscribe"
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "გამოწერა"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Подписаться"
+          }
         }
       }
     },
@@ -737,6 +1633,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Upgrade"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "განახლება"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Улучшить план"
           }
         }
       }
@@ -749,6 +1657,64 @@
             "state" : "translated",
             "value" : "Family Plan"
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "საოჯახო პაკეტი"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Семейный план"
+          }
+        }
+      }
+    },
+    "PayWall.Features.buttonTitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What's included"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "რა შედის"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Что включено"
+          }
+        }
+      }
+    },
+    "PayWall.Features.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Premium includes"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "პრემიუმი მოიცავს"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Премиум включает"
+          }
         }
       }
     },
@@ -759,6 +1725,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "One-time purchase"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ერთჯერადი შესყიდვა"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Единоразовая покупка"
           }
         }
       }
@@ -771,6 +1749,18 @@
             "state" : "translated",
             "value" : "Lifetime"
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "სრულად"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Навсегда"
+          }
         }
       }
     },
@@ -781,6 +1771,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Every month"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ყოველ თვე"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Каждый месяц"
           }
         }
       }
@@ -793,6 +1795,18 @@
             "state" : "translated",
             "value" : "Monthly"
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "თვიური"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ежемесячно"
+          }
         }
       }
     },
@@ -803,6 +1817,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Not available"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "მიუწვდომელია"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Недоступно"
           }
         }
       }
@@ -815,6 +1841,18 @@
             "state" : "translated",
             "value" : "Popular"
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "პოპულარული"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Популярное"
+          }
         }
       }
     },
@@ -825,6 +1863,41 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Purchased"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "შეძენილია"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Куплено"
+          }
+        }
+      }
+    },
+    "PayWall.subscriptionDisclaimer" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Subscriptions auto-renew until canceled in your App Store account settings at least 24 hours before the end of the current period. Payment is charged to your Apple ID at confirmation of purchase."
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "გამოწერა ავტომატურად განახლდება, სანამ არ გააუქმებთ მას App Store-ის ანგარიშის პარამეტრებში მიმდინარე პერიოდის დასრულებამდე მინიმუმ 24 საათით ადრე. გადახდა ჩამოიჭრება თქვენი Apple ID-დან შესყიდვის დადასტურებისას."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Подписки продлеваются автоматически до их отмены в настройках учётной записи App Store не менее чем за 24 часа до окончания текущего периода. Оплата списывается с вашего Apple ID при подтверждении покупки."
           }
         }
       }
@@ -837,6 +1910,18 @@
             "state" : "translated",
             "value" : "Your annual plan is active"
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "თქვენი წლიური გეგმა აქტიურია"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ваша годовая подписка активна"
+          }
         }
       }
     },
@@ -847,6 +1932,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Choose your plan and explore Citizen"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "აირჩიეთ გეგმა და აღმოაჩინეთ Citizen"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выберите план и откройте возможности Citizen"
           }
         }
       }
@@ -859,6 +1956,18 @@
             "state" : "translated",
             "value" : "You own lifetime access"
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "თქვენ გაქვთ უსასრულო წვდომა"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Все функции доступны навсегда"
+          }
         }
       }
     },
@@ -870,6 +1979,18 @@
             "state" : "translated",
             "value" : "Monthly access enabled"
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "თვიური წვდომა ჩართულია"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Месячный доступ активирован"
+          }
         }
       }
     },
@@ -880,6 +2001,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Premium Features"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "პრემიუმ ფუნქციები"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Премиум-функции"
           }
         }
       }
@@ -904,6 +2037,54 @@
               }
             }
           }
+        },
+        "ka" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld დღე უფასოდ"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld დღე უფასოდ"
+                }
+              }
+            }
+          }
+        },
+        "ru" : {
+          "variations" : {
+            "plural" : {
+              "few" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld дня бесплатно"
+                }
+              },
+              "many" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld дней бесплатно"
+                }
+              },
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld день бесплатно"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld дней бесплатно"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -915,11 +2096,43 @@
             "state" : "translated",
             "value" : "Don’t forget to cancel your subscription!"
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "არ დაგავიწყდეთ გამოწერის გაუქმება!"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не забудьте отменить подписку!"
+          }
         }
       }
     },
     "Project.AboutProject.description" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**Citizen** is your companion on the path to Georgian citizenship.  **The app helps you prepare for the exam** in Georgian language, history of Georgia, and fundamentals of law: study questions topic by topic, work on your mistakes, and test yourself in a realistic exam simulation.  **Learn Georgian right inside the questions**: tap any word to see its translation, transcription, and grammar, and save the ones you need to your personal dictionary.  Citizen is more than exam prep — **it's your way to a new home**."
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**Citizen** — თქვენი თანამგზავრი საქართველოს მოქალაქეობისკენ მიმავალ გზაზე.  **აპლიკაცია დაგეხმარებათ გამოცდისთვის მომზადებაში** ქართულ ენაში, საქართველოს ისტორიასა და სამართლის საფუძვლებში: ისწავლეთ კითხვები თემების მიხედვით, იმუშავეთ შეცდომებზე და შეამოწმეთ საკუთარი თავი რეალური გამოცდის სიმულაციით.  **ისწავლეთ ქართული პირდაპირ კითხვებში**: შეეხეთ ნებისმიერ სიტყვას, რომ ნახოთ თარგმანი, ტრანსკრიფცია და გრამატიკა, და შეინახეთ საჭირო სიტყვები პირად ლექსიკონში.  Citizen მხოლოდ გამოცდისთვის მომზადება არ არის — **ეს ახალი სახლისკენ მიმავალი გზაა**."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**Citizen** — ваш спутник на пути к гражданству Грузии.  **Приложение помогает подготовиться к экзамену** по грузинскому языку, истории Грузии и основам права: изучайте вопросы по темам, работайте над ошибками и проверяйте себя в симуляции настоящего экзамена.  **Учите грузинский прямо в вопросах**: нажмите на любое слово — увидите перевод, транскрипцию и грамматику, а нужные слова сохраните в личный словарь.  Citizen — это не просто подготовка к экзамену, **это путь к новому дому**."
+          }
+        }
+      }
     },
     "Project.AboutProject.title" : {
       "extractionState" : "manual",
@@ -928,6 +2141,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "About Citizen Project"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Citizen პროექტის შესახებ"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "О проекте Citizen"
           }
         }
       }
@@ -940,6 +2165,18 @@
             "state" : "translated",
             "value" : "iOS Developer"
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iOS დეველოპერი"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iOS Разработчик"
+          }
         }
       }
     },
@@ -950,6 +2187,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Developers"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "დეველოპერები"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Разработчики"
           }
         }
       }
@@ -962,6 +2211,18 @@
             "state" : "translated",
             "value" : "If you have any suggestions, ideas, or corrections, please contact us in any way convenient for you."
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "თუ გაქვთ რაიმე შემოთავაზება, იდეა ან შესწორება, გთხოვთ, დაგვიკავშირდეთ თქვენთვის მოსახერხებელი ნებისმიერი გზით."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Если у вас есть предложения, идеи или исправления, свяжитесь с нами любым удобным для вас способом."
+          }
         }
       }
     },
@@ -972,6 +2233,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Project"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "პროექტი"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Проект"
           }
         }
       }
@@ -984,6 +2257,18 @@
             "state" : "translated",
             "value" : "Cancel"
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "გაუქმება"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отмена"
+          }
         }
       }
     },
@@ -994,6 +2279,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Privacy Policy"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "კონფიდენციალურობა"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Политика конфиденциальности"
           }
         }
       }
@@ -1006,6 +2303,18 @@
             "state" : "translated",
             "value" : "About the Project"
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "პროექტის შესახებ"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "О проекте"
+          }
         }
       }
     },
@@ -1016,6 +2325,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Terms of Use"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "გამოყენების წესები"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Условия использования"
           }
         }
       }
@@ -1028,6 +2349,18 @@
             "state" : "translated",
             "value" : "About the App"
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "აპლიკაციის შესახებ"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "О приложении"
+          }
         }
       }
     },
@@ -1038,6 +2371,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Restore Purchases"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ყიდვების აღდგენა"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Восстановить покупки"
           }
         }
       }
@@ -1050,6 +2395,18 @@
             "state" : "translated",
             "value" : "Leave a Review on the App Store"
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "შეაფასეთ App Store-ზე"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Оставить отзыв в App Store"
+          }
         }
       }
     },
@@ -1060,6 +2417,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Subscription"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "გამოწერა"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Подписка"
           }
         }
       }
@@ -1072,6 +2441,18 @@
             "state" : "translated",
             "value" : "Access"
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "წვდომა"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Доступ"
+          }
         }
       }
     },
@@ -1083,6 +2464,18 @@
             "state" : "translated",
             "value" : "App Version"
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "აპლიკაციის ვერსია"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Версия приложения"
+          }
         }
       }
     },
@@ -1092,7 +2485,19 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pick an accent color that matches your style. Premium colors unlock with a subscription."
+            "value" : "Pick an accent color that matches your style."
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "აირჩიეთ აქცენტური ფერი, რომელიც თქვენს სტილს შეესაბამება."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выберите акцентный цвет, который подходит вашему стилю."
           }
         }
       }
@@ -1105,6 +2510,18 @@
             "state" : "translated",
             "value" : "Style"
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "სტილი"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Стиль"
+          }
         }
       }
     },
@@ -1115,6 +2532,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Customization"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "გარეგნობა"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Оформление"
           }
         }
       }
@@ -1127,6 +2556,18 @@
             "state" : "translated",
             "value" : "Dark Mode"
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "მუქი რეჟიმი"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Тёмная тема"
+          }
         }
       }
     },
@@ -1138,6 +2579,110 @@
             "state" : "translated",
             "value" : "Haptics"
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ვიბრაცია"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вибрация"
+          }
+        }
+      }
+    },
+    "Settings.General.Language.alertActionTitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yes"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "დიახ"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Да"
+          }
+        }
+      }
+    },
+    "Settings.General.Language.alertCancelTitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "არა"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нет"
+          }
+        }
+      }
+    },
+    "Settings.General.Language.alertMessage" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Do you want to change the app language?"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "გსურთ შეცვალოთ აპლიკაციის ენა?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вы хотите изменить язык приложения?"
+          }
+        }
+      }
+    },
+    "Settings.General.Language.alertTitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Change Language"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ენის შეცვლა"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Смена языка"
+          }
         }
       }
     },
@@ -1148,6 +2693,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Language"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ენა"
           }
         },
         "ru" : {
@@ -1166,6 +2717,18 @@
             "state" : "translated",
             "value" : "Sounds"
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ხმები"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Звуки"
+          }
         }
       }
     },
@@ -1176,6 +2739,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "General"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ძირითადი პარამეტრები"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Общие настройки"
           }
         }
       }
@@ -1188,6 +2763,18 @@
             "state" : "translated",
             "value" : "Tests"
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ტესტები"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Тесты"
+          }
         }
       }
     },
@@ -1198,6 +2785,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Voice Acting"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "გახმოვანება"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Озвучка"
           }
         }
       }
@@ -1210,6 +2809,18 @@
             "state" : "translated",
             "value" : "Settings"
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "პარამეტრები"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Настройки"
+          }
         }
       }
     },
@@ -1220,6 +2831,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Invalid certificate chain."
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "სერტიფიკატების ჯაჭვი არასწორია."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Недействительная цепочка сертификатов."
           }
         }
       }
@@ -1232,6 +2855,18 @@
             "state" : "translated",
             "value" : "Device verification failed."
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "მოწყობილობის ვერიფიკაცია ვერ მოხერხდა."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ошибка проверки устройства."
+          }
         }
       }
     },
@@ -1242,6 +2877,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Invalid data encoding."
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "მონაცემთა კოდირება არასწორია."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ошибка данных."
           }
         }
       }
@@ -1254,6 +2901,18 @@
             "state" : "translated",
             "value" : "Invalid transaction signature."
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ტრანზაქციის ხელმოწერა არასწორია."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Недействительная подпись транзакции."
+          }
         }
       }
     },
@@ -1264,6 +2923,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Failed to load products."
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "პროდუქტების ჩატვირთვა ვერ მოხერხდა."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не удалось загрузить продукты."
           }
         }
       }
@@ -1276,6 +2947,18 @@
             "state" : "translated",
             "value" : "Missing required transaction properties."
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ტრანზაქციისთვის საჭირო მონაცემები სრულად არაა მითითებული."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отсутствуют обязательные параметры транзакции."
+          }
         }
       }
     },
@@ -1286,6 +2969,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Your purchase is pending approval."
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "თქვენი შეძენა ელოდება დამტკიცებას."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ваша покупка ожидает одобрения."
           }
         }
       }
@@ -1298,6 +2993,18 @@
             "state" : "translated",
             "value" : "No product selected."
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "პროდუქტი არ არის არჩეული."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Продукт не выбран."
+          }
         }
       }
     },
@@ -1308,6 +3015,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "The certificate has been revoked."
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "სერტიფიკატი გაუქმებულია."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сертификат был отозван."
           }
         }
       }
@@ -1320,6 +3039,18 @@
             "state" : "translated",
             "value" : "Purchases were not synced."
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "შენაძენი არ აისახა აპლიკაციაში."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Покупки не синхронизированы."
+          }
         }
       }
     },
@@ -1330,6 +3061,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "System error. Please try again later."
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "სისტემური შეცდომა. სცადეთ მოგვიანებით."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Системная ошибка. Попробуйте позже."
           }
         }
       }
@@ -1342,6 +3085,18 @@
             "state" : "translated",
             "value" : "Unknown error occurred."
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "დაფიქსირდა გაურკვეველი შეცდომა."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Произошла неизвестная ошибка."
+          }
         }
       }
     },
@@ -1352,6 +3107,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Purchase was cancelled by user."
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "შეძენა გააუქმა მომხმარებელმა."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Покупка отменена пользователем."
           }
         }
       }
@@ -1364,6 +3131,18 @@
             "state" : "translated",
             "value" : "Exit"
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "გასვლა"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выйти"
+          }
         }
       }
     },
@@ -1374,6 +3153,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Topic Completed"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "თემა დასრულებულია"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Тема пройдена"
           }
         }
       }
@@ -1386,6 +3177,18 @@
             "state" : "translated",
             "value" : "In Progress"
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "მიმდინარეობს"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "В процессе"
+          }
         }
       }
     },
@@ -1396,6 +3199,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mistakes"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "შეცდომებზე მუშაობა"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Работа над ошибками"
           }
         }
       }
@@ -1408,6 +3223,18 @@
             "state" : "translated",
             "value" : "Not found in any question"
           }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "არცერთ კითხვაში არ გვხვდება"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не встречается ни в одном вопросе"
+          }
         }
       }
     },
@@ -1418,6 +3245,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Word"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "სიტყვა"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Слово"
           }
         }
       }

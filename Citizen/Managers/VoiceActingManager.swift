@@ -40,6 +40,7 @@ final class VoiceActingManager {
               let url = Bundle.main.url(forResource: name, withExtension: ext)
         else { return 0 }
         
+        player?.stop()
         player = try? AVAudioPlayer(contentsOf: url)
         player?.prepareToPlay()
         player?.play()
@@ -49,7 +50,7 @@ final class VoiceActingManager {
     private func configureAudioSession() {
         try? AVAudioSession
             .sharedInstance()
-            .setCategory(.ambient, options: [.mixWithOthers])
+            .setCategory(.playback, options: [.mixWithOthers])
         
         try? AVAudioSession.sharedInstance().setActive(true)
     }
