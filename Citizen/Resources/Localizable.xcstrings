@@ -3215,6 +3215,17 @@
         }
       }
     },
+    "Topics.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Topics"
+          }
+        }
+      }
+    },
     "WordOccurrences.emptyRows" : {
       "extractionState" : "manual",
       "localizations" : {
