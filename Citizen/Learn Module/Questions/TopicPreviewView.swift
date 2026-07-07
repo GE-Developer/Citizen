@@ -8,12 +8,19 @@
 import SwiftUI
 
 struct TopicPreviewView: View {
-    let vm: QuestionsViewModel
-    let dismiss: () -> Void
+    @ObservedObject private var vm: QuestionsViewModel
+
+    private let dismiss: () -> Void
+
+    init(vm: QuestionsViewModel, dismiss: @escaping () -> Void) {
+        self.vm = vm
+        self.dismiss = dismiss
+    }
 
     var body: some View {
         ZStack {
-            Color.citizen.background.ignoresSafeArea()
+            Color.citizen.background
+                .ignoresSafeArea()
 
             VStack(spacing: 0) {
                 topSection
@@ -25,14 +32,15 @@ struct TopicPreviewView: View {
 
 // MARK: - Builder
 extension TopicPreviewView {
-
-    // Верхний скруглённый блок: заголовок темы, прогресс-кольцо, статы
     private var topSection: some View {
         ZStack(alignment: .top) {
             Color.citizen.whiteAndBlack
-                .clipShape(UnevenRoundedRectangle(bottomLeadingRadius: 24, bottomTrailingRadius: 24))
+                .clipShape(UnevenRoundedRectangle(
+                    bottomLeadingRadius: 24,
+                    bottomTrailingRadius: 24)
+                )
                 .ignoresSafeArea(edges: .top)
-
+            
             VStack(spacing: 16) {
                 titleHeader
                 ringBlock
@@ -43,71 +51,56 @@ extension TopicPreviewView {
             .padding(.bottom, 20)
         }
     }
-
+    
     private var titleHeader: some View {
         VStack(spacing: 8) {
             if let subtitle = vm.headerSubtitle {
-                Text(subtitle)
-                    .font(.caption)
-                    .fontWeight(.semibold)
-                    .fontDesign(.rounded)
-                    .tracking(2)
-                    .foregroundStyle(Color.citizen.secondaryText)
-                    .multilineTextAlignment(.center)
+                Badge(subtitle)
             }
-
-            Text(vm.topicTitle)
-                .font(.system(size: 34, weight: .bold, design: .serif))
+            
+            Text(vm.topicTitle.uppercased())
+                .font(.title3)
+                .fontWeight(.semibold)
+                .fontDesign(.rounded)
                 .foregroundStyle(Color.citizen.mainText)
                 .multilineTextAlignment(.center)
+                .tracking(1)
                 .lineLimit(2)
                 .minimumScaleFactor(0.6)
         }
     }
-
+    
     private var ringBlock: some View {
-        ZStack {
-            ProgressRing(
-                progress: vm.progress,
-                withPercent: false,
-                lineWidth: 12
-            )
-            .frame(width: 220, height: 220)
-
-            VStack(spacing: 4) {
-                HStack(alignment: .firstTextBaseline, spacing: 4) {
-                    Text(vm.progressPercentText)
-                        .font(.system(size: 72, weight: .bold, design: .rounded))
-                        .foregroundStyle(Color.citizen.mainText)
-                    Text(vm.progressPercentSign)
-                        .font(.system(size: 28, weight: .semibold, design: .rounded))
-                        .foregroundStyle(Color.citizen.mainText)
-                }
-                Text(vm.ringCaption)
-                    .font(.caption)
-                    .fontWeight(.semibold)
-                    .fontDesign(.rounded)
-                    .tracking(1.5)
-                    .foregroundStyle(Color.citizen.secondaryText)
-            }
-        }
+        ProgressRing(
+            progress: vm.progress,
+            subtitle: vm.ringCaption,
+            withPercent: true,
+            lineWidth: 12,
+            isDark: true
+        )
+        .frame(width: 220, height: 220)
         .padding(.vertical, 4)
     }
-
+    
     private var statsRow: some View {
-        HStack(alignment: .center, spacing: 0) {
-            statCell(value: vm.bestStreakText, label: vm.bestStreakLabel)
-            divider
-            statCell(value: vm.successfulCompletionsText, label: vm.successfulCompletionsLabel)
-            divider
-            statCell(value: vm.attemptsText, label: vm.attemptsLabel)
+        HStack(alignment: .center, spacing: 3) {
+            statCell(
+                value: vm.bestStreakText,
+                label: vm.bestStreakLabel
+            )
+            Divider()
+                .padding(.vertical, 2)
+            statCell(
+                value: vm.successfulCompletionsText,
+                label: vm.successfulCompletionsLabel
+            )
+            Divider()
+                .padding(.vertical, 2)
+            statCell(
+                value: vm.attemptsText,
+                label: vm.attemptsLabel
+            )
         }
-    }
-
-    private var divider: some View {
-        Rectangle()
-            .fill(Color.citizen.secondaryText.opacity(0.25))
-            .frame(width: 1, height: 32)
     }
 
     private func statCell(value: String, label: String) -> some View {
@@ -117,11 +110,11 @@ extension TopicPreviewView {
                 .fontWeight(.bold)
                 .fontDesign(.rounded)
                 .foregroundStyle(Color.citizen.mainText)
-            Text(label)
+            Text(label.uppercased())
                 .font(.caption2)
                 .fontWeight(.semibold)
                 .fontDesign(.rounded)
-                .tracking(1)
+                .tracking(0.5)
                 .foregroundStyle(Color.citizen.secondaryText)
                 .lineLimit(1)
                 .minimumScaleFactor(0.7)
@@ -129,11 +122,17 @@ extension TopicPreviewView {
         .frame(maxWidth: .infinity)
     }
 
-    // Нижняя секция: список ошибок (растягивается) + кнопки действий внизу
+    
+    
+    
+    
+    
+    
+    
+    
     private var bottomSection: some View {
         VStack(spacing: 16) {
             if !vm.wrongQuestions.isEmpty {
-                toReviewHeader
                 mistakesList
             } else {
                 Spacer(minLength: 0)
@@ -141,30 +140,27 @@ extension TopicPreviewView {
 
             actionButtons
         }
-        .padding(.horizontal, 24)
-        .padding(.top, 20)
-        .padding(.bottom, isFaceIDPhone ? 24 : 12)
-    }
-
-    private var toReviewHeader: some View {
-        HStack {
-            Text(vm.toReviewHeaderText)
-                .font(.caption)
-                .fontWeight(.semibold)
-                .fontDesign(.rounded)
-                .tracking(2)
-                .foregroundStyle(Color.citizen.redLight)
-            Spacer()
-        }
+        .padding(.horizontal)
+        .padding(.bottom, isFaceIDPhone ? -12 : 12)
     }
 
     private var mistakesList: some View {
         ScrollView(showsIndicators: false) {
-            LazyVStack(spacing: 0) {
+            LazyVStack(spacing: 10) {
+                Text(vm.toReviewHeaderText)
+                    .font(.caption)
+                    .fontWeight(.semibold)
+                    .fontDesign(.rounded)
+                    .tracking(1)
+                    .foregroundStyle(Color.citizen.redLight)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.top, 13)
+                
                 ForEach(vm.wrongQuestions) { question in
                     mistakeRow(question)
                     if question.id != vm.wrongQuestions.last?.id {
-                        Divider().padding(.leading, 40)
+                        Divider()
+                            .padding(.leading, 40)
                     }
                 }
             }
@@ -191,7 +187,6 @@ extension TopicPreviewView {
 
             Spacer()
         }
-        .padding(.vertical, 12)
     }
 
     // Матрица кнопок зависит от phase
@@ -201,16 +196,28 @@ extension TopicPreviewView {
             switch vm.phase {
             case .completed:
                 primaryButton(title: vm.primaryActionTitle, action: dismiss)
-                secondaryButton(title: vm.restartTitle, subtitle: vm.restartSubtitle, action: vm.restartTest)
+                secondaryButton(
+                    title: vm.restartTitle,
+                    subtitle: vm.restartSubtitle,
+                    action: vm.restartTest
+                )
 
             case .workingOnMistakes:
                 primaryButton(title: vm.primaryActionTitle, action: vm.continueTest)
-                secondaryButton(title: vm.restartTitle, subtitle: vm.restartSubtitle, action: vm.restartTest)
+                secondaryButton(
+                    title: vm.restartTitle,
+                    subtitle: vm.restartSubtitle,
+                    action: vm.restartTest
+                )
                 ghostButton(title: vm.exitTitle, action: dismiss)
 
             case .inProgress:
                 primaryButton(title: vm.primaryActionTitle, action: vm.continueTest)
-                secondaryButton(title: vm.restartTitle, subtitle: vm.restartSubtitle, action: vm.restartTest)
+                secondaryButton(
+                    title: vm.restartTitle,
+                    subtitle: vm.restartSubtitle,
+                    action: vm.restartTest
+                )
                 ghostButton(title: vm.exitTitle, action: dismiss)
 
             case .notStarted:
