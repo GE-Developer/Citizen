@@ -925,7 +925,7 @@
         "ka" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "მთლად ასე არა — შემდეგ ჯერზე გამოვა."
+            "value" : "მთლად სწორი არაა — შემდეგ ჯერზე გამოვა."
           }
         },
         "ru" : {
@@ -1109,7 +1109,7 @@
         "ka" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "არაუშავს — გადავიდეთ შემდეგზე."
+            "value" : "არა უშავს — გადავიდეთ შემდეგზე."
           }
         },
         "ru" : {
@@ -1523,7 +1523,7 @@
         "ka" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "შენახვა"
+            "value" : "დაზოგვა"
           }
         },
         "ru" : {
@@ -1753,7 +1753,7 @@
         "ka" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "სრულად"
+            "value" : "უვადო"
           }
         },
         "ru" : {
@@ -1776,7 +1776,7 @@
         "ka" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ყოველ თვე"
+            "value" : "ყოველ თვეს"
           }
         },
         "ru" : {
@@ -1960,7 +1960,7 @@
         "ka" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "თქვენ გაქვთ უსასრულო წვდომა"
+            "value" : "თქვენ გაქვთ უვადო წვდომა"
           }
         },
         "ru" : {
@@ -2284,7 +2284,7 @@
         "ka" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "კონფიდენციალურობა"
+            "value" : "კონფიდენციალურობის პოლიტიკა"
           }
         },
         "ru" : {
@@ -2376,7 +2376,7 @@
         "ka" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ყიდვების აღდგენა"
+            "value" : "შენაძენების აღდგენა"
           }
         },
         "ru" : {

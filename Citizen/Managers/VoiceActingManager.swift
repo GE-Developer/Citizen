@@ -19,10 +19,10 @@ final class VoiceActingManager {
     private let key = AppStorageKey.voiceActing.key
     
     private var player: AVAudioPlayer?
+    private var restoreSessionTask: Task<Void, Never>?
     
     private init() {
         isVoiceActingOn = defaults.object(forKey: key) as? Bool ?? true
-        configureAudioSession()
     }
     
     func reset() {
@@ -40,18 +40,29 @@ final class VoiceActingManager {
               let url = Bundle.main.url(forResource: name, withExtension: ext)
         else { return 0 }
         
+        activatePlaybackSession()
         player?.stop()
         player = try? AVAudioPlayer(contentsOf: url)
         player?.prepareToPlay()
         player?.play()
-        return player?.duration ?? 0
+        
+        let duration = player?.duration ?? 0
+        scheduleSessionRestore(after: duration)
+        return duration
     }
     
-    private func configureAudioSession() {
+    private func activatePlaybackSession() {
+        restoreSessionTask?.cancel()
         try? AVAudioSession
             .sharedInstance()
             .setCategory(.playback, options: [.mixWithOthers])
-        
-        try? AVAudioSession.sharedInstance().setActive(true)
+    }
+    
+    private func scheduleSessionRestore(after duration: TimeInterval) {
+        restoreSessionTask = Task {
+            try? await Task.sleep(for: .seconds(duration + 0.2))
+            guard !Task.isCancelled, player?.isPlaying != true else { return }
+            try? AVAudioSession.sharedInstance().setCategory(.ambient)
+        }
     }
 }
