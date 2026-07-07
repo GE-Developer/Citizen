@@ -23,6 +23,7 @@ struct CitizenColor {
     let white = Color.white
     let black = Color.black
     let groupBackground = Color("Group Background")
+    let darkGroupBackground = Color("Dark Group Background")
     let secondaryGroupBackground = Color(.secondarySystemGroupedBackground)
     let secondaryText = Color("Secondary Text")
     let goldLight = Color("Gold Light")

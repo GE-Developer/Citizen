@@ -9,6 +9,7 @@ import SwiftUI
 
 struct WordOccurrencesView: View {
     @EnvironmentObject private var store: StoreManager
+    
     @State private var vm: WordOccurrencesViewModel
     @State private var showPayWall = false
     

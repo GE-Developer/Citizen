@@ -12,6 +12,7 @@ struct ProgressRing: View {
     private let subtitle: String?
     private let withPercent: Bool
     private let lineWidth: CGFloat
+    private let isDark: Bool
     
     private var percentText: String { "\(Int(progress * 100))%" }
     
@@ -19,12 +20,14 @@ struct ProgressRing: View {
         progress: Double,
         subtitle: String? = nil,
         withPercent: Bool = true,
-        lineWidth: CGFloat = 5
+        lineWidth: CGFloat = 5,
+        isDark: Bool = false
     ) {
         self.progress = progress
         self.subtitle = subtitle
         self.withPercent = withPercent
         self.lineWidth = lineWidth
+        self.isDark = isDark
     }
     
     var body: some View {
@@ -45,7 +48,11 @@ extension ProgressRing {
     private var trackLine: some View {
         Circle()
             .stroke(lineWidth: lineWidth)
-            .fill(Color.citizen.groupBackground)
+            .fill(
+                isDark
+                ? Color.citizen.darkGroupBackground
+                : Color.citizen.groupBackground
+            )
     }
     
     private var fillLine: some View {

@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct TopicsView: View {
+    @EnvironmentObject private var store: StoreManager
+    
     @StateObject private var vm: TopicsViewModel
+    
+    @State private var showPayWall = false
     
     init(category: Category) {
         _vm = StateObject(wrappedValue: TopicsViewModel(category: category))
@@ -18,6 +22,9 @@ struct TopicsView: View {
         questionTopic
             .navigationDestination(item: $vm.chosenTopic) { topic in
                 NavigationLazyView(QuestionsView(topic: topic))
+            }
+            .fullScreenCover(isPresented: $showPayWall) {
+                NavigationLazyView(PayWallView(store))
             }
     }
 }
@@ -36,6 +43,8 @@ extension TopicsView {
         LazyVStack(spacing: 12) {
             ForEach(vm.topics) { topic in
                 topicCard(topic)
+                    .premiumOption($showPayWall, isIncluded: topic.isPremium)
+                    .overlay(premiumOverlay(topic))
             }
         }
     }
@@ -109,6 +118,21 @@ extension TopicsView {
                 .padding(.vertical, 4)
                 .background(gradient.opacity(0.15))
                 .clipShape(Capsule())
+        }
+    }
+    
+    @ViewBuilder
+    private func premiumOverlay(_ topic: Topic) -> some View {
+        if topic.isPremium {
+            PremiumView(.star)
+                .padding(4)
+                .background {
+                    Circle()
+                        .fill(Color.citizen.background)
+                        .shadow(color: Color.citizen.background, radius: 2)
+                }
+                .offset(x: 10, y: 10)
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomTrailing)
         }
     }
 }
