@@ -11,30 +11,28 @@ import Foundation
 final class TopicsViewModel: ObservableObject {
     @Published var chosenTopic: Topic?
     
-    private let categoryID: String
-    
-    private let repository = QuizRepository.shared
-    private let haptics = HapticsManager.shared
-    
     var topics: [Topic] {
         category?.topics ?? []
     }
-
+    
     private var category: Category? {
         repository.catalog.categories.first { $0.id == categoryID }
     }
     
-    let title = "Topics"
+    let title = L10n("Topics.title")
     let subtitle: String
     
+    private let categoryID: String
+    private let repository = QuizRepository.shared
+    private let haptics = HapticsManager.shared
+
     init(category: Category) {
-        self.categoryID = category.id
-        self.subtitle = category.name
+        categoryID = category.id
+        subtitle = category.name
     }
     
     func numberFor(_ topic: Topic) -> String {
-        guard let index = topics.firstIndex(where: { $0.id == topic.id }) else { return "" }
-        return String(format: "%02d", index + 1)
+        String(format: "%02d", topic.index)
     }
     
     func pillText(for topic: Topic) -> String? {

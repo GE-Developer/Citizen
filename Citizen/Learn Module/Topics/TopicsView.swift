@@ -66,7 +66,7 @@ extension TopicsView {
                 
                 Spacer()
                 
-                QuestionProgressBar(questions: topic.questions)
+                ProgressBar(questions: topic.questions)
             }
             .frame(height: 70)
             .fontDesign(.rounded)
@@ -84,21 +84,18 @@ extension TopicsView {
                 .font(.subheadline)
                 .fontWeight(.semibold)
                 .foregroundStyle(Color.citizen.secondaryText)
-
         case .completed:
             Image.system.checkmark
                 .font(.subheadline)
                 .fontWeight(.bold)
                 .foregroundStyle(Gradient.green)
-
         case .inProgress:
             textBadge(vm.pillText(for: topic), gradient: Gradient.yellow)
-
         case .workingOnMistakes:
             textBadge(vm.pillText(for: topic), gradient: Gradient.red)
         }
     }
-
+    
     @ViewBuilder
     private func textBadge(_ text: String?, gradient: LinearGradient) -> some View {
         if let text {
