@@ -88,11 +88,12 @@ final class MainViewModel: ObservableObject {
     }
     
     var savedPreview: String {
-        "\(0)"
+        "\(savedQuestions.savedQuestionsCount())"
     }
     
     private let repository = QuizRepository.shared
     private let haptics = HapticsManager.shared
+    private let savedQuestions = SavedQuestionsStore.shared
     
     func choose(_ category: Category) {
         haptics.impact()
