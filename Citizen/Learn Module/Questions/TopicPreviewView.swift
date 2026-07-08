@@ -9,29 +9,43 @@ import SwiftUI
 
 struct TopicPreviewView: View {
     @ObservedObject private var vm: QuestionsViewModel
-
+    
     private let dismiss: () -> Void
-
+    
     init(vm: QuestionsViewModel, dismiss: @escaping () -> Void) {
         self.vm = vm
         self.dismiss = dismiss
     }
-
+    
     var body: some View {
+        topicPreview
+            .alert(vm.restartAlertTitle, isPresented: $vm.showRestartAlert) {
+                Button(vm.restartAlertCancelTitle, role: .cancel) {}
+                Button(
+                    vm.restartAlertConfirmTitle,
+                    role: .destructive, action:
+                        vm.restartTest
+                )
+            } message: {
+                Text(vm.restartAlertMessage)
+            }
+    }
+}
+
+// MARK: - Builder
+extension TopicPreviewView {
+    private var topicPreview: some View {
         ZStack {
             Color.citizen.background
                 .ignoresSafeArea()
-
+            
             VStack(spacing: 0) {
                 topSection
                 bottomSection
             }
         }
     }
-}
-
-// MARK: - Builder
-extension TopicPreviewView {
+    
     private var topSection: some View {
         ZStack(alignment: .top) {
             Color.citizen.whiteAndBlack
@@ -41,14 +55,17 @@ extension TopicPreviewView {
                 )
                 .ignoresSafeArea(edges: .top)
             
-            VStack(spacing: 16) {
+            VStack(spacing: 28) {
                 titleHeader
                 ringBlock
                 statsRow
             }
-            .padding(.horizontal, 24)
-            .padding(.top, isFaceIDPhone ? 12 : 24)
-            .padding(.bottom, 20)
+            .padding(.horizontal, 20)
+            .padding(.vertical)
+        }
+        .frame(maxWidth: .infinity)
+        .containerRelativeFrame(.vertical) { length, _ in
+            length * 0.5
         }
     }
     
@@ -59,7 +76,7 @@ extension TopicPreviewView {
             }
             
             Text(vm.topicTitle.uppercased())
-                .font(.title3)
+                .font(.caption2)
                 .fontWeight(.semibold)
                 .fontDesign(.rounded)
                 .foregroundStyle(Color.citizen.mainText)
@@ -78,8 +95,8 @@ extension TopicPreviewView {
             lineWidth: 12,
             isDark: true
         )
-        .frame(width: 220, height: 220)
-        .padding(.vertical, 4)
+        .aspectRatio(1, contentMode: .fit)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
     
     private var statsRow: some View {
@@ -101,95 +118,9 @@ extension TopicPreviewView {
                 label: vm.attemptsLabel
             )
         }
+        .fixedSize(horizontal: false, vertical: true)
     }
-
-    private func statCell(value: String, label: String) -> some View {
-        VStack(spacing: 4) {
-            Text(value)
-                .font(.title2)
-                .fontWeight(.bold)
-                .fontDesign(.rounded)
-                .foregroundStyle(Color.citizen.mainText)
-            Text(label.uppercased())
-                .font(.caption2)
-                .fontWeight(.semibold)
-                .fontDesign(.rounded)
-                .tracking(0.5)
-                .foregroundStyle(Color.citizen.secondaryText)
-                .lineLimit(1)
-                .minimumScaleFactor(0.7)
-        }
-        .frame(maxWidth: .infinity)
-    }
-
     
-    
-    
-    
-    
-    
-    
-    
-    private var bottomSection: some View {
-        VStack(spacing: 16) {
-            if !vm.wrongQuestions.isEmpty {
-                mistakesList
-            } else {
-                Spacer(minLength: 0)
-            }
-
-            actionButtons
-        }
-        .padding(.horizontal)
-        .padding(.bottom, isFaceIDPhone ? -12 : 12)
-    }
-
-    private var mistakesList: some View {
-        ScrollView(showsIndicators: false) {
-            LazyVStack(spacing: 10) {
-                Text(vm.toReviewHeaderText)
-                    .font(.caption)
-                    .fontWeight(.semibold)
-                    .fontDesign(.rounded)
-                    .tracking(1)
-                    .foregroundStyle(Color.citizen.redLight)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.top, 13)
-                
-                ForEach(vm.wrongQuestions) { question in
-                    mistakeRow(question)
-                    if question.id != vm.wrongQuestions.last?.id {
-                        Divider()
-                            .padding(.leading, 40)
-                    }
-                }
-            }
-        }
-        .frame(maxHeight: .infinity)
-    }
-
-    private func mistakeRow(_ question: Question) -> some View {
-        HStack(spacing: 12) {
-            ZStack {
-                Circle()
-                    .fill(Color.citizen.redLight.opacity(0.15))
-                Image.system.xmark
-                    .font(.system(size: 12, weight: .bold))
-                    .foregroundStyle(Color.citizen.redLight)
-            }
-            .frame(width: 28, height: 28)
-
-            Text(question.number)
-                .font(.subheadline)
-                .fontWeight(.medium)
-                .fontDesign(.rounded)
-                .foregroundStyle(Color.citizen.mainText)
-
-            Spacer()
-        }
-    }
-
-    // Матрица кнопок зависит от phase
     @ViewBuilder
     private var actionButtons: some View {
         VStack(spacing: 10) {
@@ -199,34 +130,186 @@ extension TopicPreviewView {
                 secondaryButton(
                     title: vm.restartTitle,
                     subtitle: vm.restartSubtitle,
-                    action: vm.restartTest
+                    action: vm.restartButtonPressed
                 )
-
+                
             case .workingOnMistakes:
                 primaryButton(title: vm.primaryActionTitle, action: vm.continueTest)
                 secondaryButton(
                     title: vm.restartTitle,
                     subtitle: vm.restartSubtitle,
-                    action: vm.restartTest
+                    action: vm.restartButtonPressed
                 )
                 ghostButton(title: vm.exitTitle, action: dismiss)
-
+                
             case .inProgress:
                 primaryButton(title: vm.primaryActionTitle, action: vm.continueTest)
                 secondaryButton(
                     title: vm.restartTitle,
                     subtitle: vm.restartSubtitle,
-                    action: vm.restartTest
+                    action: vm.restartButtonPressed
                 )
                 ghostButton(title: vm.exitTitle, action: dismiss)
-
+                
             case .notStarted:
                 EmptyView()
             }
         }
     }
-
-    private func primaryButton(title: String, action: @escaping () -> Void) -> some View {
+    
+    private var bottomSection: some View {
+        VStack(spacing: 3) {
+            if !vm.wrongQuestions.isEmpty {
+                mistakesList
+            } else if vm.phase == .completed {
+                completedBlock
+            } else {
+                Spacer(minLength: 0)
+            }
+            
+            actionButtons
+        }
+        .padding(.horizontal)
+        .padding(.bottom, isFaceIDPhone ? -12 : 12)
+    }
+    
+    private var mistakesList: some View {
+        ScrollView(showsIndicators: false) {
+            LazyVStack(alignment: .leading, spacing: 10) {
+                Text(vm.toReviewHeaderText)
+                    .font(.caption)
+                    .fontWeight(.semibold)
+                    .fontDesign(.rounded)
+                    .tracking(1)
+                    .foregroundStyle(Gradient.accent)
+                
+                ForEach(vm.wrongQuestions) { question in
+                    mistakeRow(question)
+                    if question.id != vm.wrongQuestions.last?.id {
+                        Divider()
+                    }
+                }
+            }
+            .padding(.vertical, 13)
+        }
+        .frame(maxHeight: .infinity)
+    }
+    
+    private var completedBlock: some View {
+        VStack(spacing: 10) {
+            Spacer()
+            
+            ZStack {
+                Circle()
+                    .fill(Color.citizen.greenLight.opacity(0.15))
+                Image.system.checkmark
+                    .font(.system(size: 26, weight: .bold))
+                    .foregroundStyle(Color.citizen.greenLight)
+            }
+            .frame(width: 64, height: 64)
+            
+            Text(vm.completedTitle)
+                .font(.headline)
+                .fontWeight(.semibold)
+                .foregroundStyle(Color.citizen.mainText)
+                .lineLimit(1)
+            
+            Text(vm.completedMessageText)
+                .font(.subheadline)
+                .fontWeight(.regular)
+                .foregroundStyle(Color.citizen.secondaryText)
+                .multilineTextAlignment(.center)
+                .padding(.horizontal, 32)
+                .lineLimit(5)
+            
+            Spacer()
+        }
+        .minimumScaleFactor(0.5)
+        .fontDesign(.rounded)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+    }
+    
+    private func statCell(value: String, label: String) -> some View {
+        VStack(spacing: 4) {
+            Text(value)
+                .font(.subheadline)
+                .fontWeight(.bold)
+                .foregroundStyle(Color.citizen.mainText)
+            Text(label.uppercased())
+                .font(.caption2)
+                .fontWeight(.semibold)
+                .tracking(0.5)
+                .foregroundStyle(Color.citizen.secondaryText)
+                .lineLimit(1)
+                .minimumScaleFactor(0.7)
+        }
+        .fontDesign(.rounded)
+        .frame(maxWidth: .infinity)
+    }
+    
+    private func mistakeRow(_ question: Question) -> some View {
+        VStack(alignment: .leading, spacing: 10) {
+            mistakeRowHeader(question)
+            questionText(question)
+            
+            let segments = vm.sentenceSegments(for: question)
+            if !segments.isEmpty {
+                sentence(segments)
+            }
+        }
+    }
+    
+    private func mistakeRowHeader(_ question: Question) -> some View {
+        HStack(spacing: 12) {
+            ZStack {
+                Circle()
+                    .fill(Color.citizen.redLight.opacity(0.15))
+                Image.system.xmark
+                    .font(.system(size: 12, weight: .bold))
+                    .foregroundStyle(Color.citizen.redLight)
+            }
+            .frame(width: 28, height: 28)
+            
+            Text(vm.mistakeRowTitle(for: question))
+                .font(.subheadline)
+                .fontWeight(.medium)
+                .fontDesign(.rounded)
+                .foregroundStyle(Color.citizen.secondaryText)
+            
+            Spacer()
+        }
+    }
+    
+    private func questionText(_ question: Question) -> some View {
+        Text(question.question)
+            .font(.subheadline)
+            .fontWeight(.regular)
+            .fontDesign(.rounded)
+            .foregroundStyle(Color.citizen.mainText)
+            .multilineTextAlignment(.leading)
+            .lineLimit(1)
+            .frame(maxWidth: .infinity, alignment: .leading)
+    }
+    
+    private func sentence(_ segments: [RichTextSegment]) -> some View {
+        HStack(spacing: 10) {
+            Capsule()
+                .frame(width: 2)
+                .foregroundStyle(Gradient.accent)
+            RichTextView(segments: segments, lineLimit: 2)
+                .font(.subheadline)
+                .fontWeight(.regular)
+                .fontDesign(.rounded)
+                .foregroundStyle(Color.citizen.mainText)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .multilineTextAlignment(.leading)
+        }
+    }
+    
+    private func primaryButton(
+        title: String,
+        action: @escaping () -> Void
+    ) -> some View {
         Button(action: action) {
             Text(title)
                 .font(.headline)
@@ -239,8 +322,12 @@ extension TopicPreviewView {
                 .clipShape(RoundedRectangle(cornerRadius: 16))
         }
     }
-
-    private func secondaryButton(title: String, subtitle: String, action: @escaping () -> Void) -> some View {
+    
+    private func secondaryButton(
+        title: String,
+        subtitle: String,
+        action: @escaping () -> Void
+    ) -> some View {
         Button(action: action) {
             VStack(spacing: 2) {
                 Text(title)
@@ -255,11 +342,11 @@ extension TopicPreviewView {
             .foregroundStyle(Color.citizen.mainText)
             .frame(maxWidth: .infinity)
             .frame(height: 56)
-            .background(Color.citizen.textFieldBackground)
+            .background(Color.citizen.groupBackground)
             .clipShape(RoundedRectangle(cornerRadius: 16))
         }
     }
-
+    
     private func ghostButton(title: String, action: @escaping () -> Void) -> some View {
         Button(action: action) {
             Text(title)
@@ -268,7 +355,7 @@ extension TopicPreviewView {
                 .fontDesign(.rounded)
                 .foregroundStyle(Color.citizen.secondaryText)
                 .frame(maxWidth: .infinity)
-                .frame(height: 44)
+                .frame(height: 40)
         }
     }
 }
