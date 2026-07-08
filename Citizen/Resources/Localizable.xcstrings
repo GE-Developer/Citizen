@@ -2755,6 +2755,17 @@
         }
       }
     },
+    "Settings.Tests.Shuffle.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shuffle the Answers"
+          }
+        }
+      }
+    },
     "Settings.Tests.title" : {
       "extractionState" : "manual",
       "localizations" : {

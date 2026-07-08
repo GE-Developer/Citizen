@@ -27,6 +27,7 @@ struct SystemImage {
     let vibration = Image(systemName: "iphone.radiowaves.left.and.right")
     let sound = Image(systemName: "speaker.wave.2.fill")
     let voiceActing = Image(systemName: "waveform")
+    let shuffle = Image(systemName: "shuffle")
     let play = Image(systemName: "play.fill")
     let transcription = Image(systemName: "textformat")
     let subscription = Image(systemName: "star")

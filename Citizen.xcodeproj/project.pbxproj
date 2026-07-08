@@ -60,6 +60,7 @@
 		1F73692F2EC60316002D12D1 /* Gradient + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7369102EC60316002D12D1 /* Gradient + Ext.swift */; };
 		1F7369302EC60316002D12D1 /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F73691B2EC60316002D12D1 /* StoreManager.swift */; };
 		1F7369312EC60316002D12D1 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F73691A2EC60316002D12D1 /* SoundManager.swift */; };
+		AB1100012EC60316002D12D1 /* ShuffleAnswersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1100022EC60316002D12D1 /* ShuffleAnswersManager.swift */; };
 		1F7369322EC60316002D12D1 /* Color + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F73690F2EC60316002D12D1 /* Color + Ext.swift */; };
 		1F7369332EC60316002D12D1 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F73691D2EC60316002D12D1 /* ThemeManager.swift */; };
 		1F7369342EC60316002D12D1 /* AppStorageKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7369052EC60316002D12D1 /* AppStorageKey.swift */; };
@@ -284,6 +285,7 @@
 		1F7369182EC60316002D12D1 /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
 		1F7369192EC60316002D12D1 /* LanguageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
 		1F73691A2EC60316002D12D1 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		AB1100022EC60316002D12D1 /* ShuffleAnswersManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShuffleAnswersManager.swift; sourceTree = "<group>"; };
 		1F73691B2EC60316002D12D1 /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
 		1F73691C2EC60316002D12D1 /* TabBarState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarState.swift; sourceTree = "<group>"; };
 		1F73691D2EC60316002D12D1 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
@@ -622,6 +624,7 @@
 				1F73691D2EC60316002D12D1 /* ThemeManager.swift */,
 				1F7369182EC60316002D12D1 /* HapticsManager.swift */,
 				1F73691A2EC60316002D12D1 /* SoundManager.swift */,
+				AB1100022EC60316002D12D1 /* ShuffleAnswersManager.swift */,
 				AAEE00022EC60316002D12D1 /* VoiceActingManager.swift */,
 				1F496C342FC1C26C00E0D7F5 /* AccentColorManager.swift */,
 				1F496C352FC1C26C00E0D7F5 /* AppIconManager.swift */,
@@ -1114,6 +1117,7 @@
 				1F496C422FC4B5F900E0D7F5 /* StyleViewModel.swift in Sources */,
 				1F7369302EC60316002D12D1 /* StoreManager.swift in Sources */,
 				1F7369312EC60316002D12D1 /* SoundManager.swift in Sources */,
+				AB1100012EC60316002D12D1 /* ShuffleAnswersManager.swift in Sources */,
 				AAEE00012EC60316002D12D1 /* VoiceActingManager.swift in Sources */,
 				1F496C1F2FC1BE0700E0D7F5 /* ExitButton.swift in Sources */,
 				1F496C202FC1BE0700E0D7F5 /* CustomButtonRow.swift in Sources */,

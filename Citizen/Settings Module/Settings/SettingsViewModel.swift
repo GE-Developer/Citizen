@@ -25,6 +25,10 @@ final class SettingsViewModel: ObservableObject {
         didSet { voiceActingManager.isVoiceActingOn = isVoiceActingOn }
     }
     
+    @Published var isShuffleAnswersOn: Bool {
+        didSet { shuffleAnswersManager.isShuffleAnswersOn = isShuffleAnswersOn }
+    }
+    
     var title: String {
         L10n("Settings.title")
     }
@@ -59,6 +63,10 @@ final class SettingsViewModel: ObservableObject {
     
     var voiceActingToggleTitle: String {
         L10n("Settings.Tests.VoiceActing.title")
+    }
+    
+    var shuffleAnswersToggleTitle: String {
+        L10n("Settings.Tests.Shuffle.title")
     }
     
     var accessTitle: String {
@@ -103,12 +111,14 @@ final class SettingsViewModel: ObservableObject {
     private let hapticsManager = HapticsManager.shared
     private let soundManager = SoundManager.shared
     private let voiceActingManager = VoiceActingManager.shared
+    private let shuffleAnswersManager = ShuffleAnswersManager.shared
     
     init() {
         isDarkMode = themeManager.isDarkMode
         isHapticsOn = hapticsManager.isHapticsOn
         isSoundOn = soundManager.isSoundOn
         isVoiceActingOn = voiceActingManager.isVoiceActingOn
+        isShuffleAnswersOn = shuffleAnswersManager.isShuffleAnswersOn
     }
     
     func rateApp() {
