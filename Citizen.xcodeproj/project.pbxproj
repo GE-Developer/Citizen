@@ -215,6 +215,9 @@
 		AB05000100000002 /* LoadPhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB05000200000002 /* LoadPhase.swift */; };
 		AB05000100000003 /* ResourceManifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB05000200000003 /* ResourceManifest.swift */; };
 		AB07000100000001 /* HintAnswerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07000200000001 /* HintAnswerRow.swift */; };
+		AB08000100000001 /* QuestionFolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB08000200000001 /* QuestionFolder.swift */; };
+		AB08000100000002 /* SavedQuestionsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB08000200000002 /* SavedQuestionsStore.swift */; };
+		AB08000100000003 /* SaveQuestionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB08000200000003 /* SaveQuestionSheet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -429,6 +432,9 @@
 		AB05000200000002 /* LoadPhase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadPhase.swift; sourceTree = "<group>"; };
 		AB05000200000003 /* ResourceManifest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceManifest.swift; sourceTree = "<group>"; };
 		AB07000200000001 /* HintAnswerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintAnswerRow.swift; sourceTree = "<group>"; };
+		AB08000200000001 /* QuestionFolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionFolder.swift; sourceTree = "<group>"; };
+		AB08000200000002 /* SavedQuestionsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedQuestionsStore.swift; sourceTree = "<group>"; };
+		AB08000200000003 /* SaveQuestionSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveQuestionSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -636,6 +642,7 @@
 				AADD000200010002 /* WordsDictionary.swift */,
 				AAEE0002000100C1 /* AlphabetCatalog.swift */,
 				AADD000200010006 /* SavedWordsStore.swift */,
+				AB08000200000002 /* SavedQuestionsStore.swift */,
 				AADD0002000100AA /* WordOccurrenceIndex.swift */,
 				AADD0002000100B1 /* ResourceProvider.swift */,
 				AADD0002000100B2 /* ResourceDownloader.swift */,
@@ -675,6 +682,7 @@
 				1F36F5F72ED4AABC0035E21F /* TopicPreviewView.swift */,
 				1F7368C52EC5FFCD002D12D1 /* QuestionsView.swift */,
 				1F36F5F52ED4AABC0035E21F /* QuestionsViewModel.swift */,
+				AB08000200000003 /* SaveQuestionSheet.swift */,
 			);
 			path = Questions;
 			sourceTree = "<group>";
@@ -818,6 +826,7 @@
 				AAEE0002000100A3 /* OccurrenceRow.swift */,
 				AB04000200000002 /* TopicStats.swift */,
 				AB07000200000001 /* HintAnswerRow.swift */,
+				AB08000200000001 /* QuestionFolder.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1198,6 +1207,9 @@
 				AB05000100000003 /* ResourceManifest.swift in Sources */,
 				AB04000100000002 /* TopicStats.swift in Sources */,
 				AB07000100000001 /* HintAnswerRow.swift in Sources */,
+				AB08000100000001 /* QuestionFolder.swift in Sources */,
+				AB08000100000002 /* SavedQuestionsStore.swift in Sources */,
+				AB08000100000003 /* SaveQuestionSheet.swift in Sources */,
 				1F496C372FC1C26C00E0D7F5 /* AccentColorManager.swift in Sources */,
 				1F496C382FC1C26C00E0D7F5 /* AppIconManager.swift in Sources */,
 				1F496C392FC1C26C00E0D7F5 /* ScreenshotManager.swift in Sources */,
