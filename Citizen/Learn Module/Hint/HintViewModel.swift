@@ -10,11 +10,9 @@ import Foundation
 @MainActor
 @Observable
 final class HintViewModel {
-
-    // MARK: - var
     var selectedWord: WordEntry?
+    var showCorrectAnswer = false
 
-    // MARK: - let
     let subTitle: String
     let questionSegments: [RichTextSegment]
     let questionTranslation: String?
@@ -23,22 +21,20 @@ final class HintViewModel {
     let hasSentence: Bool
     let answerRows: [HintAnswerRow]
 
-    // Заголовки/тексты экрана (новый дизайн, английский — без L10n, как в QuestionsViewModel).
-    let title = "Hint"
-    let questionHeader = "QUESTION"
-    let sentenceHeader = "SENTENCE"
-    let answersHeader = "ANSWER CHOICES"
-    let inSentenceHeader = "IN THIS SENTENCE"
-    let dictionaryFormHeader = "DICTIONARY FORM"
-    let saveButtonTitle = "Save to dictionary"
-    let savedButtonTitle = "In your dictionary"
+    let title = L10n("Hint.title")
+    let questionHeader = L10n("Hint.questionHeader")
+    let sentenceHeader = L10n("Hint.sentenceHeader")
+    let answersHeader = L10n("Hint.answersHeader")
+    let inSentenceHeader = L10n("Hint.WordDetail.inSentenceHeader")
+    let dictionaryFormHeader = L10n("Hint.WordDetail.dictionaryFormHeader")
+    let saveButtonTitle = L10n("Hint.WordDetail.saveButton")
+    let savedButtonTitle = L10n("Hint.WordDetail.savedButton")
+    let showAnswerTitle = L10n("Hint.showAnswer")
 
-    // MARK: - private let
     private let dictionary = WordsDictionary.shared
     private let store = SavedWordsStore.shared
     private let haptic = HapticsManager.shared
 
-    // MARK: - init
     init(question: Question) {
         self.subTitle = question.number
         self.questionSegments = question.question.asRichSegments
@@ -68,7 +64,6 @@ final class HintViewModel {
     }
 
     // MARK: - func
-
     // Тап по подчёркнутому слову → открыть карточку, если слово есть в словаре.
     func selectWord(_ token: String) {
         guard var entry = dictionary.entry(for: token) else { return }
@@ -76,8 +71,9 @@ final class HintViewModel {
         selectedWord = entry
     }
 
-    func dismissWord() {
-        selectedWord = nil
+    // Транслитерация в квадратных скобках для карточки слова.
+    func transliterationText(_ value: String) -> String {
+        "[\(value)]"
     }
 
     // Кнопка Save / In your dictionary в карточке.

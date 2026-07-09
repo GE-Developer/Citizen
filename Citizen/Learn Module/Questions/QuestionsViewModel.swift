@@ -31,18 +31,12 @@ final class QuestionsViewModel: ObservableObject {
     @Published private(set) var displayedAnswers: [Answer] = []
     @Published private(set) var showsAnswerLabels = true
     
-    @Published private var pendingQuestions: [Question]
-    
     var progress: Double {
         Double(correctCount) / Double(questionsCount)
     }
     
     var canCreateFolder: Bool {
         !newFolderName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
-    }
-    
-    var currentQuestionIndex: Int {
-        currentQuestion.index
     }
     
     var subtitle: String {
@@ -76,15 +70,11 @@ final class QuestionsViewModel: ObservableObject {
     }
     
     var questionCounterText: String {
-        L10n("Questions.counter \(currentQuestionIndex) \(questionsCount)")
+        L10n("Questions.counter \(currentQuestion.index) \(questionsCount)")
     }
     
     var additionalTextSegments: [RichTextSegment] {
         sentenceSegments(for: currentQuestion)
-    }
-    
-    var progressPercentText: String {
-        "\(Int(progress * 100))"
     }
     
     var bestStreakText: String {
@@ -117,13 +107,12 @@ final class QuestionsViewModel: ObservableObject {
     }
     
     private var mistakesCount: Int { wrongQuestions.count }
-    private var wrongInPool: Set<String>
+    private var pendingQuestions: [Question]
     private var currentStreak: Int = 0
     private var roundSize: Int = 0
     private var visitedInRound: Int = 0
     
     let topicTitle: String
-    let questionsCount: Int
     let restartTitle = L10n("Questions.Preview.Restart.title")
     let restartSubtitle = L10n("Questions.Preview.Restart.subtitle")
     let restartAlertTitle = L10n("Questions.Preview.RestartAlert.title")
@@ -148,6 +137,7 @@ final class QuestionsViewModel: ObservableObject {
     let newFolderTitle = L10n("Questions.SaveSheet.newFolder")
     
     private let topicID: String
+    private let questionsCount: Int
     private let haptic = HapticsManager.shared
     private let shuffleManager = ShuffleAnswersManager.shared
     private let repository = QuizRepository.shared
@@ -161,7 +151,6 @@ final class QuestionsViewModel: ObservableObject {
         
         let current = QuizRepository.shared.topic(byID: topic.id) ?? topic
         let questions = current.questions
-        let wrongIDs = Set(questions.filter { $0.status == .wrong }.map(\.id))
         let phase = current.phase
         
         self.phase = phase
@@ -177,22 +166,19 @@ final class QuestionsViewModel: ObservableObject {
             self.showPreview = false
             self.pendingQuestions = questions
             self.currentQuestion = questions[0]
-            self.wrongInPool = []
             self.roundSize = questions.count
             self.visitedInRound = 0
         case .completed:
             self.showPreview = true
             self.pendingQuestions = []
             self.currentQuestion = questions[0]
-            self.wrongInPool = []
             self.roundSize = 0
             self.visitedInRound = 0
         case .workingOnMistakes:
-            let wrongs = questions.filter { wrongIDs.contains($0.id) }
+            let wrongs = questions.filter { $0.status == .wrong }
             self.showPreview = true
             self.pendingQuestions = wrongs
             self.currentQuestion = wrongs[0]
-            self.wrongInPool = wrongIDs
             if stats.currentRoundSize > 0 {
                 self.roundSize = stats.currentRoundSize
                 self.visitedInRound = stats.visitedInRound
@@ -207,7 +193,6 @@ final class QuestionsViewModel: ObservableObject {
             self.showPreview = true
             self.pendingQuestions = remaining
             self.currentQuestion = remaining[0]
-            self.wrongInPool = wrongIDs
             self.roundSize = questions.count
             if stats.currentRoundSize == questions.count && stats.visitedInRound > 0 {
                 self.visitedInRound = stats.visitedInRound
@@ -261,7 +246,6 @@ final class QuestionsViewModel: ObservableObject {
         savedFolderIDs.contains(folder.id)
     }
     
-    // Единственное/множественное число решает plural-вариация ключа.
     func folderCountText(_ folder: QuestionFolder) -> String {
         L10n("Questions.SaveSheet.folderCount \(folder.count)")
     }
@@ -295,7 +279,6 @@ final class QuestionsViewModel: ObservableObject {
         chosenAnswer = nil
         showSubView = false
         feedbackText = ""
-        wrongInPool = []
         phase = .notStarted
         showPreview = false
         
@@ -367,10 +350,8 @@ final class QuestionsViewModel: ObservableObject {
         
         if chosen.isCorrect {
             correctCount += 1
-            wrongInPool.remove(currentQuestion.id)
             pendingQuestions.removeFirst()
         } else {
-            wrongInPool.insert(currentQuestion.id)
             let q = pendingQuestions.removeFirst()
             pendingQuestions.append(q)
         }
@@ -383,7 +364,7 @@ final class QuestionsViewModel: ObservableObject {
         showSubView = false
         feedbackText = ""
         
-        if visitedInRound >= roundSize {
+        if pendingQuestions.isEmpty || visitedInRound >= roundSize {
             if pendingQuestions.isEmpty {
                 phase = .completed
                 finishRound(completed: true)
