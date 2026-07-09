@@ -30,7 +30,9 @@ extension HintView {
         } content: { _ in
             VStack(alignment: .leading, spacing: 24) {
                 questionSection
-                if vm.hasSentence { sentenceSection }
+                if vm.hasSentence {
+                    sentenceSection
+                }
                 answersSection
             }
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -94,10 +96,10 @@ extension HintView {
         VStack(alignment: .leading, spacing: 10) {
             sectionHeader(vm.answersHeader)
             VStack(spacing: 10) {
+                showAnswerRow
                 ForEach(vm.answerRows) { row in
                     answerRow(row)
                 }
-                showAnswerRow
             }
         }
     }
@@ -111,10 +113,10 @@ extension HintView {
     }
     
     private func answerRow(_ row: HintAnswerRow) -> some View {
-        HStack(alignment: .top, spacing: 12) {
+        HStack(spacing: 12) {
             Text(row.label)
                 .font(.title3)
-                .fontWeight(.bold)
+                .fontWeight(.regular)
                 .fontDesign(.rounded)
                 .foregroundStyle(Gradient.accent)
                 .frame(width: 18, alignment: .leading)
@@ -161,6 +163,8 @@ extension HintView {
             .fontWeight(.semibold)
             .fontDesign(.rounded)
             .tracking(1)
+            .lineLimit(1)
+            .minimumScaleFactor(0.5)
             .foregroundStyle(Color.citizen.secondaryText)
             .frame(maxWidth: .infinity, alignment: .leading)
     }
