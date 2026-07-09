@@ -65,7 +65,7 @@ extension QuestionsView {
     
     private var progressRow: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text(vm.questionCounterText)
+            Text(vm.questionCounterText.uppercased())
                 .font(.caption)
                 .fontWeight(.semibold)
                 .fontDesign(.rounded)
