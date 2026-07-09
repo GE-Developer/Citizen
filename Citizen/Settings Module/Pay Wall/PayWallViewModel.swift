@@ -134,12 +134,11 @@ final class PayWallViewModel: ObservableObject {
         self.store = store
         
         store.$purchasedProductIDs
+            .dropFirst()
             .sink { [weak self] _ in
                 self?.objectWillChange.send()
             }
             .store(in: &cancellables)
-        
-        Task { await loadProducts() }
     }
     
     func name(for product: Product) -> String {
@@ -248,13 +247,7 @@ final class PayWallViewModel: ObservableObject {
         }
     }
     
-    private func isChosen(_ appPurchase: AppPurchase) -> Bool {
-        guard let chosenProductID = chosenProduct?.id else { return false }
-        
-        return chosenProductID == appPurchase.id
-    }
-    
-    private func loadProducts() async {
+    func loadProducts() async {
         guard !isLoading else { return }
         
         loadingError = false
@@ -284,4 +277,11 @@ final class PayWallViewModel: ObservableObject {
             loadingError = true
         }
     }
+    
+    private func isChosen(_ appPurchase: AppPurchase) -> Bool {
+        guard let chosenProductID = chosenProduct?.id else { return false }
+        
+        return chosenProductID == appPurchase.id
+    }
+    
 }

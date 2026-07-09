@@ -16,6 +16,8 @@ extension View {
     
     var isFaceIDPhone: Bool { DeviceLayout.hasHomeIndicator }
     
+    var screenWidth: CGFloat { DeviceLayout.screenWidth }
+    
     func premiumOption(
         _ showPayWall: Binding<Bool>,
         swipable: Bool = false,

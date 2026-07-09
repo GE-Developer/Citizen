@@ -28,5 +28,21 @@ enum DeviceLayout {
         return hasIndicator
     }
     
+    static var screenWidth: CGFloat {
+        if cachedScreenWidth > 0 {
+            return cachedScreenWidth
+        }
+        
+        guard let screen = UIApplication.shared.connectedScenes
+            .compactMap({ ($0 as? UIWindowScene)?.screen })
+            .first else {
+            return 0
+        }
+        
+        cachedScreenWidth = screen.bounds.width
+        return cachedScreenWidth
+    }
+    
     private static var cachedHasHomeIndicator = false
+    private static var cachedScreenWidth: CGFloat = 0
 }

@@ -8,12 +8,19 @@
 import SwiftUI
 
 struct MainView: View {
+    @EnvironmentObject private var store: StoreManager
+    
     @StateObject private var vm = MainViewModel()
+    
+    @State private var showPayWall = false
     
     var body: some View {
         learnView
             .navigationDestination(item: $vm.chosenCategory) { category in
                 NavigationLazyView(TopicsView(category: category))
+            }
+            .fullScreenCover(isPresented: $showPayWall) {
+                NavigationLazyView(PayWallView(store))
             }
     }
 }
@@ -96,7 +103,10 @@ extension MainView {
                     count: vm.examPreview,
                     title: vm.examTitle,
                     subtitle: vm.examSubtitle,
-                    action: { vm.examButtonPressed() })
+                    action: { vm.examButtonPressed() }
+                )
+                .premiumOption($showPayWall)
+                .overlay(premiumOverlay)
                 
                 HomeActionCard(
                     icon: Image.system.repeatArrow,
@@ -104,7 +114,8 @@ extension MainView {
                     count: vm.refreshPreview,
                     title: vm.refreshTitle,
                     subtitle: vm.refreshSubtitle,
-                    action: { vm.refreshButtonPressed() })
+                    action: { vm.refreshButtonPressed() }
+                )
             }
             
             HStack(spacing: 12) {
@@ -114,7 +125,8 @@ extension MainView {
                     count: vm.allMistakeScore,
                     title: vm.mistakesTitle,
                     subtitle: vm.mistakesSubtitle,
-                    action: { vm.mistakesButtonPressed() })
+                    action: { vm.mistakesButtonPressed() }
+                )
                 
                 HomeActionCard(
                     icon: Image.system.bookmark,
@@ -122,9 +134,22 @@ extension MainView {
                     count: vm.savedPreview,
                     title: vm.savedTitle,
                     subtitle: vm.savedSubtitle,
-                    action: { vm.savedButtonPressed() })
+                    action: { vm.savedButtonPressed() }
+                )
             }
         }
+    }
+    
+    private var premiumOverlay: some View {
+        PremiumView(.star)
+            .padding(4)
+            .background {
+                Circle()
+                    .fill(Color.citizen.background)
+                    .shadow(color: Color.citizen.background, radius: 2)
+            }
+            .offset(x: 10, y: 10)
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomTrailing)
     }
     
     private func statColumn(

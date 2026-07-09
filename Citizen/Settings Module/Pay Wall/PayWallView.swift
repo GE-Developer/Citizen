@@ -36,6 +36,7 @@ struct PayWallView: View {
                 actions: { Button(vm.errorOK) {} },
                 message: { Text(vm.errorDescription) }
             )
+            .task { await vm.loadProducts() }
             .environment(\.layoutDirection, layoutDirection)
             .id(languageManager.currentLanguageID)
     }
