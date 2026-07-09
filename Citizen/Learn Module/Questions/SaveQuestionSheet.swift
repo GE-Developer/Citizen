@@ -55,7 +55,7 @@ extension SaveQuestionSheet {
     
     private var foldersSection: some View {
         VStack(alignment: .leading, spacing: 6) {
-            Text(vm.foldersHeader)
+            Text(vm.foldersHeader.uppercased())
                 .font(.caption)
                 .fontWeight(.semibold)
                 .fontDesign(.rounded)
