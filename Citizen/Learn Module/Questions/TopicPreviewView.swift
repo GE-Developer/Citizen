@@ -317,7 +317,7 @@ extension TopicPreviewView {
                 .fontDesign(.rounded)
                 .foregroundStyle(Color.citizen.white)
                 .frame(maxWidth: .infinity)
-                .frame(height: 56)
+                .frame(height: 60)
                 .background(Gradient.accent)
                 .clipShape(RoundedRectangle(cornerRadius: 16))
         }
@@ -331,7 +331,7 @@ extension TopicPreviewView {
         Button(action: action) {
             VStack(spacing: 2) {
                 Text(title)
-                    .font(.subheadline)
+                    .font(.headline)
                     .fontWeight(.semibold)
                 Text(subtitle)
                     .font(.caption2)
@@ -341,7 +341,7 @@ extension TopicPreviewView {
             .fontDesign(.rounded)
             .foregroundStyle(Color.citizen.mainText)
             .frame(maxWidth: .infinity)
-            .frame(height: 56)
+            .frame(height: 60)
             .background(Color.citizen.groupBackground)
             .clipShape(RoundedRectangle(cornerRadius: 16))
         }
@@ -355,7 +355,7 @@ extension TopicPreviewView {
                 .fontDesign(.rounded)
                 .foregroundStyle(Color.citizen.secondaryText)
                 .frame(maxWidth: .infinity)
-                .frame(height: 40)
+                .frame(height: 50)
         }
     }
 }

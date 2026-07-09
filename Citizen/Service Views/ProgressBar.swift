@@ -45,7 +45,7 @@ extension ProgressBar {
         currentQuestionID: String?
     ) -> AnyShapeStyle {
         if question.id == currentQuestionID {
-            return AnyShapeStyle(Color.citizen.mainText)
+            return AnyShapeStyle(Color.citizen.white)
         }
         
         switch question.status {

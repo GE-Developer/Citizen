@@ -9,25 +9,36 @@ import SwiftUI
 
 struct QuestionsView: View {
     @Environment(\.dismiss) private var dismiss
-
+    
     @StateObject private var vm: QuestionsViewModel
-    @State private var showHint = false
-
+    
     init(topic: Topic) {
         _vm = StateObject(wrappedValue: QuestionsViewModel(topic: topic))
     }
-
+    
     var body: some View {
         questionsView
+            .navigationDestination(isPresented: $vm.showHint) {
+                NavigationLazyView(HintView(question: vm.currentQuestion))
+            }
+            .sheet(isPresented: $vm.showSaveSheet) {
+                SaveQuestionSheet(vm: vm)
+            }
     }
 }
 
 // MARK: - Builder
 extension QuestionsView {
     private var questionsView: some View {
-        CustomScrollView(title: vm.testTitle, subTitle: vm.currentQuestion.number) {
-            NavigationToolButton(.system.bookmark, action: {})
-            NavigationToolButton(.system.hint, action: { showHint = true })
+        CustomScrollView(title: vm.testTitle, subTitle: vm.subtitle) {
+            NavigationToolButton(
+                vm.isCurrentQuestionSaved ? .system.bookmark : .system.bookmarkOutline,
+                action: { vm.bookmarkButtonPressed() }
+            )
+            NavigationToolButton(
+                .system.hint,
+                action: { vm.hintButtonPressed() }
+            )
         } content: { _ in
             progressRow
             question
@@ -37,27 +48,8 @@ extension QuestionsView {
         .overlay { resultView }
         .safeAreaInset(edge: .bottom) { continueButton }
         .overlay { preview }
-        .navigationDestination(isPresented: $showHint) {
-            NavigationLazyView(HintView(question: vm.currentQuestion))
-        }
     }
-
-    private var progressRow: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            Text(vm.questionCounterText)
-                .font(.caption)
-                .fontWeight(.semibold)
-                .fontDesign(.rounded)
-                .tracking(1)
-                .foregroundStyle(Color.citizen.secondaryText)
-            QuestionProgressBar(
-                questions: vm.allTopicQuestions,
-                currentQuestionID: vm.currentQuestion.id
-            )
-        }
-        .frame(maxWidth: .infinity, alignment: .leading)
-    }
-
+    
     private var preview: some View {
         Group {
             if vm.showPreview {
@@ -70,31 +62,50 @@ extension QuestionsView {
         }
         .animation(.smooth, value: vm.showPreview)
     }
-
+    
+    private var progressRow: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text(vm.questionCounterText)
+                .font(.caption)
+                .fontWeight(.semibold)
+                .fontDesign(.rounded)
+                .tracking(1)
+                .lineLimit(1)
+                .minimumScaleFactor(0.5)
+                .foregroundStyle(Color.citizen.secondaryText)
+            ProgressBar(
+                questions: vm.allTopicQuestions,
+                currentQuestionID: vm.currentQuestion.id
+            )
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+    }
+    
     private var question: some View {
-        Group {
+        ZStack(alignment: .top) {
             VStack(spacing: 20) {
                 questionText
                 additionalText
-
+                
                 VStack {
-                    ForEach(vm.currentQuestion.answers) { answer in
+                    ForEach(vm.displayedAnswers) { answer in
                         answerRow(answer)
                             .onTapGesture { vm.optionChanged(answer) }
                     }
                 }
             }
+            .fixedSize(horizontal: false, vertical: true)
             .transition(
                 .asymmetric(
-                    insertion: .horizontalShift(x: 1000),
-                    removal: .horizontalShift(x: -1000)
+                    insertion: .offset(x: screenWidth),
+                    removal: .offset(x: -screenWidth)
                 )
             )
             .id(vm.questionStep)
         }
         .animation(.smooth, value: vm.questionStep)
     }
-
+    
     private var questionText: some View {
         Text(vm.currentQuestion.question)
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -110,7 +121,7 @@ extension QuestionsView {
                     .foregroundStyle(Color.citizen.groupBackground)
             }
     }
-
+    
     @ViewBuilder
     private var additionalText: some View {
         if vm.currentQuestion.additionalText != nil {
@@ -127,27 +138,42 @@ extension QuestionsView {
             }
         }
     }
-
+    
     private var continueButton: some View {
         Button(action: vm.buttonPressed) {
             Text(vm.ctaTitle)
-                .font(.title3)
-                .fontWeight(.medium)
+                .font(.headline)
+                .fontWeight(.semibold)
                 .fontDesign(.rounded)
+                .lineLimit(1)
+                .minimumScaleFactor(0.5)
                 .padding()
                 .frame(maxWidth: .infinity)
                 .frame(height: 60)
-                .background { Color.citizen.background }
-                .foregroundStyle(Color.citizen.mainText)
+                .background {
+                    ZStack {
+                        Color.citizen.background
+                        if vm.ctaEnabled {
+                            Gradient.accent.opacity(0.7)
+                        }
+                    }
+                }
+                .foregroundStyle(Color.citizen.white)
                 .clipShape(RoundedRectangle(cornerRadius: 12))
         }
-        .buttonStyle(.plain)
         .padding(.horizontal)
         .padding(isFaceIDPhone ? -5 : 16)
-        .opacity(vm.ctaEnabled ? 1 : 0.5)
         .disabled(!vm.ctaEnabled)
+        .transaction {
+            $0.disablesAnimations = true
+            $0.animation = nil
+        }
+        .background {
+            Color.citizen.groupBackground
+                .ignoresSafeArea()
+        }
     }
-
+    
     private var buttonBackground: some View {
         VStack {
             Spacer()
@@ -156,34 +182,42 @@ extension QuestionsView {
                 topTrailingRadius: 20
             )
             .frame(height: isFaceIDPhone ? 100 : 116)
-            .foregroundStyle(.ultraThinMaterial)
-            .shadow(color: Color.citizen.navBarShadow, radius: 4)
+            .foregroundStyle(Color.citizen.groupBackground)
+            .shadow(color: Color.citizen.navBarShadow, radius: 2)
         }
         .ignoresSafeArea()
     }
-
+    
     private var resultView: some View {
         Group {
             if vm.showSubView, let correct = vm.chosenAnswer?.isCorrect {
                 VStack {
                     Spacer()
-                    VStack(alignment: .leading) {
-                        HStack {
-                            Image.system.checkmarkAndXmark(correct)
-                                .foregroundStyle(correct ? Gradient.green : Gradient.accent)
-                                .font(.title)
-                                .fontDesign(.rounded)
-                                .fontWeight(.bold)
+                    HStack {
+                        Image.system.checkmarkAndXmark(correct)
+                            .foregroundStyle(correct ? Gradient.green : Gradient.red)
+                            .font(.title)
+                            .fontDesign(.rounded)
+                            .fontWeight(.bold)
+                        VStack(alignment: .leading) {
                             Text(vm.bannerTitle)
                                 .foregroundStyle(Color.citizen.mainText)
+                                .font(.headline)
                                 .fontWeight(.medium)
                                 .fontDesign(.rounded)
-                            Spacer()
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .lineLimit(1)
+                            
+                            Text(vm.feedbackText)
+                                .foregroundStyle(Color.citizen.secondaryText)
+                                .font(.subheadline)
+                                .fontWeight(.regular)
+                                .fontDesign(.rounded)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .lineLimit(2)
+                                .multilineTextAlignment(.leading)
                         }
-                        Text(vm.feedbackText)
-                            .foregroundStyle(Color.citizen.mainText)
-                            .fontWeight(.medium)
-                            .fontDesign(.rounded)
+                        .minimumScaleFactor(0.6)
                     }
                     .padding()
                     .background {
@@ -191,34 +225,44 @@ extension QuestionsView {
                             topLeadingRadius: 20,
                             topTrailingRadius: 20
                         )
-                        .fill(Color.citizen.whiteAndBlack)
+                        .foregroundStyle(Color.citizen.groupBackground)
                         .ignoresSafeArea()
-                        .shadow(color: Color.citizen.viewShadow, radius: 4)
+                        .shadow(color: Color.citizen.viewShadow, radius: 2)
                     }
                 }
-                .transition(.move(edge: .bottom).combined(with: .opacity))
+                .transition(
+                    .move(edge: .bottom)
+                    .combined(with: .opacity)
+                )
+                .id(vm.questionStep)
             }
         }
-        .animation(.smooth.speed(1.5), value: vm.showSubView)
+        .animation(.smooth, value: vm.showSubView)
     }
-
+    
+    @ViewBuilder
     private func answerRow(_ answer: Answer) -> some View {
         let state = vm.rowState(for: answer)
-        return HStack(alignment: .top, spacing: 12) {
-            Text(answer.label)
-                .font(.title3)
-                .fontWeight(.bold)
-                .fontDesign(.rounded)
-                .foregroundStyle(Gradient.accent)
-                .frame(width: 18, alignment: .leading)
-
+        HStack(spacing: 12) {
+            if vm.showsAnswerLabels {
+                Text(answer.label)
+                    .font(.title3)
+                    .fontWeight(.regular)
+                    .fontDesign(.rounded)
+                    .foregroundStyle(Gradient.accent)
+                    .frame(width: 18, alignment: .leading)
+            }
+            
             Text(answer.text)
                 .fontDesign(.rounded)
                 .font(.title3)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .multilineTextAlignment(.leading)
-
-            checkmark(for: state)
+            
+            Image.system.checkmarkAndXmark(answer.isCorrect)
+                .fontWeight(.semibold)
+                .foregroundStyle(answer.isCorrect ? Gradient.green : Gradient.red)
+                .opacity(checkmarkOpacity(for: state))
         }
         .frame(maxWidth: .infinity)
         .padding(.horizontal, 16)
@@ -227,57 +271,55 @@ extension QuestionsView {
             ZStack {
                 RoundedRectangle(cornerRadius: 10)
                     .foregroundStyle(background(for: state))
-                stroke(for: state)
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(strokeStyle(for: state), lineWidth: strokeWidth(for: state))
             }
         }
-        .animation(nil, value: vm.chosenAnswer)
         .animation(.smooth, value: vm.showSubView)
-    }
-
-    private func stroke(for state: AnswerRowState) -> some View {
-        RoundedRectangle(cornerRadius: 10)
-            .stroke(
-                Color.citizen.blackAndWhite,
-                lineWidth: state == .selected ? 2 : 0
-            )
-    }
-
-    private func checkmark(for state: AnswerRowState) -> some View {
-        Image.system.checkmarkAndXmark(state == .correct || state == .revealCorrect)
-            .opacity(checkmarkOpacity(for: state))
     }
 }
 
 // MARK: - Logic
 extension QuestionsView {
-    private func background(for state: AnswerRowState) -> LinearGradient {
+    private func background(for state: AnswerRowState) -> AnyShapeStyle {
         switch state {
-        case .correct, .revealCorrect: Gradient.green
-        case .wrong:                   Gradient.red
-        case .idle, .selected:         Gradient.neutral
+        case .correct, .revealCorrect:
+            AnyShapeStyle(Gradient.green.opacity(0.18))
+        case .wrong:
+            AnyShapeStyle(Gradient.red.opacity(0.18))
+        case .idle, .selected:
+            AnyShapeStyle(Gradient.neutral)
         }
     }
-
+    
+    private func strokeStyle(for state: AnswerRowState) -> AnyShapeStyle {
+        switch state {
+        case .correct, .revealCorrect:
+            AnyShapeStyle(Gradient.green)
+        case .wrong:
+            AnyShapeStyle(Gradient.red)
+        case .idle, .selected:
+            AnyShapeStyle(Color.citizen.blackAndWhite)
+        }
+    }
+    
+    private func strokeWidth(for state: AnswerRowState) -> CGFloat {
+        switch state {
+        case .selected:
+            2
+        case .correct, .revealCorrect, .wrong:
+            1.5
+        case .idle:
+            0
+        }
+    }
+    
     private func checkmarkOpacity(for state: AnswerRowState) -> Double {
         switch state {
-        case .correct, .wrong, .revealCorrect: 1
-        case .idle, .selected:                 0
+        case .correct, .wrong, .revealCorrect:
+            1
+        case .idle, .selected:
+            0
         }
-    }
-}
-
-private extension AnyTransition {
-    static func horizontalShift(x: CGFloat) -> AnyTransition {
-        .modifier(
-            active: HorizontalShiftModifier(x: x),
-            identity: HorizontalShiftModifier(x: 0)
-        )
-    }
-}
-
-private struct HorizontalShiftModifier: ViewModifier {
-    let x: CGFloat
-    func body(content: Content) -> some View {
-        content.offset(x: x)
     }
 }
