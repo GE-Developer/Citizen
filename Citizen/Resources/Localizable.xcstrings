@@ -1258,29 +1258,6 @@
         }
       }
     },
-    "Hint.WordDetail.dictionaryFormHeader" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dictionary form"
-          }
-        },
-        "ka" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "სალექსიკონო ფორმა"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Словарная форма"
-          }
-        }
-      }
-    },
     "Hint.WordDetail.inSentenceHeader" : {
       "extractionState" : "manual",
       "localizations" : {

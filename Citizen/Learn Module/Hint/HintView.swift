@@ -9,11 +9,11 @@ import SwiftUI
 
 struct HintView: View {
     @State private var vm: HintViewModel
-
+    
     init(question: Question) {
         _vm = State(initialValue: HintViewModel(question: question))
     }
-
+    
     var body: some View {
         hintView
             .sheet(item: $vm.selectedWord) { _ in
@@ -36,7 +36,7 @@ extension HintView {
             .frame(maxWidth: .infinity, alignment: .leading)
         }
     }
-
+    
     private var questionSection: some View {
         VStack(alignment: .leading, spacing: 10) {
             sectionHeader(vm.questionHeader)
@@ -61,7 +61,7 @@ extension HintView {
             }
         }
     }
-
+    
     private var sentenceSection: some View {
         VStack(alignment: .leading, spacing: 10) {
             sectionHeader(vm.sentenceHeader)
@@ -89,7 +89,7 @@ extension HintView {
             }
         }
     }
-
+    
     private var answersSection: some View {
         VStack(alignment: .leading, spacing: 10) {
             sectionHeader(vm.answersHeader)
@@ -97,10 +97,19 @@ extension HintView {
                 ForEach(vm.answerRows) { row in
                     answerRow(row)
                 }
+                showAnswerRow
             }
         }
     }
-
+    
+    private var showAnswerRow: some View {
+        CustomToggleRow(isOn: $vm.showCorrectAnswer, title: vm.showAnswerTitle)
+            .background {
+                RoundedRectangle(cornerRadius: 10)
+                    .foregroundStyle(Color.citizen.groupBackground)
+            }
+    }
+    
     private func answerRow(_ row: HintAnswerRow) -> some View {
         HStack(alignment: .top, spacing: 12) {
             Text(row.label)
@@ -109,7 +118,7 @@ extension HintView {
                 .fontDesign(.rounded)
                 .foregroundStyle(Gradient.accent)
                 .frame(width: 18, alignment: .leading)
-
+            
             VStack(alignment: .leading, spacing: 4) {
                 RichTextView(
                     segments: row.segments,
@@ -119,7 +128,7 @@ extension HintView {
                 .font(.title3)
                 .fontDesign(.rounded)
                 .foregroundStyle(Color.citizen.mainText)
-
+                
                 if let translation = row.translation {
                     Text(translation)
                         .font(.subheadline)
@@ -127,13 +136,14 @@ extension HintView {
                         .foregroundStyle(Color.citizen.secondaryText)
                 }
             }
-
+            
             Spacer(minLength: 0)
-
+            
             if row.isCorrect {
                 Image.system.checkmarkAndXmark(true)
                     .fontWeight(.semibold)
                     .foregroundStyle(Gradient.green)
+                    .opacity(vm.showCorrectAnswer ? 1 : 0)
             }
         }
         .frame(maxWidth: .infinity)
@@ -144,9 +154,9 @@ extension HintView {
                 .foregroundStyle(Color.citizen.groupBackground)
         }
     }
-
+    
     private func sectionHeader(_ text: String) -> some View {
-        Text(text)
+        Text(text.uppercased())
             .font(.caption)
             .fontWeight(.semibold)
             .fontDesign(.rounded)
@@ -154,7 +164,7 @@ extension HintView {
             .foregroundStyle(Color.citizen.secondaryText)
             .frame(maxWidth: .infinity, alignment: .leading)
     }
-
+    
     private func translationText(_ text: String) -> some View {
         Text(text)
             .font(.subheadline)

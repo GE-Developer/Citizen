@@ -26,7 +26,6 @@ final class HintViewModel {
     let sentenceHeader = L10n("Hint.sentenceHeader")
     let answersHeader = L10n("Hint.answersHeader")
     let inSentenceHeader = L10n("Hint.WordDetail.inSentenceHeader")
-    let dictionaryFormHeader = L10n("Hint.WordDetail.dictionaryFormHeader")
     let saveButtonTitle = L10n("Hint.WordDetail.saveButton")
     let savedButtonTitle = L10n("Hint.WordDetail.savedButton")
     let showAnswerTitle = L10n("Hint.showAnswer")
