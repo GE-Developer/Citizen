@@ -99,19 +99,56 @@ extension SaveQuestionSheet {
         .padding(.top, 40)
     }
     
-    @ViewBuilder
     private var createFolderRow: some View {
-        if vm.isCreatingFolder {
-            newFolderField
-        } else {
-            newFolderButton
+        HStack(spacing: 12) {
+            Image.system.plus
+                .font(.title3)
+                .foregroundStyle(Gradient.accent)
+            
+            TextField(vm.newFolderTitle, text: $vm.newFolderName)
+                .font(.title3)
+                .fontWeight(.medium)
+                .fontDesign(.rounded)
+                .foregroundStyle(Color.citizen.mainText)
+                .focused($isNameFieldFocused)
+                .submitLabel(.done)
+                .onSubmit(vm.createFolderAndSave)
+            
+            Button(action: createFolderPressed) {
+                ZStack {
+                    Image.system.checkmark
+                        .foregroundStyle(Color.citizen.secondaryText)
+                        .opacity(0.6)
+                    Image.system.checkmark
+                        .foregroundStyle(Gradient.green)
+                        .opacity(vm.canCreateFolder ? 1 : 0)
+                }
+                .font(.subheadline)
+                .fontWeight(.regular)
+                .animation(.smooth, value: vm.canCreateFolder)
+            }
+            .disabled(!vm.canCreateFolder)
         }
+        .padding(.horizontal, 16)
+        .padding(.vertical, 12)
+        .background { createFolderBackground }
+        .contentShape(Rectangle())
+        .onTapGesture { isNameFieldFocused = true }
     }
     
-    
-    
-    
-    
+    @ViewBuilder
+    private var createFolderBackground: some View {
+        if isNameFieldFocused || vm.canCreateFolder {
+            RoundedRectangle(cornerRadius: 10)
+                .foregroundStyle(Color.citizen.groupBackground)
+        } else {
+            RoundedRectangle(cornerRadius: 10)
+                .strokeBorder(
+                    Color.citizen.secondaryText.opacity(0.3),
+                    style: StrokeStyle(lineWidth: 1.5, dash: [6])
+                )
+        }
+    }
     
     private func folderRow(_ folder: QuestionFolder) -> some View {
         let isSaved = vm.isSaved(in: folder)
@@ -131,10 +168,12 @@ extension SaveQuestionSheet {
                         .fontDesign(.rounded)
                         .foregroundStyle(Color.citizen.secondaryText)
                 }
+                .lineLimit(1)
+                .minimumScaleFactor(0.5)
                 Spacer()
                 Image.system.checkmarkInCircle(isSaved)
                     .font(.title3)
-                    .foregroundStyle(isSaved ? Gradient.green : Gradient.neutral)
+                    .foregroundStyle(checkmarkStyle(isSaved))
             }
             .padding(.horizontal, 16)
             .padding(.vertical, 12)
@@ -143,57 +182,23 @@ extension SaveQuestionSheet {
                     .foregroundStyle(Color.citizen.groupBackground)
             }
         }
-        .buttonStyle(.plain)
+        .transaction {
+            $0.disablesAnimations = true
+            $0.animation = nil
+        }
+    }
+}
+
+// MARK: - Logic
+extension SaveQuestionSheet {
+    private func createFolderPressed() {
+        vm.createFolderAndSave()
+        isNameFieldFocused = false
     }
     
-    private var newFolderField: some View {
-        HStack(spacing: 12) {
-            TextField(vm.newFolderPlaceholder, text: $vm.newFolderName)
-                .font(.title3)
-                .fontDesign(.rounded)
-                .foregroundStyle(Color.citizen.mainText)
-                .focused($isNameFieldFocused)
-                .submitLabel(.done)
-                .onSubmit { vm.createFolderAndSave() }
-            Button(action: { vm.createFolderAndSave() }) {
-                Image.system.checkmark
-                    .font(.title3)
-                    .fontWeight(.semibold)
-                    .foregroundStyle(Gradient.accent)
-            }
-            .buttonStyle(.plain)
-        }
-        .padding(.horizontal, 16)
-        .padding(.vertical, 12)
-        .background {
-            RoundedRectangle(cornerRadius: 10)
-                .foregroundStyle(Color.citizen.groupBackground)
-        }
-        .onAppear { isNameFieldFocused = true }
-    }
-    
-    private var newFolderButton: some View {
-        Button(action: { vm.startFolderCreation() }) {
-            HStack(spacing: 12) {
-                Image.system.plus
-                    .font(.title3)
-                    .foregroundStyle(Gradient.accent)
-                Text(vm.newFolderTitle)
-                    .font(.title3)
-                    .fontWeight(.medium)
-                    .fontDesign(.rounded)
-                    .foregroundStyle(Color.citizen.mainText)
-                Spacer()
-            }
-            .padding(.horizontal, 16)
-            .padding(.vertical, 12)
-            .background {
-                RoundedRectangle(cornerRadius: 10)
-                    .strokeBorder(
-                        Color.citizen.secondaryText.opacity(0.3),
-                        style: StrokeStyle(lineWidth: 1.5, dash: [6])
-                    )
-            }
-        }
+    private func checkmarkStyle(_ isSaved: Bool) -> AnyShapeStyle {
+        isSaved
+        ? AnyShapeStyle(Gradient.green)
+        : AnyShapeStyle(Color.citizen.secondaryText.opacity(0.6))
     }
 }

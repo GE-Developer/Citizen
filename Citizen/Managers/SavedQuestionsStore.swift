@@ -21,7 +21,7 @@ final class SavedQuestionsStore {
     
     func folders() -> [QuestionFolder] {
         let request: NSFetchRequest<QuestionFolderEntity> = QuestionFolderEntity.fetchRequest()
-        request.sortDescriptors = [NSSortDescriptor(key: "createdAt", ascending: true)]
+        request.sortDescriptors = [NSSortDescriptor(key: "createdAt", ascending: false)]
         do {
             return try context.fetch(request).compactMap { entity in
                 guard let id = entity.id, let name = entity.name else { return nil }
