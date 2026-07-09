@@ -12,7 +12,7 @@ import Foundation
 final class HintViewModel {
     var selectedWord: WordEntry?
     var showCorrectAnswer = false
-
+    
     let subTitle: String
     let questionSegments: [RichTextSegment]
     let questionTranslation: String?
@@ -20,7 +20,7 @@ final class HintViewModel {
     let sentenceTranslationSegments: [RichTextSegment]?
     let hasSentence: Bool
     let answerRows: [HintAnswerRow]
-
+    
     let title = L10n("Hint.title")
     let questionHeader = L10n("Hint.questionHeader")
     let sentenceHeader = L10n("Hint.sentenceHeader")
@@ -30,28 +30,30 @@ final class HintViewModel {
     let saveButtonTitle = L10n("Hint.WordDetail.saveButton")
     let savedButtonTitle = L10n("Hint.WordDetail.savedButton")
     let showAnswerTitle = L10n("Hint.showAnswer")
-
+    
     private let dictionary = WordsDictionary.shared
     private let store = SavedWordsStore.shared
     private let haptic = HapticsManager.shared
-
+    
     init(question: Question) {
         self.subTitle = question.number
         self.questionSegments = question.question.asRichSegments
-
+        
         let additional = question.additionalText ?? ""
+        
         self.hasSentence = !additional.isEmpty
         self.sentenceSegments = additional.asRichSegments
-
-        // Перевод вопроса/предложения/ответов на язык пользователя (nil для ka).
+        
         let translated = QuizRepository.shared.translation(forID: question.id)
+        
         self.questionTranslation = translated?.question
         self.sentenceTranslationSegments = translated?.additionalText?.asRichSegments
+        
         let answerTranslations = Dictionary(
             (translated?.answers ?? []).map { ($0.label, $0.text) },
             uniquingKeysWith: { first, _ in first }
         )
-
+        
         self.answerRows = question.answers.map { answer in
             HintAnswerRow(
                 label: answer.label,
@@ -62,21 +64,17 @@ final class HintViewModel {
             )
         }
     }
-
-    // MARK: - func
-    // Тап по подчёркнутому слову → открыть карточку, если слово есть в словаре.
+    
     func selectWord(_ token: String) {
         guard var entry = dictionary.entry(for: token) else { return }
         entry.isSaved = store.contains(entry.key)
         selectedWord = entry
     }
-
-    // Транслитерация в квадратных скобках для карточки слова.
+    
     func transliterationText(_ value: String) -> String {
         "[\(value)]"
     }
-
-    // Кнопка Save / In your dictionary в карточке.
+    
     func toggleSave() {
         guard var detail = selectedWord else { return }
         detail.isSaved = store.toggle(detail.key)
