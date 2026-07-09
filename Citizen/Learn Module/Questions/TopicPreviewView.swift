@@ -176,7 +176,7 @@ extension TopicPreviewView {
     private var mistakesList: some View {
         ScrollView(showsIndicators: false) {
             LazyVStack(alignment: .leading, spacing: 10) {
-                Text(vm.toReviewHeaderText)
+                Text(vm.toReviewHeaderText.uppercased())
                     .font(.caption)
                     .fontWeight(.semibold)
                     .fontDesign(.rounded)

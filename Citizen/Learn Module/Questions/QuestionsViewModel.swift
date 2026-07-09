@@ -124,32 +124,28 @@ final class QuestionsViewModel: ObservableObject {
     
     let topicTitle: String
     let questionsCount: Int
-    let restartTitle = "Начать сначала"
-    let restartSubtitle = "Прогресс будет сброшен"
-    let restartAlertTitle = "Начать сначала?"
-    let restartAlertMessage = "Прогресс по этой теме будет сброшен."
-    let restartAlertConfirmTitle = "Начать сначала"
-    let restartAlertCancelTitle = "Отмена"
-    let exitTitle = "Выйти"
-    let bestStreakLabel = "ЛУЧШАЯ СЕРИЯ"
-    let successfulCompletionsLabel = "ПРОЙДЕНО"
-    let attemptsLabel = "ПОПЫТКА"
-    let toReviewHeaderText = "ОШИБКИ"
-    let completedTitle = "Тема пройдена полностью!"
-    let completedMessageText = "Вы ответили верно на все вопросы этой темы. Отличная работа — так держать!"
-    
-    // Тексты экрана вопроса
-    let selectAnswerTitle     = "Select an answer"
-    let checkAnswerTitle      = "Check answer"
-    let continueButtonTitle   = "Continue"
-    let testTitle             = "Question"
-    
-    // Тексты шита сохранения вопроса
-    let saveSheetTitle    = "Save question"
-    let saveSheetSubtitle = "Choose a folder or create a new one"
-    let foldersHeader     = "FOLDERS"
-    let emptyFoldersText  = "No folders yet"
-    let newFolderTitle    = "New folder"
+    let restartTitle = L10n("Questions.Preview.Restart.title")
+    let restartSubtitle = L10n("Questions.Preview.Restart.subtitle")
+    let restartAlertTitle = L10n("Questions.Preview.RestartAlert.title")
+    let restartAlertMessage = L10n("Questions.Preview.RestartAlert.message")
+    let restartAlertConfirmTitle = L10n("Questions.Preview.RestartAlert.confirm")
+    let restartAlertCancelTitle = L10n("Questions.Preview.RestartAlert.cancel")
+    let exitTitle = L10n("Questions.Preview.exit")
+    let bestStreakLabel = L10n("Questions.Preview.Stats.bestStreak")
+    let successfulCompletionsLabel = L10n("Questions.Preview.Stats.completed")
+    let attemptsLabel = L10n("Questions.Preview.Stats.attempts")
+    let toReviewHeaderText = L10n("Questions.Preview.mistakesHeader")
+    let completedTitle = L10n("Questions.Preview.Completed.title")
+    let completedMessageText = L10n("Questions.Preview.Completed.message")
+    let selectAnswerTitle = L10n("Questions.Button.selectAnswer")
+    let checkAnswerTitle = L10n("Questions.Button.checkAnswer")
+    let continueButtonTitle = L10n("Questions.Button.continue")
+    let testTitle = L10n("Questions.title")
+    let saveSheetTitle = L10n("Questions.SaveSheet.title")
+    let saveSheetSubtitle = L10n("Questions.SaveSheet.subtitle")
+    let foldersHeader = L10n("Questions.SaveSheet.foldersHeader")
+    let emptyFoldersText = L10n("Questions.SaveSheet.emptyFolders")
+    let newFolderTitle = L10n("Questions.SaveSheet.newFolder")
     
     private let topicID: String
     private let haptic = HapticsManager.shared
