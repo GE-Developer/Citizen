@@ -13,21 +13,21 @@ final class DictionaryViewModel {
     var selectedFilter: Filter = .all
     var selectedSort: SortOrder = .recent
     var searchText = ""
-    var selectedOccurrenceWord: WordEntry?
+    var selectedOccurrenceWord: SavedWord?
     var showAlphabet = false
     
     var availableFilters: [Filter] {
         [.all] + dictionary.partsOfSpeech.map(Filter.named)
     }
     
-    var displayedWords: [WordEntry] {
+    var displayedWords: [SavedWord] {
         let filtered = words.filter { matchesFilter($0) && matchesSearch($0) }
         switch selectedSort {
         case .recent:
             return filtered
         case .alphabetical:
             return filtered.sorted {
-                $0.lemma.word.localizedStandardCompare($1.lemma.word) == .orderedAscending
+                $0.entry.word.localizedStandardCompare($1.entry.word) == .orderedAscending
             }
         }
     }
@@ -67,7 +67,7 @@ final class DictionaryViewModel {
     var savedAsLabel: String {
         L10n("Dictionary.savedAsLabel")
     }
-    
+
     var removeActionTitle: String {
         L10n("Dictionary.removeActionTitle")
     }
@@ -86,7 +86,7 @@ final class DictionaryViewModel {
     
     private(set) var isLoading = true
     
-    private var words: [WordEntry] = []
+    private var words: [SavedWord] = []
     private var occurrenceCounts: [String: Int] = [:]
     
     let alphabetIconLetter = "ა"
@@ -105,10 +105,10 @@ final class DictionaryViewModel {
         isLoading = false
     }
     
-    func remove(_ word: WordEntry) {
+    func remove(_ word: SavedWord) {
         hapticsManager.impact(style: .rigid)
-        store.remove(word.key)
-        words.removeAll { $0.key == word.key }
+        word.keys.forEach { store.remove($0) }
+        words.removeAll { $0.id == word.id }
     }
     
     func openAlphabet() {
@@ -116,7 +116,7 @@ final class DictionaryViewModel {
         showAlphabet = true
     }
     
-    func showOccurrences(_ word: WordEntry) {
+    func showOccurrences(_ word: SavedWord) {
         hapticsManager.impact()
         selectedOccurrenceWord = word
     }
@@ -125,25 +125,39 @@ final class DictionaryViewModel {
         searchText = ""
     }
     
-    func occurrenceCount(for word: WordEntry) -> Int {
-        occurrenceCounts[word.key] ?? 0
+    func occurrenceCount(for word: SavedWord) -> Int {
+        occurrenceCounts[word.id] ?? 0
     }
     
     func transliteration(_ value: String) -> String {
         "[\(value)]"
     }
     
-    private func fetchSavedWords() -> [WordEntry] {
-        store.fetchAll().compactMap { key in
-            guard var entry = dictionary.entry(for: key) else { return nil }
+    private func fetchSavedWords() -> [SavedWord] {
+        var entries: [String: WordEntry] = [:]
+        var keysByWord: [String: [String]] = [:]
+        var order: [String] = []
+
+        for key in store.fetchAll() {
+            guard var entry = dictionary.entry(for: key) else { continue }
             entry.isSaved = true
-            return entry
+            if entries[entry.word] == nil {
+                entries[entry.word] = entry
+                order.append(entry.word)
+            }
+            keysByWord[entry.word, default: []].append(key)
+        }
+
+        return order.compactMap { word in
+            entries[word].map { SavedWord(entry: $0, keys: keysByWord[word] ?? []) }
         }
     }
-    
-    private func countOccurrences(for words: [WordEntry]) -> [String: Int] {
+
+    private func countOccurrences(for words: [SavedWord]) -> [String: Int] {
         Dictionary(
-            words.map { ($0.key, occurrences.count(for: $0.key)) },
+            words.map { word in
+                (word.id, Set(word.keys.flatMap { occurrences.questions(for: $0).map(\.id) }).count)
+            },
             uniquingKeysWith: { first, _ in first }
         )
     }
@@ -154,14 +168,14 @@ final class DictionaryViewModel {
         }
     }
     
-    private func matchesFilter(_ word: WordEntry) -> Bool {
+    private func matchesFilter(_ word: SavedWord) -> Bool {
         switch selectedFilter {
         case .all:            return true
-        case .named(let pos): return word.partOfSpeech == pos
+        case .named(let pos): return word.entry.partOfSpeech == pos
         }
     }
-    
-    private func matchesSearch(_ word: WordEntry) -> Bool {
+
+    private func matchesSearch(_ word: SavedWord) -> Bool {
         let query = searchText.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !query.isEmpty else { return true }
         return word.searchableText.localizedCaseInsensitiveContains(query)

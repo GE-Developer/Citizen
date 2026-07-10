@@ -218,6 +218,7 @@
 		AB08000100000001 /* QuestionFolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB08000200000001 /* QuestionFolder.swift */; };
 		AB08000100000002 /* SavedQuestionsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB08000200000002 /* SavedQuestionsStore.swift */; };
 		AB08000100000003 /* SaveQuestionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB08000200000003 /* SaveQuestionSheet.swift */; };
+		AB09000100000001 /* SavedWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB09000200000001 /* SavedWord.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -435,6 +436,7 @@
 		AB08000200000001 /* QuestionFolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionFolder.swift; sourceTree = "<group>"; };
 		AB08000200000002 /* SavedQuestionsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedQuestionsStore.swift; sourceTree = "<group>"; };
 		AB08000200000003 /* SaveQuestionSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveQuestionSheet.swift; sourceTree = "<group>"; };
+		AB09000200000001 /* SavedWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedWord.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -827,6 +829,7 @@
 				AB04000200000002 /* TopicStats.swift */,
 				AB07000200000001 /* HintAnswerRow.swift */,
 				AB08000200000001 /* QuestionFolder.swift */,
+				AB09000200000001 /* SavedWord.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1210,6 +1213,7 @@
 				AB08000100000001 /* QuestionFolder.swift in Sources */,
 				AB08000100000002 /* SavedQuestionsStore.swift in Sources */,
 				AB08000100000003 /* SaveQuestionSheet.swift in Sources */,
+				AB09000100000001 /* SavedWord.swift in Sources */,
 				1F496C372FC1C26C00E0D7F5 /* AccentColorManager.swift in Sources */,
 				1F496C382FC1C26C00E0D7F5 /* AppIconManager.swift in Sources */,
 				1F496C392FC1C26C00E0D7F5 /* ScreenshotManager.swift in Sources */,

@@ -29,8 +29,7 @@ extension WordDetailSheet {
         if let detail = vm.selectedWord {
             VStack(alignment: .leading, spacing: 10) {
                 header(detail)
-                lemmaSection(detail)
-                inSentenceSection(detail)
+                wordSection(detail)
             }
             .padding()
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
@@ -53,18 +52,18 @@ extension WordDetailSheet {
         }
     }
     
-    private func lemmaSection(_ detail: WordEntry) -> some View {
+    private func wordSection(_ detail: WordEntry) -> some View {
         VStack(alignment: .leading, spacing: 2) {
-            Text(detail.lemma.word)
+            Text(detail.word)
                 .font(.title2)
                 .fontWeight(.bold)
                 .fontDesign(.rounded)
                 .foregroundStyle(Color.citizen.mainText)
-            Text(vm.transliterationText(detail.lemma.transliteration))
+            Text(vm.transliterationText(detail.transliteration))
                 .font(.callout)
                 .fontDesign(.monospaced)
                 .foregroundStyle(Color.citizen.secondaryText)
-            if let translation = detail.lemma.translation {
+            if let translation = detail.translation {
                 Text(translation)
                     .font(.callout)
                     .fontDesign(.rounded)
@@ -73,54 +72,6 @@ extension WordDetailSheet {
         }
         .lineLimit(1)
         .minimumScaleFactor(0.5)
-    }
-    
-    @ViewBuilder
-    private func inSentenceSection(_ detail: WordEntry) -> some View {
-        if let form = detail.form {
-            HStack(spacing: 10) {
-                RoundedRectangle(cornerRadius: 1)
-                    .fill(Gradient.accent)
-                    .frame(width: 2)
-                    .frame(maxHeight: .infinity)
-                
-                VStack(alignment: .leading, spacing: 2) {
-                    Text(vm.inSentenceHeader.uppercased())
-                        .font(.caption)
-                        .fontWeight(.bold)
-                        .fontDesign(.rounded)
-                        .tracking(0.5)
-                        .foregroundStyle(Gradient.accent)
-                        .lineLimit(1)
-                    Text(form.word)
-                        .font(.callout)
-                        .fontWeight(.semibold)
-                        .fontDesign(.rounded)
-                        .foregroundStyle(Color.citizen.mainText)
-                        .lineLimit(1)
-                    Text(vm.transliterationText(form.transliteration))
-                        .font(.footnote)
-                        .fontDesign(.monospaced)
-                        .foregroundStyle(Color.citizen.secondaryText)
-                        .lineLimit(1)
-                    Text(form.formDescription)
-                        .font(.footnote)
-                        .fontDesign(.rounded)
-                        .foregroundStyle(Color.citizen.secondaryText)
-                        .lineLimit(2)
-                    if let translation = form.translation {
-                        Text(translation)
-                            .font(.callout)
-                            .fontDesign(.rounded)
-                            .foregroundStyle(Color.citizen.mainText)
-                            .lineLimit(2)
-                    }
-                }
-                .minimumScaleFactor(0.5)
-            }
-            .fixedSize(horizontal: false, vertical: true)
-            .padding(.top, 3)
-        }
     }
     
     private func saveButton(_ detail: WordEntry) -> some View {

@@ -167,10 +167,10 @@ extension DictionaryView {
             .padding(.top, 40)
     }
     
-    private func wordCard(_ word: WordEntry) -> some View {
+    private func wordCard(_ word: SavedWord) -> some View {
         VStack(alignment: .leading, spacing: 10) {
             cardHeader(word)
-            lemmaSection(word)
+            wordSection(word.entry)
             savedAsSection(word)
         }
         .padding(.bottom, 16)
@@ -181,17 +181,17 @@ extension DictionaryView {
         .clipShape(RoundedRectangle(cornerRadius: 15))
         .contentShape(.contextMenuPreview, RoundedRectangle(cornerRadius: 15))
         .contextMenu { removeButton(word) }
-        .opacity(fadingKeys.contains(word.key) ? 0 : 1)
+        .opacity(fadingKeys.contains(word.id) ? 0 : 1)
         .padding(.bottom, 16)
         .transition(.identity)
     }
     
     @ViewBuilder
-    private func cardHeader(_ word: WordEntry) -> some View {
+    private func cardHeader(_ word: SavedWord) -> some View {
         let occurrenceCount = vm.occurrenceCount(for: word)
-        
+
         HStack {
-            Badge(word.partOfSpeech)
+            Badge(word.entry.partOfSpeech)
             Spacer()
             
             if occurrenceCount > 0 {
@@ -208,18 +208,18 @@ extension DictionaryView {
         }
     }
     
-    private func lemmaSection(_ word: WordEntry) -> some View {
+    private func wordSection(_ word: WordEntry) -> some View {
         VStack(alignment: .leading, spacing: 2) {
-            Text(word.lemma.word)
+            Text(word.word)
                 .font(.title3)
                 .fontWeight(.bold)
                 .fontDesign(.rounded)
                 .foregroundStyle(Color.citizen.mainText)
-            Text(vm.transliteration(word.lemma.transliteration))
+            Text(vm.transliteration(word.transliteration))
                 .font(.subheadline)
                 .fontDesign(.monospaced)
                 .foregroundStyle(Color.citizen.secondaryText)
-            if let translation = word.lemma.translation {
+            if let translation = word.translation {
                 Text(translation)
                     .font(.subheadline)
                     .fontDesign(.rounded)
@@ -229,16 +229,16 @@ extension DictionaryView {
         .lineLimit(1)
         .minimumScaleFactor(0.5)
     }
-    
+
     @ViewBuilder
-    private func savedAsSection(_ word: WordEntry) -> some View {
-        if let form = word.form {
+    private func savedAsSection(_ word: SavedWord) -> some View {
+        if !word.savedAsKeys.isEmpty {
             HStack(spacing: 10) {
                 RoundedRectangle(cornerRadius: 1)
                     .fill(Gradient.accent)
                     .frame(width: 2)
                     .frame(maxHeight: .infinity)
-                
+
                 VStack(alignment: .leading, spacing: 2) {
                     Text(vm.savedAsLabel.uppercased())
                         .font(.caption2)
@@ -247,28 +247,13 @@ extension DictionaryView {
                         .tracking(0.5)
                         .foregroundStyle(Gradient.accent)
                         .lineLimit(1)
-                    Text(form.word)
-                        .font(.subheadline)
-                        .fontWeight(.semibold)
-                        .fontDesign(.rounded)
-                        .foregroundStyle(Color.citizen.mainText)
-                        .lineLimit(1)
-                    Text(vm.transliteration(form.transliteration))
-                        .font(.caption)
-                        .fontDesign(.monospaced)
-                        .foregroundStyle(Color.citizen.secondaryText)
-                        .lineLimit(1)
-                    Text(form.formDescription)
-                        .font(.caption)
-                        .fontDesign(.rounded)
-                        .foregroundStyle(Color.citizen.secondaryText)
-                        .lineLimit(2)
-                    if let translation = form.translation {
-                        Text(translation)
+                    ForEach(word.savedAsKeys, id: \.self) { key in
+                        Text(key)
                             .font(.subheadline)
+                            .fontWeight(.semibold)
                             .fontDesign(.rounded)
                             .foregroundStyle(Color.citizen.mainText)
-                            .lineLimit(2)
+                            .lineLimit(1)
                     }
                 }
                 .minimumScaleFactor(0.5)
@@ -276,8 +261,8 @@ extension DictionaryView {
             .padding(.top, 3)
         }
     }
-    
-    private func removeButton(_ word: WordEntry) -> some View {
+
+    private func removeButton(_ word: SavedWord) -> some View {
         Button(role: .destructive) {
             deleteWord(word)
         } label: {
@@ -314,8 +299,8 @@ extension DictionaryView {
 
 // MARK: - Logic
 extension DictionaryView {
-    private func deleteWord(_ word: WordEntry) {
-        let key = word.key
+    private func deleteWord(_ word: SavedWord) {
+        let key = word.id
         let fadeDuration = 0.2
         
         withAnimation(.easeInOut(duration: fadeDuration)) {

@@ -29,20 +29,21 @@ final class WordOccurrencesViewModel {
     let headerTitle: String
     let headerTransliteration: String
     let headerTranslation: String?
-    let headerDescription: String?
     let availableFilters: [Filter]
     let rows: [OccurrenceRow]
     
     private let hapticsManager = HapticsManager.shared
     
-    init(word: WordEntry) {
-        let questions = WordOccurrenceIndex.shared.questions(for: word.key)
+    init(word: SavedWord) {
+        var seen = Set<String>()
+        let questions = word.keys
+            .flatMap { WordOccurrenceIndex.shared.questions(for: $0) }
+            .filter { seen.insert($0.id).inserted }
         let rows = questions.map { Self.makeRow(for: $0) }
         
-        headerTitle = word.word
-        headerTransliteration = "[\(word.transliteration)]"
-        headerTranslation = word.translation
-        headerDescription = word.form?.formDescription
+        headerTitle = word.entry.word
+        headerTransliteration = "[\(word.entry.transliteration)]"
+        headerTranslation = word.entry.translation
         subtitle = L10n("\(questions.count) WordOccurrences.subtitle")
         self.rows = rows
         availableFilters = Self.filters(for: rows)

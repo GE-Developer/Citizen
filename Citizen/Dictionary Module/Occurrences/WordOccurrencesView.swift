@@ -13,7 +13,7 @@ struct WordOccurrencesView: View {
     @State private var vm: WordOccurrencesViewModel
     @State private var showPayWall = false
     
-    init(word: WordEntry) {
+    init(word: SavedWord) {
         _vm = State(initialValue: WordOccurrencesViewModel(word: word))
     }
     
@@ -55,13 +55,6 @@ extension WordOccurrencesView {
                         .fontWeight(.regular)
                         .foregroundStyle(Color.citizen.secondaryText)
                         .fontDesign(.monospaced)
-                    if let description = vm.headerDescription {
-                        Text(description)
-                            .font(.headline)
-                            .fontWeight(.regular)
-                            .foregroundStyle(Color.citizen.secondaryText)
-                            .fontDesign(.rounded)
-                    }
                     if let translation = vm.headerTranslation {
                         Text(translation)
                             .font(.headline)
