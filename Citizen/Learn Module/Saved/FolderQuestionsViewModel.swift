@@ -11,6 +11,7 @@ import Foundation
 final class FolderQuestionsViewModel: ObservableObject {
     @Published var selectedQuestion: Question?
     @Published var selectedFilter: Filter = .all
+    @Published var showPractice = false
     
     @Published private(set) var rows: [OccurrenceRow] = []
     
@@ -29,6 +30,16 @@ final class FolderQuestionsViewModel: ObservableObject {
     var questionsCountSuffix: String {
         L10n("\(rows.count) Saved.questionCountSuffix")
     }
+    
+    var practiceFilterDetail: String {
+        selectedFilter.title
+    }
+    
+    var practiceHeaderTitle: String {
+        selectedFilter == .all ? title : "\(title) — \(selectedFilter.title)"
+    }
+    
+    private(set) var practiceQuestions: [Question] = []
     
     let title: String
     let removeActionTitle = L10n("Saved.removeQuestion")
@@ -56,8 +67,21 @@ final class FolderQuestionsViewModel: ObservableObject {
         selectedQuestion = row.question
     }
     
-    func practicePressed() {
+    func canPractice(isPremium: Bool) -> Bool {
+        visibleRows.contains { isPremium || !$0.isPremium }
+    }
+    
+    func practicePressed(isPremium: Bool) {
         haptics.impact()
+        
+        let pool = visibleRows
+            .filter { isPremium || !$0.isPremium }
+            .map(\.question)
+        
+        guard !pool.isEmpty else { return }
+        
+        practiceQuestions = pool
+        showPractice = true
     }
     
     func remove(_ row: OccurrenceRow) {

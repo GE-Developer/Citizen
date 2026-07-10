@@ -58,6 +58,12 @@ final class SavedQuestionsStore {
         return Set(items.compactMap { $0.questionID })
     }
     
+    func allSavedQuestionIDs() -> Set<String> {
+        let request: NSFetchRequest<SavedQuestionEntity> = SavedQuestionEntity.fetchRequest()
+        let items = (try? context.fetch(request)) ?? []
+        return Set(items.compactMap { $0.questionID })
+    }
+    
     func contains(_ questionID: String) -> Bool {
         let request: NSFetchRequest<SavedQuestionEntity> = SavedQuestionEntity.fetchRequest()
         request.predicate = NSPredicate(format: "questionID == %@", questionID)

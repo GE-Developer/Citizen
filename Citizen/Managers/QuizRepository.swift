@@ -83,6 +83,17 @@ final class QuizRepository {
         return (catalog.categories[ci], catalog.categories[ci].topics[ti])
     }
     
+    func recordPracticeAnswer(questionID: String, isCorrect: Bool) {
+        if isCorrect {
+            storage.addToGlobalCorrectPool(questionID: questionID)
+        } else {
+            storage.addToGlobalPool(questionID: questionID)
+            if let (ci, ti, qi) = locate(questionID: questionID) {
+                catalog.categories[ci].topics[ti].questions[qi].isInMistakePool = true
+            }
+        }
+    }
+    
     func occurrenceRow(for question: Question) -> OccurrenceRow {
         let placement = placement(ofQuestionID: question.id)
         let sentence = question.additionalText ?? ""

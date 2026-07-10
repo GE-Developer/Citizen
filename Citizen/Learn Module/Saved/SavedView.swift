@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SavedView: View {
+    @EnvironmentObject private var store: StoreManager
+    
     @StateObject private var vm = SavedViewModel()
     
     @State private var fadingIDs: Set<String> = []
@@ -16,6 +18,14 @@ struct SavedView: View {
         savedFolders
             .navigationDestination(item: $vm.chosenFolder) { folder in
                 NavigationLazyView(FolderQuestionsView(folder: folder))
+            }
+            .navigationDestination(isPresented: $vm.showPractice) {
+                NavigationLazyView(
+                    PracticeView(
+                        questions: vm.practiceQuestions,
+                        title: vm.title
+                    )
+                )
             }
             .onAppear { vm.refresh() }
             .alert(vm.renameActionTitle, isPresented: $vm.showRenameAlert) {
@@ -56,10 +66,10 @@ extension SavedView {
             icon: Image.system.practice,
             title: vm.practiceTitle,
             subtitle: vm.practiceSubtitle,
-            action: { vm.practicePressed() }
+            action: { vm.practicePressed(isPremium: store.isPremium) }
         )
-        .disabled(!vm.hasAnyQuestions)
-        .opacity(vm.hasAnyQuestions ? 1 : 0.6)
+        .disabled(!vm.canPractice(isPremium: store.isPremium))
+        .opacity(vm.canPractice(isPremium: store.isPremium) ? 1 : 0.6)
     }
     
     private var countHeader: some View {

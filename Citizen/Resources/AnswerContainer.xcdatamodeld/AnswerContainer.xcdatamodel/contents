@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="23605" systemVersion="23J520" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="GlobalCorrectEntity" representedClassName="GlobalCorrectEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="questionID" optional="YES" attributeType="String"/>
+    </entity>
     <entity name="GlobalMistakeEntity" representedClassName="GlobalMistakeEntity" syncable="YES" codeGenerationType="class">
         <attribute name="questionID" optional="YES" attributeType="String"/>
     </entity>

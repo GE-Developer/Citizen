@@ -86,4 +86,30 @@ final class AnswerStorage {
             return []
         }
     }
+    
+    // MARK: - GlobalCorrectEntity
+    func addToGlobalCorrectPool(questionID: String) {
+        let request: NSFetchRequest<GlobalCorrectEntity> = GlobalCorrectEntity.fetchRequest()
+        
+        request.predicate = NSPredicate(format: "questionID == %@", questionID)
+        request.fetchLimit = 1
+        do {
+            guard try context.fetch(request).isEmpty else { return }
+            let entity = GlobalCorrectEntity(context: context)
+            entity.questionID = questionID
+            stack.saveContext()
+        } catch {
+            print("❌ Failed to add to global correct pool:", error)
+        }
+    }
+    
+    func fetchGlobalCorrectIDs() -> [String] {
+        let request = GlobalCorrectEntity.fetchRequest()
+        do {
+            return try context.fetch(request).compactMap { $0.questionID }
+        } catch {
+            print("❌ Failed to fetch global correct IDs:", error)
+            return []
+        }
+    }
 }

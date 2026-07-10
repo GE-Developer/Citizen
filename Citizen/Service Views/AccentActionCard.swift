@@ -11,12 +11,20 @@ struct AccentActionCard: View {
     private let icon: Image
     private let title: String
     private let subtitle: String
+    private let detail: String?
     private let action: () -> Void
     
-    init(icon: Image, title: String, subtitle: String, action: @escaping () -> Void) {
+    init(
+        icon: Image,
+        title: String,
+        subtitle: String,
+        detail: String? = nil,
+        action: @escaping () -> Void
+    ) {
         self.icon = icon
         self.title = title
         self.subtitle = subtitle
+        self.detail = detail
         self.action = action
     }
     
@@ -49,6 +57,12 @@ extension AccentActionCard {
                     Text(subtitle)
                         .font(.subheadline)
                         .foregroundStyle(Color.citizen.secondaryText)
+                    if let detail {
+                        Text(detail)
+                            .font(.caption)
+                            .fontWeight(.semibold)
+                            .foregroundStyle(Gradient.accent)
+                    }
                 }
                 .fontDesign(.rounded)
                 .lineLimit(1)

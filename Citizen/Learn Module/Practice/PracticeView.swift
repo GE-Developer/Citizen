@@ -1,5 +1,5 @@
 //
-//  QuestionsView.swift
+//  PracticeView.swift
 //  Citizen
 //
 //  Created by GE-Developer
@@ -7,44 +7,33 @@
 
 import SwiftUI
 
-struct QuestionsView: View {
+struct PracticeView: View {
     @Environment(\.dismiss) private var dismiss
     
-    @StateObject private var vm: QuestionsViewModel
+    @StateObject private var vm: PracticeViewModel
     
-    init(topic: Topic) {
-        _vm = StateObject(wrappedValue: QuestionsViewModel(topic: topic))
+    init(questions: [Question], title: String) {
+        _vm = StateObject(wrappedValue: PracticeViewModel(questions: questions, title: title))
     }
     
     var body: some View {
-        questionsView
+        practiceView
             .navigationDestination(isPresented: $vm.showHint) {
                 NavigationLazyView(HintView(question: vm.currentQuestion))
-            }
-            .sheet(isPresented: $vm.showSaveSheet) {
-                SaveQuestionSheet(vm: vm)
             }
     }
 }
 
 // MARK: - Builder
-extension QuestionsView {
-    private var questionsView: some View {
-        CustomScrollView(title: vm.testTitle, subTitle: vm.subtitle) {
-            NavigationToolButton(
-                vm.isCurrentQuestionSaved ? .system.bookmark : .system.bookmarkOutline,
-                action: { vm.bookmarkButtonPressed() }
-            )
+extension PracticeView {
+    private var practiceView: some View {
+        CustomScrollView(title: vm.screenTitle, subTitle: vm.subtitle) {
             NavigationToolButton(
                 .system.hint,
                 action: { vm.hintButtonPressed() }
             )
         } content: { _ in
-            QuestionProgressHeader(
-                counterText: vm.questionCounterText,
-                questions: vm.allTopicQuestions,
-                currentQuestionID: vm.currentQuestion.id
-            )
+            progressRow
             question
                 .padding(.bottom, isFaceIDPhone ? 70 : 86)
         }
@@ -57,7 +46,7 @@ extension QuestionsView {
     private var preview: some View {
         Group {
             if vm.showPreview {
-                TopicPreviewView(vm: vm, dismiss: { dismiss() })
+                PracticePreviewView(vm: vm, dismiss: { dismiss() })
                     .transition(
                         .move(edge: .bottom)
                         .combined(with: .opacity)
@@ -67,11 +56,18 @@ extension QuestionsView {
         .animation(.smooth, value: vm.showPreview)
     }
     
+    private var progressRow: some View {
+        QuestionProgressHeader(
+            counterText: vm.questionCounterText,
+            questions: vm.sessionQuestions,
+            currentQuestionID: vm.currentQuestion.id
+        )
+    }
+    
     private var question: some View {
         ZStack(alignment: .top) {
             VStack(spacing: 20) {
                 QuestionTextCard(text: vm.currentQuestion.question)
-                
                 if vm.currentQuestion.additionalText != nil {
                     AccentSentenceView(segments: vm.additionalTextSegments)
                         .font(.title3)
