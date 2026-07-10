@@ -9,18 +9,18 @@ import SwiftUI
 
 struct FolderQuestionsView: View {
     @Environment(\.dismiss) private var dismiss
-
+    
     @EnvironmentObject private var store: StoreManager
-
+    
     @StateObject private var vm: FolderQuestionsViewModel
-
+    
     @State private var showPayWall = false
     @State private var fadingIDs: Set<String> = []
-
+    
     init(folder: QuestionFolder) {
         _vm = StateObject(wrappedValue: FolderQuestionsViewModel(folder: folder))
     }
-
+    
     var body: some View {
         folderQuestions
             .navigationDestination(item: $vm.selectedQuestion) { question in
@@ -45,20 +45,23 @@ extension FolderQuestionsView {
                     subtitle: vm.practiceSubtitle,
                     action: { vm.practicePressed() }
                 )
-
+                
                 CountHeaderView(count: vm.questionsCountText, suffix: vm.questionsCountSuffix)
-
+                
                 CustomCapsulePicker(
                     selection: $vm.selectedFilter,
                     items: vm.availableFilters,
                     capsuleName: { $0.title }
                 )
-
+                
                 ForEach(vm.visibleRows) { row in
                     OccurrenceCard(row: row, action: { vm.select(row) })
                         .premiumOption($showPayWall, isIncluded: row.isPremium)
                         .overlay(premiumOverlay(row))
-                        .contentShape(.contextMenuPreview, RoundedRectangle(cornerRadius: 15))
+                        .contentShape(
+                            .contextMenuPreview,
+                            RoundedRectangle(cornerRadius: 15)
+                        )
                         .contextMenu { removeButton(row) }
                         .opacity(fadingIDs.contains(row.id) ? 0 : 1)
                         .transition(.identity)
@@ -66,7 +69,7 @@ extension FolderQuestionsView {
             }
         }
     }
-
+    
     @ViewBuilder
     private func premiumOverlay(_ row: OccurrenceRow) -> some View {
         if row.isPremium {
@@ -78,10 +81,14 @@ extension FolderQuestionsView {
                         .shadow(color: Color.citizen.background, radius: 2)
                 }
                 .offset(x: 10, y: 10)
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomTrailing)
+                .frame(
+                    maxWidth: .infinity,
+                    maxHeight: .infinity,
+                    alignment: .bottomTrailing
+                )
         }
     }
-
+    
     private func removeButton(_ row: OccurrenceRow) -> some View {
         Button(role: .destructive) {
             deleteQuestion(row)
@@ -96,16 +103,19 @@ extension FolderQuestionsView {
     private func deleteQuestion(_ row: OccurrenceRow) {
         let id = row.id
         let fadeDuration = 0.2
-
+        
         withAnimation(.easeInOut(duration: fadeDuration)) {
             _ = fadingIDs.insert(id)
         }
+        
         Task {
             try? await Task.sleep(for: .seconds(fadeDuration))
             withAnimation(.easeInOut(duration: 0.25)) {
                 vm.remove(row)
             }
+            
             fadingIDs.remove(id)
+            
             if vm.rows.isEmpty {
                 dismiss()
             }

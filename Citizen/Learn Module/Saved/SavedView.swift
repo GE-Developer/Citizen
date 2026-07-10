@@ -61,7 +61,7 @@ extension SavedView {
         .disabled(!vm.hasAnyQuestions)
         .opacity(vm.hasAnyQuestions ? 1 : 0.6)
     }
-
+    
     private var countHeader: some View {
         CountHeaderView(count: vm.foldersCountText, suffix: vm.foldersCountSuffix)
     }
@@ -90,7 +90,7 @@ extension SavedView {
                         .fontWeight(.bold)
                         .foregroundStyle(Color.citizen.mainText)
                         .lineLimit(1)
-
+                    
                     Text(vm.questionCountText(folder))
                         .font(.caption)
                         .foregroundStyle(Color.citizen.secondaryText)
@@ -113,7 +113,7 @@ extension SavedView {
         .opacity(cardOpacity(folder))
         .transition(.identity)
     }
-
+    
     private func renameButton(_ folder: QuestionFolder) -> some View {
         Button(action: { vm.renamePressed(folder) }) {
             Text(vm.renameActionTitle)
@@ -132,10 +132,13 @@ extension SavedView {
 // MARK: - Logic
 extension SavedView {
     private func cardOpacity(_ folder: QuestionFolder) -> Double {
-        if fadingIDs.contains(folder.id) { return 0 }
+        if fadingIDs.contains(folder.id) {
+            return 0
+        }
+        
         return vm.hasQuestions(folder) ? 1 : 0.6
     }
-
+    
     private func deleteFolder(_ folder: QuestionFolder) {
         let id = folder.id
         let fadeDuration = 0.2
@@ -143,11 +146,13 @@ extension SavedView {
         withAnimation(.easeInOut(duration: fadeDuration)) {
             _ = fadingIDs.insert(id)
         }
+        
         Task {
             try? await Task.sleep(for: .seconds(fadeDuration))
             withAnimation(.easeInOut(duration: 0.25)) {
                 vm.remove(folder)
             }
+            
             fadingIDs.remove(id)
         }
     }
