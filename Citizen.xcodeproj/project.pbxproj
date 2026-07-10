@@ -221,6 +221,12 @@
 		AB10000100000001 /* SavedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB10000200000001 /* SavedView.swift */; };
 		AB10000100000002 /* SavedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB10000200000002 /* SavedViewModel.swift */; };
 		AB10000100000003 /* EmptyFoldersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB10000200000003 /* EmptyFoldersView.swift */; };
+		AB10000100000004 /* FolderQuestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB10000200000004 /* FolderQuestionsView.swift */; };
+		AB10000100000005 /* FolderQuestionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB10000200000005 /* FolderQuestionsViewModel.swift */; };
+		AB10000100000006 /* OccurrenceCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB10000200000006 /* OccurrenceCard.swift */; };
+		AB10000100000007 /* CountHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB10000200000007 /* CountHeaderView.swift */; };
+		AB10000100000008 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB10000200000008 /* EmptyStateView.swift */; };
+		AB10000100000009 /* AccentActionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB10000200000009 /* AccentActionCard.swift */; };
 		AB1100012EC60316002D12D1 /* ShuffleAnswersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1100022EC60316002D12D1 /* ShuffleAnswersManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -442,6 +448,12 @@
 		AB10000200000001 /* SavedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedView.swift; sourceTree = "<group>"; };
 		AB10000200000002 /* SavedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewModel.swift; sourceTree = "<group>"; };
 		AB10000200000003 /* EmptyFoldersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyFoldersView.swift; sourceTree = "<group>"; };
+		AB10000200000004 /* FolderQuestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderQuestionsView.swift; sourceTree = "<group>"; };
+		AB10000200000005 /* FolderQuestionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderQuestionsViewModel.swift; sourceTree = "<group>"; };
+		AB10000200000006 /* OccurrenceCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OccurrenceCard.swift; sourceTree = "<group>"; };
+		AB10000200000007 /* CountHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountHeaderView.swift; sourceTree = "<group>"; };
+		AB10000200000008 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		AB10000200000009 /* AccentActionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccentActionCard.swift; sourceTree = "<group>"; };
 		AB1100022EC60316002D12D1 /* ShuffleAnswersManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShuffleAnswersManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -577,6 +589,10 @@
 				AACC000200010003 /* ProgressBar.swift */,
 				AB02000200000002 /* ScreenShotPreventerMask.swift */,
 				AB10000200000003 /* EmptyFoldersView.swift */,
+				AB10000200000006 /* OccurrenceCard.swift */,
+				AB10000200000007 /* CountHeaderView.swift */,
+				AB10000200000008 /* EmptyStateView.swift */,
+				AB10000200000009 /* AccentActionCard.swift */,
 			);
 			path = "Service Views";
 			sourceTree = "<group>";
@@ -964,6 +980,8 @@
 			children = (
 				AB10000200000001 /* SavedView.swift */,
 				AB10000200000002 /* SavedViewModel.swift */,
+				AB10000200000004 /* FolderQuestionsView.swift */,
+				AB10000200000005 /* FolderQuestionsViewModel.swift */,
 			);
 			path = Saved;
 			sourceTree = "<group>";
@@ -1234,6 +1252,12 @@
 				AB10000100000001 /* SavedView.swift in Sources */,
 				AB10000100000002 /* SavedViewModel.swift in Sources */,
 				AB10000100000003 /* EmptyFoldersView.swift in Sources */,
+				AB10000100000004 /* FolderQuestionsView.swift in Sources */,
+				AB10000100000005 /* FolderQuestionsViewModel.swift in Sources */,
+				AB10000100000006 /* OccurrenceCard.swift in Sources */,
+				AB10000100000007 /* CountHeaderView.swift in Sources */,
+				AB10000100000008 /* EmptyStateView.swift in Sources */,
+				AB10000100000009 /* AccentActionCard.swift in Sources */,
 				1F496C372FC1C26C00E0D7F5 /* AccentColorManager.swift in Sources */,
 				1F496C382FC1C26C00E0D7F5 /* AppIconManager.swift in Sources */,
 				1F496C392FC1C26C00E0D7F5 /* ScreenshotManager.swift in Sources */,

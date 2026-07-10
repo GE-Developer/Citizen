@@ -42,7 +42,10 @@ extension DictionaryView {
         } else {
             VStack(spacing: 14) {
                 alphabetCard
-                countHeader
+                CountHeaderView(
+                    count: vm.wordsCountText,
+                    suffix: vm.wordsSavedSuffix
+                )
                 if vm.isEmpty {
                     emptyState
                 } else {
@@ -130,23 +133,6 @@ extension DictionaryView {
         }
     }
     
-    private var countHeader: some View {
-        HStack(alignment: .firstTextBaseline, spacing: 8) {
-            Text(vm.wordsCountText)
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .foregroundStyle(Gradient.accent)
-            Text(vm.wordsSavedSuffix.lowercased())
-                .font(.headline)
-                .fontWeight(.regular)
-                .foregroundStyle(Color.citizen.secondaryText)
-            Spacer()
-        }
-        .fontDesign(.rounded)
-        .lineLimit(1)
-        .minimumScaleFactor(0.5)
-    }
-    
     @ViewBuilder
     private var wordsSection: some View {
         if vm.displayedWords.isEmpty {
@@ -189,7 +175,7 @@ extension DictionaryView {
     @ViewBuilder
     private func cardHeader(_ word: SavedWord) -> some View {
         let occurrenceCount = vm.occurrenceCount(for: word)
-
+        
         HStack {
             Badge(word.entry.partOfSpeech)
             Spacer()
@@ -229,7 +215,7 @@ extension DictionaryView {
         .lineLimit(1)
         .minimumScaleFactor(0.5)
     }
-
+    
     @ViewBuilder
     private func savedAsSection(_ word: SavedWord) -> some View {
         if !word.savedAsKeys.isEmpty {
@@ -238,7 +224,7 @@ extension DictionaryView {
                     .fill(Gradient.accent)
                     .frame(width: 2)
                     .frame(maxHeight: .infinity)
-
+                
                 VStack(alignment: .leading, spacing: 2) {
                     Text(vm.savedAsLabel.uppercased())
                         .font(.caption2)
@@ -261,7 +247,7 @@ extension DictionaryView {
             .padding(.top, 3)
         }
     }
-
+    
     private func removeButton(_ word: SavedWord) -> some View {
         Button(role: .destructive) {
             deleteWord(word)
@@ -271,28 +257,11 @@ extension DictionaryView {
     }
     
     private var emptyState: some View {
-        VStack(spacing: 14) {
-            Image.system.dictionaryOutline
-                .font(.system(size: 32))
-                .foregroundStyle(Color.citizen.secondaryText)
-                .frame(width: 78, height: 78)
-                .background {
-                    RoundedRectangle(cornerRadius: 18)
-                        .fill(Color.citizen.groupBackground)
-                }
-            Text(vm.emptyTitle)
-                .font(.title3)
-                .fontWeight(.bold)
-                .fontDesign(.rounded)
-                .foregroundStyle(Color.citizen.mainText)
-            Text(vm.emptyMessage)
-                .font(.subheadline)
-                .fontDesign(.rounded)
-                .foregroundStyle(Color.citizen.secondaryText)
-                .multilineTextAlignment(.center)
-                .padding(.horizontal, 30)
-        }
-        .frame(maxWidth: .infinity)
+        EmptyStateView(
+            icon: Image.system.dictionaryOutline,
+            title: vm.emptyTitle,
+            message: vm.emptyMessage
+        )
         .padding(.top, 40)
     }
 }

@@ -43,6 +43,7 @@ struct SystemImage {
     let bookmark = Image(systemName: "bookmark.fill")
     let bookmarkOutline = Image(systemName: "bookmark")
     let folder = Image(systemName: "folder")
+    let practice = Image(systemName: "checklist")
     let hint = Image(systemName: "lightbulb")
     let books = Image(systemName: "books.vertical.fill")
     let dictionary = Image(systemName: "character.book.closed.fill")

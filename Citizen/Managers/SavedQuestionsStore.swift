@@ -51,6 +51,13 @@ final class SavedQuestionsStore {
         return Set(items.compactMap { $0.folderID })
     }
     
+    func questionIDs(inFolder folderID: String) -> Set<String> {
+        let request: NSFetchRequest<SavedQuestionEntity> = SavedQuestionEntity.fetchRequest()
+        request.predicate = NSPredicate(format: "folderID == %@", folderID)
+        let items = (try? context.fetch(request)) ?? []
+        return Set(items.compactMap { $0.questionID })
+    }
+    
     func contains(_ questionID: String) -> Bool {
         let request: NSFetchRequest<SavedQuestionEntity> = SavedQuestionEntity.fetchRequest()
         request.predicate = NSPredicate(format: "questionID == %@", questionID)
@@ -72,10 +79,7 @@ final class SavedQuestionsStore {
     @discardableResult
     func toggle(questionID: String, folderID: String) -> Bool {
         if isSaved(questionID: questionID, inFolder: folderID) {
-            stack.batchDelete(
-                entityName: "SavedQuestionEntity",
-                predicate: NSPredicate(format: "questionID == %@ AND folderID == %@", questionID, folderID)
-            )
+            remove(questionID: questionID, folderID: folderID)
             return false
         }
         let entity = SavedQuestionEntity(context: context)
@@ -84,6 +88,22 @@ final class SavedQuestionsStore {
         entity.createdAt = Date()
         stack.saveContext()
         return true
+    }
+    
+    func remove(questionID: String, folderID: String) {
+        stack.batchDelete(
+            entityName: "SavedQuestionEntity",
+            predicate: NSPredicate(format: "questionID == %@ AND folderID == %@", questionID, folderID)
+        )
+    }
+    
+    func renameFolder(_ folderID: String, to name: String) {
+        let request: NSFetchRequest<QuestionFolderEntity> = QuestionFolderEntity.fetchRequest()
+        request.predicate = NSPredicate(format: "id == %@", folderID)
+        request.fetchLimit = 1
+        guard let entity = try? context.fetch(request).first else { return }
+        entity.name = name
+        stack.saveContext()
     }
     
     func removeFolder(_ folderID: String) {

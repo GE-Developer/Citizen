@@ -74,29 +74,11 @@ extension WordOccurrencesView {
                 )
                 
                 ForEach(vm.visibleRows) { row in
-                    card(for: row)
+                    OccurrenceCard(row: row, action: { vm.select(row) })
                         .premiumOption($showPayWall, isIncluded: row.isPremium)
                         .overlay(premiumOverlay(row))
                 }
             }
-        }
-    }
-    
-    private func card(for row: OccurrenceRow) -> some View {
-        Button {
-            vm.select(row)
-        } label: {
-            VStack(alignment: .leading, spacing: 12) {
-                cardHeader(for: row)
-                questionText(row)
-                if row.hasSentence {
-                    sentence(row)
-                }
-            }
-            .padding(16)
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .background(Color.citizen.groupBackground)
-            .clipShape(RoundedRectangle(cornerRadius: 15))
         }
     }
     
@@ -112,57 +94,6 @@ extension WordOccurrencesView {
                 }
                 .offset(x: 10, y: 10)
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomTrailing)
-        }
-    }
-    
-    private func cardHeader(for row: OccurrenceRow) -> some View {
-        VStack(alignment: .leading, spacing: 4) {
-            HStack {
-                Badge(row.number)
-                Spacer()
-                Image.system.chevron
-                    .font(.caption)
-                    .fontWeight(.semibold)
-                    .foregroundStyle(Color.citizen.secondaryText)
-            }
-            Text(row.categoryName)
-                .font(.caption)
-                .fontWeight(.regular)
-                .foregroundStyle(Gradient.accent)
-            
-            Text(row.topicName)
-                .font(.caption)
-                .fontWeight(.regular)
-                .foregroundStyle(Gradient.accent)
-        }
-        .fontDesign(.rounded)
-        .lineLimit(1)
-        .minimumScaleFactor(0.5)
-    }
-    
-    private func questionText(_ row: OccurrenceRow) -> some View {
-        Text(row.questionText)
-            .font(.subheadline)
-            .fontWeight(.regular)
-            .fontDesign(.rounded)
-            .foregroundStyle(Color.citizen.mainText)
-            .multilineTextAlignment(.leading)
-            .lineLimit(3)
-            .frame(maxWidth: .infinity, alignment: .leading)
-    }
-    
-    private func sentence(_ row: OccurrenceRow) -> some View {
-        HStack(spacing: 10) {
-            Capsule()
-                .frame(width: 2)
-                .foregroundStyle(Gradient.accent)
-            RichTextView(segments: row.sentenceSegments, lineLimit: 3)
-                .font(.subheadline)
-                .fontWeight(.regular)
-                .fontDesign(.rounded)
-                .foregroundStyle(Color.citizen.mainText)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .multilineTextAlignment(.leading)
         }
     }
     

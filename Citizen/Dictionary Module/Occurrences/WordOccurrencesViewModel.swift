@@ -14,12 +14,7 @@ final class WordOccurrencesViewModel {
     var selectedFilter: Filter = .all
     
     var visibleRows: [OccurrenceRow] {
-        switch selectedFilter {
-        case .all:
-            rows
-        case .named(let category):
-            rows.filter { $0.categoryName == category }
-        }
+        rows.filtered(by: selectedFilter)
     }
     
     let title = L10n("WordOccurrences.title")
@@ -42,46 +37,18 @@ final class WordOccurrencesViewModel {
             .flatMap(\.topics)
             .flatMap(\.questions)
             .filter { occurrenceIDs.contains($0.id) }
-        let rows = questions.map { Self.makeRow(for: $0) }
+        let rows = questions.map { QuizRepository.shared.occurrenceRow(for: $0) }
         
         headerTitle = word.entry.word
         headerTransliteration = "[\(word.entry.transliteration)]"
         headerTranslation = word.entry.translation
         subtitle = L10n("\(questions.count) WordOccurrences.subtitle")
         self.rows = rows
-        availableFilters = Self.filters(for: rows)
+        availableFilters = rows.categoryFilters
     }
     
     func select(_ row: OccurrenceRow) {
         hapticsManager.impact()
         selectedQuestion = row.question
-    }
-    
-    private static func filters(for rows: [OccurrenceRow]) -> [Filter] {
-        var seen = Set<String>()
-        var categories: [String] = []
-        
-        for row in rows {
-            let category = row.categoryName
-            
-            guard !category.isEmpty else { continue }
-            guard seen.insert(category).inserted else { continue }
-            
-            categories.append(category)
-        }
-        
-        return [.all] + categories.map(Filter.named)
-    }
-    
-    private static func makeRow(for question: Question) -> OccurrenceRow {
-        let placement = QuizRepository.shared.placement(ofQuestionID: question.id)
-        let sentence = question.additionalText ?? ""
-        return OccurrenceRow(
-            question: question,
-            categoryName: placement?.category.name ?? "",
-            topicName: placement?.topic.name ?? "",
-            sentenceSegments: sentence.isEmpty ? [] : sentence.asRichSegments,
-            isPremium: placement?.topic.isPremium ?? false
-        )
     }
 }

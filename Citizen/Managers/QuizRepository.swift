@@ -83,6 +83,18 @@ final class QuizRepository {
         return (catalog.categories[ci], catalog.categories[ci].topics[ti])
     }
     
+    func occurrenceRow(for question: Question) -> OccurrenceRow {
+        let placement = placement(ofQuestionID: question.id)
+        let sentence = question.additionalText ?? ""
+        return OccurrenceRow(
+            question: question,
+            categoryName: placement?.category.name ?? "",
+            topicName: placement?.topic.name ?? "",
+            sentenceSegments: sentence.isEmpty ? [] : sentence.asRichSegments,
+            isPremium: placement?.topic.isPremium ?? false
+        )
+    }
+    
     // MARK: - Private helpers
     private nonisolated static func applyNameOverlay(base: QuestionCatalog, overlay: QuestionCatalog) -> QuestionCatalog {
         let overlayMap = Dictionary(
@@ -129,9 +141,6 @@ final class QuizRepository {
         return QuestionCatalog(categories: merged)
     }
     
-    // Структурные инварианты, на которые опирается Learn Module:
-    // QuestionsViewModel берёт questions[0] у непустой темы, Answer.id == text,
-    // переводы ответов ключуются label'ом, ответы в CoreData — по question.id.
     private nonisolated static func validate(_ catalog: QuestionCatalog) throws {
         var questionIDs = Set<String>()
         

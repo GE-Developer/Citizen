@@ -65,3 +65,31 @@ extension Array where Element == RichTextSegment {
         return attr.plainToken
     }
 }
+
+// MARK: - OccurrenceRow
+extension Array where Element == OccurrenceRow {
+    var categoryFilters: [Filter] {
+        var seen = Set<String>()
+        var categories: [String] = []
+        
+        for row in self {
+            let category = row.categoryName
+            
+            guard !category.isEmpty else { continue }
+            guard seen.insert(category).inserted else { continue }
+            
+            categories.append(category)
+        }
+        
+        return [.all] + categories.map(Filter.named)
+    }
+    
+    func filtered(by filter: Filter) -> [OccurrenceRow] {
+        switch filter {
+        case .all:
+            return self
+        case .named(let category):
+            return self.filter { $0.categoryName == category }
+        }
+    }
+}

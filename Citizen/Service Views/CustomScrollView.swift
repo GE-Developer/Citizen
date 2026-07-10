@@ -235,6 +235,7 @@ private struct NavigationBarView<NavBarItems: View>: View {
                 .fontWeight(.medium)
                 .foregroundStyle(Color.citizen.blackAndWhite)
                 .multilineTextAlignment(textAlignment)
+                .lineLimit(1)
             
             if navState.isLarge, let subTitle {
                 Text(subTitle)
