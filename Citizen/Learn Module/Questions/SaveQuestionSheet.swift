@@ -66,7 +66,8 @@ extension SaveQuestionSheet {
             ScrollView {
                 LazyVStack(spacing: 8) {
                     if vm.folders.isEmpty {
-                        emptyFoldersRow
+                        EmptyFoldersView(text: vm.emptyFoldersText)
+                            .padding(.top, 40)
                     }
                     ForEach(vm.folders) { folder in
                         folderRow(folder)
@@ -77,26 +78,6 @@ extension SaveQuestionSheet {
             }
             .scrollIndicators(.hidden)
         }
-    }
-    
-    private var emptyFoldersRow: some View {
-        VStack(spacing: 10) {
-            Image.system.folder
-                .font(.system(size: 24))
-                .foregroundStyle(Color.citizen.secondaryText)
-                .frame(width: 55, height: 55)
-                .background {
-                    RoundedRectangle(cornerRadius: 14)
-                        .fill(Color.citizen.groupBackground)
-                }
-            Text(vm.emptyFoldersText)
-                .font(.subheadline)
-                .fontWeight(.bold)
-                .fontDesign(.rounded)
-                .foregroundStyle(Color.citizen.mainText)
-        }
-        .frame(maxWidth: .infinity)
-        .padding(.top, 40)
     }
     
     private var createFolderRow: some View {

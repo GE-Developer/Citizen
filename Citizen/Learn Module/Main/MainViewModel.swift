@@ -10,6 +10,7 @@ import Foundation
 @MainActor
 final class MainViewModel: ObservableObject {
     @Published var chosenCategory: Category?
+    @Published var showSaved = false
     
     var catalog: QuestionCatalog { repository.catalog }
     
@@ -88,7 +89,7 @@ final class MainViewModel: ObservableObject {
     }
     
     var savedPreview: String {
-        "\(savedQuestions.savedQuestionsCount())"
+        "\(savedQuestions.foldersCount())"
     }
     
     private let repository = QuizRepository.shared
@@ -130,6 +131,7 @@ final class MainViewModel: ObservableObject {
     
     func savedButtonPressed() {
         haptics.impact()
+        showSaved = true
     }
     
     func searchButtonPressed() {

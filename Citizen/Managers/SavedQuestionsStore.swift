@@ -58,6 +58,11 @@ final class SavedQuestionsStore {
         return ((try? context.count(for: request)) ?? 0) > 0
     }
     
+    func foldersCount() -> Int {
+        let request: NSFetchRequest<QuestionFolderEntity> = QuestionFolderEntity.fetchRequest()
+        return (try? context.count(for: request)) ?? 0
+    }
+    
     func savedQuestionsCount() -> Int {
         let request: NSFetchRequest<SavedQuestionEntity> = SavedQuestionEntity.fetchRequest()
         let items = (try? context.fetch(request)) ?? []
@@ -79,6 +84,17 @@ final class SavedQuestionsStore {
         entity.createdAt = Date()
         stack.saveContext()
         return true
+    }
+    
+    func removeFolder(_ folderID: String) {
+        stack.batchDelete(
+            entityName: "SavedQuestionEntity",
+            predicate: NSPredicate(format: "folderID == %@", folderID)
+        )
+        stack.batchDelete(
+            entityName: "QuestionFolderEntity",
+            predicate: NSPredicate(format: "id == %@", folderID)
+        )
     }
     
     func removeAll() {
