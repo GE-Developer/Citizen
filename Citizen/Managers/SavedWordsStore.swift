@@ -49,6 +49,13 @@ final class SavedWordsStore {
         )
     }
     
+    func remove(_ words: [String]) {
+        stack.batchDelete(
+            entityName: "SavedWordEntity",
+            predicate: NSPredicate(format: "word IN %@", words)
+        )
+    }
+    
     func saveAll(_ words: [String]) {
         let existing = Set(fetchAll())
         let now = Date()

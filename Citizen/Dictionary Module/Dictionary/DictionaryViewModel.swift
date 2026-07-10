@@ -107,7 +107,7 @@ final class DictionaryViewModel {
     
     func remove(_ word: SavedWord) {
         hapticsManager.impact(style: .rigid)
-        word.keys.forEach { store.remove($0) }
+        store.remove(word.keys)
         words.removeAll { $0.id == word.id }
     }
     

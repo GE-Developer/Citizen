@@ -35,10 +35,13 @@ final class WordOccurrencesViewModel {
     private let hapticsManager = HapticsManager.shared
     
     init(word: SavedWord) {
-        var seen = Set<String>()
-        let questions = word.keys
-            .flatMap { WordOccurrenceIndex.shared.questions(for: $0) }
-            .filter { seen.insert($0.id).inserted }
+        let occurrenceIDs = Set(
+            word.keys.flatMap { WordOccurrenceIndex.shared.questions(for: $0).map(\.id) }
+        )
+        let questions = QuizRepository.shared.catalog.categories
+            .flatMap(\.topics)
+            .flatMap(\.questions)
+            .filter { occurrenceIDs.contains($0.id) }
         let rows = questions.map { Self.makeRow(for: $0) }
         
         headerTitle = word.entry.word
