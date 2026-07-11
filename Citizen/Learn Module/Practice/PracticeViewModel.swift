@@ -12,8 +12,10 @@ final class PracticeViewModel: ObservableObject {
     @Published var chosenAnswer: Answer?
     @Published var showHint = false
     @Published var showRestartAlert = false
+    @Published var showSaveSheet = false
     
     @Published private(set) var currentQuestion: Question
+    @Published private(set) var isCurrentQuestionSaved = false
     @Published private(set) var sessionQuestions: [Question]
     @Published private(set) var sessionMistakes: [Question] = []
     @Published private(set) var displayedAnswers: [Answer] = []
@@ -61,17 +63,15 @@ final class PracticeViewModel: ObservableObject {
     }
     
     var previewProgress: Double {
-        Double(previewCorrectCount) / Double(questionsCount)
+        Double(correctCount) / Double(questionsCount)
     }
     
     var ringCaption: String {
-        L10n("Questions.Preview.ringCaption \(previewCorrectCount) \(questionsCount)")
+        L10n("Questions.Preview.ringCaption \(correctCount) \(questionsCount)")
     }
     
     var previewMistakes: [Question] {
-        isCompleted
-        ? sessionMistakes
-        : sessionQuestions.filter { $0.status == .wrong }
+        sessionQuestions.filter { $0.status == .wrong }
     }
     
     var statusBadgeText: String {
@@ -102,14 +102,11 @@ final class PracticeViewModel: ObservableObject {
         (sessionQuestions.firstIndex { $0.id == currentQuestion.id } ?? 0) + 1
     }
     
-    private var previewCorrectCount: Int {
-        isCompleted ? questionsCount - sessionMistakes.count : correctCount
-    }
-    
     private var pendingQuestions: [Question]
     private var roundSize: Int
     private var visitedInRound = 0
     private var mistakeIDs: Set<String> = []
+    private var isWorkingOnMistakes = false
     
     let headerTitle: String
     let screenTitle = L10n("Questions.title")
@@ -135,7 +132,9 @@ final class PracticeViewModel: ObservableObject {
     private let questionsCount: Int
     private let haptic = HapticsManager.shared
     private let shuffleManager = ShuffleAnswersManager.shared
+    private let shuffleQuestionsManager = ShuffleQuestionsManager.shared
     private let repository = QuizRepository.shared
+    private let savedStore = SavedQuestionsStore.shared
     
     init(questions: [Question], title: String) {
         let normalized = questions.map { question -> Question in
@@ -144,15 +143,17 @@ final class PracticeViewModel: ObservableObject {
             return copy
         }
         
-        let shuffled = normalized.shuffled()
+        let ordered = ShuffleQuestionsManager.shared.isShuffleQuestionsOn
+        ? normalized.shuffled()
+        : normalized
         
         headerTitle = title
         sourceQuestions = normalized
         questionsCount = normalized.count
-        sessionQuestions = shuffled
-        pendingQuestions = shuffled
-        currentQuestion = shuffled[0]
-        roundSize = shuffled.count
+        sessionQuestions = ordered
+        pendingQuestions = ordered
+        currentQuestion = ordered[0]
+        roundSize = ordered.count
         
         updateDisplayedAnswers()
     }
@@ -175,6 +176,15 @@ final class PracticeViewModel: ObservableObject {
         showHint = true
     }
     
+    func bookmarkButtonPressed() {
+        haptic.impact()
+        showSaveSheet = true
+    }
+    
+    func refreshSavedState() {
+        isCurrentQuestionSaved = savedStore.contains(currentQuestion.id)
+    }
+    
     func continuePractice() {
         showPreview = false
     }
@@ -185,11 +195,13 @@ final class PracticeViewModel: ObservableObject {
     }
     
     func restartSession() {
-        let shuffled = sourceQuestions.shuffled()
+        let ordered = shuffleQuestionsManager.isShuffleQuestionsOn
+        ? sourceQuestions.shuffled()
+        : sourceQuestions
         
-        sessionQuestions = shuffled
-        pendingQuestions = shuffled
-        currentQuestion = shuffled[0]
+        sessionQuestions = ordered
+        pendingQuestions = ordered
+        currentQuestion = ordered[0]
         correctCount = 0
         questionStep = 0
         roundsCompleted = 0
@@ -200,8 +212,9 @@ final class PracticeViewModel: ObservableObject {
         showPreview = false
         sessionMistakes = []
         mistakeIDs = []
-        roundSize = shuffled.count
+        roundSize = ordered.count
         visitedInRound = 0
+        isWorkingOnMistakes = false
         
         updateDisplayedAnswers()
     }
@@ -285,7 +298,12 @@ final class PracticeViewModel: ObservableObject {
             questionStep += 1
             currentQuestion = pendingQuestions[0]
             updateDisplayedAnswers()
-            showPreview = true
+            
+            if !isWorkingOnMistakes {
+                isWorkingOnMistakes = true
+                showPreview = true
+            }
+            
             return
         }
         
@@ -305,5 +323,6 @@ final class PracticeViewModel: ObservableObject {
         displayedAnswers = isShuffleOn
         ? currentQuestion.answers.shuffled()
         : currentQuestion.answers
+        refreshSavedState()
     }
 }

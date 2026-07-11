@@ -21,6 +21,13 @@ struct PracticeView: View {
             .navigationDestination(isPresented: $vm.showHint) {
                 NavigationLazyView(HintView(question: vm.currentQuestion))
             }
+            .sheet(isPresented: $vm.showSaveSheet) {
+                SaveQuestionSheet(
+                    question: vm.currentQuestion,
+                    onChange: { vm.refreshSavedState() }
+                )
+            }
+            .onAppear { vm.refreshSavedState() }
     }
 }
 
@@ -28,6 +35,10 @@ struct PracticeView: View {
 extension PracticeView {
     private var practiceView: some View {
         CustomScrollView(title: vm.screenTitle, subTitle: vm.subtitle) {
+            NavigationToolButton(
+                vm.isCurrentQuestionSaved ? .system.bookmark : .system.bookmarkOutline,
+                action: { vm.bookmarkButtonPressed() }
+            )
             NavigationToolButton(
                 .system.hint,
                 action: { vm.hintButtonPressed() }
@@ -47,10 +58,7 @@ extension PracticeView {
         Group {
             if vm.showPreview {
                 PracticePreviewView(vm: vm, dismiss: { dismiss() })
-                    .transition(
-                        .move(edge: .bottom)
-                        .combined(with: .opacity)
-                    )
+                    .transition(.offset(y: screenHeight))
             }
         }
         .animation(.smooth, value: vm.showPreview)

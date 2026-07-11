@@ -41,6 +41,7 @@ extension PracticePreviewView {
             
             VStack(spacing: 0) {
                 topSection
+                    .layoutPriority(1)
                 bottomSection
             }
         }
@@ -64,9 +65,7 @@ extension PracticePreviewView {
             .padding(.vertical)
         }
         .frame(maxWidth: .infinity)
-        .containerRelativeFrame(.vertical) { length, _ in
-            length * 0.5
-        }
+        .frame(maxHeight: screenHeight * 0.45)
     }
     
     private var titleHeader: some View {
@@ -122,16 +121,18 @@ extension PracticePreviewView {
     private var bottomSection: some View {
         VStack(spacing: 3) {
             if !vm.previewMistakes.isEmpty {
-                mistakesList
+                mistakesPager
+                Spacer(minLength: 0)
             } else if vm.isCompleted {
                 completedBlock
+                    .padding(.horizontal)
             } else {
                 Spacer(minLength: 0)
             }
             
             actionButtons
+                .padding(.horizontal)
         }
-        .padding(.horizontal)
         .padding(.bottom, isFaceIDPhone ? -12 : 12)
     }
     
@@ -157,26 +158,27 @@ extension PracticePreviewView {
         }
     }
     
-    private var mistakesList: some View {
-        ScrollView(showsIndicators: false) {
-            LazyVStack(alignment: .leading, spacing: 10) {
-                Text(vm.toReviewHeaderText.uppercased())
-                    .font(.caption)
-                    .fontWeight(.semibold)
-                    .fontDesign(.rounded)
-                    .tracking(1)
-                    .foregroundStyle(Gradient.accent)
-                
+    private var mistakesPager: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            Text(vm.toReviewHeaderText.uppercased())
+                .font(.caption)
+                .fontWeight(.semibold)
+                .fontDesign(.rounded)
+                .tracking(1)
+                .foregroundStyle(Gradient.accent)
+                .padding(.horizontal)
+            
+            TabView {
                 ForEach(vm.previewMistakes) { question in
-                    mistakeRow(question)
-                    if question.id != vm.previewMistakes.last?.id {
-                        Divider()
-                    }
+                    mistakeCard(question)
+                        .padding(.horizontal)
                 }
             }
-            .padding(.vertical, 13)
+            .tabViewStyle(.page(indexDisplayMode: .never))
+            .frame(height: 170)
         }
-        .frame(maxHeight: .infinity)
+        .padding(.top, 13)
+        .padding(.bottom, 7)
     }
     
     private var completedBlock: some View {
@@ -231,7 +233,7 @@ extension PracticePreviewView {
         .frame(maxWidth: .infinity)
     }
     
-    private func mistakeRow(_ question: Question) -> some View {
+    private func mistakeCard(_ question: Question) -> some View {
         VStack(alignment: .leading, spacing: 10) {
             mistakeRowHeader(question)
             questionText(question)
@@ -244,7 +246,13 @@ extension PracticePreviewView {
                     .fontDesign(.rounded)
                     .foregroundStyle(Color.citizen.mainText)
             }
+            
+            Spacer(minLength: 0)
         }
+        .padding(16)
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+        .background(Color.citizen.groupBackground)
+        .clipShape(RoundedRectangle(cornerRadius: 15))
     }
     
     private func mistakeRowHeader(_ question: Question) -> some View {

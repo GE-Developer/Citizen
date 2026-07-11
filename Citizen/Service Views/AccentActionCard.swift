@@ -57,6 +57,7 @@ extension AccentActionCard {
                     Text(subtitle)
                         .font(.subheadline)
                         .foregroundStyle(Color.citizen.secondaryText)
+                        .lineLimit(2)
                     if let detail {
                         Text(detail)
                             .font(.caption)

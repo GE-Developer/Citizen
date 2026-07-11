@@ -43,6 +43,22 @@ enum DeviceLayout {
         return cachedScreenWidth
     }
     
+    static var screenHeight: CGFloat {
+        if cachedScreenHeight > 0 {
+            return cachedScreenHeight
+        }
+        
+        guard let screen = UIApplication.shared.connectedScenes
+            .compactMap({ ($0 as? UIWindowScene)?.screen })
+            .first else {
+            return 0
+        }
+        
+        cachedScreenHeight = screen.bounds.height
+        return cachedScreenHeight
+    }
+    
     private static var cachedHasHomeIndicator = false
     private static var cachedScreenWidth: CGFloat = 0
+    private static var cachedScreenHeight: CGFloat = 0
 }

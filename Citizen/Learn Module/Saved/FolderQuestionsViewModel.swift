@@ -49,17 +49,25 @@ final class FolderQuestionsViewModel: ObservableObject {
     private let folderID: String
     private let savedStore = SavedQuestionsStore.shared
     private let haptics = HapticsManager.shared
+    private let repository = QuizRepository.shared
     
     init(folder: QuestionFolder) {
-        let savedIDs = SavedQuestionsStore.shared.questionIDs(inFolder: folder.id)
-        let questions = QuizRepository.shared.catalog.categories
+        title = folder.name
+        folderID = folder.id
+        refresh()
+    }
+    
+    func refresh() {
+        let savedIDs = savedStore.questionIDs(inFolder: folderID)
+        rows = repository.catalog.categories
             .flatMap(\.topics)
             .flatMap(\.questions)
             .filter { savedIDs.contains($0.id) }
+            .map { repository.occurrenceRow(for: $0) }
         
-        title = folder.name
-        folderID = folder.id
-        rows = questions.map { QuizRepository.shared.occurrenceRow(for: $0) }
+        if !availableFilters.contains(selectedFilter) {
+            selectedFilter = .all
+        }
     }
     
     func select(_ row: OccurrenceRow) {

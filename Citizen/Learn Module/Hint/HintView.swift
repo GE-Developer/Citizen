@@ -19,6 +19,12 @@ struct HintView: View {
             .sheet(item: $vm.selectedWord) { _ in
                 WordDetailSheet(vm: vm)
             }
+            .sheet(isPresented: $vm.showSaveSheet) {
+                SaveQuestionSheet(
+                    question: vm.question,
+                    onChange: { vm.refreshSavedState() }
+                )
+            }
     }
 }
 
@@ -26,7 +32,10 @@ struct HintView: View {
 extension HintView {
     private var hintView: some View {
         CustomScrollView(title: vm.title, subTitle: vm.subTitle) {
-            EmptyView()
+            NavigationToolButton(
+                vm.isQuestionSaved ? .system.bookmark : .system.bookmarkOutline,
+                action: { vm.bookmarkButtonPressed() }
+            )
         } content: { _ in
             VStack(alignment: .leading, spacing: 24) {
                 questionSection

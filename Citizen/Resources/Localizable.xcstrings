@@ -4155,6 +4155,29 @@
         }
       }
     },
+    "Settings.Tests.ShuffleQuestions.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shuffle Questions"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "კითხვების არევა"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Перемешивать вопросы"
+          }
+        }
+      }
+    },
     "Settings.Tests.title" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -4657,6 +4680,29 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Не встречается ни в одном вопросе"
+          }
+        }
+      }
+    },
+    "WordOccurrences.practiceSubtitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "All questions with this word"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ყველა კითხვა ამ სიტყვით"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Все вопросы с этим словом"
           }
         }
       }

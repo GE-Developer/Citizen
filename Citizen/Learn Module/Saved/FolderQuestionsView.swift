@@ -37,6 +37,12 @@ struct FolderQuestionsView: View {
             .fullScreenCover(isPresented: $showPayWall) {
                 NavigationLazyView(PayWallView(store))
             }
+            .onAppear {
+                vm.refresh()
+                if vm.rows.isEmpty {
+                    dismiss()
+                }
+            }
     }
 }
 

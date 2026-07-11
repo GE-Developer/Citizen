@@ -18,6 +18,8 @@ extension View {
     
     var screenWidth: CGFloat { DeviceLayout.screenWidth }
     
+    var screenHeight: CGFloat { DeviceLayout.screenHeight }
+    
     func premiumOption(
         _ showPayWall: Binding<Bool>,
         swipable: Bool = false,

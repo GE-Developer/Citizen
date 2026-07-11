@@ -59,6 +59,8 @@ extension SettingsView {
                     voiceActingToggle
                     Divider().padding(.leading, 50)
                     shuffleAnswersToggle
+                    Divider().padding(.leading, 50)
+                    shuffleQuestionsToggle
                 }
                 
                 CustomForm(headerText: vm.accessTitle) {
@@ -135,6 +137,14 @@ extension SettingsView {
             isOn: $vm.isShuffleAnswersOn,
             icon: .system.shuffle,
             title: vm.shuffleAnswersToggleTitle
+        )
+    }
+    
+    private var shuffleQuestionsToggle: some View {
+        CustomToggleRow(
+            isOn: $vm.isShuffleQuestionsOn,
+            icon: .system.dice,
+            title: vm.shuffleQuestionsToggleTitle
         )
     }
     

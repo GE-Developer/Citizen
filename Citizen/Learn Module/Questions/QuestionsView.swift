@@ -22,8 +22,12 @@ struct QuestionsView: View {
                 NavigationLazyView(HintView(question: vm.currentQuestion))
             }
             .sheet(isPresented: $vm.showSaveSheet) {
-                SaveQuestionSheet(vm: vm)
+                SaveQuestionSheet(
+                    question: vm.currentQuestion,
+                    onChange: { vm.refreshSavedState() }
+                )
             }
+            .onAppear { vm.refreshSavedState() }
     }
 }
 
@@ -58,10 +62,7 @@ extension QuestionsView {
         Group {
             if vm.showPreview {
                 TopicPreviewView(vm: vm, dismiss: { dismiss() })
-                    .transition(
-                        .move(edge: .bottom)
-                        .combined(with: .opacity)
-                    )
+                    .transition(.offset(y: screenHeight))
             }
         }
         .animation(.smooth, value: vm.showPreview)

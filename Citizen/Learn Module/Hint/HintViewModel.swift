@@ -12,7 +12,11 @@ import Foundation
 final class HintViewModel {
     var selectedWord: WordEntry?
     var showCorrectAnswer = false
+    var showSaveSheet = false
     
+    private(set) var isQuestionSaved = false
+    
+    let question: Question
     let subTitle: String
     let questionSegments: [RichTextSegment]
     let questionTranslation: String?
@@ -31,9 +35,11 @@ final class HintViewModel {
     
     private let dictionary = WordsDictionary.shared
     private let store = SavedWordsStore.shared
+    private let savedQuestions = SavedQuestionsStore.shared
     private let haptic = HapticsManager.shared
     
     init(question: Question) {
+        self.question = question
         self.subTitle = question.number
         self.questionSegments = question.question.asRichSegments
         
@@ -61,6 +67,17 @@ final class HintViewModel {
                 isCorrect: answer.isCorrect
             )
         }
+        
+        refreshSavedState()
+    }
+    
+    func bookmarkButtonPressed() {
+        haptic.impact()
+        showSaveSheet = true
+    }
+    
+    func refreshSavedState() {
+        isQuestionSaved = savedQuestions.contains(question.id)
     }
     
     func selectWord(_ token: String) {

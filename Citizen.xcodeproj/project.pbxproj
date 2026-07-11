@@ -237,6 +237,8 @@
 		AB10000100000011 /* QuizCTAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB10000200000011 /* QuizCTAButton.swift */; };
 		AB10000100000012 /* BottomBarBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB10000200000012 /* BottomBarBackground.swift */; };
 		AB10000100000013 /* QuestionProgressHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB10000200000013 /* QuestionProgressHeader.swift */; };
+		AB10000100000014 /* SaveQuestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB10000200000014 /* SaveQuestionViewModel.swift */; };
+		AB10000100000015 /* ShuffleQuestionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB10000200000015 /* ShuffleQuestionsManager.swift */; };
 		AB1100012EC60316002D12D1 /* ShuffleAnswersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1100022EC60316002D12D1 /* ShuffleAnswersManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -474,6 +476,8 @@
 		AB10000200000011 /* QuizCTAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCTAButton.swift; sourceTree = "<group>"; };
 		AB10000200000012 /* BottomBarBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBarBackground.swift; sourceTree = "<group>"; };
 		AB10000200000013 /* QuestionProgressHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionProgressHeader.swift; sourceTree = "<group>"; };
+		AB10000200000014 /* SaveQuestionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveQuestionViewModel.swift; sourceTree = "<group>"; };
+		AB10000200000015 /* ShuffleQuestionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShuffleQuestionsManager.swift; sourceTree = "<group>"; };
 		AB1100022EC60316002D12D1 /* ShuffleAnswersManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShuffleAnswersManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -683,6 +687,7 @@
 				1F7369182EC60316002D12D1 /* HapticsManager.swift */,
 				1F73691A2EC60316002D12D1 /* SoundManager.swift */,
 				AB1100022EC60316002D12D1 /* ShuffleAnswersManager.swift */,
+				AB10000200000015 /* ShuffleQuestionsManager.swift */,
 				AAEE00022EC60316002D12D1 /* VoiceActingManager.swift */,
 				1F496C342FC1C26C00E0D7F5 /* AccentColorManager.swift */,
 				1F496C352FC1C26C00E0D7F5 /* AppIconManager.swift */,
@@ -735,6 +740,7 @@
 				1F7368C52EC5FFCD002D12D1 /* QuestionsView.swift */,
 				1F36F5F52ED4AABC0035E21F /* QuestionsViewModel.swift */,
 				AB08000200000003 /* SaveQuestionSheet.swift */,
+				AB10000200000014 /* SaveQuestionViewModel.swift */,
 			);
 			path = Questions;
 			sourceTree = "<group>";
@@ -1203,6 +1209,7 @@
 				1F7369302EC60316002D12D1 /* StoreManager.swift in Sources */,
 				1F7369312EC60316002D12D1 /* SoundManager.swift in Sources */,
 				AB1100012EC60316002D12D1 /* ShuffleAnswersManager.swift in Sources */,
+				AB10000100000015 /* ShuffleQuestionsManager.swift in Sources */,
 				AAEE00012EC60316002D12D1 /* VoiceActingManager.swift in Sources */,
 				1F496C1F2FC1BE0700E0D7F5 /* ExitButton.swift in Sources */,
 				1F496C202FC1BE0700E0D7F5 /* CustomButtonRow.swift in Sources */,
@@ -1306,6 +1313,7 @@
 				AB10000100000011 /* QuizCTAButton.swift in Sources */,
 				AB10000100000012 /* BottomBarBackground.swift in Sources */,
 				AB10000100000013 /* QuestionProgressHeader.swift in Sources */,
+				AB10000100000014 /* SaveQuestionViewModel.swift in Sources */,
 				1F496C372FC1C26C00E0D7F5 /* AccentColorManager.swift in Sources */,
 				1F496C382FC1C26C00E0D7F5 /* AppIconManager.swift in Sources */,
 				1F496C392FC1C26C00E0D7F5 /* ScreenshotManager.swift in Sources */,

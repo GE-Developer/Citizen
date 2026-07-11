@@ -8,9 +8,15 @@
 import SwiftUI
 
 struct SaveQuestionSheet: View {
-    @ObservedObject var vm: QuestionsViewModel
+    @StateObject private var vm: SaveQuestionViewModel
     
     @FocusState private var isNameFieldFocused: Bool
+    
+    init(question: Question, onChange: @escaping () -> Void) {
+        _vm = StateObject(
+            wrappedValue: SaveQuestionViewModel(question: question, onChange: onChange)
+        )
+    }
     
     var body: some View {
         sheetBody
@@ -24,7 +30,7 @@ extension SaveQuestionSheet {
     private var sheetBody: some View {
         VStack(alignment: .leading, spacing: 12) {
             HStack(alignment: .bottom) {
-                Text(vm.saveSheetTitle)
+                Text(vm.title)
                     .font(.title)
                     .fontWeight(.bold)
                     .fontDesign(.rounded)
@@ -36,7 +42,7 @@ extension SaveQuestionSheet {
                 ExitButton()
             }
             
-            Text(vm.saveSheetSubtitle)
+            Text(vm.subtitle)
                 .font(.callout)
                 .fontDesign(.rounded)
                 .foregroundStyle(Color.citizen.secondaryText)

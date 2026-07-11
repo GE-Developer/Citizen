@@ -22,6 +22,14 @@ struct WordOccurrencesView: View {
             .navigationDestination(item: $vm.selectedQuestion) { question in
                 NavigationLazyView(HintView(question: question))
             }
+            .navigationDestination(isPresented: $vm.showPractice) {
+                NavigationLazyView(
+                    PracticeView(
+                        questions: vm.practiceQuestions,
+                        title: vm.practiceHeaderTitle
+                    )
+                )
+            }
             .fullScreenCover(isPresented: $showPayWall) {
                 NavigationLazyView(PayWallView(store))
             }
@@ -44,6 +52,16 @@ extension WordOccurrencesView {
             emptyState
         } else {
             LazyVStack(spacing: 16) {
+                AccentActionCard(
+                    icon: Image.system.practice,
+                    title: vm.practiceTitle,
+                    subtitle: vm.practiceSubtitle,
+                    detail: vm.practiceFilterDetail,
+                    action: { vm.practicePressed(isPremium: store.isPremium) }
+                )
+                .disabled(!vm.canPractice(isPremium: store.isPremium))
+                .opacity(vm.canPractice(isPremium: store.isPremium) ? 1 : 0.6)
+                
                 VStack(alignment: .leading) {
                     Text(vm.headerTitle)
                         .font(.largeTitle)

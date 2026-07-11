@@ -12,6 +12,7 @@ enum AppStorageKey {
     case sound
     case voiceActing
     case shuffleAnswers
+    case shuffleQuestions
     case accentColor
     case devTest
     case screenshotProtection
@@ -25,6 +26,7 @@ enum AppStorageKey {
         case .sound: return "isSoundOn"
         case .voiceActing: return "isVoiceActingOn"
         case .shuffleAnswers: return "isShuffleAnswersOn"
+        case .shuffleQuestions: return "isShuffleQuestionsOn"
         case .accentColor: return "accentColor"
         case .devTest: return "devTest"
         case .screenshotProtection: return "screenshotProtection"

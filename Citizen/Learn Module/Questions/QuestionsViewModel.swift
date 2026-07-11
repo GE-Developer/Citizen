@@ -13,12 +13,9 @@ final class QuestionsViewModel: ObservableObject {
     @Published var showHint = false
     @Published var showRestartAlert = false
     @Published var showSaveSheet = false
-    @Published var newFolderName = ""
     
     @Published private(set) var currentQuestion: Question
     @Published private(set) var isCurrentQuestionSaved = false
-    @Published private(set) var folders: [QuestionFolder] = []
-    @Published private(set) var savedFolderIDs: Set<String> = []
     @Published private(set) var questionStep: Int = 0
     @Published private(set) var correctCount: Int
     @Published private(set) var showSubView = false
@@ -33,10 +30,6 @@ final class QuestionsViewModel: ObservableObject {
     
     var progress: Double {
         Double(correctCount) / Double(questionsCount)
-    }
-    
-    var canCreateFolder: Bool {
-        !newFolderName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
     }
     
     var subtitle: String {
@@ -130,11 +123,6 @@ final class QuestionsViewModel: ObservableObject {
     let checkAnswerTitle = L10n("Questions.Button.checkAnswer")
     let continueButtonTitle = L10n("Questions.Button.continue")
     let testTitle = L10n("Questions.title")
-    let saveSheetTitle = L10n("Questions.SaveSheet.title")
-    let saveSheetSubtitle = L10n("Questions.SaveSheet.subtitle")
-    let foldersHeader = L10n("Questions.SaveSheet.foldersHeader")
-    let emptyFoldersText = L10n("Questions.SaveSheet.emptyFolders")
-    let newFolderTitle = L10n("Questions.SaveSheet.newFolder")
     
     private let topicID: String
     private let questionsCount: Int
@@ -179,7 +167,8 @@ final class QuestionsViewModel: ObservableObject {
             self.showPreview = true
             self.pendingQuestions = wrongs
             self.currentQuestion = wrongs[0]
-            if stats.currentRoundSize > 0 {
+            
+            if stats.currentRoundSize > 0, stats.visitedInRound < stats.currentRoundSize {
                 self.roundSize = stats.currentRoundSize
                 self.visitedInRound = stats.visitedInRound
             } else {
@@ -231,33 +220,11 @@ final class QuestionsViewModel: ObservableObject {
     
     func bookmarkButtonPressed() {
         haptic.impact()
-        newFolderName = ""
-        refreshFolders()
         showSaveSheet = true
     }
     
-    func toggleFolder(_ folder: QuestionFolder) {
-        savedStore.toggle(questionID: currentQuestion.id, folderID: folder.id)
-        haptic.selectionChanged()
-        refreshFolders()
-    }
-    
-    func isSaved(in folder: QuestionFolder) -> Bool {
-        savedFolderIDs.contains(folder.id)
-    }
-    
-    func folderCountText(_ folder: QuestionFolder) -> String {
-        L10n("Questions.SaveSheet.folderCount \(folder.count)")
-    }
-    
-    func createFolderAndSave() {
-        let name = newFolderName.trimmingCharacters(in: .whitespacesAndNewlines)
-        guard !name.isEmpty else { return }
-        let folder = savedStore.createFolder(named: name)
-        savedStore.toggle(questionID: currentQuestion.id, folderID: folder.id)
-        haptic.notification(type: .success)
-        newFolderName = ""
-        refreshFolders()
+    func refreshSavedState() {
+        isCurrentQuestionSaved = savedStore.contains(currentQuestion.id)
     }
     
     func continueTest() {
@@ -327,6 +294,11 @@ final class QuestionsViewModel: ObservableObject {
         guard let chosen = chosenAnswer else { return }
         
         repository.recordAnswer(questionID: currentQuestion.id, isCorrect: chosen.isCorrect)
+        statsStorage.setRoundProgress(
+            topicID: topicID,
+            roundSize: roundSize,
+            visited: visitedInRound + 1
+        )
         
         if phase == .notStarted || phase == .inProgress {
             if chosen.isCorrect {
@@ -417,15 +389,5 @@ final class QuestionsViewModel: ObservableObject {
         ? currentQuestion.answers.shuffled()
         : currentQuestion.answers
         refreshSavedState()
-    }
-    
-    private func refreshSavedState() {
-        isCurrentQuestionSaved = savedStore.contains(currentQuestion.id)
-    }
-    
-    private func refreshFolders() {
-        folders = savedStore.folders()
-        savedFolderIDs = savedStore.folderIDs(for: currentQuestion.id)
-        isCurrentQuestionSaved = !savedFolderIDs.isEmpty
     }
 }
