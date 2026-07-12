@@ -64,7 +64,6 @@ final class AnswerStorage {
     // MARK: - GlobalMistakeEntity
     func addToGlobalPool(questionID: String) {
         let request: NSFetchRequest<GlobalMistakeEntity> = GlobalMistakeEntity.fetchRequest()
-        
         request.predicate = NSPredicate(format: "questionID == %@", questionID)
         request.fetchLimit = 1
         do {
@@ -97,7 +96,6 @@ final class AnswerStorage {
     // MARK: - GlobalCorrectEntity
     func addToGlobalCorrectPool(questionID: String) {
         let request: NSFetchRequest<GlobalCorrectEntity> = GlobalCorrectEntity.fetchRequest()
-        
         request.predicate = NSPredicate(format: "questionID == %@", questionID)
         request.fetchLimit = 1
         do {

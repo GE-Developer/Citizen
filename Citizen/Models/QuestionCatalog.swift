@@ -48,6 +48,17 @@ struct QuestionCatalog: Decodable, Hashable {
     var mistakePoolCount: Int {
         mistakePoolQuestions.count
     }
+    
+    var correctPoolQuestions: [Question] {
+        categories
+            .flatMap(\.topics)
+            .flatMap(\.questions)
+            .filter { $0.status == .correct && !$0.isInMistakePool }
+    }
+    
+    var correctPoolCount: Int {
+        correctPoolQuestions.count
+    }
 }
 
 // MARK: - Category

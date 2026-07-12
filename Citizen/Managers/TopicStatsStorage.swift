@@ -19,7 +19,7 @@ final class TopicStatsStorage {
     
     // MARK: - Public API
     func fetch(topicID: String) -> TopicStats {
-        let entity = fetchEntity(topicID: topicID)
+        let entity = Self.fetchEntity(topicID: topicID, in: context)
         return TopicStats(
             attempts: Int(entity?.attempts ?? 0),
             bestStreak: Int(entity?.bestStreak ?? 0),
@@ -30,36 +30,29 @@ final class TopicStatsStorage {
     }
     
     func setRoundProgress(topicID: String, roundSize: Int, visited: Int) {
-        let entity = upsert(topicID: topicID)
+        let entity = Self.upsert(topicID: topicID, in: context)
         entity.currentRoundSize = Int16(roundSize)
         entity.visitedInRound = Int16(visited)
         stack.saveContext()
     }
     
-    @discardableResult
-    func incrementAttempts(topicID: String) -> Int {
-        let entity = upsert(topicID: topicID)
-        entity.attempts += 1
+    func setAttempts(topicID: String, value: Int) {
+        Self.upsert(topicID: topicID, in: context).attempts = Int16(value)
         stack.saveContext()
-        return Int(entity.attempts)
     }
     
     func setBestStreak(topicID: String, value: Int) {
-        let entity = upsert(topicID: topicID)
-        entity.bestStreak = Int16(value)
+        Self.upsert(topicID: topicID, in: context).bestStreak = Int16(value)
         stack.saveContext()
     }
     
-    @discardableResult
-    func incrementSuccessfulCompletions(topicID: String) -> Int {
-        let entity = upsert(topicID: topicID)
-        entity.successfulCompletions += 1
+    func setSuccessfulCompletions(topicID: String, value: Int) {
+        Self.upsert(topicID: topicID, in: context).successfulCompletions = Int16(value)
         stack.saveContext()
-        return Int(entity.successfulCompletions)
     }
     
     func resetAttemptStats(topicID: String) {
-        let entity = upsert(topicID: topicID)
+        let entity = Self.upsert(topicID: topicID, in: context)
         entity.attempts = 0
         entity.bestStreak = 0
         entity.currentRoundSize = 0
@@ -68,7 +61,10 @@ final class TopicStatsStorage {
     }
     
     // MARK: - Private helpers
-    private func fetchEntity(topicID: String) -> TopicStatsEntity? {
+    private nonisolated static func fetchEntity(
+        topicID: String,
+        in context: NSManagedObjectContext
+    ) -> TopicStatsEntity? {
         let request: NSFetchRequest<TopicStatsEntity> = TopicStatsEntity.fetchRequest()
         request.predicate = NSPredicate(format: "topicID == %@", topicID)
         request.fetchLimit = 1
@@ -80,8 +76,11 @@ final class TopicStatsStorage {
         }
     }
     
-    private func upsert(topicID: String) -> TopicStatsEntity {
-        if let existing = fetchEntity(topicID: topicID) { return existing }
+    private nonisolated static func upsert(
+        topicID: String,
+        in context: NSManagedObjectContext
+    ) -> TopicStatsEntity {
+        if let existing = fetchEntity(topicID: topicID, in: context) { return existing }
         let entity = TopicStatsEntity(context: context)
         entity.topicID = topicID
         entity.attempts = 0

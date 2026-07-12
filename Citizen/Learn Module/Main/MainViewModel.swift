@@ -9,6 +9,7 @@ import Foundation
 
 enum MainDestination: Hashable {
     case mistakes
+    case refresh
     case saved
     case search
 }
@@ -75,7 +76,7 @@ final class MainViewModel: ObservableObject {
     }
     
     var refreshPreview: String {
-        "\(0)"
+        "\(catalog.correctPoolCount)"
     }
     
     var mistakesTitle: String {
@@ -129,6 +130,7 @@ final class MainViewModel: ObservableObject {
     
     func refreshButtonPressed() {
         haptics.impact()
+        destination = .refresh
     }
     
     func mistakesButtonPressed() {

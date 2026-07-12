@@ -22,6 +22,7 @@ struct MainView: View {
             .navigationDestination(item: $vm.destination) { destination in
                 switch destination {
                 case .mistakes: NavigationLazyView(MistakesView())
+                case .refresh: NavigationLazyView(RefreshView())
                 case .saved: NavigationLazyView(SavedView())
                 case .search: NavigationLazyView(SearchView())
                 }

@@ -370,11 +370,11 @@ final class QuestionsViewModel: ObservableObject {
     }
     
     private func finishRound(completed: Bool) {
-        attempts = statsStorage.incrementAttempts(topicID: topicID)
+        attempts += 1
+        statsStorage.setAttempts(topicID: topicID, value: attempts)
         if completed {
-            successfulCompletions = statsStorage.incrementSuccessfulCompletions(
-                topicID: topicID
-            )
+            successfulCompletions += 1
+            statsStorage.setSuccessfulCompletions(topicID: topicID, value: successfulCompletions)
         }
     }
     
