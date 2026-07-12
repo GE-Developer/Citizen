@@ -8,6 +8,7 @@
 import Foundation
 
 enum MainDestination: Hashable {
+    case exam
     case mistakes
     case refresh
     case saved
@@ -64,7 +65,7 @@ final class MainViewModel: ObservableObject {
     }
     
     var examPreview: String {
-        L10n("\(60) Main.Exam.preview")
+        L10n("\(ExamConfig.fullDurationMin) Main.Exam.preview")
     }
     
     var refreshTitle: String {
@@ -126,6 +127,7 @@ final class MainViewModel: ObservableObject {
     
     func examButtonPressed() {
         haptics.impact()
+        destination = .exam
     }
     
     func refreshButtonPressed() {

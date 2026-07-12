@@ -1087,6 +1087,29 @@
         }
       }
     },
+    "Exam.FullExam.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Full exam"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "სრული გამოცდა"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Полный экзамен"
+          }
+        }
+      }
+    },
     "FeedbackPhrase.Correct.1" : {
       "extractionState" : "manual",
       "localizations" : {

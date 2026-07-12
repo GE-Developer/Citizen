@@ -246,6 +246,9 @@
 		AB10000100000019 /* MistakesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB10000200000019 /* MistakesViewModel.swift */; };
 		AB10000100000020 /* RefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB10000200000020 /* RefreshView.swift */; };
 		AB10000100000021 /* RefreshViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB10000200000021 /* RefreshViewModel.swift */; };
+		AB10000100000022 /* ExamConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB10000200000022 /* ExamConfig.swift */; };
+		AB10000100000023 /* ExamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB10000200000023 /* ExamView.swift */; };
+		AB10000100000024 /* ExamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB10000200000024 /* ExamViewModel.swift */; };
 		AB1100012EC60316002D12D1 /* ShuffleAnswersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1100022EC60316002D12D1 /* ShuffleAnswersManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -492,6 +495,9 @@
 		AB10000200000019 /* MistakesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MistakesViewModel.swift; sourceTree = "<group>"; };
 		AB10000200000020 /* RefreshView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshView.swift; sourceTree = "<group>"; };
 		AB10000200000021 /* RefreshViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshViewModel.swift; sourceTree = "<group>"; };
+		AB10000200000022 /* ExamConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamConfig.swift; sourceTree = "<group>"; };
+		AB10000200000023 /* ExamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamView.swift; sourceTree = "<group>"; };
+		AB10000200000024 /* ExamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamViewModel.swift; sourceTree = "<group>"; };
 		AB1100022EC60316002D12D1 /* ShuffleAnswersManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShuffleAnswersManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -974,6 +980,7 @@
 				AB10000300000003 /* Search */,
 				AB10000300000004 /* Mistakes */,
 				AB10000300000005 /* Refresh */,
+				AB10000300000006 /* Exam */,
 			);
 			path = "Learn Module";
 			sourceTree = "<group>";
@@ -1081,6 +1088,16 @@
 				AB10000200000021 /* RefreshViewModel.swift */,
 			);
 			path = Refresh;
+			sourceTree = "<group>";
+		};
+		AB10000300000006 /* Exam */ = {
+			isa = PBXGroup;
+			children = (
+				AB10000200000022 /* ExamConfig.swift */,
+				AB10000200000023 /* ExamView.swift */,
+				AB10000200000024 /* ExamViewModel.swift */,
+			);
+			path = Exam;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1268,6 +1285,9 @@
 				AB10000100000019 /* MistakesViewModel.swift in Sources */,
 				AB10000100000020 /* RefreshView.swift in Sources */,
 				AB10000100000021 /* RefreshViewModel.swift in Sources */,
+				AB10000100000022 /* ExamConfig.swift in Sources */,
+				AB10000100000023 /* ExamView.swift in Sources */,
+				AB10000100000024 /* ExamViewModel.swift in Sources */,
 				AAEE00012EC60316002D12D1 /* VoiceActingManager.swift in Sources */,
 				1F496C1F2FC1BE0700E0D7F5 /* ExitButton.swift in Sources */,
 				1F496C202FC1BE0700E0D7F5 /* CustomButtonRow.swift in Sources */,
