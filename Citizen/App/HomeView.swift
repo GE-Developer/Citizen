@@ -15,7 +15,9 @@ struct HomeView: View {
     
     private var layoutDirection: LayoutDirection {
         let rtlLanguages = Language.rtlLanguages
-        return rtlLanguages.contains(languageManager.currentLanguageID) ? .rightToLeft : .leftToRight
+        return rtlLanguages.contains(languageManager.currentLanguageID)
+        ? .rightToLeft
+        : .leftToRight
     }
     
     private let accent = AccentColorManager.shared
@@ -28,7 +30,7 @@ struct HomeView: View {
             }
             .ignoresSafeArea(.keyboard, edges: .bottom)
             .task { setAccentColorIfPremiumExpired() }
-        //            .task { await setIconIfPremiumExpired() }
+            .task { await setIconIfPremiumExpired() }
         //            .task { setCaptureProtectionIfPremiumExpired() }
             .environment(\.layoutDirection, layoutDirection)
             .preferredColorScheme(ThemeManager.shared.theme)
@@ -88,10 +90,10 @@ extension HomeView {
     
     private func setIconIfPremiumExpired() async {
         guard !store.isPremium else { return }
-        if AppIconManager.currentIcon() != .blackCitizen {
+        if AppIconManager.currentIcon() != .georgianBlack {
             do {
                 try await Task.sleep(for: .milliseconds(600))
-                try await AppIconManager.setIcon(.blackCitizen)
+                try await AppIconManager.setIcon(.georgianBlack)
             } catch {
                 return
             }

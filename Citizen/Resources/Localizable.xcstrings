@@ -266,12 +266,6 @@
               "formatSpecifier" : "lld",
               "variations" : {
                 "plural" : {
-                  "one" : {
-                    "stringUnit" : {
-                      "state" : "translated",
-                      "value" : "%lld вопрос для повторения"
-                    }
-                  },
                   "few" : {
                     "stringUnit" : {
                       "state" : "translated",
@@ -282,6 +276,12 @@
                     "stringUnit" : {
                       "state" : "translated",
                       "value" : "%lld вопросов для повторения"
+                    }
+                  },
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%lld вопрос для повторения"
                     }
                   },
                   "other" : {
@@ -4045,6 +4045,75 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Версия приложения"
+          }
+        }
+      }
+    },
+    "Settings.Customization.AppIcon.alternativeIconTitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alternative"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ალტერნატიული"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Альтернативы"
+          }
+        }
+      }
+    },
+    "Settings.Customization.AppIcon.defaultIconTitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Default"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ნაგულისხმევი"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "По умолчанию"
+          }
+        }
+      }
+    },
+    "Settings.Customization.AppIcon.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App Icon"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "აპლიკაციის ხატულა"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Иконка"
           }
         }
       }

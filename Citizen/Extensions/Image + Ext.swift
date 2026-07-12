@@ -53,6 +53,7 @@ struct SystemImage {
     let plus = Image(systemName: "plus")
     let paintpalette = Image(systemName: "paintpalette.fill")
     let code = Image(systemName: "chevron.left.slash.chevron.right")
+    let appIcon = Image(systemName: "app.fill")
     
     func key(_ isFilled: Bool = false) -> Image {
         Image(systemName: isFilled ? "key.fill" : "key")

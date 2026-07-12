@@ -49,6 +49,8 @@
 		1F496C4C2FC4B89600E0D7F5 /* Dev_Mode.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F496C472FC4B89600E0D7F5 /* Dev_Mode.mp3 */; };
 		1F54C2C92FE997D600D907D1 /* words.ru.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F54C2C82FE997D600D907D1 /* words.ru.json */; };
 		1F54C2CB2FE9DF6D00D907D1 /* words.ka.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F54C2CA2FE9DF6D00D907D1 /* words.ka.json */; };
+		1F6F25913003E25D003492DA /* AppIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6F258E3003E25D003492DA /* AppIconView.swift */; };
+		1F6F25923003E25D003492DA /* AppIconViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6F258F3003E25D003492DA /* AppIconViewModel.swift */; };
 		1F7368C92EC60193002D12D1 /* QuestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7368C52EC5FFCD002D12D1 /* QuestionsView.swift */; };
 		1F7368CA2EC60197002D12D1 /* CitizenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7368C42EC5FFCD002D12D1 /* CitizenApp.swift */; };
 		1F7368EF2EC6023F002D12D1 /* CustomScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7368D42EC6023F002D12D1 /* CustomScrollView.swift */; };
@@ -78,7 +80,6 @@
 		1F7369502EC6077A002D12D1 /* Property List.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F73692B2EC60316002D12D1 /* Property List.plist */; };
 		1F7369522EC607B9002D12D1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F7369262EC60316002D12D1 /* Images.xcassets */; };
 		1F7369532EC607BD002D12D1 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F7369252EC60316002D12D1 /* Colors.xcassets */; };
-		1F7369542EC607C2002D12D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F7369242EC60316002D12D1 /* Assets.xcassets */; };
 		1F797C512FCB01AC00F33C97 /* words.en.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F797C502FCB01AC00F33C97 /* words.en.json */; };
 		1F7A35492FE55777005041DD /* questions.en.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F7A35482FE55777005041DD /* questions.en.json */; };
 		1F91F0262ED8ED9700F26DDD /* AnswerContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1F91F0242ED8ED9700F26DDD /* AnswerContainer.xcdatamodeld */; };
@@ -289,6 +290,8 @@
 		1F496C482FC4B89600E0D7F5 /* Error_Alert.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Error_Alert.mp3; sourceTree = "<group>"; };
 		1F54C2C82FE997D600D907D1 /* words.ru.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = words.ru.json; sourceTree = "<group>"; };
 		1F54C2CA2FE9DF6D00D907D1 /* words.ka.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = words.ka.json; sourceTree = "<group>"; };
+		1F6F258E3003E25D003492DA /* AppIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconView.swift; sourceTree = "<group>"; };
+		1F6F258F3003E25D003492DA /* AppIconViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconViewModel.swift; sourceTree = "<group>"; };
 		1F7368A92EC5FEA6002D12D1 /* Citizen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Citizen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F7368C12EC5FFCD002D12D1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1F7368C42EC5FFCD002D12D1 /* CitizenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitizenApp.swift; sourceTree = "<group>"; };
@@ -317,7 +320,6 @@
 		1F73691B2EC60316002D12D1 /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
 		1F73691C2EC60316002D12D1 /* TabBarState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarState.swift; sourceTree = "<group>"; };
 		1F73691D2EC60316002D12D1 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
-		1F7369242EC60316002D12D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F7369252EC60316002D12D1 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		1F7369262EC60316002D12D1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1F7369272EC60316002D12D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -538,6 +540,15 @@
 			path = Sounds;
 			sourceTree = "<group>";
 		};
+		1F6F25903003E25D003492DA /* AppIcon */ = {
+			isa = PBXGroup;
+			children = (
+				1F6F258E3003E25D003492DA /* AppIconView.swift */,
+				1F6F258F3003E25D003492DA /* AppIconViewModel.swift */,
+			);
+			path = AppIcon;
+			sourceTree = "<group>";
+		};
 		1F7368A02EC5FEA6002D12D1 = {
 			isa = PBXGroup;
 			children = (
@@ -721,7 +732,6 @@
 			children = (
 				1FE85B832FFB13BF008C90D4 /* From Supabase in Future */,
 				1F36F5EC2ECF61F90035E21F /* Localizable.xcstrings */,
-				1F7369242EC60316002D12D1 /* Assets.xcassets */,
 				1F7369252EC60316002D12D1 /* Colors.xcassets */,
 				1F7369262EC60316002D12D1 /* Images.xcassets */,
 				1F7369272EC60316002D12D1 /* Info.plist */,
@@ -943,6 +953,7 @@
 				1FEF1BB42ECBA40A0085BA76 /* Language */,
 				1FEF1BB82ECBA40A0085BA76 /* Pay Wall */,
 				1FEF1BBB2ECBA40A0085BA76 /* Settings */,
+				1F6F25903003E25D003492DA /* AppIcon */,
 			);
 			path = "Settings Module";
 			sourceTree = "<group>";
@@ -1132,7 +1143,6 @@
 				1F7369502EC6077A002D12D1 /* Property List.plist in Resources */,
 				1F7A35492FE55777005041DD /* questions.en.json in Resources */,
 				1FA3EE612FE5FA3C0042AED5 /* questions.ru.json in Resources */,
-				1F7369542EC607C2002D12D1 /* Assets.xcassets in Resources */,
 				1F496C4B2FC4B89600E0D7F5 /* Error_Alert.mp3 in Resources */,
 				1F496C4C2FC4B89600E0D7F5 /* Dev_Mode.mp3 in Resources */,
 				1F0E93472FB6312B0016D5B4 /* questions.ka.json in Resources */,
@@ -1370,6 +1380,8 @@
 				1FCAFE0000010000CAFE0001 /* QuestionCatalog.swift in Sources */,
 				1FCAFE0000060000CAFE0006 /* QuizRepository.swift in Sources */,
 				1F7368C92EC60193002D12D1 /* QuestionsView.swift in Sources */,
+				1F6F25913003E25D003492DA /* AppIconView.swift in Sources */,
+				1F6F25923003E25D003492DA /* AppIconViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1500,8 +1512,11 @@
 		1F7368B82EC5FEAA002D12D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "GeorgianWhite Gold Fresh";
+				ASSETCATALOG_COMPILER_APPICON_NAME = GeorgianBlack;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				ASSETCATALOG_COMPILER_STANDALONE_ICON_BEHAVIOR = none;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Citizen/Preview Content\"";
@@ -1536,8 +1551,11 @@
 		1F7368B92EC5FEAA002D12D1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "GeorgianWhite Gold Fresh";
+				ASSETCATALOG_COMPILER_APPICON_NAME = GeorgianBlack;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				ASSETCATALOG_COMPILER_STANDALONE_ICON_BEHAVIOR = none;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Citizen/Preview Content\"";

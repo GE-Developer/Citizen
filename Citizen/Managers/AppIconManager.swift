@@ -15,7 +15,7 @@ final class AppIconManager {
     
     static func currentIcon() -> AppIcon {
         let currentName = UIApplication.shared.alternateIconName
-        return AppIcon.allCases.first { $0.appIconID == currentName } ?? .blackCitizen
+        return AppIcon.allCases.first { $0.appIconID == currentName } ?? .georgianBlack
     }
     
     static func setIcon(_ icon: AppIcon) async throws {
@@ -24,6 +24,6 @@ final class AppIconManager {
     }
     
     static func reset() async throws {
-        try await setIcon(.blackCitizen)
+        try await setIcon(.georgianBlack)
     }
 }

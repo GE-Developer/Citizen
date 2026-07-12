@@ -97,6 +97,10 @@ final class SettingsViewModel: ObservableObject {
         L10n("Settings.Customization.title")
     }
     
+    var appIconTitle: String {
+        L10n("Settings.Customization.AppIcon.title")
+    }
+    
     var styleTitle: String {
         L10n("Settings.Customization.Style.title")
     }

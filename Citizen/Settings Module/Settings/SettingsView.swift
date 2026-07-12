@@ -16,6 +16,7 @@ struct SettingsView: View {
     @State private var showPayWall = false
     @State private var projectViewPresented = false
     @State private var showStyleView = false
+    @State private var showAppIconView = false
     
     init() {
         UIScrollView.appearance().delaysContentTouches = false
@@ -31,6 +32,9 @@ struct SettingsView: View {
             }
             .navigationDestination(isPresented: $showStyleView) {
                 NavigationLazyView(StyleView())
+            }
+            .navigationDestination(isPresented: $showAppIconView) {
+                NavigationLazyView(AppIconView())
             }
             .fullScreenCover(isPresented: $showPayWall) {
                 NavigationLazyView(PayWallView(store))
@@ -73,6 +77,8 @@ extension SettingsView {
                 
                 CustomForm(headerText: vm.customizationTitle) {
                     styleButton
+                    Divider().padding(.leading, 50)
+                    appIconButton
                 }
                 
                 CustomForm(headerText: vm.aboutAppTitle) {
@@ -172,6 +178,15 @@ extension SettingsView {
             title: vm.styleTitle,
             isLink: true,
             action: { showStyleView.toggle() }
+        )
+    }
+    
+    private var appIconButton: some View {
+        CustomButtonRow(
+            icon: .system.appIcon,
+            title: vm.appIconTitle,
+            isLink: true,
+            action: { showAppIconView.toggle() }
         )
     }
     

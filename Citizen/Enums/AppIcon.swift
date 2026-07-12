@@ -6,52 +6,42 @@
 //
 
 enum AppIcon: CaseIterable, Identifiable {
-    case blackCitizen
-    case ghostWhite
-    case cyberGold
-    case titanium
-    case neonPinky
-    case desertForge
+    case georgianBlack
+    case georgianWhite
+    case fresh
+    case gold
     
     var id: String {
-        appIconID ?? "BlackVoid"
+        appIconID ?? "GeorgianBlack"
     }
     
     var appIconID: String? {
         switch self {
-        case .blackCitizen:
+        case .georgianBlack:
             return nil
-        case .ghostWhite:
-            return "GhostWhite"
-        case .cyberGold:
-            return "CyberGold"
-        case .titanium:
-            return "Titanium"
-        case .neonPinky:
-            return "NeonPinky"
-        case .desertForge:
-            return "DesertForge"
+        case .georgianWhite:
+            return "GeorgianWhite"
+        case .fresh:
+            return "Fresh"
+        case .gold:
+            return "Gold"
         }
     }
     
     var title: String {
         switch self {
-        case .blackCitizen:
-            return "Black VOID"
-        case .ghostWhite:
-            return "Ghost White"
-        case .cyberGold:
-            return "Cyber Gold"
-        case .titanium:
-            return "Titanium"
-        case .neonPinky:
-            return "Neon Pinky"
-        case .desertForge:
-            return "Desert Forge"
+        case .georgianBlack:
+            return "Georgian Black"
+        case .georgianWhite:
+            return "Georgian White"
+        case .fresh:
+            return "Fresh"
+        case .gold:
+            return "Gold"
         }
     }
     
     static var premiumIcons: [AppIcon] {
-        allCases.filter { $0 != .blackCitizen }
+        allCases.filter { $0 != .georgianBlack }
     }
 }
