@@ -13,6 +13,7 @@ final class QuizRepository {
     private(set) var catalog: QuestionCatalog = QuestionCatalog(categories: [])
     
     private var translations: [String: Question] = [:]
+    private var questionIndex: [String: (Int, Int, Int)] = [:]
     
     static let shared = QuizRepository()
     
@@ -91,6 +92,14 @@ final class QuizRepository {
             if let (ci, ti, qi) = locate(questionID: questionID) {
                 catalog.categories[ci].topics[ti].questions[qi].isInMistakePool = true
             }
+        }
+    }
+    
+    func resolveMistake(questionID: String) {
+        storage.removeFromGlobalPool(questionID: questionID)
+        
+        if let (ci, ti, qi) = locate(questionID: questionID) {
+            catalog.categories[ci].topics[ti].questions[qi].isInMistakePool = false
         }
     }
     
@@ -193,6 +202,7 @@ final class QuizRepository {
         let pool = Set(storage.fetchGlobalWrongIDs())
         
         var hydrated = catalog
+        var index: [String: (Int, Int, Int)] = [:]
         
         for ci in hydrated.categories.indices {
             for ti in hydrated.categories[ci].topics.indices {
@@ -201,10 +211,12 @@ final class QuizRepository {
                     hydrated.categories[ci].topics[ti].questions[qi].status =
                     answered[qid].map { $0 ? .correct : .wrong } ?? .unanswered
                     hydrated.categories[ci].topics[ti].questions[qi].isInMistakePool = pool.contains(qid)
+                    index[qid] = (ci, ti, qi)
                 }
             }
         }
         
+        questionIndex = index
         return hydrated
     }
     
@@ -230,15 +242,6 @@ final class QuizRepository {
     }
     
     private func locate(questionID: String) -> (Int, Int, Int)? {
-        for ci in catalog.categories.indices {
-            for ti in catalog.categories[ci].topics.indices {
-                if let qi = catalog.categories[ci].topics[ti]
-                    .questions.firstIndex(where: { $0.id == questionID }) {
-                    return (ci, ti, qi)
-                }
-            }
-        }
-        
-        return nil
+        questionIndex[questionID]
     }
 }

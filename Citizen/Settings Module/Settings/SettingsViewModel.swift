@@ -77,6 +77,10 @@ final class SettingsViewModel: ObservableObject {
         L10n("Settings.Tests.ShuffleQuestions.title")
     }
     
+    var shuffleQuestionsToggleSubtitle: String {
+        L10n("Settings.Tests.ShuffleQuestions.subtitle")
+    }
+    
     var accessTitle: String {
         L10n("Settings.Access.title")
     }

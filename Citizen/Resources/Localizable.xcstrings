@@ -196,6 +196,107 @@
         }
       }
     },
+    "%lld Mistakes.Practice.subtitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%#@count@"
+          },
+          "substitutions" : {
+            "count" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%lld question to review"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%lld questions to review"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%#@count@"
+          },
+          "substitutions" : {
+            "count" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%lld კითხვა გასამეორებლად"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%lld კითხვა გასამეორებლად"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%#@count@"
+          },
+          "substitutions" : {
+            "count" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%lld вопрос для повторения"
+                    }
+                  },
+                  "few" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%lld вопроса для повторения"
+                    }
+                  },
+                  "many" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%lld вопросов для повторения"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%lld вопроса для повторения"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "%lld Saved.folderCountSuffix" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1847,6 +1948,52 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ошибки"
+          }
+        }
+      }
+    },
+    "Mistakes.Empty.message" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Answer questions in the topics — anything you get wrong shows up here to review."
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "უპასუხეთ კითხვებს თემებში — ყველაფერი, სადაც შეცდებით, აქ გამოჩნდება გასამეორებლად."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отвечайте на вопросы в темах — всё, где вы ошиблись, появится здесь для повторения."
+          }
+        }
+      }
+    },
+    "Mistakes.Empty.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No mistakes"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "შეცდომები არ არის"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ошибок нет"
           }
         }
       }
@@ -3517,19 +3664,19 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Practice questions"
+            "value" : "Practice"
           }
         },
         "ka" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "კითხვების გავლა"
+            "value" : "პრაქტიკა"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Пройти вопросы"
+            "value" : "Практика"
           }
         }
       }
@@ -3622,6 +3769,52 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Переименовать папку"
+          }
+        }
+      }
+    },
+    "Search.emptyMessage" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Type a word to find questions across the topics."
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "აკრიფეთ სიტყვა, რომ იპოვოთ კითხვები თემებში."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Введите слово, чтобы найти вопросы по темам."
+          }
+        }
+      }
+    },
+    "Search.emptyTitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search questions"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "კითხვების ძიება"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поиск вопросов"
           }
         }
       }
@@ -4151,6 +4344,29 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Перемешивать ответы"
+          }
+        }
+      }
+    },
+    "Settings.Tests.ShuffleQuestions.subtitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Practice only"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "მხოლოდ პრაქტიკაში"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Только в практике"
           }
         }
       }

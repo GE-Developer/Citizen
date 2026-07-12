@@ -104,6 +104,7 @@ final class QuestionsViewModel: ObservableObject {
     private var currentStreak: Int = 0
     private var roundSize: Int = 0
     private var visitedInRound: Int = 0
+    private var didFinalizeCompletion = false
     
     let topicTitle: String
     let restartTitle = L10n("Questions.Preview.Restart.title")
@@ -252,6 +253,7 @@ final class QuestionsViewModel: ObservableObject {
         currentStreak = 0
         sessionBestStreak = 0
         attempts = 0
+        didFinalizeCompletion = false
         
         roundSize = fresh.questions.count
         visitedInRound = 0
@@ -312,6 +314,10 @@ final class QuestionsViewModel: ObservableObject {
             }
         }
         
+        if chosen.isCorrect, pendingQuestions.count == 1 {
+            finalizeCompletion()
+        }
+        
         showSubView = true
         feedbackText = FeedbackPhrase.random(correct: chosen.isCorrect)
         haptic.notification(type: chosen.isCorrect ? .success : .error)
@@ -339,7 +345,7 @@ final class QuestionsViewModel: ObservableObject {
         if pendingQuestions.isEmpty || visitedInRound >= roundSize {
             if pendingQuestions.isEmpty {
                 phase = .completed
-                finishRound(completed: true)
+                finalizeCompletion()
                 showPreview = true
                 return
             }
@@ -370,6 +376,12 @@ final class QuestionsViewModel: ObservableObject {
                 topicID: topicID
             )
         }
+    }
+    
+    private func finalizeCompletion() {
+        guard !didFinalizeCompletion else { return }
+        didFinalizeCompletion = true
+        finishRound(completed: true)
     }
     
     private func startNewRound() {

@@ -12,6 +12,8 @@ struct TopicPreviewView: View {
     
     private let dismiss: () -> Void
     
+    private let reviewPlaceholderHeight: CGFloat = 216
+    
     init(vm: QuestionsViewModel, dismiss: @escaping () -> Void) {
         self.vm = vm
         self.dismiss = dismiss
@@ -165,6 +167,8 @@ extension TopicPreviewView {
                 completedBlock
                     .padding(.horizontal)
             } else {
+                Color.clear
+                    .frame(height: reviewPlaceholderHeight)
                 Spacer(minLength: 0)
             }
             

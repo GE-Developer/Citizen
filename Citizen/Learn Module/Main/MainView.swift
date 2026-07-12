@@ -19,8 +19,12 @@ struct MainView: View {
             .navigationDestination(item: $vm.chosenCategory) { category in
                 NavigationLazyView(TopicsView(category: category))
             }
-            .navigationDestination(isPresented: $vm.showSaved) {
-                NavigationLazyView(SavedView())
+            .navigationDestination(item: $vm.destination) { destination in
+                switch destination {
+                case .mistakes: NavigationLazyView(MistakesView())
+                case .saved: NavigationLazyView(SavedView())
+                case .search: NavigationLazyView(SearchView())
+                }
             }
             .fullScreenCover(isPresented: $showPayWall) {
                 NavigationLazyView(PayWallView(store))

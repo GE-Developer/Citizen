@@ -10,14 +10,14 @@ import SwiftUI
 struct AccentActionCard: View {
     private let icon: Image
     private let title: String
-    private let subtitle: String
+    private let subtitle: String?
     private let detail: String?
     private let action: () -> Void
     
     init(
         icon: Image,
         title: String,
-        subtitle: String,
+        subtitle: String? = nil,
         detail: String? = nil,
         action: @escaping () -> Void
     ) {
@@ -54,10 +54,12 @@ extension AccentActionCard {
                         .font(.headline)
                         .fontWeight(.bold)
                         .foregroundStyle(Color.citizen.mainText)
-                    Text(subtitle)
-                        .font(.subheadline)
-                        .foregroundStyle(Color.citizen.secondaryText)
-                        .lineLimit(2)
+                    if let subtitle {
+                        Text(subtitle)
+                            .font(.subheadline)
+                            .foregroundStyle(Color.citizen.secondaryText)
+                            .lineLimit(2)
+                    }
                     if let detail {
                         Text(detail)
                             .font(.caption)

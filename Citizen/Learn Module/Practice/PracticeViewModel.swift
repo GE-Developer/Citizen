@@ -86,6 +86,18 @@ final class PracticeViewModel: ObservableObject {
         : L10n("\(previewMistakes.count) TopicPhase.Action.workingOnMistakes")
     }
     
+    var showsRestartButton: Bool {
+        !isMistakeReview
+    }
+    
+    var showsRoundsStat: Bool {
+        !isMistakeReview
+    }
+    
+    var showsHintButton: Bool {
+        !isMistakeReview
+    }
+    
     var totalQuestionsText: String {
         "\(questionsCount)"
     }
@@ -114,7 +126,6 @@ final class PracticeViewModel: ObservableObject {
     let checkAnswerTitle = L10n("Questions.Button.checkAnswer")
     let continueButtonTitle = L10n("Questions.Button.continue")
     let restartTitle = L10n("Questions.Preview.Restart.title")
-    let restartSubtitle = L10n("Questions.Preview.Restart.subtitle")
     let restartAlertTitle = L10n("Questions.Preview.RestartAlert.title")
     let restartAlertMessage = L10n("Questions.Preview.RestartAlert.message")
     let restartAlertConfirmTitle = L10n("Questions.Preview.RestartAlert.confirm")
@@ -130,13 +141,14 @@ final class PracticeViewModel: ObservableObject {
     
     private let sourceQuestions: [Question]
     private let questionsCount: Int
+    private let isMistakeReview: Bool
     private let haptic = HapticsManager.shared
     private let shuffleManager = ShuffleAnswersManager.shared
     private let shuffleQuestionsManager = ShuffleQuestionsManager.shared
     private let repository = QuizRepository.shared
     private let savedStore = SavedQuestionsStore.shared
     
-    init(questions: [Question], title: String) {
+    init(questions: [Question], title: String, isMistakeReview: Bool = false) {
         let normalized = questions.map { question -> Question in
             var copy = question
             copy.status = .unanswered
@@ -150,6 +162,7 @@ final class PracticeViewModel: ObservableObject {
         headerTitle = title
         sourceQuestions = normalized
         questionsCount = normalized.count
+        self.isMistakeReview = isMistakeReview
         sessionQuestions = ordered
         pendingQuestions = ordered
         currentQuestion = ordered[0]
@@ -256,6 +269,12 @@ final class PracticeViewModel: ObservableObject {
         )
         setSessionStatus(chosen.isCorrect ? .correct : .wrong, forID: currentQuestion.id)
         
+        if isMistakeReview,
+           chosen.isCorrect,
+           !mistakeIDs.contains(currentQuestion.id) {
+            repository.resolveMistake(questionID: currentQuestion.id)
+        }
+        
         if !chosen.isCorrect,
            mistakeIDs.insert(currentQuestion.id).inserted,
            let source = sourceQuestions.first(where: { $0.id == currentQuestion.id }) {
@@ -275,7 +294,9 @@ final class PracticeViewModel: ObservableObject {
             pendingQuestions.removeFirst()
         } else {
             let question = pendingQuestions.removeFirst()
-            pendingQuestions.append(question)
+            if !isMistakeReview {
+                pendingQuestions.append(question)
+            }
         }
         
         visitedInRound += 1

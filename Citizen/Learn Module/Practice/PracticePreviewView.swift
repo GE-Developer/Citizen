@@ -12,6 +12,8 @@ struct PracticePreviewView: View {
     
     private let dismiss: () -> Void
     
+    private let reviewPlaceholderHeight: CGFloat = 216
+    
     init(vm: PracticeViewModel, dismiss: @escaping () -> Void) {
         self.vm = vm
         self.dismiss = dismiss
@@ -108,12 +110,14 @@ extension PracticePreviewView {
                 value: vm.mistakesCountText,
                 label: vm.mistakesLabel
             )
-            Divider()
-                .padding(.vertical, 2)
-            statCell(
-                value: vm.roundsCompletedText,
-                label: vm.roundsLabel
-            )
+            if vm.showsRoundsStat {
+                Divider()
+                    .padding(.vertical, 2)
+                statCell(
+                    value: vm.roundsCompletedText,
+                    label: vm.roundsLabel
+                )
+            }
         }
         .fixedSize(horizontal: false, vertical: true)
     }
@@ -127,6 +131,8 @@ extension PracticePreviewView {
                 completedBlock
                     .padding(.horizontal)
             } else {
+                Color.clear
+                    .frame(height: reviewPlaceholderHeight)
                 Spacer(minLength: 0)
             }
             
@@ -141,18 +147,20 @@ extension PracticePreviewView {
         VStack(spacing: 10) {
             if vm.isCompleted {
                 primaryButton(title: vm.primaryActionTitle, action: dismiss)
-                secondaryButton(
-                    title: vm.restartTitle,
-                    subtitle: vm.restartSubtitle,
-                    action: vm.restartButtonPressed
-                )
+                if vm.showsRestartButton {
+                    secondaryButton(
+                        title: vm.restartTitle,
+                        action: vm.restartButtonPressed
+                    )
+                }
             } else {
                 primaryButton(title: vm.primaryActionTitle, action: vm.continuePractice)
-                secondaryButton(
-                    title: vm.restartTitle,
-                    subtitle: vm.restartSubtitle,
-                    action: vm.restartButtonPressed
-                )
+                if vm.showsRestartButton {
+                    secondaryButton(
+                        title: vm.restartTitle,
+                        action: vm.restartButtonPressed
+                    )
+                }
                 ghostButton(title: vm.exitTitle, action: dismiss)
             }
         }
@@ -306,25 +314,18 @@ extension PracticePreviewView {
     
     private func secondaryButton(
         title: String,
-        subtitle: String,
         action: @escaping () -> Void
     ) -> some View {
         Button(action: action) {
-            VStack(spacing: 2) {
-                Text(title)
-                    .font(.headline)
-                    .fontWeight(.semibold)
-                Text(subtitle)
-                    .font(.caption2)
-                    .fontWeight(.regular)
-                    .opacity(0.55)
-            }
-            .fontDesign(.rounded)
-            .foregroundStyle(Color.citizen.mainText)
-            .frame(maxWidth: .infinity)
-            .frame(height: 60)
-            .background(Color.citizen.groupBackground)
-            .clipShape(RoundedRectangle(cornerRadius: 16))
+            Text(title)
+                .font(.headline)
+                .fontWeight(.semibold)
+                .fontDesign(.rounded)
+                .foregroundStyle(Color.citizen.mainText)
+                .frame(maxWidth: .infinity)
+                .frame(height: 60)
+                .background(Color.citizen.groupBackground)
+                .clipShape(RoundedRectangle(cornerRadius: 16))
         }
     }
     

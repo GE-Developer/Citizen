@@ -12,12 +12,14 @@ struct CustomToggleRow: View {
     
     private let icon: Image?
     private let title: String
+    private let subtitle: String?
     private let haptics = HapticsManager.shared
     
-    init(isOn: Binding<Bool>, icon: Image? = nil, title: String) {
+    init(isOn: Binding<Bool>, icon: Image? = nil, title: String, subtitle: String? = nil) {
         _isOn = isOn
         self.icon = icon
         self.title = title
+        self.subtitle = subtitle
     }
     
     var body: some View {
@@ -45,20 +47,32 @@ extension CustomToggleRow {
                             .padding(.leading, 16)
                     }
                 }
-                Text(title)
-                    .foregroundStyle(Color.citizen.mainText)
-                    .font(.headline)
-                    .fontDesign(.rounded)
-                    .fontWeight(.regular)
-                    .lineLimit(2)
-                    .minimumScaleFactor(0.5)
-                    .multilineTextAlignment(.leading)
-                    .padding(.trailing)
+                titleColumn
             }
-            .padding(.vertical)
+            .padding(.vertical, subtitle == nil ? 16 : 6)
             Spacer()
             toggle
         }
+    }
+    
+    private var titleColumn: some View {
+        VStack(alignment: .leading, spacing: 3) {
+            Text(title)
+                .foregroundStyle(Color.citizen.mainText)
+                .font(.headline)
+                .fontWeight(.regular)
+                .lineLimit(2)
+                .minimumScaleFactor(0.5)
+            if let subtitle {
+                Text(subtitle)
+                    .foregroundStyle(Color.citizen.secondaryText)
+                    .font(.caption)
+                    .fontWeight(.light)
+            }
+        }
+        .fontDesign(.rounded)
+        .multilineTextAlignment(.leading)
+        .padding(.trailing)
     }
     
     private var toggle: some View {

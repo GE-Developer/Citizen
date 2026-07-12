@@ -87,6 +87,13 @@ final class AnswerStorage {
         }
     }
     
+    func removeFromGlobalPool(questionID: String) {
+        stack.batchDelete(
+            entityName: "GlobalMistakeEntity",
+            predicate: NSPredicate(format: "questionID == %@", questionID)
+        )
+    }
+    
     // MARK: - GlobalCorrectEntity
     func addToGlobalCorrectPool(questionID: String) {
         let request: NSFetchRequest<GlobalCorrectEntity> = GlobalCorrectEntity.fetchRequest()

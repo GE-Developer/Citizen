@@ -239,6 +239,10 @@
 		AB10000100000013 /* QuestionProgressHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB10000200000013 /* QuestionProgressHeader.swift */; };
 		AB10000100000014 /* SaveQuestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB10000200000014 /* SaveQuestionViewModel.swift */; };
 		AB10000100000015 /* ShuffleQuestionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB10000200000015 /* ShuffleQuestionsManager.swift */; };
+		AB10000100000016 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB10000200000016 /* SearchView.swift */; };
+		AB10000100000017 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB10000200000017 /* SearchViewModel.swift */; };
+		AB10000100000018 /* MistakesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB10000200000018 /* MistakesView.swift */; };
+		AB10000100000019 /* MistakesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB10000200000019 /* MistakesViewModel.swift */; };
 		AB1100012EC60316002D12D1 /* ShuffleAnswersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1100022EC60316002D12D1 /* ShuffleAnswersManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -478,6 +482,10 @@
 		AB10000200000013 /* QuestionProgressHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionProgressHeader.swift; sourceTree = "<group>"; };
 		AB10000200000014 /* SaveQuestionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveQuestionViewModel.swift; sourceTree = "<group>"; };
 		AB10000200000015 /* ShuffleQuestionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShuffleQuestionsManager.swift; sourceTree = "<group>"; };
+		AB10000200000016 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		AB10000200000017 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		AB10000200000018 /* MistakesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MistakesView.swift; sourceTree = "<group>"; };
+		AB10000200000019 /* MistakesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MistakesViewModel.swift; sourceTree = "<group>"; };
 		AB1100022EC60316002D12D1 /* ShuffleAnswersManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShuffleAnswersManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -948,18 +956,10 @@
 				AADD000300010001 /* Hint */,
 				AB10000300000001 /* Saved */,
 				AB10000300000002 /* Practice */,
+				AB10000300000003 /* Search */,
+				AB10000300000004 /* Mistakes */,
 			);
 			path = "Learn Module";
-			sourceTree = "<group>";
-		};
-		AB10000300000002 /* Practice */ = {
-			isa = PBXGroup;
-			children = (
-				AB1000020000000A /* PracticeView.swift */,
-				AB1000020000000B /* PracticeViewModel.swift */,
-				AB1000020000000C /* PracticePreviewView.swift */,
-			);
-			path = Practice;
 			sourceTree = "<group>";
 		};
 		AADD000300010001 /* Hint */ = {
@@ -1028,6 +1028,34 @@
 				AB10000200000005 /* FolderQuestionsViewModel.swift */,
 			);
 			path = Saved;
+			sourceTree = "<group>";
+		};
+		AB10000300000002 /* Practice */ = {
+			isa = PBXGroup;
+			children = (
+				AB1000020000000A /* PracticeView.swift */,
+				AB1000020000000B /* PracticeViewModel.swift */,
+				AB1000020000000C /* PracticePreviewView.swift */,
+			);
+			path = Practice;
+			sourceTree = "<group>";
+		};
+		AB10000300000003 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				AB10000200000016 /* SearchView.swift */,
+				AB10000200000017 /* SearchViewModel.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		AB10000300000004 /* Mistakes */ = {
+			isa = PBXGroup;
+			children = (
+				AB10000200000018 /* MistakesView.swift */,
+				AB10000200000019 /* MistakesViewModel.swift */,
+			);
+			path = Mistakes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1210,6 +1238,10 @@
 				1F7369312EC60316002D12D1 /* SoundManager.swift in Sources */,
 				AB1100012EC60316002D12D1 /* ShuffleAnswersManager.swift in Sources */,
 				AB10000100000015 /* ShuffleQuestionsManager.swift in Sources */,
+				AB10000100000016 /* SearchView.swift in Sources */,
+				AB10000100000017 /* SearchViewModel.swift in Sources */,
+				AB10000100000018 /* MistakesView.swift in Sources */,
+				AB10000100000019 /* MistakesViewModel.swift in Sources */,
 				AAEE00012EC60316002D12D1 /* VoiceActingManager.swift in Sources */,
 				1F496C1F2FC1BE0700E0D7F5 /* ExitButton.swift in Sources */,
 				1F496C202FC1BE0700E0D7F5 /* CustomButtonRow.swift in Sources */,

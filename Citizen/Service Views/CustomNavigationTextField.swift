@@ -12,7 +12,9 @@ struct CustomNavigationTextField: View {
     
     @FocusState private var focus: Bool
     @State private var isButtonEnabled = false
+    @State private var hasAutoFocused = false
     
+    private let autoFocused: Bool
     private let image: Image
     private let placeholder: String
     private let cancelButtonTitle: String
@@ -21,12 +23,14 @@ struct CustomNavigationTextField: View {
     
     init(text: Binding<String>,
          isButtonEnabled: Bool = false,
+         autoFocused: Bool = false,
          image: Image = .system.magnifyingglass,
          placeholder: String,
          cancelButtonTitle: String = L10n("SearchField.cancel"),
          deleteAction: @escaping () -> Void) {
         _text = text
         self.isButtonEnabled = isButtonEnabled
+        self.autoFocused = autoFocused
         self.image = image
         self.placeholder = placeholder
         self.cancelButtonTitle = cancelButtonTitle
@@ -35,6 +39,12 @@ struct CustomNavigationTextField: View {
     
     var body: some View {
         customNavigationTextField
+            .task {
+                guard autoFocused, !hasAutoFocused else { return }
+                hasAutoFocused = true
+                guard (try? await Task.sleep(for: .seconds(0.5))) != nil else { return }
+                focus = true
+            }
     }
 }
 

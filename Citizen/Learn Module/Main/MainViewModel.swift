@@ -7,10 +7,16 @@
 
 import Foundation
 
+enum MainDestination: Hashable {
+    case mistakes
+    case saved
+    case search
+}
+
 @MainActor
 final class MainViewModel: ObservableObject {
     @Published var chosenCategory: Category?
-    @Published var showSaved = false
+    @Published var destination: MainDestination?
     
     var catalog: QuestionCatalog { repository.catalog }
     
@@ -127,15 +133,17 @@ final class MainViewModel: ObservableObject {
     
     func mistakesButtonPressed() {
         haptics.impact()
+        destination = .mistakes
     }
     
     func savedButtonPressed() {
         haptics.impact()
-        showSaved = true
+        destination = .saved
     }
     
     func searchButtonPressed() {
         haptics.impact()
+        destination = .search
     }
     
     func leaderboardButtonPressed() {

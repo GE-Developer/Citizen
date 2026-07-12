@@ -12,8 +12,14 @@ struct PracticeView: View {
     
     @StateObject private var vm: PracticeViewModel
     
-    init(questions: [Question], title: String) {
-        _vm = StateObject(wrappedValue: PracticeViewModel(questions: questions, title: title))
+    init(questions: [Question], title: String, isMistakeReview: Bool = false) {
+        _vm = StateObject(
+            wrappedValue: PracticeViewModel(
+                questions: questions,
+                title: title,
+                isMistakeReview: isMistakeReview
+            )
+        )
     }
     
     var body: some View {
@@ -39,10 +45,12 @@ extension PracticeView {
                 vm.isCurrentQuestionSaved ? .system.bookmark : .system.bookmarkOutline,
                 action: { vm.bookmarkButtonPressed() }
             )
-            NavigationToolButton(
-                .system.hint,
-                action: { vm.hintButtonPressed() }
-            )
+            if vm.showsHintButton {
+                NavigationToolButton(
+                    .system.hint,
+                    action: { vm.hintButtonPressed() }
+                )
+            }
         } content: { _ in
             progressRow
             question

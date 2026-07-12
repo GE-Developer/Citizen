@@ -144,7 +144,8 @@ extension SettingsView {
         CustomToggleRow(
             isOn: $vm.isShuffleQuestionsOn,
             icon: .system.dice,
-            title: vm.shuffleQuestionsToggleTitle
+            title: vm.shuffleQuestionsToggleTitle,
+            subtitle: vm.shuffleQuestionsToggleSubtitle
         )
     }
     
