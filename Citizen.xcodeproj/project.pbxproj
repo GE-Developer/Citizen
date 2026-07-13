@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1F0E93472FB6312B0016D5B4 /* questions.ka.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F0E93462FB6312B0016D5B4 /* questions.ka.json */; };
 		1F0E934F2FBB89110016D5B4 /* MatrixAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0E934E2FBB89110016D5B4 /* MatrixAnimationView.swift */; };
+		1F124C30300503CE004E5B5F /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 1F124C2F300503CE004E5B5F /* Supabase */; };
 		1F36F5ED2ECF61F90035E21F /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 1F36F5EC2ECF61F90035E21F /* Localizable.xcstrings */; };
 		1F36F5F12ED093A30035E21F /* CustomPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F36F5F02ED093A30035E21F /* CustomPage.swift */; };
 		1F36F5F32ED1E41D0035E21F /* TopicsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F36F5F22ED1E41D0035E21F /* TopicsView.swift */; };
@@ -255,6 +256,7 @@
 /* Begin PBXFileReference section */
 		1F0E93462FB6312B0016D5B4 /* questions.ka.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = questions.ka.json; sourceTree = "<group>"; };
 		1F0E934E2FBB89110016D5B4 /* MatrixAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixAnimationView.swift; sourceTree = "<group>"; };
+		1F124C2D3005002A004E5B5F /* Citizen.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Citizen.entitlements; sourceTree = "<group>"; };
 		1F36F5EC2ECF61F90035E21F /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		1F36F5F02ED093A30035E21F /* CustomPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPage.swift; sourceTree = "<group>"; };
 		1F36F5F22ED1E41D0035E21F /* TopicsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsView.swift; sourceTree = "<group>"; };
@@ -506,6 +508,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F124C30300503CE004E5B5F /* Supabase in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -741,6 +744,7 @@
 			isa = PBXGroup;
 			children = (
 				1FE85B832FFB13BF008C90D4 /* From Supabase in Future */,
+				1F124C2D3005002A004E5B5F /* Citizen.entitlements */,
 				1F36F5EC2ECF61F90035E21F /* Localizable.xcstrings */,
 				1F7369252EC60316002D12D1 /* Colors.xcassets */,
 				1F7369262EC60316002D12D1 /* Images.xcassets */,
@@ -1117,6 +1121,7 @@
 			);
 			name = Citizen;
 			packageProductDependencies = (
+				1F124C2F300503CE004E5B5F /* Supabase */,
 			);
 			productName = "Chito Gvrito";
 			productReference = 1F7368A92EC5FEA6002D12D1 /* Citizen.app */;
@@ -1149,6 +1154,7 @@
 			mainGroup = 1F7368A02EC5FEA6002D12D1;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
+				1F124C2E300503CE004E5B5F /* XCRemoteSwiftPackageReference "supabase-swift" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 1F7368AA2EC5FEA6002D12D1 /* Products */;
@@ -1553,6 +1559,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				ASSETCATALOG_COMPILER_STANDALONE_ICON_BEHAVIOR = none;
+				CODE_SIGN_ENTITLEMENTS = Citizen/Resources/Citizen.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Citizen/Preview Content\"";
@@ -1572,7 +1579,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ge-developer.citizen";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ge-developer.ge.citizen";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -1592,6 +1599,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				ASSETCATALOG_COMPILER_STANDALONE_ICON_BEHAVIOR = none;
+				CODE_SIGN_ENTITLEMENTS = Citizen/Resources/Citizen.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Citizen/Preview Content\"";
@@ -1611,7 +1619,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ge-developer.citizen";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ge-developer.ge.citizen";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -1645,6 +1653,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1F124C2E300503CE004E5B5F /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase/supabase-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1F124C2F300503CE004E5B5F /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1F124C2E300503CE004E5B5F /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		1F91F0242ED8ED9700F26DDD /* AnswerContainer.xcdatamodeld */ = {

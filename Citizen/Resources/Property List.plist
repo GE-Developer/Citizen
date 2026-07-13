@@ -12,6 +12,10 @@
 	<string>https://ge-developer.tilda.ws</string>
 	<key>Terms of Use</key>
 	<string></string>
+	<key>Supabase Anon Key</key>
+	<string>sb_publishable_gFZhb1fvMsZBbFCzRC1LaQ_aL2Rju77</string>
+	<key>Supabase Project URL</key>
+	<string>https://iyajmndpyqmkgxbfjboc.supabase.co</string>
 	<key>Privacy Policy</key>
 	<string></string>
 </dict>

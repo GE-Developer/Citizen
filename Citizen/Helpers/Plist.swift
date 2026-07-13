@@ -15,6 +15,8 @@ struct Plist {
         case developerLink = "Developer Link"
         case termsOfUse = "Terms of Use"
         case privacyPolicy = "Privacy Policy"
+        case supabaseAnonKey = "Supabase Anon Key"
+        case supabaseProjectUrl = "Supabase Project URL"
     }
     
     static private let plistName = "Property List"
