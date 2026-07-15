@@ -108,6 +108,14 @@ final class SettingsViewModel: ObservableObject {
     var aboutAppTitle: String {
         L10n("Settings.AboutApp.title")
     }
+    
+    var accountTitle: String {
+        L10n("Settings.Account.title")
+    }
+    
+    var signOutTitle: String {
+        L10n("Settings.Account.SignOut.title")
+    }
     var termsOfUseTitle: String {
         L10n("Settings.AboutApp.TermsOfUse.title")
     }
@@ -154,5 +162,9 @@ final class SettingsViewModel: ObservableObject {
     func showTermsOfUse() {
         guard let url = URL(string: Plist.get(.termsOfUse)) else { return }
         UIApplication.shared.open(url)
+    }
+    
+    func signOut() {
+        Task { await AuthManager.shared.signOut() }
     }
 }

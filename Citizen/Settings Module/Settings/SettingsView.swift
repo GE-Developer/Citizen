@@ -89,6 +89,15 @@ extension SettingsView {
                     projectButton
                 }
                 
+                CustomForm(headerText: vm.accountTitle) {
+                    CustomButtonRow(
+                        icon: .system.signOut,
+                        title: vm.signOutTitle,
+                        isCritical: true,
+                        action: { vm.signOut() }
+                    )
+                }
+                
                 AppVersion()
             }
         }
