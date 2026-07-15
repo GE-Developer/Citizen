@@ -14,11 +14,25 @@ extension View {
             .scaledToFit()
     }
     
-    var isFaceIDPhone: Bool { DeviceLayout.hasHomeIndicator }
+    var isFaceIDPhone: Bool {
+        DeviceLayout.hasHomeIndicator
+    }
     
-    var screenWidth: CGFloat { DeviceLayout.screenWidth }
+    var screenWidth: CGFloat {
+        DeviceLayout.screenWidth
+    }
     
-    var screenHeight: CGFloat { DeviceLayout.screenHeight }
+    var screenHeight: CGFloat {
+        DeviceLayout.screenHeight
+    }
+    
+    var safeAreaTop: CGFloat {
+        DeviceLayout.safeAreaTop
+    }
+    
+    var safeAreaBottom: CGFloat {
+        DeviceLayout.safeAreaBottom
+    }
     
     func premiumOption(
         _ showPayWall: Binding<Bool>,

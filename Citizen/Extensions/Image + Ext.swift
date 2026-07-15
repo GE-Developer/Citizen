@@ -54,6 +54,10 @@ struct SystemImage {
     let paintpalette = Image(systemName: "paintpalette.fill")
     let code = Image(systemName: "chevron.left.slash.chevron.right")
     let appIcon = Image(systemName: "app.fill")
+    let envelope = Image(systemName: "envelope")
+    let person = Image(systemName: "person")
+    let appleLogo = Image(systemName: "apple.logo")
+    let signOut = Image(systemName: "rectangle.portrait.and.arrow.right")
     
     func key(_ isFilled: Bool = false) -> Image {
         Image(systemName: isFilled ? "key.fill" : "key")
@@ -70,9 +74,14 @@ struct SystemImage {
     func checkmarkAndXmark(_ isCorrect: Bool) -> Image {
         isCorrect ? Image(systemName: "checkmark") : xmark
     }
+    
+    func eye(_ isRevealed: Bool) -> Image {
+        Image(systemName: isRevealed ? "eye.slash" : "eye")
+    }
 }
 
 struct OtherImage {
     let iosDeveloperMichael = Image("iOS Developer")
     let svgLogo = Image("SVG Logo")
+    let logo = Image("logo")
 }

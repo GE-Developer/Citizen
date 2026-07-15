@@ -19,6 +19,12 @@ extension Gradient {
         endPoint: .trailing
     )
     
+    static let secondaryText = LinearGradient(
+        colors: [.citizen.secondaryText],
+        startPoint: .leading,
+        endPoint: .trailing
+    )
+    
     static let gold = LinearGradient(
         colors: [.citizen.goldLight, .citizen.goldDark],
         startPoint: .leading,
