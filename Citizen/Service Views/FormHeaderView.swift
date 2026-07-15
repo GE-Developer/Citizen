@@ -23,13 +23,12 @@ struct FormHeaderView: View {
 extension FormHeaderView {
     private var header: some View {
         Text(text)
-            .foregroundStyle(Color.citizen.mainText)
+            .foregroundStyle(Color.citizen.secondaryText)
             .font(.caption)
             .fontDesign(.rounded)
             .tracking(1)
             .textCase(.uppercase)
             .lineLimit(2)
-            .minimumScaleFactor(0.5)
             .frame(maxWidth: .infinity, alignment: .leading)
             .multilineTextAlignment(.leading)
             .padding(.horizontal, 6)

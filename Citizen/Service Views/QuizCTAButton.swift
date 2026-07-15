@@ -48,7 +48,7 @@ extension QuizCTAButton {
                 .clipShape(RoundedRectangle(cornerRadius: 12))
         }
         .padding(.horizontal)
-        .padding(isFaceIDPhone ? -5 : 16)
+        .padding(.bottom, isFaceIDPhone ? -5 : 16)
         .disabled(!isEnabled)
         .transaction {
             $0.disablesAnimations = true

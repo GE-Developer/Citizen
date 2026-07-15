@@ -251,6 +251,25 @@
 		AB10000100000023 /* ExamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB10000200000023 /* ExamView.swift */; };
 		AB10000100000024 /* ExamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB10000200000024 /* ExamViewModel.swift */; };
 		AB1100012EC60316002D12D1 /* ShuffleAnswersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1100022EC60316002D12D1 /* ShuffleAnswersManager.swift */; };
+		AB12000100000001 /* SupabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB12000200000001 /* SupabaseService.swift */; };
+		AB12000100000002 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB12000200000002 /* AuthManager.swift */; };
+		AB12000100000003 /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB12000200000003 /* ProfileService.swift */; };
+		AB12000100000004 /* AuthFlowError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB12000200000004 /* AuthFlowError.swift */; };
+		AB12000100000005 /* AuthFieldError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB12000200000005 /* AuthFieldError.swift */; };
+		AB12000100000006 /* AuthMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB12000200000006 /* AuthMode.swift */; };
+		AB12000100000007 /* AuthValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB12000200000007 /* AuthValidator.swift */; };
+		AB12000100000008 /* AuthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB12000200000008 /* AuthTextField.swift */; };
+		AB12000100000009 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB12000200000009 /* AuthView.swift */; };
+		AB12000100000011 /* AuthRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB12000200000011 /* AuthRoute.swift */; };
+		AB12000100000012 /* AuthComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB12000200000012 /* AuthComponents.swift */; };
+		AB12000100000019 /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB12000200000019 /* ResetPasswordView.swift */; };
+		AB1200010000001A /* ResetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1200020000001A /* ResetPasswordViewModel.swift */; };
+		AB12000100000013 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB12000200000013 /* SignInView.swift */; };
+		AB12000100000014 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB12000200000014 /* SignInViewModel.swift */; };
+		AB12000100000015 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB12000200000015 /* SignUpView.swift */; };
+		AB12000100000016 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB12000200000016 /* SignUpViewModel.swift */; };
+		AB12000100000017 /* VerifyEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB12000200000017 /* VerifyEmailView.swift */; };
+		AB12000100000018 /* VerifyEmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB12000200000018 /* VerifyEmailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -501,6 +520,25 @@
 		AB10000200000023 /* ExamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamView.swift; sourceTree = "<group>"; };
 		AB10000200000024 /* ExamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamViewModel.swift; sourceTree = "<group>"; };
 		AB1100022EC60316002D12D1 /* ShuffleAnswersManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShuffleAnswersManager.swift; sourceTree = "<group>"; };
+		AB12000200000001 /* SupabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseService.swift; sourceTree = "<group>"; };
+		AB12000200000002 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		AB12000200000003 /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
+		AB12000200000004 /* AuthFlowError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthFlowError.swift; sourceTree = "<group>"; };
+		AB12000200000005 /* AuthFieldError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthFieldError.swift; sourceTree = "<group>"; };
+		AB12000200000006 /* AuthMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthMode.swift; sourceTree = "<group>"; };
+		AB12000200000007 /* AuthValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthValidator.swift; sourceTree = "<group>"; };
+		AB12000200000008 /* AuthTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTextField.swift; sourceTree = "<group>"; };
+		AB12000200000009 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		AB12000200000011 /* AuthRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRoute.swift; sourceTree = "<group>"; };
+		AB12000200000012 /* AuthComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthComponents.swift; sourceTree = "<group>"; };
+		AB12000200000019 /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
+		AB1200020000001A /* ResetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewModel.swift; sourceTree = "<group>"; };
+		AB12000200000013 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		AB12000200000014 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		AB12000200000015 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		AB12000200000016 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		AB12000200000017 /* VerifyEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyEmailView.swift; sourceTree = "<group>"; };
+		AB12000200000018 /* VerifyEmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyEmailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -593,6 +631,7 @@
 				1F7368E72EC6023F002D12D1 /* Service Views */,
 				1F73691E2EC60316002D12D1 /* Managers */,
 				1FEF1BAC2ECA85600085BA76 /* Models */,
+				AB12000300000001 /* Auth Module */,
 				AAEE000300010001 /* Dictionary Module */,
 				AABB000300010001 /* Learn Module */,
 				1FEF1BBC2ECBA40A0085BA76 /* Settings Module */,
@@ -616,6 +655,7 @@
 				1F496C0E2FC1BE0700E0D7F5 /* CustomForm.swift */,
 				1F496C0F2FC1BE0700E0D7F5 /* CustomNavigationTextField.swift */,
 				1F496C102FC1BE0700E0D7F5 /* CustomSecureField.swift */,
+				AB12000200000008 /* AuthTextField.swift */,
 				1F496C112FC1BE0700E0D7F5 /* CustomTabImageView.swift */,
 				1F496C122FC1BE0700E0D7F5 /* CustomTabSection.swift */,
 				1F496C132FC1BE0700E0D7F5 /* CustomTextField.swift */,
@@ -676,6 +716,10 @@
 				AB04000200000001 /* RootTab.swift */,
 				AB05000200000001 /* ResourceError.swift */,
 				AB05000200000002 /* LoadPhase.swift */,
+				AB12000200000004 /* AuthFlowError.swift */,
+				AB12000200000005 /* AuthFieldError.swift */,
+				AB12000200000006 /* AuthMode.swift */,
+				AB12000200000011 /* AuthRoute.swift */,
 				AAEE000200020002 /* SortOrder.swift */,
 				AAEE000200020005 /* Filter.swift */,
 				1F36F5F92ED4AABC0035E21F /* TopicPhase.swift */,
@@ -705,6 +749,7 @@
 			children = (
 				1F7369152EC60316002D12D1 /* L10n.swift */,
 				1F7369162EC60316002D12D1 /* Plist.swift */,
+				AB12000200000007 /* AuthValidator.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -736,6 +781,9 @@
 				AADD0002000100B1 /* ResourceProvider.swift */,
 				AADD0002000100B2 /* ResourceDownloader.swift */,
 				AADD0002000100B3 /* AppDataLoader.swift */,
+				AB12000200000001 /* SupabaseService.swift */,
+				AB12000200000002 /* AuthManager.swift */,
+				AB12000200000003 /* ProfileService.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -1104,6 +1152,23 @@
 			path = Exam;
 			sourceTree = "<group>";
 		};
+		AB12000300000001 /* Auth Module */ = {
+			isa = PBXGroup;
+			children = (
+				AB12000200000009 /* AuthView.swift */,
+				AB12000200000012 /* AuthComponents.swift */,
+				AB12000200000013 /* SignInView.swift */,
+				AB12000200000014 /* SignInViewModel.swift */,
+				AB12000200000015 /* SignUpView.swift */,
+				AB12000200000016 /* SignUpViewModel.swift */,
+				AB12000200000017 /* VerifyEmailView.swift */,
+				AB12000200000018 /* VerifyEmailViewModel.swift */,
+				AB12000200000019 /* ResetPasswordView.swift */,
+				AB1200020000001A /* ResetPasswordViewModel.swift */,
+			);
+			path = "Auth Module";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1284,6 +1349,25 @@
 				1F7369302EC60316002D12D1 /* StoreManager.swift in Sources */,
 				1F7369312EC60316002D12D1 /* SoundManager.swift in Sources */,
 				AB1100012EC60316002D12D1 /* ShuffleAnswersManager.swift in Sources */,
+				AB12000100000001 /* SupabaseService.swift in Sources */,
+				AB12000100000002 /* AuthManager.swift in Sources */,
+				AB12000100000003 /* ProfileService.swift in Sources */,
+				AB12000100000004 /* AuthFlowError.swift in Sources */,
+				AB12000100000005 /* AuthFieldError.swift in Sources */,
+				AB12000100000006 /* AuthMode.swift in Sources */,
+				AB12000100000007 /* AuthValidator.swift in Sources */,
+				AB12000100000008 /* AuthTextField.swift in Sources */,
+				AB12000100000009 /* AuthView.swift in Sources */,
+				AB12000100000011 /* AuthRoute.swift in Sources */,
+				AB12000100000012 /* AuthComponents.swift in Sources */,
+				AB12000100000019 /* ResetPasswordView.swift in Sources */,
+				AB1200010000001A /* ResetPasswordViewModel.swift in Sources */,
+				AB12000100000013 /* SignInView.swift in Sources */,
+				AB12000100000014 /* SignInViewModel.swift in Sources */,
+				AB12000100000015 /* SignUpView.swift in Sources */,
+				AB12000100000016 /* SignUpViewModel.swift in Sources */,
+				AB12000100000017 /* VerifyEmailView.swift in Sources */,
+				AB12000100000018 /* VerifyEmailViewModel.swift in Sources */,
 				AB10000100000015 /* ShuffleQuestionsManager.swift in Sources */,
 				AB10000100000016 /* SearchView.swift in Sources */,
 				AB10000100000017 /* SearchViewModel.swift in Sources */,

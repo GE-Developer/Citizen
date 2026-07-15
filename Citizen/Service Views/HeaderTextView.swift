@@ -9,11 +9,9 @@ import SwiftUI
 
 struct HeaderTextView: View {
     private let text: String
-    private let offsetY: Double
     
-    init(text: String, offsetY: Double) {
+    init(text: String) {
         self.text = text
-        self.offsetY = offsetY
     }
     
     var body: some View {
@@ -36,7 +34,6 @@ extension HeaderTextView {
         }
         .padding(10)
         .background(background)
-        .offset(y: min(offsetY, 0))
     }
     
     private var background: some View {
