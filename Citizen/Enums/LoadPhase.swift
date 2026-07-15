@@ -7,6 +7,7 @@
 
 enum LoadPhase {
     case loading
+    case needsAuth
     case ready
     case failed
 }

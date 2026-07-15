@@ -14,10 +14,7 @@ enum DeviceLayout {
             return true
         }
         
-        guard let window = UIApplication.shared.connectedScenes
-            .compactMap({ $0 as? UIWindowScene })
-            .flatMap({ $0.windows })
-            .first(where: { $0.isKeyWindow }) else {
+        guard let window = keyWindow else {
             return false
         }
         
@@ -25,7 +22,36 @@ enum DeviceLayout {
         if hasIndicator {
             cachedHasHomeIndicator = true
         }
+        
         return hasIndicator
+    }
+    
+    static var safeAreaTop: CGFloat {
+        if cachedSafeAreaTop > 0 {
+            return cachedSafeAreaTop
+        }
+        
+        guard let window = keyWindow else {
+            return 0
+        }
+        
+        cachedSafeAreaTop = window.safeAreaInsets.top
+        
+        return cachedSafeAreaTop
+    }
+    
+    static var safeAreaBottom: CGFloat {
+        if cachedSafeAreaBottom > 0 {
+            return cachedSafeAreaBottom
+        }
+        
+        guard let window = keyWindow else {
+            return 0
+        }
+        
+        cachedSafeAreaBottom = window.safeAreaInsets.bottom
+        
+        return cachedSafeAreaBottom
     }
     
     static var screenWidth: CGFloat {
@@ -40,6 +66,7 @@ enum DeviceLayout {
         }
         
         cachedScreenWidth = screen.bounds.width
+        
         return cachedScreenWidth
     }
     
@@ -55,10 +82,20 @@ enum DeviceLayout {
         }
         
         cachedScreenHeight = screen.bounds.height
+        
         return cachedScreenHeight
     }
     
     private static var cachedHasHomeIndicator = false
     private static var cachedScreenWidth: CGFloat = 0
     private static var cachedScreenHeight: CGFloat = 0
+    private static var cachedSafeAreaTop: CGFloat = 0
+    private static var cachedSafeAreaBottom: CGFloat = 0
+    
+    private static var keyWindow: UIWindow? {
+        UIApplication.shared.connectedScenes
+            .compactMap { $0 as? UIWindowScene }
+            .flatMap { $0.windows }
+            .first { $0.isKeyWindow }
+    }
 }
