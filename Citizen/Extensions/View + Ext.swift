@@ -74,4 +74,16 @@ extension View {
     func shimmering() -> some View {
         modifier(Shimmer())
     }
+    
+    func voiceHighlight(isActive: Bool) -> some View {
+        modifier(VoiceHighlight(isActive: isActive))
+    }
+    
+    func voiceUnavailableNotice() -> some View {
+        modifier(VoiceNoticeModifier())
+    }
+    
+    func feedbackToast() -> some View {
+        modifier(FeedbackToastModifier())
+    }
 }

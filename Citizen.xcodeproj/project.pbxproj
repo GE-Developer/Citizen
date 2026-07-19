@@ -82,14 +82,20 @@
 		1F91F0282ED8EDFF00F26DDD /* AnswerStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F91F0272ED8EDFF00F26DDD /* AnswerStorage.swift */; };
 		1F91F02B2ED8EE0000F26DDE /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F91F02A2ED8EE0000F26DDE /* CoreDataStack.swift */; };
 		1F91F02D2ED8EE0000F26DDE /* TopicStatsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F91F02C2ED8EE0000F26DDE /* TopicStatsStorage.swift */; };
+		1FACC00300000000000000A3 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FACC00100000000000000A1 /* AccountView.swift */; };
+		1FACC00400000000000000A4 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FACC00200000000000000A2 /* AccountViewModel.swift */; };
+		1FACC00600000000000000A6 /* AvatarStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FACC00700000000000000A7 /* AvatarStore.swift */; };
+		1FACC00800000000000000A8 /* ChangePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FACC00900000000000000A9 /* ChangePasswordView.swift */; };
+		1FACC00A0000000000000AA0 /* ChangePasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FACC00B0000000000000AB0 /* ChangePasswordViewModel.swift */; };
+		1FACC00C0000000000000AC0 /* AvatarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FACC00D0000000000000AD0 /* AvatarService.swift */; };
+		1FACC00E0000000000000AE0 /* FeedbackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FACC00F0000000000000AF0 /* FeedbackManager.swift */; };
+		1FACC0100000000000000B00 /* FeedbackToastModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FACC0110000000000000B10 /* FeedbackToastModifier.swift */; };
 		1FCAFE0000010000CAFE0001 /* QuestionCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCAFE0000110000CAFE0011 /* QuestionCatalog.swift */; };
 		1FCAFE0000060000CAFE0006 /* QuizRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCAFE0000160000CAFE0016 /* QuizRepository.swift */; };
 		1FEF1BAE2ECBA3AC0085BA76 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEF1BAD2ECBA3AC0085BA76 /* HomeView.swift */; };
 		1FEF1BBD2ECBA40A0085BA76 /* LanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEF1BB22ECBA40A0085BA76 /* LanguageView.swift */; };
 		1FEF1BBE2ECBA40A0085BA76 /* AboutProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEF1BAF2ECBA40A0085BA76 /* AboutProjectView.swift */; };
 		1FEF1BBF2ECBA40A0085BA76 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEF1BBA2ECBA40A0085BA76 /* SettingsViewModel.swift */; };
-		1FACC00300000000000000A3 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FACC00100000000000000A1 /* AccountView.swift */; };
-		1FACC00400000000000000A4 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FACC00200000000000000A2 /* AccountViewModel.swift */; };
 		1FEF1BC02ECBA40A0085BA76 /* PayWallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEF1BB62ECBA40A0085BA76 /* PayWallViewModel.swift */; };
 		1FEF1BC12ECBA40A0085BA76 /* AboutProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEF1BB02ECBA40A0085BA76 /* AboutProjectViewModel.swift */; };
 		1FEF1BC22ECBA40A0085BA76 /* ProductButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEF1BB72ECBA40A0085BA76 /* ProductButton.swift */; };
@@ -210,16 +216,10 @@
 		AB15000100000005 /* ResendCountdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB15000200000005 /* ResendCountdown.swift */; };
 		AB16000100000001 /* MediaKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB16000200000001 /* MediaKind.swift */; };
 		AB16000100000002 /* MediaStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB16000200000002 /* MediaStore.swift */; };
-		1FACC00600000000000000A6 /* AvatarStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FACC00700000000000000A7 /* AvatarStore.swift */; };
-		1FACC00C0000000000000AC0 /* AvatarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FACC00D0000000000000AD0 /* AvatarService.swift */; };
-		1FACC00E0000000000000AE0 /* FeedbackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FACC00F0000000000000AF0 /* FeedbackManager.swift */; };
-		1FACC0100000000000000B00 /* FeedbackToastModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FACC0110000000000000B10 /* FeedbackToastModifier.swift */; };
-		1FACC00800000000000000A8 /* ChangePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FACC00900000000000000A9 /* ChangePasswordView.swift */; };
-		1FACC00A0000000000000AA0 /* ChangePasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FACC00B0000000000000AB0 /* ChangePasswordViewModel.swift */; };
 		AB17000100000001 /* QuestionVoicePart.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB17000200000001 /* QuestionVoicePart.swift */; };
 		AB17000100000002 /* VoiceHighlightModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB17000200000002 /* VoiceHighlightModifier.swift */; };
-		AB19000100000002 /* VoiceNoticeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB19000200000002 /* VoiceNoticeModifier.swift */; };
 		AB18000100000001 /* DiskSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB18000200000001 /* DiskSpace.swift */; };
+		AB19000100000002 /* VoiceNoticeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB19000200000002 /* VoiceNoticeModifier.swift */; };
 		AB19000300000002 /* QuestionVoicePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB19000400000002 /* QuestionVoicePlayer.swift */; };
 /* End PBXBuildFile section */
 
@@ -302,6 +302,14 @@
 		1F91F0272ED8EDFF00F26DDD /* AnswerStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerStorage.swift; sourceTree = "<group>"; };
 		1F91F02A2ED8EE0000F26DDE /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		1F91F02C2ED8EE0000F26DDE /* TopicStatsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicStatsStorage.swift; sourceTree = "<group>"; };
+		1FACC00100000000000000A1 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		1FACC00200000000000000A2 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
+		1FACC00700000000000000A7 /* AvatarStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarStore.swift; sourceTree = "<group>"; };
+		1FACC00900000000000000A9 /* ChangePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordView.swift; sourceTree = "<group>"; };
+		1FACC00B0000000000000AB0 /* ChangePasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewModel.swift; sourceTree = "<group>"; };
+		1FACC00D0000000000000AD0 /* AvatarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarService.swift; sourceTree = "<group>"; };
+		1FACC00F0000000000000AF0 /* FeedbackManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackManager.swift; sourceTree = "<group>"; };
+		1FACC0110000000000000B10 /* FeedbackToastModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackToastModifier.swift; sourceTree = "<group>"; };
 		1FCAFE0000110000CAFE0011 /* QuestionCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCatalog.swift; sourceTree = "<group>"; };
 		1FCAFE0000160000CAFE0016 /* QuizRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizRepository.swift; sourceTree = "<group>"; };
 		1FEF1BAD2ECBA3AC0085BA76 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -314,8 +322,6 @@
 		1FEF1BB72ECBA40A0085BA76 /* ProductButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductButton.swift; sourceTree = "<group>"; };
 		1FEF1BB92ECBA40A0085BA76 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		1FEF1BBA2ECBA40A0085BA76 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
-		1FACC00100000000000000A1 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
-		1FACC00200000000000000A2 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		AA00FEEDC0DE0002 /* FeedbackPhrase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackPhrase.swift; sourceTree = "<group>"; };
 		AA1100020001000A /* LinkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkButton.swift; sourceTree = "<group>"; };
 		AABB000200010002 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
@@ -430,16 +436,10 @@
 		AB15000200000005 /* ResendCountdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResendCountdown.swift; sourceTree = "<group>"; };
 		AB16000200000001 /* MediaKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaKind.swift; sourceTree = "<group>"; };
 		AB16000200000002 /* MediaStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaStore.swift; sourceTree = "<group>"; };
-		1FACC00700000000000000A7 /* AvatarStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarStore.swift; sourceTree = "<group>"; };
-		1FACC00D0000000000000AD0 /* AvatarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarService.swift; sourceTree = "<group>"; };
-		1FACC00F0000000000000AF0 /* FeedbackManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackManager.swift; sourceTree = "<group>"; };
-		1FACC0110000000000000B10 /* FeedbackToastModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackToastModifier.swift; sourceTree = "<group>"; };
-		1FACC00900000000000000A9 /* ChangePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordView.swift; sourceTree = "<group>"; };
-		1FACC00B0000000000000AB0 /* ChangePasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewModel.swift; sourceTree = "<group>"; };
 		AB17000200000001 /* QuestionVoicePart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionVoicePart.swift; sourceTree = "<group>"; };
 		AB17000200000002 /* VoiceHighlightModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceHighlightModifier.swift; sourceTree = "<group>"; };
-		AB19000200000002 /* VoiceNoticeModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceNoticeModifier.swift; sourceTree = "<group>"; };
 		AB18000200000001 /* DiskSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskSpace.swift; sourceTree = "<group>"; };
+		AB19000200000002 /* VoiceNoticeModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceNoticeModifier.swift; sourceTree = "<group>"; };
 		AB19000400000002 /* QuestionVoicePlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionVoicePlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -741,6 +741,17 @@
 			path = Questions;
 			sourceTree = "<group>";
 		};
+		1FACC00500000000000000A5 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				1FACC00100000000000000A1 /* AccountView.swift */,
+				1FACC00200000000000000A2 /* AccountViewModel.swift */,
+				1FACC00900000000000000A9 /* ChangePasswordView.swift */,
+				1FACC00B0000000000000AB0 /* ChangePasswordViewModel.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
 		1FEF1BAC2ECA85600085BA76 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -795,17 +806,6 @@
 				1FEF1BBA2ECBA40A0085BA76 /* SettingsViewModel.swift */,
 			);
 			path = Settings;
-			sourceTree = "<group>";
-		};
-		1FACC00500000000000000A5 /* Account */ = {
-			isa = PBXGroup;
-			children = (
-				1FACC00100000000000000A1 /* AccountView.swift */,
-				1FACC00200000000000000A2 /* AccountViewModel.swift */,
-				1FACC00900000000000000A9 /* ChangePasswordView.swift */,
-				1FACC00B0000000000000AB0 /* ChangePasswordViewModel.swift */,
-			);
-			path = Account;
 			sourceTree = "<group>";
 		};
 		1FEF1BBC2ECBA40A0085BA76 /* Settings Module */ = {
