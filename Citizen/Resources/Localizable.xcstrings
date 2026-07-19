@@ -1685,6 +1685,29 @@
         }
       }
     },
+    "AuthField.emptyName" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enter your name"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "შეიყვანეთ სახელი"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Введите имя"
+          }
+        }
+      }
+    },
     "AuthField.invalidEmail" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -2762,6 +2785,29 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Готовность к экзамену"
+          }
+        }
+      }
+    },
+    "Main.Greeting.title %@" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hi, %@ 👋"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "გამარჯობა, %@ 👋"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Привет, %@ 👋"
           }
         }
       }
@@ -5139,6 +5185,466 @@
         }
       }
     },
+    "Settings.Account.Avatar.change" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Change photo"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ფოტოს შეცვლა"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Изменить фото"
+          }
+        }
+      }
+    },
+    "Settings.Account.Avatar.loadFailed" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Couldn't load the photo. Try another one"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ფოტოს ჩატვირთვა ვერ მოხერხდა. სცადეთ სხვა"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не удалось загрузить фото. Попробуйте другое"
+          }
+        }
+      }
+    },
+    "Settings.Account.Avatar.remove" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Remove photo"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ფოტოს წაშლა"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Удалить фото"
+          }
+        }
+      }
+    },
+    "Settings.Account.Avatar.uploadFailed" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Couldn't upload the photo. It will sync later"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ფოტოს ატვირთვა ვერ მოხერხდა. სინქრონიზაცია მოგვიანებით მოხდება"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не удалось загрузить фото на сервер. Синхронизируется позже"
+          }
+        }
+      }
+    },
+    "Settings.Account.ChangePassword.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Change password"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "პაროლის შეცვლა"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Смена пароля"
+          }
+        }
+      }
+    },
+    "Settings.Account.ChangePassword.wrongPassword" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Current password is incorrect"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "მიმდინარე პაროლი არასწორია"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Текущий пароль неверный"
+          }
+        }
+      }
+    },
+    "Settings.Account.CurrentPassword.placeholder" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Current password"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "მიმდინარე პაროლი"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Текущий пароль"
+          }
+        }
+      }
+    },
+    "Settings.Account.DeleteAccount.alertConfirm" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "წაშლა"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Удалить"
+          }
+        }
+      }
+    },
+    "Settings.Account.DeleteAccount.alertMessage" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This permanently deletes your account and all your progress. This can't be undone."
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ეს სამუდამოდ წაშლის თქვენს ანგარიშსა და მთელ პროგრესს. მოქმედების გაუქმება შეუძლებელია."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Аккаунт и весь прогресс будут удалены навсегда. Отменить это действие нельзя."
+          }
+        }
+      }
+    },
+    "Settings.Account.DeleteAccount.alertTitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete Account?"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "წავშალო ანგარიში?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Удалить аккаунт?"
+          }
+        }
+      }
+    },
+    "Settings.Account.DeleteAccount.error" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Couldn't delete your account. Please try again."
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ანგარიშის წაშლა ვერ მოხერხდა. სცადეთ თავიდან."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не удалось удалить аккаунт. Попробуйте ещё раз."
+          }
+        }
+      }
+    },
+    "Settings.Account.DeleteAccount.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete Account"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ანგარიშის წაშლა"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Удалить аккаунт"
+          }
+        }
+      }
+    },
+    "Settings.Account.Feedback.failed" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Couldn't save to the server. We'll retry later"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "სერვერზე შენახვა ვერ მოხერხდა. თავიდან ვცდით მოგვიანებით"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не удалось сохранить на сервере. Попробуем позже"
+          }
+        }
+      }
+    },
+    "Settings.Account.Feedback.passwordChanged" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Password changed"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "პაროლი შეიცვალა"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пароль изменён"
+          }
+        }
+      }
+    },
+    "Settings.Account.Feedback.saved" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Changes saved"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ცვლილებები შენახულია"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Изменения сохранены"
+          }
+        }
+      }
+    },
+    "Settings.Account.Feedback.savedOffline" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saved. Will sync when you're back online"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "შენახულია. სინქრონიზდება ინტერნეტის დაბრუნებისას"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сохранено. Синхронизируется при появлении интернета"
+          }
+        }
+      }
+    },
+    "Settings.Account.Id.copied" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copied"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "დაკოპირდა"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Скопировано"
+          }
+        }
+      }
+    },
+    "Settings.Account.Id.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "User ID"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "მომხმარებლის ID"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ID пользователя"
+          }
+        }
+      }
+    },
+    "Settings.Account.NewPassword.placeholder" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "New password"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ახალი პაროლი"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Новый пароль"
+          }
+        }
+      }
+    },
+    "Settings.Account.Nickname.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nickname"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "მეტსახელი"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Никнейм"
+          }
+        }
+      }
+    },
     "Settings.Account.SignOut.title" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -5342,6 +5848,167 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Оформление"
+          }
+        }
+      }
+    },
+    "Settings.Data.ClearProgress.alertConfirm" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clear"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "გასუფთავება"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Очистить"
+          }
+        }
+      }
+    },
+    "Settings.Data.ClearProgress.alertMessage" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your answers, statistics and saved words and questions will be erased on all your devices. This can't be undone."
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "თქვენი პასუხები, სტატისტიკა და შენახული სიტყვები და კითხვები წაიშლება ყველა თქვენს მოწყობილობაზე. მოქმედების გაუქმება შეუძლებელია."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ответы, статистика и сохранённые слова и вопросы будут стёрты на всех ваших устройствах. Отменить это действие нельзя."
+          }
+        }
+      }
+    },
+    "Settings.Data.ClearProgress.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clear Progress"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "პროგრესის გასუფთავება"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Очистить прогресс"
+          }
+        }
+      }
+    },
+    "Settings.Data.DeleteData.alertConfirm" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "წაშლა"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Удалить"
+          }
+        }
+      }
+    },
+    "Settings.Data.DeleteData.alertMessage" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your progress and account are safe, but you'll need to sign in again. An internet connection is required to re-download the materials."
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "თქვენი პროგრესი და ანგარიში არ დაზარალდება, თუმცა ხელახლა შესვლა მოგიწევთ. მასალების ხელახლა ჩამოსატვირთად საჭიროა ინტერნეტი."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Прогресс и аккаунт не пострадают, но потребуется заново войти. Для повторной загрузки материалов нужен интернет."
+          }
+        }
+      }
+    },
+    "Settings.Data.DeleteData.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete Downloaded Data"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "მონაცემების წაშლა"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Удалить данные"
+          }
+        }
+      }
+    },
+    "Settings.Data.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Data"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "მონაცემები"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Данные"
           }
         }
       }
@@ -6101,6 +6768,52 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Темы"
+          }
+        }
+      }
+    },
+    "VoiceActing.Unavailable.missing" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voice-over isn't available yet."
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "გახმოვანება ჯერ არ არის ხელმისაწვდომი."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Озвучка пока недоступна."
+          }
+        }
+      }
+    },
+    "VoiceActing.Unavailable.notDownloaded" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voice-over isn't downloaded yet — check your internet connection."
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "გახმოვანება ჯერ არ ჩამოტვირთულა — შეამოწმეთ ინტერნეტკავშირი."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Озвучка ещё не загружена — проверьте подключение к интернету."
           }
         }
       }

@@ -9,9 +9,11 @@ import SwiftUI
 
 struct QuestionTextCard: View {
     private let text: String
+    private let isVoicing: Bool
     
-    init(text: String) {
+    init(text: String, isVoicing: Bool = false) {
         self.text = text
+        self.isVoicing = isVoicing
     }
     
     var body: some View {
@@ -29,6 +31,7 @@ extension QuestionTextCard {
             .fontDesign(.rounded)
             .multilineTextAlignment(.leading)
             .foregroundStyle(Color.citizen.mainText)
+            .voiceHighlight(isActive: isVoicing)
             .padding(.horizontal)
             .padding(.vertical, 10)
             .background {
