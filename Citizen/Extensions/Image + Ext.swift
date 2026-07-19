@@ -10,6 +10,10 @@ import SwiftUI
 extension Image {
     static let system = SystemImage()
     static let other = OtherImage()
+    
+    static func avatar(_ image: CGImage) -> Image {
+        Image(decorative: image, scale: 1)
+    }
 }
 
 struct SystemImage {
@@ -27,6 +31,7 @@ struct SystemImage {
     let vibration = Image(systemName: "iphone.radiowaves.left.and.right")
     let sound = Image(systemName: "speaker.wave.2.fill")
     let voiceActing = Image(systemName: "waveform")
+    let voiceUnavailable = Image(systemName: "speaker.slash.fill")
     let shuffle = Image(systemName: "shuffle")
     let dice = Image(systemName: "die.face.5")
     let play = Image(systemName: "play.fill")
@@ -58,7 +63,13 @@ struct SystemImage {
     let person = Image(systemName: "person")
     let appleLogo = Image(systemName: "apple.logo")
     let signOut = Image(systemName: "rectangle.portrait.and.arrow.right")
-    
+    let trash = Image(systemName: "trash")
+    let photo = Image(systemName: "photo")
+    let camera = Image(systemName: "camera.fill")
+    let sync = Image(systemName: "arrow.triangle.2.circlepath")
+    let copy = Image(systemName: "doc.on.doc")
+    let eraser = Image(systemName: "eraser")
+    let deleteData = Image(systemName: "externaldrive.badge.xmark")
     func key(_ isFilled: Bool = false) -> Image {
         Image(systemName: isFilled ? "key.fill" : "key")
     }
