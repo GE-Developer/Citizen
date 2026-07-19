@@ -11,6 +11,7 @@ struct HintAnswerRow: Identifiable, Hashable {
     let segments: [RichTextSegment]
     let translation: String?
     let isCorrect: Bool
+    let audioUrl: String?
     
     var id: String { label }
 }
