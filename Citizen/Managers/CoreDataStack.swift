@@ -13,12 +13,16 @@ final class CoreDataStack {
         container.viewContext
     }
     
-    let container: NSPersistentContainer
+    var isSyncSuppressed = false
+    var onProgressMutation: (() -> Void)?
     
     static let shared = CoreDataStack()
     
+    private let container: NSPersistentContainer
+    private let answerContinerBase = "AnswerContainer"
+    
     private init() {
-        container = NSPersistentContainer(name: "AnswerContainer")
+        container = NSPersistentContainer(name: answerContinerBase)
         container.loadPersistentStores { _, error in
             if let error = error {
                 fatalError("CoreData error: \(error)")
@@ -28,8 +32,12 @@ final class CoreDataStack {
     
     func saveContext() {
         guard context.hasChanges else { return }
+        
         do {
             try context.save()
+            if !isSyncSuppressed {
+                onProgressMutation?()
+            }
         } catch {
             print("❌ Failed to save context:", error)
         }
@@ -38,18 +46,33 @@ final class CoreDataStack {
     func batchDelete(entityName: String, predicate: NSPredicate? = nil) {
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
         request.predicate = predicate
+        
         let delete = NSBatchDeleteRequest(fetchRequest: request)
         delete.resultType = .resultTypeObjectIDs
         
         do {
             let result = try context.execute(delete) as? NSBatchDeleteResult
             let ids = result?.result as? [NSManagedObjectID] ?? []
+            
             NSManagedObjectContext.mergeChanges(
                 fromRemoteContextSave: [NSDeletedObjectsKey: ids],
                 into: [context]
             )
+            
+            if !ids.isEmpty, !isSyncSuppressed {
+                onProgressMutation?()
+            }
         } catch {
             print("❌ Failed to batch delete \(entityName):", error)
         }
+    }
+    
+    func hasAnyRows(entityName: String) -> Bool {
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
+        request.fetchLimit = 1
+        
+        let rows = (try? context.fetch(request)) ?? []
+        
+        return !rows.isEmpty
     }
 }

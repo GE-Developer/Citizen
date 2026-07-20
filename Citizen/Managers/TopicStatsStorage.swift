@@ -9,7 +9,9 @@ import CoreData
 
 @MainActor
 final class TopicStatsStorage {
-    private var context: NSManagedObjectContext { stack.context }
+    private var context: NSManagedObjectContext {
+        stack.context
+    }
     
     static let shared = TopicStatsStorage()
     
@@ -20,6 +22,7 @@ final class TopicStatsStorage {
     // MARK: - Public API
     func fetch(topicID: String) -> TopicStats {
         let entity = Self.fetchEntity(topicID: topicID, in: context)
+        
         return TopicStats(
             attempts: Int(entity?.attempts ?? 0),
             bestStreak: Int(entity?.bestStreak ?? 0),
@@ -58,6 +61,43 @@ final class TopicStatsStorage {
         entity.currentRoundSize = 0
         entity.visitedInRound = 0
         stack.saveContext()
+    }
+    
+    // MARK: - Sync
+    func snapshotItems() -> [ProgressSnapshot.TopicStatsItem] {
+        let request: NSFetchRequest<TopicStatsEntity> = TopicStatsEntity.fetchRequest()
+        do {
+            return try context.fetch(request).compactMap { entity in
+                guard let topicID = entity.topicID else { return nil }
+                return ProgressSnapshot.TopicStatsItem(
+                    topicID: topicID,
+                    attempts: Int(entity.attempts),
+                    bestStreak: Int(entity.bestStreak),
+                    successfulCompletions: Int(entity.successfulCompletions),
+                    currentRoundSize: Int(entity.currentRoundSize),
+                    visitedInRound: Int(entity.visitedInRound)
+                )
+            }
+        } catch {
+            print("❌ Failed to snapshot topic stats:", error)
+            return []
+        }
+    }
+    
+    func removeAll() {
+        stack.batchDelete(entityName: "TopicStatsEntity")
+    }
+    
+    func restore(_ items: [ProgressSnapshot.TopicStatsItem]) {
+        for item in items {
+            let entity = TopicStatsEntity(context: context)
+            entity.topicID = item.topicID
+            entity.attempts = Int16(clamping: item.attempts)
+            entity.bestStreak = Int16(clamping: item.bestStreak)
+            entity.successfulCompletions = Int16(clamping: item.successfulCompletions)
+            entity.currentRoundSize = Int16(clamping: item.currentRoundSize)
+            entity.visitedInRound = Int16(clamping: item.visitedInRound)
+        }
     }
     
     // MARK: - Private helpers

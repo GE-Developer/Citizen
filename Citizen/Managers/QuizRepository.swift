@@ -10,7 +10,7 @@ import Foundation
 @MainActor
 @Observable
 final class QuizRepository {
-    private(set) var catalog: QuestionCatalog = QuestionCatalog(categories: [])
+    private(set) var catalog = QuestionCatalog(categories: [])
     
     private var translations: [String: Question] = [:]
     private var questionIndex: [String: (Int, Int, Int)] = [:]
@@ -18,27 +18,35 @@ final class QuizRepository {
     static let shared = QuizRepository()
     
     private let storage = AnswerStorage.shared
+    private let languageManager = LanguageManager.shared
+    private let geoLangCode = Language.georgian.id
     
     private init() {}
     
     // MARK: - Public API
     func load() async throws {
-        let langCode = LanguageManager.shared.currentLanguageID
+        let langCode = languageManager.currentLanguageID
+        
         let (merged, loadedTranslations) = try await Task.detached(
             priority: .userInitiated
         ) { () throws -> (QuestionCatalog, [String: Question]?) in
-            guard let base = Self.decode(langCode: "ka") else {
+            guard let base = Self.decode(langCode: self.geoLangCode) else {
                 throw ResourceError.loadFailed("questions.ka")
             }
             
             try Self.validate(base)
             
-            guard langCode != "ka", let overlay = Self.decode(langCode: langCode) else {
+            guard langCode != self.geoLangCode,
+                  let overlay = Self.decode(langCode: langCode) else {
                 return (base, nil)
             }
             
             let translations = Dictionary(
-                overlay.categories.flatMap(\.topics).flatMap(\.questions).map { ($0.id, $0) },
+                overlay
+                    .categories
+                    .flatMap(\.topics)
+                    .flatMap(\.questions)
+                    .map { ($0.id, $0) },
                 uniquingKeysWith: { first, _ in first }
             )
             
@@ -70,12 +78,20 @@ final class QuizRepository {
         storage.removeAnswers(ids: ids)
         
         for qi in catalog.categories[ci].topics[ti].questions.indices {
-            catalog.categories[ci].topics[ti].questions[qi].status = .unanswered
+            catalog
+                .categories[ci]
+                .topics[ti]
+                .questions[qi]
+                .status = .unanswered
         }
     }
     
     func topic(byID id: String) -> Topic? {
-        catalog.categories.lazy.flatMap(\.topics).first { $0.id == id }
+        catalog
+            .categories
+            .lazy
+            .flatMap(\.topics)
+            .first { $0.id == id }
     }
     
     func placement(ofQuestionID id: String) -> (category: Category, topic: Topic)? {
@@ -84,14 +100,14 @@ final class QuizRepository {
         return (catalog.categories[ci], catalog.categories[ci].topics[ti])
     }
     
-    func recordPracticeAnswer(questionID: String, isCorrect: Bool) {
-        if isCorrect {
-            storage.addToGlobalCorrectPool(questionID: questionID)
-        } else {
-            storage.addToGlobalPool(questionID: questionID)
-            if let (ci, ti, qi) = locate(questionID: questionID) {
-                catalog.categories[ci].topics[ti].questions[qi].isInMistakePool = true
-            }
+    func recordPracticeMistake(questionID: String) {
+        storage.addToGlobalPool(questionID: questionID)
+        if let (ci, ti, qi) = locate(questionID: questionID) {
+            catalog
+                .categories[ci]
+                .topics[ti]
+                .questions[qi]
+                .isInMistakePool = true
         }
     }
     
@@ -99,13 +115,22 @@ final class QuizRepository {
         storage.removeFromGlobalPool(questionID: questionID)
         
         if let (ci, ti, qi) = locate(questionID: questionID) {
-            catalog.categories[ci].topics[ti].questions[qi].isInMistakePool = false
+            catalog
+                .categories[ci]
+                .topics[ti]
+                .questions[qi]
+                .isInMistakePool = false
         }
+    }
+    
+    func rehydrate() {
+        catalog = hydrate(catalog)
     }
     
     func occurrenceRow(for question: Question) -> OccurrenceRow {
         let placement = placement(ofQuestionID: question.id)
         let sentence = question.additionalText ?? ""
+        
         return OccurrenceRow(
             question: question,
             categoryName: placement?.category.name ?? "",
@@ -115,10 +140,46 @@ final class QuizRepository {
         )
     }
     
-    // MARK: - Private helpers
-    private nonisolated static func applyNameOverlay(base: QuestionCatalog, overlay: QuestionCatalog) -> QuestionCatalog {
+    // MARK: - Helpers
+    nonisolated static func validate(_ catalog: QuestionCatalog) throws {
+        var questionIDs = Set<String>()
+        
+        for topic in catalog.categories.flatMap(\.topics) {
+            guard !topic.questions.isEmpty else {
+                throw ResourceError.invalidData("empty topic \(topic.id)")
+            }
+            
+            for question in topic.questions {
+                guard questionIDs.insert(question.id).inserted else {
+                    throw ResourceError.invalidData(
+                        "duplicate question id \(question.id)"
+                    )
+                }
+                
+                guard question.answers.count(where: \.isCorrect) == 1 else {
+                    throw ResourceError.invalidData(
+                        "question \(question.id) must have exactly one correct answer"
+                    )
+                }
+                
+                guard Set(question.answers.map(\.text)).count == question.answers.count,
+                      Set(question.answers.map(\.label)).count == question.answers.count else {
+                    throw ResourceError.invalidData(
+                        "duplicate answer text/label in question \(question.id)"
+                    )
+                }
+            }
+        }
+    }
+    
+    private nonisolated static func applyNameOverlay(
+        base: QuestionCatalog,
+        overlay: QuestionCatalog
+    ) -> QuestionCatalog {
         let overlayMap = Dictionary(
-            overlay.categories.map { ($0.id, $0) },
+            overlay
+                .categories
+                .map { ($0.id, $0) },
             uniquingKeysWith: { first, _ in first }
         )
         
@@ -128,7 +189,9 @@ final class QuizRepository {
             }
             
             let topicOverlayMap = Dictionary(
-                overlayCategory.topics.map { ($0.id, $0) },
+                overlayCategory
+                    .topics
+                    .map { ($0.id, $0) },
                 uniquingKeysWith: { first, _ in first }
             )
             
@@ -161,36 +224,14 @@ final class QuizRepository {
         return QuestionCatalog(categories: merged)
     }
     
-    private nonisolated static func validate(_ catalog: QuestionCatalog) throws {
-        var questionIDs = Set<String>()
-        
-        for topic in catalog.categories.flatMap(\.topics) {
-            guard !topic.questions.isEmpty else {
-                throw ResourceError.invalidData("empty topic \(topic.id)")
-            }
-            
-            for question in topic.questions {
-                guard questionIDs.insert(question.id).inserted else {
-                    throw ResourceError.invalidData("duplicate question id \(question.id)")
-                }
-                guard question.answers.count(where: \.isCorrect) == 1 else {
-                    throw ResourceError.invalidData("question \(question.id) must have exactly one correct answer")
-                }
-                guard Set(question.answers.map(\.text)).count == question.answers.count,
-                      Set(question.answers.map(\.label)).count == question.answers.count else {
-                    throw ResourceError.invalidData("duplicate answer text/label in question \(question.id)")
-                }
-            }
-        }
-    }
-    
     private nonisolated static func decode(langCode: String) -> QuestionCatalog? {
         let name = "questions.\(langCode)"
         
         guard let data = ResourceProvider.shared.data(forName: name) else { return nil }
         
         do {
-            return try JSONDecoder().decode(QuestionCatalog.self, from: data)
+            return try JSONDecoder()
+                .decode(QuestionCatalog.self, from: data)
         } catch {
             print("[QuizRepository] decode error for \(name).json: \(error)")
             return nil
@@ -207,10 +248,24 @@ final class QuizRepository {
         for ci in hydrated.categories.indices {
             for ti in hydrated.categories[ci].topics.indices {
                 for qi in hydrated.categories[ci].topics[ti].questions.indices {
-                    let qid = hydrated.categories[ci].topics[ti].questions[qi].id
-                    hydrated.categories[ci].topics[ti].questions[qi].status =
-                    answered[qid].map { $0 ? .correct : .wrong } ?? .unanswered
-                    hydrated.categories[ci].topics[ti].questions[qi].isInMistakePool = pool.contains(qid)
+                    let qid = hydrated
+                        .categories[ci]
+                        .topics[ti]
+                        .questions[qi]
+                        .id
+                    hydrated
+                        .categories[ci]
+                        .topics[ti]
+                        .questions[qi]
+                        .status = answered[qid]
+                        .map { $0 ? .correct : .wrong } ?? .unanswered
+                    hydrated
+                        .categories[ci]
+                        .topics[ti]
+                        .questions[qi]
+                        .isInMistakePool = pool
+                        .contains(qid)
+                    
                     index[qid] = (ci, ti, qi)
                 }
             }
@@ -223,10 +278,18 @@ final class QuizRepository {
     private func applyAnswerState(forQuestionID id: String, isCorrect: Bool) {
         guard let (ci, ti, qi) = locate(questionID: id) else { return }
         
-        catalog.categories[ci].topics[ti].questions[qi].status = isCorrect ? .correct : .wrong
+        catalog
+            .categories[ci]
+            .topics[ti]
+            .questions[qi]
+            .status = isCorrect ? .correct : .wrong
         
         if !isCorrect {
-            catalog.categories[ci].topics[ti].questions[qi].isInMistakePool = true
+            catalog
+                .categories[ci]
+                .topics[ti]
+                .questions[qi]
+                .isInMistakePool = true
         }
     }
     
@@ -238,6 +301,7 @@ final class QuizRepository {
                 }
             }
         }
+        
         return nil
     }
     

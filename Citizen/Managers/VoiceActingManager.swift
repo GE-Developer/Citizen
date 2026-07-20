@@ -6,20 +6,29 @@
 //
 
 import AVFoundation
+import Observation
 
 @MainActor
+@Observable
 final class VoiceActingManager {
     var isVoiceActingOn: Bool {
         didSet { defaults.set(isVoiceActingOn, forKey: key) }
     }
     
+    private(set) var unavailableNotice: String?
+    
+    private var player: AVAudioPlayer?
+    private var restoreSessionTask: Task<Void, Never>?
+    private var noticeTask: Task<Void, Never>?
+    
     static let shared = VoiceActingManager()
     
     private let defaults = UserDefaults.standard
     private let key = AppStorageKey.voiceActing.key
+    private let mediaStore = MediaStore.shared
     
-    private var player: AVAudioPlayer?
-    private var restoreSessionTask: Task<Void, Never>?
+    private let notDownloadedNotice = L10n("VoiceActing.Unavailable.notDownloaded")
+    private let missingNotice = L10n("VoiceActing.Unavailable.missing")
     
     private init() {
         isVoiceActingOn = defaults.object(forKey: key) as? Bool ?? true
@@ -30,15 +39,23 @@ final class VoiceActingManager {
     }
     
     @discardableResult
-    func playFile(_ fileName: String) -> TimeInterval {
+    func play(_ kind: MediaKind, fileName: String?) -> TimeInterval {
         guard isVoiceActingOn else { return 0 }
         
-        let ns = fileName as NSString
-        let name = ns.deletingPathExtension
-        let ext = ns.pathExtension.isEmpty ? "mp3" : ns.pathExtension
-        guard !name.isEmpty,
-              let url = Bundle.main.url(forResource: name, withExtension: ext)
-        else { return 0 }
+        guard let fileName, !fileName.isEmpty else {
+            showNotice(missingNotice)
+            
+            return 0
+        }
+        
+        guard let url = localOrBundledURL(kind, fileName: fileName) else {
+            showNotice(notDownloadedNotice)
+            Task {
+                _ = try? await mediaStore.fetch(kind, name: fileName)
+            }
+            
+            return 0
+        }
         
         activatePlaybackSession()
         player?.stop()
@@ -47,8 +64,36 @@ final class VoiceActingManager {
         player?.play()
         
         let duration = player?.duration ?? 0
+        
         scheduleSessionRestore(after: duration)
+        
         return duration
+    }
+    
+    func stop() {
+        player?.stop()
+        scheduleSessionRestore(after: 0)
+    }
+    
+    private func localOrBundledURL(_ kind: MediaKind, fileName: String) -> URL? {
+        if let url = MediaStore.shared.localURL(kind, name: fileName) {
+            return url
+        }
+        
+        let ns = fileName as NSString
+        let ext = ns.pathExtension.isEmpty ? "mp3" : ns.pathExtension
+        
+        return Bundle.main.url(forResource: ns.deletingPathExtension, withExtension: ext)
+    }
+    
+    private func showNotice(_ text: String) {
+        noticeTask?.cancel()
+        unavailableNotice = text
+        noticeTask = Task {
+            try? await Task.sleep(for: .seconds(2.5))
+            guard !Task.isCancelled else { return }
+            unavailableNotice = nil
+        }
     }
     
     private func activatePlaybackSession() {
