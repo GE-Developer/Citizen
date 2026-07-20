@@ -5,9 +5,9 @@
 //  Created by GE-Developer
 //
 
-enum LoadPhase {
+enum LoadPhase: Equatable {
     case loading
     case needsAuth
     case ready
-    case failed
+    case failed(outOfSpace: Bool)
 }

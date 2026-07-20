@@ -6,6 +6,7 @@
 //
 
 enum AuthFieldError {
+    case emptyName
     case emptyEmail
     case invalidEmail
     case shortPassword
@@ -14,6 +15,8 @@ enum AuthFieldError {
     @MainActor
     var message: String {
         switch self {
+        case .emptyName:
+            return L10n("AuthField.emptyName")
         case .emptyEmail:
             return L10n("AuthField.emptyEmail")
         case .invalidEmail:
