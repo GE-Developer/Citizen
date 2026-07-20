@@ -75,10 +75,38 @@ final class SavedWordsStore {
         let request = SavedWordEntity.fetchRequest()
         request.sortDescriptors = [NSSortDescriptor(key: "createdAt", ascending: false)]
         do {
-            return try context.fetch(request).compactMap { $0.word }
+            return try context
+                .fetch(request)
+                .compactMap { $0.word }
         } catch {
             print("❌ Failed to fetch saved words:", error)
             return []
+        }
+    }
+    
+    func snapshotItems() -> [ProgressSnapshot.SavedWordItem] {
+        let request = SavedWordEntity.fetchRequest()
+        do {
+            return try context
+                .fetch(request)
+                .compactMap { entity in
+                    guard let word = entity.word else { return nil }
+                    return ProgressSnapshot.SavedWordItem(
+                        word: word,
+                        createdAt: (entity.createdAt ?? Date()).timeIntervalSince1970
+                    )
+                }
+        } catch {
+            print("❌ Failed to snapshot saved words:", error)
+            return []
+        }
+    }
+    
+    func restore(_ items: [ProgressSnapshot.SavedWordItem]) {
+        for item in items {
+            let entity = SavedWordEntity(context: context)
+            entity.word = item.word
+            entity.createdAt = Date(timeIntervalSince1970: item.createdAt)
         }
     }
     

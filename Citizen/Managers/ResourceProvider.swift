@@ -9,7 +9,10 @@ import Foundation
 
 final class ResourceProvider: Sendable {
     var downloadsURL: URL {
-        let base = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
+        let base = FileManager
+            .default
+            .urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
+        
         return base.appendingPathComponent("Resources", isDirectory: true)
     }
     
@@ -31,10 +34,19 @@ final class ResourceProvider: Sendable {
         return try? Data(contentsOf: url)
     }
     
+    func hasLocal(_ name: String) -> Bool {
+        FileManager.default.fileExists(
+            atPath: downloadsURL.appendingPathComponent("\(name).json").path
+        )
+    }
+    
     func saveDownloaded(_ data: Data, forName name: String) throws {
         let fileManager = FileManager.default
         
-        try fileManager.createDirectory(at: downloadsURL, withIntermediateDirectories: true)
+        try fileManager.createDirectory(
+            at: downloadsURL,
+            withIntermediateDirectories: true
+        )
         
         let destination = downloadsURL.appendingPathComponent("\(name).json")
         let temp = downloadsURL.appendingPathComponent("\(name).json.tmp")

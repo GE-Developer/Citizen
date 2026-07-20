@@ -20,13 +20,22 @@ final class SavedQuestionsStore {
     private init() {}
     
     func folders() -> [QuestionFolder] {
-        let request: NSFetchRequest<QuestionFolderEntity> = QuestionFolderEntity.fetchRequest()
+        let request = QuestionFolderEntity.fetchRequest()
         request.sortDescriptors = [NSSortDescriptor(key: "createdAt", ascending: false)]
+        
         do {
-            return try context.fetch(request).compactMap { entity in
-                guard let id = entity.id, let name = entity.name else { return nil }
-                return QuestionFolder(id: id, name: name, count: count(inFolder: id))
-            }
+            return try context
+                .fetch(request)
+                .compactMap { entity in
+                    guard let id = entity.id,
+                          let name = entity.name else { return nil }
+                    
+                    return QuestionFolder(
+                        id: id,
+                        name: name,
+                        count: count(inFolder: id)
+                    )
+                }
         } catch {
             print("❌ Failed to fetch question folders:", error)
             return []
@@ -41,44 +50,53 @@ final class SavedQuestionsStore {
         entity.name = name
         entity.createdAt = Date()
         stack.saveContext()
+        
         return QuestionFolder(id: id, name: name, count: 0)
     }
     
     func folderIDs(for questionID: String) -> Set<String> {
-        let request: NSFetchRequest<SavedQuestionEntity> = SavedQuestionEntity.fetchRequest()
+        let request = SavedQuestionEntity.fetchRequest()
         request.predicate = NSPredicate(format: "questionID == %@", questionID)
+        
         let items = (try? context.fetch(request)) ?? []
+        
         return Set(items.compactMap { $0.folderID })
     }
     
     func questionIDs(inFolder folderID: String) -> Set<String> {
-        let request: NSFetchRequest<SavedQuestionEntity> = SavedQuestionEntity.fetchRequest()
+        let request = SavedQuestionEntity.fetchRequest()
         request.predicate = NSPredicate(format: "folderID == %@", folderID)
+        
         let items = (try? context.fetch(request)) ?? []
+        
         return Set(items.compactMap { $0.questionID })
     }
     
     func allSavedQuestionIDs() -> Set<String> {
-        let request: NSFetchRequest<SavedQuestionEntity> = SavedQuestionEntity.fetchRequest()
+        let request = SavedQuestionEntity.fetchRequest()
         let items = (try? context.fetch(request)) ?? []
+        
         return Set(items.compactMap { $0.questionID })
     }
     
     func contains(_ questionID: String) -> Bool {
-        let request: NSFetchRequest<SavedQuestionEntity> = SavedQuestionEntity.fetchRequest()
+        let request = SavedQuestionEntity.fetchRequest()
         request.predicate = NSPredicate(format: "questionID == %@", questionID)
         request.fetchLimit = 1
+        
         return ((try? context.count(for: request)) ?? 0) > 0
     }
     
     func foldersCount() -> Int {
-        let request: NSFetchRequest<QuestionFolderEntity> = QuestionFolderEntity.fetchRequest()
+        let request = QuestionFolderEntity.fetchRequest()
+        
         return (try? context.count(for: request)) ?? 0
     }
     
     func savedQuestionsCount() -> Int {
-        let request: NSFetchRequest<SavedQuestionEntity> = SavedQuestionEntity.fetchRequest()
+        let request = SavedQuestionEntity.fetchRequest()
         let items = (try? context.fetch(request)) ?? []
+        
         return Set(items.compactMap { $0.questionID }).count
     }
     
@@ -88,26 +106,33 @@ final class SavedQuestionsStore {
             remove(questionID: questionID, folderID: folderID)
             return false
         }
+        
         let entity = SavedQuestionEntity(context: context)
         entity.questionID = questionID
         entity.folderID = folderID
         entity.createdAt = Date()
+        
         stack.saveContext()
+        
         return true
     }
     
     func remove(questionID: String, folderID: String) {
+        let predicateFormat = "questionID == %@ AND folderID == %@"
+        
         stack.batchDelete(
             entityName: "SavedQuestionEntity",
-            predicate: NSPredicate(format: "questionID == %@ AND folderID == %@", questionID, folderID)
+            predicate: NSPredicate(format: predicateFormat, questionID, folderID)
         )
     }
     
     func renameFolder(_ folderID: String, to name: String) {
-        let request: NSFetchRequest<QuestionFolderEntity> = QuestionFolderEntity.fetchRequest()
+        let request = QuestionFolderEntity.fetchRequest()
         request.predicate = NSPredicate(format: "id == %@", folderID)
         request.fetchLimit = 1
+        
         guard let entity = try? context.fetch(request).first else { return }
+        
         entity.name = name
         stack.saveContext()
     }
@@ -128,16 +153,85 @@ final class SavedQuestionsStore {
         stack.batchDelete(entityName: "QuestionFolderEntity")
     }
     
+    // MARK: - Sync
+    func snapshotFolders() -> [ProgressSnapshot.FolderItem] {
+        let request = QuestionFolderEntity.fetchRequest()
+        
+        do {
+            return try context
+                .fetch(request)
+                .compactMap { entity in
+                    guard let id = entity.id,
+                          let name = entity.name else { return nil }
+                    
+                    return ProgressSnapshot.FolderItem(
+                        id: id,
+                        name: name,
+                        createdAt: (entity.createdAt ?? Date()).timeIntervalSince1970
+                    )
+                }
+        } catch {
+            print("❌ Failed to snapshot folders:", error)
+            return []
+        }
+    }
+    
+    func snapshotSavedQuestions() -> [ProgressSnapshot.SavedQuestionItem] {
+        let request = SavedQuestionEntity.fetchRequest()
+        
+        do {
+            return try context
+                .fetch(request)
+                .compactMap { entity in
+                    guard let questionID = entity.questionID,
+                          let folderID = entity.folderID else {
+                        return nil
+                    }
+                    
+                    return ProgressSnapshot.SavedQuestionItem(
+                        questionID: questionID,
+                        folderID: folderID,
+                        createdAt: (entity.createdAt ?? Date()).timeIntervalSince1970
+                    )
+                }
+        } catch {
+            print("❌ Failed to snapshot saved questions:", error)
+            return []
+        }
+    }
+    
+    func restore(
+        folders: [ProgressSnapshot.FolderItem],
+        savedQuestions: [ProgressSnapshot.SavedQuestionItem]
+    ) {
+        for folder in folders {
+            let entity = QuestionFolderEntity(context: context)
+            entity.id = folder.id
+            entity.name = folder.name
+            entity.createdAt = Date(timeIntervalSince1970: folder.createdAt)
+        }
+        
+        for item in savedQuestions {
+            let entity = SavedQuestionEntity(context: context)
+            entity.questionID = item.questionID
+            entity.folderID = item.folderID
+            entity.createdAt = Date(timeIntervalSince1970: item.createdAt)
+        }
+    }
+    
     private func isSaved(questionID: String, inFolder folderID: String) -> Bool {
-        let request: NSFetchRequest<SavedQuestionEntity> = SavedQuestionEntity.fetchRequest()
-        request.predicate = NSPredicate(format: "questionID == %@ AND folderID == %@", questionID, folderID)
+        let predicateFormat = "questionID == %@ AND folderID == %@"
+        let request = SavedQuestionEntity.fetchRequest()
+        request.predicate = NSPredicate(format: predicateFormat, questionID, folderID)
         request.fetchLimit = 1
+        
         return ((try? context.count(for: request)) ?? 0) > 0
     }
     
     private func count(inFolder folderID: String) -> Int {
-        let request: NSFetchRequest<SavedQuestionEntity> = SavedQuestionEntity.fetchRequest()
+        let request = SavedQuestionEntity.fetchRequest()
         request.predicate = NSPredicate(format: "folderID == %@", folderID)
+        
         return (try? context.count(for: request)) ?? 0
     }
 }

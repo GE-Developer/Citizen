@@ -21,10 +21,13 @@ final class WordsDictionary {
     
     static let shared = WordsDictionary()
     
+    private let languageManager = LanguageManager.shared
+    
     private init() {}
     
     func load() async throws {
-        let lang = LanguageManager.shared.currentLanguageID
+        let lang = languageManager.currentLanguageID
+        
         let loaded = try await Task.detached(priority: .userInitiated) {
             try Self.load(lang: lang)
         }.value
@@ -44,16 +47,24 @@ final class WordsDictionary {
         token.trimmingCharacters(in: CharacterSet.letters.inverted)
     }
     
+    private func apply(_ loaded: [String: WordEntry]) {
+        entries = loaded
+        maxPhraseWordCount = loaded.keys.map { $0.split(separator: " ").count }.max() ?? 1
+        
+        var counts: [String: Int] = [:]
+        
+        for entry in loaded.values {
+            counts[entry.partOfSpeech, default: 0] += 1
+        }
+        
+        partsOfSpeech = counts.sorted { $0.value > $1.value }.map(\.key)
+    }
+    
     private nonisolated static func load(lang: String) throws -> [String: WordEntry] {
-        if let dict = decode(lang: lang) {
-            return dict
+        guard let dict = decode(lang: lang) else {
+            throw ResourceError.loadFailed("words.\(lang)")
         }
-        
-        if lang != Language.english.id, let dict = decode(lang: Language.english.id) {
-            return dict
-        }
-        
-        throw ResourceError.loadFailed("words.\(lang)")
+        return dict
     }
     
     private nonisolated static func decode(lang: String) -> [String: WordEntry]? {
@@ -67,18 +78,5 @@ final class WordsDictionary {
             entry.key = item.key
             result[item.key] = entry
         }
-    }
-    
-    private func apply(_ loaded: [String: WordEntry]) {
-        entries = loaded
-        maxPhraseWordCount = loaded.keys.map { $0.split(separator: " ").count }.max() ?? 1
-        
-        var counts: [String: Int] = [:]
-        
-        for entry in loaded.values {
-            counts[entry.partOfSpeech, default: 0] += 1
-        }
-        
-        partsOfSpeech = counts.sorted { $0.value > $1.value }.map(\.key)
     }
 }
