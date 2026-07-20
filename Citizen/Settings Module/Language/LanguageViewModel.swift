@@ -46,5 +46,7 @@ final class LanguageViewModel {
         languageManager.currentLanguageID = chosenLanguage?.id ?? Language.english.id
         
         Task { await AppDataLoader.shared.reload() }
+        
+        ProfileSync.shared.noteLocalEdit()
     }
 }
